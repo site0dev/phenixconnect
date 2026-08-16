@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHENIX CONNECT – Solutions numériques & Réparation</title>
+
+  <!-- Balises SEO -->
+  <meta name="description" content="PHENIX CONNECT à Parakou : réparation de téléphone, maintenance informatique, développement web et dépannage à domicile. Devis gratuit." />
+  <meta property="og:title" content="PHENIX CONNECT – Solutions numériques & Réparation" />
+  <meta property="og:description" content="Votre expert en réparation mobile, maintenance IT, web et dépannage à Parakou. Contactez-nous !" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://phenixconnect.bj" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F8F9FA;
+      color: #1A3B5C;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* HEADER / HERO */
+    .hero {
+      background: linear-gradient(135deg, #1A3B5C 0%, #0F283D 100%);
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero .sub {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0.5rem auto 1rem auto;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      background: #F5A623;
+      color: #1A3B5C;
+      padding: 0.8rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #e09515;
+      transform: scale(1.02);
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 4rem 2rem;
+    }
+    .section:nth-child(even) {
+      background: #f1f4f8;
+    }
+    .section .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+    }
+    .section .container.reverse {
+      flex-direction: row-reverse;
+    }
+    .section .text {
+      flex: 1 1 45%;
+    }
+    .section .image {
+      flex: 1 1 45%;
+    }
+    .section .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      display: block;
+      transition: 0.3s;
+    }
+    .section .image img:hover {
+      transform: scale(1.01);
+    }
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #0F283D;
+      border-left: 6px solid #F5A623;
+      padding-left: 1rem;
+    }
+    .section p {
+      line-height: 1.8;
+      color: #3d4f62;
+      margin-bottom: 0.8rem;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .section ul li {
+      padding: 0.4rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      color: #3d4f62;
+    }
+    .section ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #F5A623;
+      font-weight: bold;
+    }
+
+    /* FAQ ACCORDÉON */
+    .faq-section {
+      background: #fff;
+      padding: 4rem 2rem;
+    }
+    .faq-section .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .faq-section .desc {
+      text-align: center;
+      color: #4a5b6e;
+      margin-bottom: 2.5rem;
+    }
+    .faq-item {
+      background: #f8f9fa;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid #e9edf2;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+    .faq-item:hover {
+      border-color: #F5A623;
+    }
+    .faq-item summary {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1.2rem 2rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      transition: 0.2s;
+      color: #0F283D;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::after {
+      content: "➕";
+      font-size: 1.2rem;
+      color: #F5A623;
+      transition: 0.3s;
+    }
+    .faq-item[open] summary::after {
+      content: "➖";
+    }
+    .faq-item summary:hover {
+      background: #f1f4f8;
+    }
+    .faq-item .answer {
+      padding: 0 2rem 1.8rem 2rem;
+      color: #3d4f62;
+      line-height: 1.7;
+      border-top: 1px solid #e9edf2;
+      margin-top: 0.5rem;
+      padding-top: 1.2rem;
+    }
+
+    /* FOOTER / CONTACT */
+    .footer {
+      background: #1A3B5C;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-top: 4px solid #F5A623;
+    }
+    .footer p {
+      margin: 0.3rem 0;
+    }
+    .footer small {
+      display: block;
+      margin-top: 0.8rem;
+      opacity: 0.7;
+    }
+    .footer a {
+      color: #F5A623;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* WHATSAPP FLOTTANT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      border: 2px solid #fff;
+      transition: 0.3s;
+      font-family: 'Inter', sans-serif;
+      animation: pulse-whatsapp 2s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background: #20b858;
+    }
+    .whatsapp-float .icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+    @keyframes pulse-whatsapp {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .section .container {
+        flex-direction: column !important;
+      }
+      .section .text,
+      .section .image {
+        flex: 1 1 100%;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .whatsapp-float {
+        padding: 12px 16px;
+        bottom: 15px;
+        right: 15px;
+      }
+      .whatsapp-float .icon {
+        font-size: 24px;
+      }
+      .whatsapp-float .text {
+        display: none;
+      }
+      .faq-item summary {
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+      }
+      .faq-item .answer {
+        padding: 0 1.2rem 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <h1>PHENIX CONNECT</h1>
+    <p class="sub">
+      Réparation mobile · Maintenance IT · Web · Dépannage<br />
+      Une expertise complète à Parakou depuis 2026.
+    </p>
+    <!-- Le bouton envoie directement un message WhatsApp pour une demande de devis -->
+    <a href="https://wa.me/22966191000?text=Bonjour%20PHENIX%20CONNECT%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20vos%20services."
+       class="btn"
+       target="_blank"
+       rel="noopener noreferrer">
+       📞 Demander un devis
+    </a>
+  </header>
+
+  <!-- ===== 1. RÉPARATION DE TÉLÉPHONE ===== -->
+  <section class="section" id="reparation">
+    <div class="container">
+      <div class="text">
+        <h2>📱 Réparation de téléphone</h2>
+        <p>
+          L’atelier PHENIX CONNECT prend en charge toutes les pannes matérielles et logicielles
+          sur smartphones et tablettes, quelle que soit la marque.
+        </p>
+        <ul>
+          <li>Remplacement d’écrans (vitre, LCD, OLED)</li>
+          <li>Changement de batteries et connectiques de charge</li>
+          <li>Réparation de cartes mères et composants internes</li>
+          <li>Débogage logiciel, réinitialisation et mise à jour</li>
+          <li>Diagnostic gratuit et devis transparent</li>
+        </ul>
+        <!-- Mise à jour du délai : 3 à 6 heures -->
+        <p><strong>Délai moyen :</strong> 3 à 6 heures en atelier.</p>
+      </div>
+      <div class="image">
+        <img src="reparation-telephone.jpeg" alt="Réparation de téléphone à Parakou" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. MAINTENANCE INFORMATIQUE ===== -->
+  <section class="section" id="maintenance" style="background:#f1f4f8;">
+    <div class="container reverse">
+      <div class="text">
+        <h2>💻 Maintenance informatique & réseau</h2>
+        <p>
+          PHENIX CONNECT assure la gestion et la sécurisation de votre parc informatique,
+          pour les particuliers comme pour les entreprises.
+        </p>
+        <ul>
+          <li>Dépannage matériel (PC, serveurs)</li>
+          <li>Administration réseau (WiFi, routeurs)</li>
+          <li>Protection antivirus, antiransomware et pare‑feu</li>
+          <li>Sauvegarde automatique et migration de données</li>
+          <li>Contrats de maintenance mensuels ou trimestriels</li>
+        </ul>
+        <p><strong>Intervention préventive</strong> pour éviter les pannes et pertes de données.</p>
+      </div>
+      <div class="image">
+        <img src="maintenance-informatique.jpg" alt="Maintenance informatique à Parakou" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. DÉVELOPPEMENT WEB & APPLICATIONS ===== -->
+  <section class="section" id="web">
+    <div class="container">
+      <div class="text">
+        <h2>🌐 Développement Web & Apps</h2>
+        <p>
+          L’agence conçoit des solutions digitales sur mesure, parfaitement adaptées
+          à vos besoins et à votre secteur d’activité.
+        </p>
+        <ul>
+          <li>Sites vitrines, blogs et portfolios</li>
+          <li>Boutiques en ligne (e‑commerce) sécurisées</li>
+          <li>Applications mobiles natives (Android / iOS) et hybrides (Flutter)</li>
+          <li>Technologies : WordPress, Laravel, HTML/CSS/JS</li>
+          <li>Design responsive et optimisation SEO</li>
+        </ul>
+        <p><strong>Accompagnement</strong> de la maquette au déploiement, avec formation à la prise en main.</p>
+      </div>
+      <div class="image">
+        <img src="developpement-web-app.jpg" alt="Développement web et applications mobiles" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. DÉPANNAGE À DOMICILE ET EN ENTREPRISE ===== -->
+  <section class="section" id="depannage" style="background:#f1f4f8;">
+    <div class="container reverse">
+      <div class="text">
+        <h2>🔧 Dépannage à domicile & en entreprise</h2>
+        <p>
+          Un technicien se déplace directement chez vous ou dans vos locaux pour
+          résoudre vos problèmes techniques sur place, sans déplacement de matériel.
+        </p>
+        <ul>
+          <li>Interventions à Parakou et ses environs</li>
+          <li>Dépannage informatique sur site</li>
+          <li>Assistance rapide pour les entreprises (astreinte possible)</li>
+          <li>Frais de déplacement communiqués avant toute intervention</li>
+        </ul>
+        <p><strong>Réactivité :</strong> un technicien chez vous sous 24h ouvrées.</p>
+      </div>
+      <div class="image">
+        <img src="depannage-domicile-entreprise.jpeg" alt="Dépannage à domicile et en entreprise" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (ACCORDÉON) ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2>❓ Foire aux questions</h2>
+      <p class="desc">Cliquez sur une question pour afficher la réponse.</p>
+
+      <!-- Réparation -->
+      <details class="faq-item">
+        <summary>Quels sont les délais pour une réparation de téléphone ?</summary>
+        <div class="answer">
+          <!-- Mise à jour du délai -->
+          En atelier à Parakou, une réparation standard (écran, batterie, connectique) est réalisée sous 3 à 6 heures. Pour les pannes complexes, un diagnostic est effectué et le délai est communiqué sous 24 heures.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Quelles marques de téléphones sont réparées ?</summary>
+        <div class="answer">
+          Toutes les marques courantes : Samsung, Apple (iPhone), Xiaomi, Tecno, Infinix, Oppo, Huawei, etc. L’atelier intervient aussi bien sur les pannes matérielles que logicielles.
+        </div>
+      </details>
+
+      <!-- Maintenance IT -->
+      <details class="faq-item">
+        <summary>Proposez-vous des contrats de maintenance pour les entreprises ?</summary>
+        <div class="answer">
+          Oui. Des contrats mensuels ou trimestriels incluent l’audit du parc, les sauvegardes automatiques, la maintenance préventive et une astreinte pour les urgences.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Quels types d’interventions en maintenance informatique ?</summary>
+        <div class="answer">
+          Dépannage matériel (PC, serveurs), administration réseau (WiFi, routeurs), lutte contre les virus, migration de données et mises à jour systèmes.
+        </div>
+      </details>
+
+      <!-- Développement Web -->
+      <details class="faq-item">
+        <summary>Quels types de sites web PHENIX CONNECT peut-il créer ?</summary>
+        <div class="answer">
+          Des vitrines, blogs, boutiques en ligne et plateformes sur mesure. Les technologies utilisées sont WordPress, Laravel et le HTML/CSS/JavaScript pur, avec une adaptation systématique aux mobiles.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Combien de temps faut-il pour créer un site web professionnel ?</summary>
+        <div class="answer">
+          Un site vitrine standard est livré en 2 à 3 semaines. Une boutique ou une plateforme complexe nécessite 4 à 8 semaines. Un planning détaillé est fourni en amont.
+        </div>
+      </details>
+
+      <!-- Dépannage à domicile / entreprise -->
+      <details class="faq-item">
+        <summary>Proposez-vous un dépannage à domicile ou en entreprise ?</summary>
+        <div class="answer">
+          Oui. Un technicien se déplace à Parakou et ses environs pour les interventions complexes ou urgentes. Les frais de déplacement sont précisés lors de la prise de rendez-vous.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Quels sont les horaires d’ouverture de l’établissement ?</summary>
+        <div class="answer">
+          <!-- Mise à jour des horaires -->
+          Du lundi au vendredi de 8h00 à 19h00, et le samedi de 10h00 à 16h00. L’établissement est fermé le dimanche.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <p><strong>PHENIX CONNECT</strong> – RCCM RB/PKO/26 A 29751</p>
+    <p>Dokparou, Parakou, Bénin</p>
+    <p>
+      📞 01 66 19 10 00 &nbsp;|&nbsp; 
+      ✉️ <a href="mailto:phenixconnect26@gmail.com">phenixconnect26@gmail.com</a>
+    </p>
+    <small>© 2026 Tous droits réservés – Mentions légales disponibles sur demande.</small>
+  </footer>
+
+  <!-- ===== BOUTON WHATSAPP FLOTTANT ===== -->
+  <a href="https://wa.me/22966191000?text=Bonjour%20PHENIX%20CONNECT%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer">
+    <span class="icon">💬</span>
+    <span class="text">WhatsApp</span>
+  </a>
+
+</body>
+</html>
