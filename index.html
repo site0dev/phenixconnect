@@ -1461,8 +1461,7 @@
                     '',
                     'Projet / message :',
                     message.value.trim()
-                ].join('
-');
+                ].join('\n');
                 window.location.href = `mailto:contact@phenixconnect.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 formSuccess.innerHTML = '<i class="fa-solid fa-envelope"></i> Votre messagerie va s’ouvrir pour envoyer votre demande.';
                 formSuccess.classList.add('show');
