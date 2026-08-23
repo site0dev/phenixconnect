@@ -1,496 +1,1549 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PHENIX CONNECT – Solutions numériques & Réparation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phenix Connect | Création de sites web, applications & solutions IT en Afrique de l’Ouest et en Europe</title>
+    <meta name="description" content="Phenix Connect accompagne entreprises et entrepreneurs en Afrique de l’Ouest, en France, en Belgique et en Europe : création de sites web, applications sur mesure, maintenance informatique, assistance IT et solutions digitales.">
+    <meta name="keywords" content="création site web Bénin, agence web Bénin, agence web Cotonou, développement web Afrique de l’Ouest, application sur mesure Bénin, maintenance informatique Bénin, assistance informatique, agence web France, création site internet France, agence web Belgique, création site internet Belgique, développement web Europe, solutions digitales Afrique, Phenix Connect">
+    <meta name="author" content="Phenix Connect">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="canonical" href="https://phenixconnect.online/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Phenix Connect">
+    <meta property="og:title" content="Phenix Connect | Solutions digitales & IT">
+    <meta property="og:description" content="Création de sites web, applications sur mesure, maintenance informatique et solutions digitales pour l’Afrique de l’Ouest, la France, la Belgique et l’Europe.">
+    <meta property="og:url" content="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr-BJ" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr-FR" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr-BE" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr-CI" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr-SN" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="fr-TG" href="https://phenixconnect.online/">
+    <link rel="alternate" hreflang="x-default" href="https://phenixconnect.online/">
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"ProfessionalService",
+      "name":"Phenix Connect",
+      "url":"https://phenixconnect.online/",
+      "email":"contact@phenixconnect.online",
+      "telephone":"+2290147602848",
+      "description":"Création de sites web, applications sur mesure, maintenance informatique et solutions digitales pour l’Afrique de l’Ouest et l’Europe.",
+      "areaServed":["Benin","Togo","Côte d’Ivoire","Sénégal","Burkina Faso","Niger","Ghana","Nigeria","France","Belgique","Europe"],
+      "serviceType":["Développement Web","Applications sur mesure","Maintenance informatique","Maintenance téléphonique","Assistance informatique"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #16161f;
+            --bg-card-hover: #1c1c28;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --accent-1: #ff6b35;
+            --accent-2: #ff8c42;
+            --accent-3: #ffb347;
+            --accent-glow: rgba(255, 107, 53, 0.25);
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-hover: rgba(255, 107, 53, 0.35);
+            --gradient-fire: linear-gradient(135deg, #ff6b35 0%, #ff8c42 40%, #ffb347 100%);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.35);
+            --shadow-glow: 0 0 60px rgba(255, 107, 53, 0.15);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-display: 'Playfair Display', 'Georgia', serif;
+        }
 
-  <!-- Balises SEO -->
-  <meta name="description" content="PHENIX CONNECT à Parakou : réparation de téléphone, maintenance informatique, développement web et dépannage à domicile. Devis gratuit." />
-  <meta property="og:title" content="PHENIX CONNECT – Solutions numériques & Réparation" />
-  <meta property="og:description" content="Votre expert en réparation mobile, maintenance IT, web et dépannage à Parakou. Contactez-nous !" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://phenixconnect.bj" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #F8F9FA;
-      color: #1A3B5C;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* HEADER / HERO */
-    .hero {
-      background: linear-gradient(135deg, #1A3B5C 0%, #0F283D 100%);
-      color: #fff;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero .sub {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0.5rem auto 1rem auto;
-      opacity: 0.9;
-    }
-    .btn {
-      display: inline-block;
-      background: #F5A623;
-      color: #1A3B5C;
-      padding: 0.8rem 2.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      margin-top: 1.5rem;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #e09515;
-      transform: scale(1.02);
-    }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    /* SECTIONS */
-    .section {
-      padding: 4rem 2rem;
-    }
-    .section:nth-child(even) {
-      background: #f1f4f8;
-    }
-    .section .container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 3rem;
-    }
-    .section .container.reverse {
-      flex-direction: row-reverse;
-    }
-    .section .text {
-      flex: 1 1 45%;
-    }
-    .section .image {
-      flex: 1 1 45%;
-    }
-    .section .image img {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-      display: block;
-      transition: 0.3s;
-    }
-    .section .image img:hover {
-      transform: scale(1.01);
-    }
-    .section h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      color: #0F283D;
-      border-left: 6px solid #F5A623;
-      padding-left: 1rem;
-    }
-    .section p {
-      line-height: 1.8;
-      color: #3d4f62;
-      margin-bottom: 0.8rem;
-    }
-    .section ul {
-      list-style: none;
-      padding: 0;
-    }
-    .section ul li {
-      padding: 0.4rem 0;
-      padding-left: 1.8rem;
-      position: relative;
-      color: #3d4f62;
-    }
-    .section ul li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #F5A623;
-      font-weight: bold;
-    }
+        /* ===== ANIMATED BACKGROUND ===== */
+        .bg-aurora {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .bg-aurora::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(255, 107, 53, 0.07) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(255, 140, 66, 0.05) 0%, transparent 45%),
+                radial-gradient(ellipse at 50% 80%, rgba(255, 179, 71, 0.04) 0%, transparent 40%);
+            animation: auroraShift 20s ease-in-out infinite alternate;
+        }
+        @keyframes auroraShift {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            50% {
+                transform: translate(-3%, 2%) rotate(2deg) scale(1.05);
+            }
+            100% {
+                transform: translate(3%, -2%) rotate(-2deg) scale(1.02);
+            }
+        }
 
-    /* FAQ ACCORDÉON */
-    .faq-section {
-      background: #fff;
-      padding: 4rem 2rem;
-    }
-    .faq-section .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .faq-section h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    .faq-section .desc {
-      text-align: center;
-      color: #4a5b6e;
-      margin-bottom: 2.5rem;
-    }
-    .faq-item {
-      background: #f8f9fa;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      border: 1px solid #e9edf2;
-      overflow: hidden;
-      transition: 0.2s;
-    }
-    .faq-item:hover {
-      border-color: #F5A623;
-    }
-    .faq-item summary {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 1.2rem 2rem;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fff;
-      transition: 0.2s;
-      color: #0F283D;
-    }
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-    .faq-item summary::after {
-      content: "➕";
-      font-size: 1.2rem;
-      color: #F5A623;
-      transition: 0.3s;
-    }
-    .faq-item[open] summary::after {
-      content: "➖";
-    }
-    .faq-item summary:hover {
-      background: #f1f4f8;
-    }
-    .faq-item .answer {
-      padding: 0 2rem 1.8rem 2rem;
-      color: #3d4f62;
-      line-height: 1.7;
-      border-top: 1px solid #e9edf2;
-      margin-top: 0.5rem;
-      padding-top: 1.2rem;
-    }
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
 
-    /* FOOTER / CONTACT */
-    .footer {
-      background: #1A3B5C;
-      color: rgba(255, 255, 255, 0.85);
-      text-align: center;
-      padding: 2.5rem 2rem;
-      border-top: 4px solid #F5A623;
-    }
-    .footer p {
-      margin: 0.3rem 0;
-    }
-    .footer small {
-      display: block;
-      margin-top: 0.8rem;
-      opacity: 0.7;
-    }
-    .footer a {
-      color: #F5A623;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 2rem;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 10, 15, 0.75);
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+        }
+        .nav-brand-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--gradient-fire);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #0a0a0f;
+            font-weight: 900;
+            box-shadow: 0 4px 18px var(--accent-glow);
+            transition: var(--transition);
+        }
+        .nav-brand:hover .nav-brand-icon {
+            transform: scale(1.05) rotate(-3deg);
+            box-shadow: 0 6px 28px var(--accent-glow);
+        }
+        .nav-brand-text {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+        .nav-brand-text span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.3rem 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-fire);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--gradient-fire);
+            color: #0a0a0f !important;
+            padding: 0.55rem 1.4rem !important;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            font-size: 0.8rem !important;
+            box-shadow: 0 4px 20px var(--accent-glow);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px var(--accent-glow);
+            color: #0a0a0f !important;
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.4rem;
+            transition: var(--transition);
+        }
+        .nav-toggle:hover {
+            color: var(--accent-1);
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(10, 10, 15, 0.97);
+                backdrop-filter: blur(20px);
+                padding: 2rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid var(--border-subtle);
+                transform: translateY(-110%);
+                transition: var(--transition);
+                opacity: 0;
+                pointer-events: none;
+            }
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .navbar {
+                padding: 0 1.2rem;
+            }
+        }
 
-    /* WHATSAPP FLOTTANT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 50px;
-      padding: 14px 22px;
-      font-size: 16px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      border: 2px solid #fff;
-      transition: 0.3s;
-      font-family: 'Inter', sans-serif;
-      animation: pulse-whatsapp 2s infinite;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-      background: #20b858;
-    }
-    .whatsapp-float .icon {
-      font-size: 28px;
-      line-height: 1;
-    }
-    @keyframes pulse-whatsapp {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 2rem 5rem;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 107, 53, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-2);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        .hero-badge i {
+            font-size: 0.7rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+        .hero-title .highlight {
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-style: italic;
+        }
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.45s both;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 2.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            letter-spacing: 0.02em;
+        }
+        .btn-primary {
+            background: var(--gradient-fire);
+            color: #0a0a0f;
+            box-shadow: 0 6px 28px var(--accent-glow);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px var(--accent-glow);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateY(-3px);
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3.5rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            font-family: var(--font-display);
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            animation: bounceDown 2s ease-in-out infinite;
+            cursor: pointer;
+            z-index: 2;
+            text-decoration: none;
+        }
+        @keyframes bounceDown {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(8px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(4px);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .section .container {
-        flex-direction: column !important;
-      }
-      .section .text,
-      .section .image {
-        flex: 1 1 100%;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .whatsapp-float {
-        padding: 12px 16px;
-        bottom: 15px;
-        right: 15px;
-      }
-      .whatsapp-float .icon {
-        font-size: 24px;
-      }
-      .whatsapp-float .text {
-        display: none;
-      }
-      .faq-item summary {
-        font-size: 1rem;
-        padding: 1rem 1.2rem;
-      }
-      .faq-item .answer {
-        padding: 0 1.2rem 1.2rem 1.2rem;
-      }
-    }
-  </style>
+        /* ===== SECTIONS COMMON ===== */
+        .section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-2);
+            margin-bottom: 0.8rem;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 550px;
+            margin: 1rem auto 0;
+            font-size: 1rem;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 2.2rem 1.8rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: default;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out, background 0.35s, border-color 0.35s, box-shadow 0.35s;
+        }
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-fire);
+            opacity: 0;
+            transition: var(--transition);
+            border-radius: 3px 3px 0 0;
+        }
+        .service-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-card), var(--shadow-glow);
+            transform: translateY(-6px);
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(255, 107, 53, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent-1);
+            margin-bottom: 1.4rem;
+            transition: var(--transition);
+        }
+        .service-card:hover .service-icon {
+            background: var(--gradient-fire);
+            color: #0a0a0f;
+            border-color: transparent;
+            box-shadow: 0 6px 24px var(--accent-glow);
+        }
+        .service-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            letter-spacing: -0.01em;
+        }
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.65;
+        }
+        .service-card .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-2);
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: var(--transition);
+        }
+        .service-card:hover .service-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== ABOUT ===== */
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .about-feature i {
+            color: var(--accent-1);
+            font-size: 1rem;
+            width: 24px;
+            text-align: center;
+        }
+        .about-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 380px;
+        }
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            z-index: 2;
+            max-width: 360px;
+            width: 100%;
+            transition: var(--transition);
+        }
+        .about-card:hover {
+            box-shadow: var(--shadow-card), var(--shadow-glow);
+            border-color: var(--border-hover);
+        }
+        .about-card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .about-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .about-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        .about-card .about-ring {
+            position: absolute;
+            inset: -12px;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: calc(var(--radius-lg) + 12px);
+            pointer-events: none;
+            animation: ringPulse 3s ease-in-out infinite;
+        }
+        @keyframes ringPulse {
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            .about-visual {
+                min-height: auto;
+            }
+        }
+
+        /* ===== PROCESS / WHY US ===== */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .why-item {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            border-radius: var(--radius-md);
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out, background 0.35s, border-color 0.35s;
+        }
+        .why-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .why-item:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+        .why-item .why-number {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .why-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .why-item p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
+        }
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .contact-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+        }
+        .contact-detail i {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(255, 107, 53, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-1);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1.2rem;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 0.88rem;
+            transition: var(--transition);
+            outline: none;
+            width: 100%;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--border-hover);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.08);
+        }
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+        .contact-form select {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a0a0b0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+        .contact-form select option {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        .contact-form .btn {
+            align-self: flex-start;
+            margin-top: 0.5rem;
+            font-family: var(--font-sans);
+        }
+        .form-success {
+            display: none;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            background: rgba(46, 213, 115, 0.1);
+            border: 1px solid rgba(46, 213, 115, 0.25);
+            color: #2ed573;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        .form-success.show {
+            display: block;
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            .hero-stats {
+                gap: 2rem;
+            }
+            .hero-stat-value {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-subtle);
+            padding: 3rem 2rem 2rem;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin-top: 0.8rem;
+            max-width: 320px;
+            line-height: 1.6;
+        }
+        .footer h5 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            margin-bottom: 1.2rem;
+        }
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--accent-2);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .whatsapp-float {
+            position: fixed; right: 20px; bottom: 20px; width: 58px; height: 58px;
+            border-radius: 50%; background: #25D366; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.65rem; text-decoration: none;
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35);
+            z-index: 1100; transition: transform .3s ease, box-shadow .3s ease;
+            animation: whatsappPulse 2.5s ease-in-out infinite;
+        }
+        .whatsapp-float:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 34px rgba(37, 211, 102, 0.45); color: #fff; }
+        .whatsapp-float span {
+            position: absolute; right: 70px; white-space: nowrap;
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            color: var(--text-primary); padding: .55rem .8rem; border-radius: 8px;
+            font-size: .75rem; font-weight: 600; opacity: 0; pointer-events: none;
+            transform: translateX(8px); transition: .25s ease;
+        }
+        .whatsapp-float:hover span { opacity: 1; transform: translateX(0); }
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 8px 28px rgba(37,211,102,.35); }
+            50% { box-shadow: 0 8px 28px rgba(37,211,102,.35), 0 0 0 10px rgba(37,211,102,.08); }
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float { right: 15px; bottom: 15px; width: 54px; height: 54px; }
+            .whatsapp-float span { display: none; }
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== SELECTION ===== */
+        ::selection {
+            background: rgba(255, 107, 53, 0.3);
+            color: var(--text-primary);
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-card-hover);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-1);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- ===== HERO ===== -->
-  <header class="hero">
-    <h1>PHENIX CONNECT</h1>
-    <p class="sub">
-      Réparation mobile · Maintenance IT · Web · Dépannage<br />
-      <!-- Modification demandée : "depuis 2026" remplacé par "Parakou & ses environs" -->
-      Une expertise complète à Parakou & ses environs.
-    </p>
-    <a href="https://wa.me/22966191000?text=Bonjour%20PHENIX%20CONNECT%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20vos%20services."
-       class="btn"
-       target="_blank"
-       rel="noopener noreferrer">
-       📞 Demander un devis
+    <!-- BACKGROUND -->
+    <div class="bg-aurora"></div>
+    <div class="bg-grid"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-brand" aria-label="Phenix Connect Accueil">
+            <div class="nav-brand-icon">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="nav-brand-text">
+                Phenix Connect
+                <span>Digital Solutions</span>
+            </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#pourquoi">Pourquoi nous</a></li>
+            <li><a href="#contact" class="nav-cta">Démarrer un projet</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu de navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-circle"></i>
+                Solutions IT &amp; Digitales sur mesure
+            </div>
+            <h1 class="hero-title">
+                Votre vision.<br>
+                <span class="highlight">Notre expertise.</span><br>
+                Réalité digitale.
+            </h1>
+            <p class="hero-subtitle">
+                Phenix Connect conçoit, développe et maintient vos solutions digitales.
+                Des sites web aux applications métiers, nous donnons vie à vos projets
+                avec excellence et précision, pour les entreprises et entrepreneurs en Afrique de l’Ouest et en Europe.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Demander un devis
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Découvrir nos services
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">+89</div>
+                    <div class="hero-stat-label">Projets livrés</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">+98%</div>
+                    <div class="hero-stat-label">Clients satisfaits</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">24/7</div>
+                    <div class="hero-stat-label">Support réactif</div>
+                </div>
+            </div>
+        </div>
+        <a href="#services" class="scroll-indicator" aria-label="Faire défiler vers les services">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nos services</span>
+                <h2 class="section-title">Une expertise complète</h2>
+                <p class="section-subtitle">
+                    Cinq pôles de compétences pour couvrir tous vos besoins digitaux
+                    et informatiques, de la conception à la maintenance.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Développement Web</h3>
+                    <p>
+                        Sites vitrines, e-commerce, plateformes sur mesure. Des solutions
+                        performantes, responsives et optimisées SEO, construites avec les
+                        technologies les plus modernes.
+                    </p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Applications sur mesure</h3>
+                    <p>
+                        Applications métiers, SaaS, outils internes. Nous concevons des
+                        logiciels personnalisés qui automatisent vos processus et
+                        accélèrent votre croissance.
+                    </p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Maintenance informatique</h3>
+                    <p>
+                        Surveillance proactive, mises à jour, sauvegardes, sécurisation.
+                        Votre infrastructure entre des mains expertes pour un fonctionnement
+                        sans interruption.
+                    </p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Maintenance téléphonique</h3>
+                    <p>
+                        Installation, configuration et dépannage de vos systèmes
+                        téléphoniques. Standard, VoIP, mobilité : nous assurons une
+                        communication fluide et fiable.
+                    </p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Assistance informatique</h3>
+                    <p>
+                        Support technique réactif, à distance ou sur site. Résolution
+                        rapide des incidents, accompagnement utilisateurs, conseils
+                        personnalisés. Nous sommes là quand vous en avez besoin.
+                    </p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="apropos" style="background: var(--bg-secondary);">
+        <div class="section-container">
+            <div class="about-wrapper">
+                <div class="about-text reveal">
+                    <span class="section-tag">À propos</span>
+                    <h2>L'excellence digitale, portée par la passion du code</h2>
+                    <p>
+                        Fondée sur une conviction simple — <strong>la technologie doit servir
+                        votre vision</strong> — Phenix Connect accompagne les entreprises et les
+                        entrepreneurs dans leur transformation digitale.
+                    </p>
+                    <p>
+                        Notre équipe d'experts allie rigueur technique et créativité pour
+                        livrer des projets qui allient performance, design et fiabilité.
+                        Chaque mission est une nouvelle opportunité de repousser les limites.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fa-solid fa-check-circle"></i>
+                            Équipe certifiée &amp; expérimentée
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-check-circle"></i>
+                            Délais respectés, budget maîtrisé
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-check-circle"></i>
+                            Technologies de pointe
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-check-circle"></i>
+                            Accompagnement post-livraison
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="about-card">
+                        <div class="about-ring"></div>
+                        <div class="about-card-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <h4>Phenix Connect</h4>
+                        <p>
+                            Le phénix renaît de ses cendres.<br>
+                            Votre digital, lui, renaît avec nous.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section" id="pourquoi">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Pourquoi nous choisir</span>
+                <h2 class="section-title">Une méthode éprouvée</h2>
+                <p class="section-subtitle">
+                    Notre approche structurée garantit des résultats concrets,
+                    mesurables et durables pour chaque projet.
+                </p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="why-number">01</div>
+                    <h4>Écoute &amp; Analyse</h4>
+                    <p>Nous comprenons vos besoins réels avant toute ligne de code.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-number">02</div>
+                    <h4>Conception &amp; Design</h4>
+                    <p>Maquettes, prototypes et UX design pour valider chaque étape.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-number">03</div>
+                    <h4>Développement Agile</h4>
+                    <p>Code propre, revues régulières, déploiement continu.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-number">04</div>
+                    <h4>Suivi &amp; Support</h4>
+                    <p>Maintenance proactive et support réactif 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="background: var(--bg-secondary);">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Parlons de votre projet</h2>
+                <p class="section-subtitle">
+                    Une question ? Un devis ? Un projet à concrétiser ?
+                    Notre équipe vous répond sous 24 heures.
+                </p>
+            </div>
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h3>Restons connectés</h3>
+                    <p>
+                        Que vous ayez besoin d'un site vitrine, d'une application complexe
+                        ou d'un support informatique réactif, nous sommes là pour vous accompagner.
+                    </p>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Afrique de l’Ouest & Europe — Intervention à distance partout dans le monde</span>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@phenixconnect.online" style="color:inherit;text-decoration:none;">contact@phenixconnect.online</a>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+2290147602848" style="color:inherit;text-decoration:none;">+229 01 47 60 28 48</a>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Lun – Ven : 9h00 – 19h00 · Support : 24/7</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <input type="text" name="name" placeholder="Votre nom complet *" autocomplete="name" aria-label="Votre nom complet" required>
+                    <input type="email" name="email" placeholder="Votre adresse email *" autocomplete="email" aria-label="Votre adresse email" required>
+                    <input type="tel" name="phone" placeholder="Votre téléphone (optionnel)" autocomplete="tel" aria-label="Votre téléphone">
+                    <select name="service" required>
+                        <option value="" disabled selected>Service souhaité *</option>
+                        <option value="web">Développement Web</option>
+                        <option value="app">Application sur mesure</option>
+                        <option value="maintenance-info">Maintenance informatique</option>
+                        <option value="maintenance-tel">Maintenance téléphonique</option>
+                        <option value="assistance">Assistance informatique</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                    <textarea name="message" placeholder="Décrivez votre projet en quelques lignes... *" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Envoyer la demande
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-check-circle"></i>
+                        Merci ! Votre demande a bien été envoyée. Nous vous répondrons sous 24h.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="nav-brand" style="margin-bottom: 0.5rem;">
+                    <div class="nav-brand-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div class="nav-brand-text">
+                        Phenix Connect
+                        <span>Digital Solutions</span>
+                    </div>
+                </a>
+                <p>
+                    Votre partenaire digital pour la conception, le développement et la maintenance de solutions IT en Afrique de l’Ouest et en Europe.
+                </p>
+            </div>
+            <div>
+                <h5>Navigation</h5>
+                <ul class="footer-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#pourquoi">Pourquoi nous</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Services</h5>
+                <ul class="footer-links">
+                    <li><a href="#services">Développement Web</a></li>
+                    <li><a href="#services">Applications sur mesure</a></li>
+                    <li><a href="#services">Maintenance informatique</a></li>
+                    <li><a href="#services">Maintenance téléphonique</a></li>
+                    <li><a href="#services">Assistance informatique</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Phenix Connect. Tous droits réservés.</p>
+    
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTTANT -->
+    <a class="whatsapp-float" href="https://wa.me/2290147602848?text=Bonjour%20Phenix%20Connect%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." target="_blank" rel="noopener noreferrer" aria-label="Contacter Phenix Connect sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Nous contacter sur WhatsApp</span>
     </a>
-  </header>
 
-  <!-- ===== 1. RÉPARATION DE TÉLÉPHONE ===== -->
-  <section class="section" id="reparation">
-    <div class="container">
-      <div class="text">
-        <h2>📱 Réparation de téléphone</h2>
-        <p>
-          L’atelier PHENIX CONNECT prend en charge toutes les pannes matérielles et logicielles
-          sur smartphones et tablettes, quelle que soit la marque.
-        </p>
-        <ul>
-          <li>Remplacement d’écrans (vitre, LCD, OLED)</li>
-          <li>Changement de batteries et connectiques de charge</li>
-          <li>Réparation de cartes mères et composants internes</li>
-          <li>Débogage logiciel, réinitialisation et mise à jour</li>
-          <li>Diagnostic gratuit et devis transparent</li>
-        </ul>
-        <p><strong>Délai moyen :</strong> 3 à 6 heures en atelier.</p>
-      </div>
-      <div class="image">
-        <img src="reparation-telephone.jpeg" alt="Réparation de téléphone à Parakou" loading="lazy" />
-      </div>
-    </div>
-  </section>
+    <!-- JAVASCRIPT -->
+    <script>
+        (function() {
+            'use strict';
 
-  <!-- ===== 2. MAINTENANCE INFORMATIQUE ===== -->
-  <section class="section" id="maintenance" style="background:#f1f4f8;">
-    <div class="container reverse">
-      <div class="text">
-        <h2>💻 Maintenance informatique & réseau</h2>
-        <p>
-          PHENIX CONNECT assure la gestion et la sécurisation de votre parc informatique,
-          pour les particuliers comme pour les entreprises.
-        </p>
-        <ul>
-          <li>Dépannage matériel (PC, serveurs)</li>
-          <li>Administration réseau (WiFi, routeurs)</li>
-          <li>Protection antivirus, antiransomware et pare‑feu</li>
-          <li>Sauvegarde automatique et migration de données</li>
-          <li>Contrats de maintenance mensuels ou trimestriels</li>
-        </ul>
-        <p><strong>Intervention préventive</strong> pour éviter les pannes et pertes de données.</p>
-      </div>
-      <div class="image">
-        <img src="maintenance-informatique.jpg" alt="Maintenance informatique à Parakou" loading="lazy" />
-      </div>
-    </div>
-  </section>
+            // === NAVBAR SCROLL EFFECT ===
+            const navbar = document.getElementById('navbar');
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
 
-  <!-- ===== 3. DÉVELOPPEMENT WEB & APPLICATIONS ===== -->
-  <section class="section" id="web">
-    <div class="container">
-      <div class="text">
-        <h2>🌐 Développement Web & Apps</h2>
-        <p>
-          L’agence conçoit des solutions digitales sur mesure, parfaitement adaptées
-          à vos besoins et à votre secteur d’activité.
-        </p>
-        <ul>
-          <li>Sites vitrines, blogs et portfolios</li>
-          <li>Boutiques en ligne (e‑commerce) sécurisées</li>
-          <li>Applications mobiles natives (Android / iOS) et hybrides (Flutter)</li>
-          <li>Technologies : WordPress, Laravel, HTML/CSS/JS</li>
-          <li>Design responsive et optimisation SEO</li>
-        </ul>
-        <p><strong>Accompagnement</strong> de la maquette au déploiement, avec formation à la prise en main.</p>
-      </div>
-      <div class="image">
-        <img src="developpement-web-app.jpg" alt="Développement web et applications mobiles" loading="lazy" />
-      </div>
-    </div>
-  </section>
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
 
-  <!-- ===== 4. DÉPANNAGE À DOMICILE ET EN ENTREPRISE ===== -->
-  <section class="section" id="depannage" style="background:#f1f4f8;">
-    <div class="container reverse">
-      <div class="text">
-        <h2>🔧 Dépannage à domicile & en entreprise</h2>
-        <p>
-          Un technicien se déplace directement chez vous ou dans vos locaux pour
-          résoudre vos problèmes techniques sur place, sans déplacement de matériel.
-        </p>
-        <ul>
-          <li>Interventions à Parakou et ses environs</li>
-          <li>Dépannage informatique sur site</li>
-          <li>Assistance rapide pour les entreprises (astreinte possible)</li>
-          <li>Frais de déplacement communiqués avant toute intervention</li>
-        </ul>
-        <p><strong>Réactivité :</strong> un technicien chez vous sous 24h ouvrées.</p>
-      </div>
-      <div class="image">
-        <img src="depannage-domicile-entreprise.jpeg" alt="Dépannage à domicile et en entreprise" loading="lazy" />
-      </div>
-    </div>
-  </section>
+            // === MOBILE NAV TOGGLE ===
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
 
-  <!-- ===== FAQ (ACCORDÉON) ===== -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <h2>❓ Foire aux questions</h2>
-      <p class="desc">Cliquez sur une question pour afficher la réponse.</p>
+            // Close mobile nav on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
 
-      <!-- Réparation -->
-      <details class="faq-item">
-        <summary>Quels sont les délais pour une réparation de téléphone ?</summary>
-        <div class="answer">
-          <!-- Correction : "sous 3 à 6" devient "entre 3 et 6" -->
-          En atelier à Parakou, une réparation standard (écran, batterie, connectique) est réalisée en 3 à 6 heures. Pour les pannes complexes, un diagnostic est effectué et le délai est communiqué sous 24 heures.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>Quelles marques de téléphones sont réparées ?</summary>
-        <div class="answer">
-          Toutes les marques courantes : Samsung, Apple (iPhone), Xiaomi, Tecno, Infinix, Oppo, Huawei, etc. L’atelier intervient aussi bien sur les pannes matérielles que logicielles.
-        </div>
-      </details>
+            // === SCROLL REVEAL (Intersection Observer) ===
+            const revealElements = document.querySelectorAll('.reveal, .service-card, .why-item');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            };
 
-      <!-- Maintenance IT -->
-      <details class="faq-item">
-        <summary>Proposez-vous des contrats de maintenance pour les entreprises ?</summary>
-        <div class="answer">
-          Oui. Des contrats mensuels ou trimestriels incluent l’audit du parc, les sauvegardes automatiques, la maintenance préventive et une astreinte pour les urgences.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>Quels types d’interventions en maintenance informatique ?</summary>
-        <div class="answer">
-          <!-- Correction : "mises à jour systèmes" devient "mises à jour des systèmes" -->
-          Dépannage matériel (PC, serveurs), administration réseau (WiFi, routeurs), lutte contre les virus, migration de données et mises à jour des systèmes.
-        </div>
-      </details>
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-      <!-- Développement Web -->
-      <details class="faq-item">
-        <summary>Quels types de sites web PHENIX CONNECT peut-il créer ?</summary>
-        <div class="answer">
-          Des vitrines, blogs, boutiques en ligne et plateformes sur mesure. Les technologies utilisées sont WordPress, Laravel et le HTML/CSS/JavaScript pur, avec une adaptation systématique aux mobiles.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>Combien de temps faut-il pour créer un site web professionnel ?</summary>
-        <div class="answer">
-          Un site vitrine standard est livré en 2 à 3 semaines. Une boutique ou une plateforme complexe nécessite 4 à 8 semaines. Un planning détaillé est fourni en amont.
-        </div>
-      </details>
+            revealElements.forEach(el => revealObserver.observe(el));
 
-      <!-- Dépannage à domicile / entreprise -->
-      <details class="faq-item">
-        <summary>Proposez-vous un dépannage à domicile ou en entreprise ?</summary>
-        <div class="answer">
-          Oui. Un technicien se déplace à Parakou et ses environs pour les interventions complexes ou urgentes. Les frais de déplacement sont précisés lors de la prise de rendez-vous.
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>Quels sont les horaires d’ouverture de l’établissement ?</summary>
-        <div class="answer">
-          Du lundi au vendredi de 8h00 à 19h00, et le samedi de 10h00 à 16h00. L’établissement est fermé le dimanche.
-        </div>
-      </details>
-    </div>
-  </section>
+            // === CONTACT FORM ===
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
 
-  <!-- ===== CONTACT / FOOTER ===== -->
-  <footer class="footer" id="contact">
-    <p><strong>PHENIX CONNECT</strong> – RCCM RB/PKO/26 A 29751</p>
-    <p>Dokparou, Parakou, Bénin</p>
-    <p>
-      📞 01 66 19 10 00 &nbsp;|&nbsp; 
-      ✉️ <a href="mailto:phenixconnect26@gmail.com">phenixconnect26@gmail.com</a>
-    </p>
-    <small>© 2026 Tous droits réservés – Mentions légales disponibles sur demande.</small>
-  </footer>
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
 
-  <!-- ===== BOUTON WHATSAPP FLOTTANT ===== -->
-  <a href="https://wa.me/22966191000?text=Bonjour%20PHENIX%20CONNECT%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services."
-     class="whatsapp-float"
-     target="_blank"
-     rel="noopener noreferrer">
-    <span class="icon">💬</span>
-    <span class="text">WhatsApp</span>
-  </a>
+                // Basic validation
+                const name = contactForm.querySelector('input[name="name"]');
+                const email = contactForm.querySelector('input[name="email"]');
+                const service = contactForm.querySelector('select[name="service"]');
+                const message = contactForm.querySelector('textarea[name="message"]');
 
+                let isValid = true;
+                [name, email, service, message].forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = 'rgba(255, 80, 80, 0.6)';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = 'var(--border-subtle)';
+                    }
+                });
+
+                // Email regex check
+                if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                    email.style.borderColor = 'rgba(255, 80, 80, 0.6)';
+                    isValid = false;
+                }
+
+                if (!isValid) return;
+                // Prepare a real email draft in the visitor's email client
+                const phone = contactForm.querySelector('input[name="phone"]').value.trim();
+                const subject = `Demande de contact — ${service.value}`;
+                const body = [
+                    `Nom : ${name.value.trim()}`,
+                    `Email : ${email.value.trim()}`,
+                    `Téléphone : ${phone || 'Non renseigné'}`,
+                    `Service : ${service.options[service.selectedIndex].text}`,
+                    '',
+                    'Projet / message :',
+                    message.value.trim()
+                ].join('
+');
+                window.location.href = `mailto:contact@phenixconnect.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                formSuccess.innerHTML = '<i class="fa-solid fa-envelope"></i> Votre messagerie va s’ouvrir pour envoyer votre demande.';
+                formSuccess.classList.add('show');
+                setTimeout(() => formSuccess.classList.remove('show'), 7000);
+            });
+
+            // Real-time validation reset
+            contactForm.querySelectorAll('input, textarea, select').forEach(field => {
+                field.addEventListener('input', () => {
+                    field.style.borderColor = 'var(--border-subtle)';
+                });
+            });
+
+            // === SMOOTH SCROLL (fallback for older browsers) ===
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = navbar.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window
+                            .pageYOffset - navHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // === HERO STATS COUNTER ANIMATION ===
+            const stats = document.querySelectorAll('.hero-stat-value');
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const text = el.textContent;
+                        const match = text.match(/([\d.]+)/);
+                        if (match) {
+                            const targetValue = parseFloat(match[1]);
+                            const suffix = text.replace(match[1], '');
+                            const prefix = text.replace(match[1], '').replace(suffix, '');
+
+                            if (targetValue === Math.floor(targetValue) && targetValue <
+                                200) {
+                                // Integer counter
+                                let current = 0;
+                                const increment = Math.ceil(targetValue / 40);
+                                const interval = setInterval(() => {
+                                    current += increment;
+                                    if (current >= targetValue) {
+                                        current = targetValue;
+                                        clearInterval(interval);
+                                    }
+                                    el.textContent = prefix + current + suffix;
+                                }, 30);
+                            } else {
+                                // For 98% etc, use decimal
+                                let current = 0;
+                                const decimals = targetValue % 1 !== 0 ? 1 : 0;
+                                const increment = Math.max(targetValue / 60, decimals ? 0.1 : 1);
+                                const interval = setInterval(() => {
+                                    current += increment;
+                                    if (current >= targetValue) {
+                                        current = targetValue;
+                                        clearInterval(interval);
+                                    }
+                                    el.textContent = prefix + current.toFixed(decimals) +
+                                        suffix;
+                                }, 25);
+                            }
+                        }
+                        statsObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            stats.forEach(stat => statsObserver.observe(stat));
+        })();
+    </script>
 </body>
 </html>
