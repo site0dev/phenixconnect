@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PHENIX CONNECT accompagne entreprises, commerces, organisations et professionnels dans leurs projets web, applications, informatique et téléphonie au Bénin et à distance.">
+  <meta name="description" content="PHENIX CONNECT accompagne entreprises, commerces, organisations et professionnels dans leurs projets web, applications, informatique et téléphonie au Bénin, en Afrique, en Europe et à distance.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.phenixconnect.online/">
@@ -40,6 +40,25 @@
     .btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 24px rgba(15,118,110,.2)}
     .btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
     .btn-light{background:#fff;border-color:var(--line);color:var(--text)}
+    
+    /* Style spécifique pour le bouton WhatsApp avec icône */
+    .btn-whatsapp{
+      background:#25D366;
+      color:#fff;
+      box-shadow:0 10px 24px rgba(37,211,102,.25);
+    }
+    .btn-whatsapp:hover{
+      background:#1eaa53;
+      color:#fff;
+      transform:translateY(-1px);
+    }
+    .btn-whatsapp svg{
+      width:20px;
+      height:20px;
+      fill:currentColor;
+      flex-shrink:0;
+    }
+
     section{padding:92px 0}
     .hero{padding:95px 0 80px;background:radial-gradient(circle at 85% 10%,#dff8f4 0,transparent 35%),linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
@@ -52,14 +71,14 @@
     .hero-card h3{font-size:1.35rem;margin-bottom:12px}
     .hero-card p{font-size:.95rem;margin:0 0 20px}
     
-    .mini-list{display:grid;gap:12px}
-    .mini-list details{border:1px solid var(--line);border-radius:14px;background:#fbfefd;overflow:hidden;transition:.2s}
-    .mini-list details[open]{background:#fff;border-color:var(--accent);box-shadow:0 4px 15px rgba(15,118,110,.08)}
-    .mini-list summary{padding:13px 14px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none}
-    .mini-list summary::-webkit-details-marker{display:none}
-    .mini-list summary::after{content:'+';font-size:1.2rem;color:var(--primary);font-weight:900;transition:transform .2s}
-    .mini-list details[open] summary::after{content:'-'}
-    .mini-list .detail-content{padding:0 14px 14px;font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:6px;padding-top:10px}
+    .mini-list, .faq-list{display:grid;gap:12px}
+    .mini-list details, .faq-list details{border:1px solid var(--line);border-radius:14px;background:#fbfefd;overflow:hidden;transition:.2s}
+    .mini-list details[open], .faq-list details[open]{background:#fff;border-color:var(--accent);box-shadow:0 4px 15px rgba(15,118,110,.08)}
+    .mini-list summary, .faq-list summary{padding:16px 18px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none}
+    .mini-list summary::-webkit-details-marker, .faq-list summary::-webkit-details-marker{display:none}
+    .mini-list summary::after, .faq-list summary::after{content:'+';font-size:1.3rem;color:var(--primary);font-weight:900;transition:transform .2s}
+    .mini-list details[open] summary::after, .faq-list details[open] summary::after{content:'-'}
+    .mini-list .detail-content, .faq-list .detail-content{padding:0 18px 18px;font-size:.94rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:6px;padding-top:12px}
     .mini-list ul{margin-left:18px;margin-top:6px}
     .mini-list li{margin-bottom:6px}
 
@@ -74,7 +93,6 @@
     .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
     .card:hover .card-img img{transform:scale(1.05)}
     
-    /* Conteneur spécifique pour le logo MTN MoMo */
     .card-img.mtn-bg{background:#FFCC00}
     .mtn-logo-container{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:20px}
     .mtn-logo-container svg{max-width:180px;max-height:100px;width:100%;height:auto}
@@ -192,7 +210,12 @@
       <a href="#apropos">À propos</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-primary" href="https://wa.me/2290147602848" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/2290147602848" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.191 8.191 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.31.2-.56.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.18-.48-.3z"/>
+        </svg>
+        WhatsApp
+      </a>
     </nav>
   </div>
 </header>
@@ -208,7 +231,7 @@
       <p>
         PHENIX CONNECT accompagne entreprises, commerces, organisations, professionnels
         et particuliers dans leurs projets web, applications, informatique et téléphonie,
-        au Bénin et à distance.
+        au Bénin, en Afrique, en Europe et à distance.
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="#contact">Parler de votre projet</a>
@@ -276,7 +299,6 @@
       <p>Des prestations complémentaires pour accompagner vos besoins numériques, informatiques et techniques.</p>
     </div>
     <div class="grid">
-      <!-- 1. Dev Web -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code source HTML CSS sur un écran de programmation">
@@ -288,7 +310,6 @@
         </div>
       </article>
 
-      <!-- 2. Gestion -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Tableau de bord de gestion et graphiques d'analyse">
@@ -300,7 +321,6 @@
         </div>
       </article>
 
-      <!-- 3. Mobile -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Application mobile sur smartphone dans la main">
@@ -312,7 +332,6 @@
         </div>
       </article>
 
-      <!-- 4. Assistance info -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=600&q=80" alt="Assistance et support informatique sur ordinateur de bureau">
@@ -324,7 +343,6 @@
         </div>
       </article>
 
-      <!-- 5. Maintenance info -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80" alt="Réparation de composants électroniques et carte mère PC">
@@ -336,7 +354,6 @@
         </div>
       </article>
 
-      <!-- 6. Téléphonie -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=600&q=80" alt="Démontage et réparation de téléphone portable avec outils">
@@ -348,7 +365,6 @@
         </div>
       </article>
 
-      <!-- 7. Visibilité -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=600&q=80" alt="Recherche web et présence locale sur tablette">
@@ -360,7 +376,6 @@
         </div>
       </article>
 
-      <!-- 8. IA & Numérique -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="Réseaux de neurones et intelligence artificielle">
@@ -372,7 +387,6 @@
         </div>
       </article>
 
-      <!-- 9. Matériel -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80" alt="Ordinateur portable professionnel en vente ou fourniture">
@@ -394,7 +408,6 @@
       <p>Nous pouvons développer une solution sur mesure lorsque les outils existants ne correspondent pas suffisamment à votre fonctionnement.</p>
     </div>
     <div class="grid solutions">
-      <!-- Couture -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Mètre ruban, ciseaux et tissu dans un atelier de couture">
@@ -405,7 +418,6 @@
         </div>
       </article>
 
-      <!-- Monnaie Mobile Bénin : Logo MTN MoMo en SVG vectoriel pur (S'affiche à 100% sans bug) -->
       <article class="card">
         <div class="card-img mtn-bg">
           <div class="mtn-logo-container">
@@ -421,7 +433,6 @@
         </div>
       </article>
 
-      <!-- Commerce -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=600&q=80" alt="Comptoir de vente et encaissement en boutique">
@@ -432,7 +443,6 @@
         </div>
       </article>
 
-      <!-- Sur mesure -->
       <article class="card">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Conception de maquettes de projet web sur mesure">
@@ -462,7 +472,7 @@
       <article class="card">
         <div class="card-body">
           <h3>Une capacité à distance</h3>
-          <p>Nos prestations numériques peuvent accompagner des clients au Bénin et en Europe.</p>
+          <p>Nos prestations numériques peuvent accompagner des clients au Bénin, en Afrique et en Europe.</p>
         </div>
       </article>
       <article class="card">
@@ -550,11 +560,35 @@
       <h2>Questions fréquentes</h2>
       <p>Quelques réponses essentielles avant votre prise de contact.</p>
     </div>
-    <div class="grid">
-      <article class="card"><div class="card-body"><h3>Quels sont vos tarifs ?</h3><p>Les tarifs ne sont pas affichés publiquement. Ils dépendent de la nature, des fonctionnalités et des besoins du projet. Contactez-nous pour obtenir un devis.</p></div></article>
-      <article class="card"><div class="card-body"><h3>Travaillez-vous à distance ?</h3><p>Oui. Les projets web et numériques peuvent être réalisés à distance, notamment pour des clients au Bénin et en Europe.</p></div></article>
-      <article class="card"><div class="card-body"><h3>Pouvez-vous créer une solution sur mesure ?</h3><p>Oui. Les projets peuvent être conçus sur mesure lorsque les besoins nécessitent des fonctionnalités spécifiques.</p></div></article>
-      <article class="card"><div class="card-body"><h3>Comment obtenir un devis ?</h3><p>Présentez votre besoin via WhatsApp ou le formulaire de contact. Une proposition adaptée pourra ensuite être établie.</p></div></article>
+    
+    <div class="faq-list">
+      <details>
+        <summary>Quels sont vos tarifs ?</summary>
+        <div class="detail-content">
+          <p>Les tarifs ne sont pas affichés publiquement. Ils dépendent de la nature, des fonctionnalités et des besoins spécifiques de votre projet. Contactez-nous pour obtenir un devis personnalisé.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Travaillez-vous à distance ?</summary>
+        <div class="detail-content">
+          <p>Oui. Les projets web et numériques peuvent être réalisés à distance, notamment pour des clients au Bénin, en Afrique et en Europe.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Pouvez-vous créer une solution sur mesure ?</summary>
+        <div class="detail-content">
+          <p>Oui. Les projets peuvent être conçus entièrement sur mesure lorsque vos besoins nécessitent des fonctionnalités spécifiques ou un fonctionnement particulier.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Comment obtenir un devis ?</summary>
+        <div class="detail-content">
+          <p>Présentez votre besoin via WhatsApp ou le formulaire de contact en bas de page. Une proposition adaptée pourra ensuite être établie rapidement.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -609,7 +643,7 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie pour vos projets au Bénin et à distance.</p></div>
+      <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie pour vos projets au Bénin, en Afrique, en Europe et à distance.</p></div>
       <div><h3>Navigation</h3><p><a href="#services">Services</a><br><a href="#realisations">Réalisations</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
       <div>
         <h3>Contact</h3>
