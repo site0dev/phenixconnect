@@ -1,607 +1,1829 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PHENIX CONNECT accompagne entreprises et professionnels dans leurs projets web, applications et maintenance au Bénin et à distance.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://www.phenixconnect.online/">
-  <title>PHENIX CONNECT — Solutions numériques & informatiques</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    
+    <!-- ========== SEO ULTRA SOPHISTIQUÉ (FRANCE & BELGIQUE) ========== -->
+    <title>Premium Électronique | PC, Smartphones & Appareils Photo – France & Belgique</title>
+    <meta name="description" content="Achetez vos équipements high-tech au meilleur prix en France et en Belgique. Sélection de PC portables, iPhones, smartphones Android et appareils photo avec livraison rapide." />
+    <meta name="keywords" content="e-commerce high-tech france, achat smartphone belgique, pc portable france, iphone pas cher belgique, appareil photo sony canon, livraison high tech bruxelles paris" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://premium-electronique.com/" />
 
-  <style>
-    :root{
-      --primary:#0f766e;
-      --primary-dark:#115e59;
-      --accent:#14b8a6;
-      --text:#102a2a;
-      --muted:#5f7373;
-      --bg:#f7fbfa;
-      --card:#ffffff;
-      --line:#e2eceb;
-      --shadow:0 10px 30px rgba(15,118,110,.08);
-      --radius:16px;
+    <!-- Hreflang pour le ciblage France & Belgique -->
+    <link rel="alternate" hreflang="fr-FR" href="https://premium-electronique.com/" />
+    <link rel="alternate" hreflang="fr-BE" href="https://premium-electronique.com/be-fr/" />
+    <link rel="alternate" hreflang="nl-BE" href="https://premium-electronique.com/be-nl/" />
+    <link rel="alternate" hreflang="x-default" href="https://premium-electronique.com/" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="fr_BE" />
+    <meta property="og:title" content="Premium Électronique – High-Tech en France & Belgique" />
+    <meta property="og:description" content="Découvrez les derniers smartphones, ordinateurs et appareils photo. Commandez en toute sécurité avec livraison en France et Belgique." />
+    <meta property="og:url" content="https://premium-electronique.com/" />
+    <meta property="og:site_name" content="Premium Électronique" />
+    <meta property="og:image" content="https://premium-electronique.com/og-cover.jpg" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Premium Électronique – High-Tech France & Belgique" />
+    <meta name="twitter:description" content="Commandez votre matériel high-tech livré rapidement chez vous en France ou en Belgique." />
+
+    <!-- Geo-Targeting FR & BE -->
+    <meta name="geo.region" content="FR;BE" />
+    <meta name="geo.placename" content="Paris; Bruxelles" />
+
+    <!-- DONNÉES STRUCTURÉES SCHEMA.ORG (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ElectronicsStore",
+      "name": "Premium Électronique",
+      "image": "https://premium-electronique.com/og-cover.jpg",
+      "description": "Boutique en ligne spécialisée dans la vente de smartphones, ordinateurs portables et matériel photo pour la France et la Belgique.",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Bank Transfer, Credit Card",
+      "priceRange": "€€-€€€",
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Country", "name": "Belgium" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "infopreniumelectronique@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["French", "Dutch", "English"]
+      }
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.5;content-visibility:auto}
-    a{text-decoration:none;color:inherit}
-    button,input,textarea,select{font:inherit}
-    .container{width:min(1160px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
-    .nav{height:65px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{font-weight:900;letter-spacing:.05em;font-size:1.05rem}
-    .brand span{color:var(--primary)}
-    .navlinks{display:flex;gap:18px;align-items:center}
-    .navlinks a{font-size:.9rem;font-weight:600;color:#385050}
-    .navlinks a:hover{color:var(--primary)}
-    .menu{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:700;cursor:pointer}
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-primary:hover{background:var(--primary-dark)}
-    .btn-light{background:#fff;border-color:var(--line);color:var(--text)}
+    </script>
     
-    .btn-whatsapp{background:#25D366;color:#fff}
-    .btn-whatsapp:hover{background:#1eaa53;color:#fff}
-    .btn-whatsapp svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+    <!-- Pré-connexions pour un chargement ultra-rapide -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://gvfwetjrsnjvjpyhipqg.supabase.co" crossorigin />
 
-    section{padding:50px 0}
-    .hero{padding:50px 0 40px;background:linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
-    h1{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.03em}
-    h1 span{color:var(--primary)}
-    .hero p{font-size:1rem;color:var(--muted);margin:16px 0 22px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-    .hero-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
-    .hero-card h3{font-size:1.2rem;margin-bottom:10px}
-    .hero-card p{font-size:.9rem;margin-bottom:15px}
-    
-    .mini-list, .faq-list{display:grid;gap:10px}
-    .mini-list details, .faq-list details{border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
-    .mini-list summary, .faq-list summary{padding:12px 15px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
-    .mini-list summary::-webkit-details-marker, .faq-list summary::-webkit-details-marker{display:none}
-    .mini-list summary::after, .faq-list summary::after{content:'+';font-size:1.1rem;color:var(--primary);font-weight:900}
-    .mini-list details[open] summary::after, .faq-list details[open] summary::after{content:'-'}
-    .mini-list .detail-content, .faq-list .detail-content{padding:0 15px 15px;font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:4px;padding-top:10px}
-    .mini-list ul{margin-left:16px;margin-top:4px}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
 
-    .section-head{max-width:700px;margin-bottom:30px}
-    .section-head h2{font-size:clamp(1.6rem,3.5vw,2.4rem);line-height:1.15}
-    .section-head p{color:var(--muted);margin-top:8px;font-size:.95rem}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
-    .card-img{width:100%;height:150px;background:#e2eceb;display:flex;align-items:center;justify-content:center}
-    .card-img img{width:100%;height:100%;object-fit:cover}
-    
-    .card-img.mtn-bg{background:#FFCC00}
-    .mtn-logo-container{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:15px}
-    .mtn-logo-container svg{max-width:140px;max-height:80px;width:100%;height:auto}
+    <style>
+        /* ========== PALETTE : VERT FORÊT + PÊCHE ========== */
+        :root {
+            --primary: #1e3a2f;
+            --primary-light: #2d6a4f;
+            --primary-dark: #0f2219;
+            --accent: #f4a261;
+            --accent-hover: #e76f51;
+            --text: #1a2e1a;
+            --text-light: #f0fdf4;
+            --bg: #f0fdf4;
+            --card-bg: #ffffff;
+            --shadow: 0 12px 40px rgba(45, 106, 79, 0.15);
+            --radius: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --muted: #6b8c7b;
+            --border: #d1e0d3;
+        }
 
-    .card-body{padding:18px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
-    .card h3{font-size:1.05rem;margin-bottom:6px}
-    .card p{color:var(--muted);font-size:.9rem}
-    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f0f6f5;color:#496060}
-    
-    .band{background:#102a2a;color:#fff}
-    .band .section-head p{color:#bdd0ce}
-    .band .card{background:#173837;border-color:#2b504e}
-    .band .card p{color:#bdd0ce}
-    .solutions, .projects{grid-template-columns:repeat(2,1fr)}
-    
-    .project .card-img{height:160px}
-    .project-body{padding:18px}
-    .project-body p{color:var(--muted);font-size:.9rem}
-    .project-body a{display:inline-block;margin-top:10px;color:var(--primary);font-weight:700;font-size:.9rem}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-    .steps{counter-reset:step}
-    .step{position:relative;padding:20px;padding-left:55px}
-    .step:before{counter-increment:step;content:counter(step);position:absolute;left:15px;top:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:800;font-size:.85rem}
-    
-    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
-    .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-    .contact-list{display:grid;gap:12px;margin-top:18px}
-    .contact-item{padding:12px;border:1px solid var(--line);border-radius:10px}
-    .contact-item small{display:block;color:var(--muted);font-size:.78rem}
-    .contact-item a{color:var(--primary);font-weight:700}
-    
-    .map-box{margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid var(--line);height:180px;background:#e2eceb;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px}
-    .map-box button{background:var(--primary);color:#fff;border:0;padding:8px 14px;border-radius:8px;font-size:.85rem;cursor:pointer;font-weight:700}
+        input, textarea, select {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
 
-    form{display:grid;gap:12px}
-    label{font-weight:700;font-size:.85rem}
-    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d6e3e1;border-radius:8px;outline:none;background:#fff;color:var(--text)}
-    textarea{min-height:100px;resize:vertical}
-    .consent{font-size:.75rem;color:var(--muted)}
-    footer{background:#0b2020;color:#b9ccca;padding:35px 0 20px}
-    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px;font-size:.9rem}
-    footer h3{color:#fff;margin-bottom:10px;font-size:1rem}
-    footer a:hover{color:#fff}
-    .copyright{border-top:1px solid #24403e;margin-top:25px;padding-top:15px;font-size:.78rem}
-    
-    #ai-button{
-      position:fixed;right:18px;bottom:18px;z-index:100;width:52px;height:52px;border:0;border-radius:50%;
-      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;
-    }
-    #ai-button svg{width:24px;height:24px;fill:currentColor}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            font-display: swap;
+        }
 
-    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15);display:none;flex-direction:column;overflow:hidden}
-    #ai-panel.open{display:flex}
-    .ai-head{padding:14px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
-    .ai-head small{display:block;opacity:.85;font-size:.75rem}
-    .ai-close{background:none;border:0;color:#fff;font-size:1.2rem;cursor:pointer}
-    #messages{flex:1;overflow:auto;padding:14px;background:#f7fbfa;display:flex;flex-direction:column;gap:8px}
-    .msg{max-width:88%;padding:8px 11px;border-radius:10px;font-size:.85rem;white-space:pre-wrap}
-    .bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
-    .user{background:var(--primary);color:#fff;align-self:flex-end}
-    .quick{display:flex;gap:5px;flex-wrap:wrap;padding:8px 10px;border-top:1px solid var(--line)}
-    .quick button{border:1px solid #cfe1df;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
-    .ai-input{display:flex;gap:6px;padding:8px 10px;border-top:1px solid var(--line)}
-    .ai-input input{margin:0;padding:8px}
-    .ai-input button{border:0;border-radius:8px;background:var(--primary);color:#fff;padding:0 12px;cursor:pointer;font-size:.85rem}
-    .note{font-size:.7rem;color:var(--muted);padding:0 10px 6px}
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+        }
+        .logo i { color: var(--accent); }
+        .header-actions { display: flex; align-items: center; gap: 0.8rem; }
+        .support-btn {
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .support-btn:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+            border-color: var(--accent);
+        }
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.6rem;
+            transition: var(--transition);
+            color: white;
+            padding: 0.3rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cart-icon:hover {
+            color: var(--accent);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: #e76f51;
+            color: white;
+            border-radius: 50%;
+            padding: 0 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            min-width: 22px;
+            text-align: center;
+            line-height: 22px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(231, 111, 81, 0.5);
+        }
 
-    @media(max-width:850px){
-      .navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:#fff;padding:15px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
-      .navlinks.show{display:flex}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media(max-width:580px){
-      section{padding:35px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
-      .actions .btn{width:100%}.footer-grid{grid-template-columns:1fr}
-    }
-  </style>
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-radius: 0 0 50px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(244, 162, 97, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+        .hero h1 i { color: var(--accent); }
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0.6rem auto 0;
+            position: relative;
+        }
+
+        .shop-container {
+            max-width: 1400px;
+            margin: 0 auto 2.5rem;
+            padding: 0 1rem;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        .categories button {
+            background: white;
+            border: 2px solid var(--border);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--muted);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .categories button:hover {
+            border-color: var(--accent);
+            color: var(--primary);
+            background: #fef7ee;
+            transform: translateY(-2px);
+        }
+        .categories button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(30, 58, 47, 0.25);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.8rem;
+        }
+        .product-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform var(--transition), box-shadow var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(209, 224, 211, 0.3);
+            content-visibility: auto;
+            contain-intrinsic-size: 350px;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 48px rgba(45, 106, 79, 0.18);
+        }
+        .product-image {
+            height: 200px;
+            background: #f8faf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s;
+        }
+        .product-card:hover .product-image img { transform: scale(1.05); }
+        .product-info {
+            padding: 1.2rem 1.2rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+            line-height: 1.3;
+            min-height: 2.8rem;
+            color: var(--primary);
+        }
+        .product-category {
+            font-size: 0.7rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.3rem;
+        }
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0.2rem 0 0.6rem;
+        }
+        .add-to-cart {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.7rem 0.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: auto;
+            font-size: 0.9rem;
+            min-height: 48px;
+        }
+        .add-to-cart:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+            box-shadow: 0 4px 16px rgba(244, 162, 97, 0.4);
+        }
+
+        /* ===== CART SIDEBAR ===== */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 420px;
+            max-width: 100%;
+            height: 100%;
+            background: white;
+            box-shadow: -8px 0 40px rgba(0,0,0,0.10);
+            transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            padding: 1.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .cart-sidebar.open { right: 0; }
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .cart-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--primary);
+        }
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 2.2rem;
+            cursor: pointer;
+            color: #94a3b8;
+            transition: var(--transition);
+            padding: 0 0.5rem;
+        }
+        .close-cart:hover { color: #e76f51; transform: rotate(90deg); }
+        .cart-items {
+            flex: 1;
+            list-style: none;
+            margin-bottom: 1rem;
+            overflow-y: auto;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .cart-item-info { flex: 1; min-width: 100px; }
+        .cart-item-name { font-weight: 500; font-size: 0.95rem; color: var(--primary); }
+        .cart-item-price { font-size: 0.85rem; color: var(--muted); }
+        .cart-item-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .cart-item-actions button {
+            background: #f1f5f1;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cart-item-actions button:hover { background: #d1e0d3; }
+        .cart-item-actions .remove-btn {
+            background: transparent;
+            color: #e76f51;
+            width: auto;
+            border-radius: 0;
+            font-size: 1rem;
+            padding: 0 4px;
+        }
+        .cart-item-actions .remove-btn:hover { background: #fde8e0; }
+        .cart-item-actions span { min-width: 20px; text-align: center; font-weight: 600; }
+        .cart-total {
+            border-top: 2px solid var(--border);
+            padding-top: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            color: var(--primary);
+        }
+        .checkout-btn {
+            background: var(--accent);
+            color: var(--primary-dark);
+            border: none;
+            padding: 0.9rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 0.8rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .checkout-btn:hover { background: var(--accent-hover); box-shadow: 0 4px 16px rgba(244, 162, 97, 0.35); }
+        .empty-cart { text-align: center; color: var(--muted); padding: 2.5rem 0; font-size: 1rem; }
+
+        /* ===== OVERLAY ===== */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 58, 47, 0.5);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 999;
+        }
+        .overlay.active { opacity: 1; visibility: visible; }
+
+        /* ===== PAYMENT MODAL ===== */
+        .payment-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+            z-index: 1100;
+            max-width: 520px;
+            width: 92%;
+            max-height: 95vh;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+        }
+        .payment-modal.open { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+        .payment-modal h2 {
+            font-size: 1.7rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+        }
+        .payment-modal .iban-box {
+            background: #f0fdf4;
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0.8rem 0 0.6rem;
+            word-break: break-all;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .payment-modal .iban-box span { flex: 1; }
+        .payment-modal .copy-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.35rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+        .payment-modal .copy-btn:hover { background: var(--accent); color: var(--primary-dark); }
+        .payment-modal .bank-details {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin: 0.2rem 0 1rem;
+            line-height: 1.6;
+        }
+        .payment-modal .bank-details strong { color: var(--primary); }
+        .upload-section { margin: 1rem 0 1.2rem; border-top: 2px dashed var(--border); padding-top: 1rem; }
+        .upload-section label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+        .upload-section .helper { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem; }
+        .upload-section input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 0.6rem;
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            background: #f8faf8;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+        .upload-section input[type="file"]:hover { border-color: var(--primary); background: #f0fdf4; }
+        .upload-section .preview-container {
+            margin-top: 0.6rem;
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .upload-section .preview-container img {
+            max-height: 70px;
+            max-width: 100px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            object-fit: cover;
+        }
+        .upload-section .preview-container .file-name { font-size: 0.8rem; color: var(--muted); word-break: break-all; }
+        .payment-modal .close-payment-btn {
+            background: var(--accent);
+            color: var(--primary-dark);
+            border: none;
+            padding: 0.8rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .payment-modal .close-payment-btn:hover { background: var(--accent-hover); box-shadow: 0 4px 16px rgba(244, 162, 97, 0.3); }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.4s;
+            z-index: 2000;
+            font-weight: 500;
+            pointer-events: none;
+            font-size: 0.95rem;
+            max-width: 92%;
+            text-align: center;
+        }
+        .toast.show { opacity: 1; }
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+        }
+        footer span { color: white; }
+
+        /* ===== ADMIN STYLES ===== */
+        #adminPanel { display: none; max-width: 1400px; margin: 2rem auto; padding: 0 1rem; }
+        #adminPanel.active { display: block; }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .admin-header h2 { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .admin-header .btn-back {
+            background: var(--accent);
+            color: var(--primary-dark);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .admin-header .btn-back:hover { background: var(--accent-hover); }
+
+        .admin-settings {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+        .admin-settings h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary); }
+        .admin-settings .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .admin-settings .settings-grid label {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .admin-settings .settings-grid input {
+            margin-top: 0.2rem;
+            padding: 0.5rem 0.8rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .admin-settings .settings-grid input:focus { outline: none; border-color: var(--primary); }
+        .admin-settings .save-settings-btn {
+            margin-top: 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .admin-settings .save-settings-btn:hover { background: var(--accent); color: var(--primary-dark); }
+
+        .admin-products { background: white; border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
+        .admin-products h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary); }
+        .admin-product-item {
+            display: grid;
+            grid-template-columns: 80px 1fr 1fr 100px 120px 140px auto;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .admin-product-item .admin-img-preview {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #f1f5f1;
+        }
+        .admin-product-item input, .admin-product-item select {
+            padding: 0.3rem 0.5rem;
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            width: 100%;
+        }
+        .admin-product-item input:focus, .admin-product-item select:focus { outline: none; border-color: var(--primary); }
+        .admin-product-item .admin-file-input { font-size: 0.75rem; padding: 0.2rem; }
+        .admin-product-item .admin-save-product {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+        .admin-product-item .admin-save-product:hover { background: var(--accent); color: var(--primary-dark); }
+        .admin-product-item .admin-remove-product {
+            background: #e76f51;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.75rem;
+        }
+        .admin-product-item .admin-remove-product:hover { background: #d45a3a; }
+
+        /* ===== ADMIN LOGIN MODAL ===== */
+        .admin-login-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+            z-index: 1200;
+            max-width: 400px;
+            width: 92%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+        }
+        .admin-login-modal.open { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+        .admin-login-modal h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+        }
+        .admin-login-modal label { display: block; margin-top: 1rem; font-weight: 500; color: var(--muted); }
+        .admin-login-modal input {
+            width: 100%;
+            padding: 0.6rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            margin-top: 0.2rem;
+            font-size: 0.9rem;
+        }
+        .admin-login-modal input:focus { outline: none; border-color: var(--primary); }
+        .admin-login-modal .login-btn {
+            margin-top: 1.5rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        .admin-login-modal .login-btn:hover { background: var(--accent); color: var(--primary-dark); }
+        .admin-login-modal .login-error { color: #e76f51; font-size: 0.85rem; margin-top: 0.5rem; display: none; }
+        .admin-login-modal .login-error.show { display: block; }
+        .admin-login-modal .close-login {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #94a3b8;
+            transition: var(--transition);
+        }
+        .admin-login-modal .close-login:hover { color: #e76f51; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            .logo { font-size: 1.2rem; }
+            .support-btn { font-size: 0.7rem; padding: 0.2rem 0.6rem; }
+            .cart-icon { width: 40px; height: 40px; font-size: 1.4rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+            .product-image { height: 140px; }
+            .product-name { font-size: 0.85rem; min-height: 2.2rem; }
+            .product-price { font-size: 1.1rem; }
+            .add-to-cart { font-size: 0.75rem; min-height: 38px; }
+            .cart-sidebar { width: 100%; right: -100%; padding: 1rem; }
+            .payment-modal { padding: 1.2rem; width: 95%; }
+            .admin-product-item { grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 1rem 0; }
+            .admin-product-item .admin-img-preview { grid-column: 1 / -1; width: 80px; height: 80px; margin: 0 auto; }
+            .admin-product-item input, .admin-product-item select { width: 100%; }
+            .admin-product-item .admin-save-product, .admin-product-item .admin-remove-product { width: 100%; justify-self: stretch; }
+            .admin-settings .settings-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 420px) {
+            .products-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+            .product-image { height: 110px; }
+            .product-name { font-size: 0.75rem; min-height: 1.8rem; }
+            .product-price { font-size: 0.95rem; }
+            .add-to-cart { font-size: 0.65rem; min-height: 34px; }
+        }
+        .loading-spinner { grid-column: 1 / -1; text-align: center; padding: 3rem 0; color: var(--muted); }
+        .loading-spinner i { font-size: 2rem; margin-bottom: 0.5rem; display: block; color: var(--primary); }
+
+        /* ===== DELIVERY SECTION ===== */
+        .delivery-section { margin: 1rem 0 1.2rem; border-bottom: 2px dashed var(--border); padding-bottom: 1rem; }
+        .delivery-section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+        }
+        .delivery-section input {
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            background: #f8faf8;
+            transition: var(--transition);
+            margin-bottom: 0.5rem;
+        }
+        .delivery-section input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.1);
+        }
+        .delivery-section .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        @media (max-width: 700px) { .delivery-section .row { grid-template-columns: 1fr; } }
+    </style>
 </head>
+<body oncontextmenu="return false;">
 
-<body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#accueil">PHENIX <span>CONNECT</span></a>
-    <button class="menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
-    <nav class="navlinks" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#solutions">Solutions</a>
-      <a href="#realisations">Réalisations</a>
-      <a href="#apropos">À propos</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/2290147602848" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.191 8.191 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.31.2-.56.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.18-.48-.3z"/></svg>
-        WhatsApp
-      </a>
-    </nav>
-  </div>
-</header>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="logo" id="adminLogo">
+            <i class="fas fa-microchip"></i> Premium
+        </div>
+        <div class="header-actions">
+            <button class="support-btn" id="supportBtn" aria-label="Contacter le support">
+                <i class="fas fa-headset"></i> Support
+            </button>
+            <div class="cart-icon" id="cartIcon" aria-label="Ouvrir le panier">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
 
-<main>
-<section class="hero" id="accueil">
-  <div class="container hero-grid">
-    <div>
-      <h1>Des solutions <span>numériques utiles</span>, conçues pour vos projets.</h1>
-      <div><span class="eyebrow">Entreprise béninoise · Solutions numériques & informatiques</span></div>
-      <p>PHENIX CONNECT accompagne entreprises, commerces, organisations et particuliers dans leurs projets web, applications, informatique et téléphonie.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#contact">Parler de votre projet</a>
-        <a class="btn btn-light" href="#services">Découvrir nos services</a>
-      </div>
-    </div>
-    
-    <aside class="hero-card">
-      <h3>Un interlocuteur pour vos besoins</h3>
-      <p>Un accompagnement adapté à vos objectifs :</p>
-      <div class="mini-list">
-        <details>
-          <summary>Développement web & applications</summary>
-          <div class="detail-content">
-            <ul>
-              <li><strong>Sites vitrines & d'entreprise :</strong> Présentation claire et professionnelle.</li>
-              <li><strong>Boutiques en ligne :</strong> Catalogue, panier et commandes directes.</li>
-              <li><strong>Applications web & mobiles :</strong> Outils sur mesure sur PC, Android et iOS.</li>
-            </ul>
-          </div>
-        </details>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="heroSection">
+        <h1><i class="fas fa-bolt"></i> Premium Électronique</h1>
+        <p>Les derniers PC, smartphones et appareils photo – Livrés rapidement en France & Belgique.</p>
+    </section>
 
-        <details>
-          <summary>Gestion et solutions métier</summary>
-          <div class="detail-content">
-            <ul>
-              <li><strong>Ateliers & artisans :</strong> Fiches clients, mesures et suivi des commandes.</li>
-              <li><strong>Gestion commerciale :</strong> Stocks, ventes, facturation et reçus.</li>
-              <li><strong>Monnaie électronique :</strong> Registre digital sécurisé pour dépôts/retraits.</li>
-            </ul>
-          </div>
-        </details>
+    <!-- ========== SHOP ========== -->
+    <main class="shop-container" id="shopContainer">
+        <div class="categories" id="categories">
+            <button class="active" data-category="all">Tous</button>
+            <button data-category="pc">PC</button>
+            <button data-category="iphone">iPhone</button>
+            <button data-category="android">Android</button>
+            <button data-category="camera">Appareils photo</button>
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-pulse"></i>
+                Chargement des produits…
+            </div>
+        </div>
+    </main>
 
-        <details>
-          <summary>Assistance & maintenance PC</summary>
-          <div class="detail-content">
-            <ul>
-              <li><strong>Systèmes & Logiciels :</strong> Installation propre de Windows et configurations.</li>
-              <li><strong>Dépannage matériel :</strong> Nettoyage, changement de disques, RAM, écran PC.</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>Maintenance téléphonique</summary>
-          <div class="detail-content">
-            <ul>
-              <li><strong>Réparations physiques :</strong> Remplacement d'écran, batterie, prise de charge.</li>
-              <li><strong>Déblocage :</strong> Reprogrammation et décodage réseau.</li>
-            </ul>
-          </div>
-        </details>
-      </div>
+    <!-- ========== CART SIDEBAR ========== -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-bag"></i> Panier</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <ul class="cart-items" id="cartItems"></ul>
+        <div class="cart-total">
+            <span>Total</span>
+            <span id="cartTotal">0,00 €</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">
+            <i class="fas fa-credit-card"></i> Passer à la caisse
+        </button>
     </aside>
-  </div>
-</section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <h2>Nos services</h2>
-      <p>Des prestations adaptées à vos besoins informatiques et numériques.</p>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Code source HTML CSS" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Développement web</h3>
-          <p>Sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios et solutions sur mesure.</p>
-          <div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div>
+    <!-- ========== PAYMENT MODAL ========== -->
+    <div class="overlay" id="paymentOverlay"></div>
+    <div class="payment-modal" id="paymentModal">
+        <h2><i class="fas fa-truck"></i> Finaliser la commande</h2>
+        <div class="delivery-section">
+            <h3><i class="fas fa-address-card"></i> Adresse de livraison (FR / BE)</h3>
+            <div class="row">
+                <input type="text" id="deliveryFirstname" placeholder="Prénom *">
+                <input type="text" id="deliveryLastname" placeholder="Nom *">
+            </div>
+            <input type="text" id="deliveryStreet" placeholder="Rue et numéro *">
+            <div class="row">
+                <input type="text" id="deliveryZip" placeholder="Code postal *">
+                <input type="text" id="deliveryCity" placeholder="Ville *">
+            </div>
+            <input type="text" id="deliveryCountry" placeholder="Pays (France / Belgique) *">
         </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Tableau de bord de gestion" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Applications de gestion</h3>
-          <p>Outils adaptés aux activités professionnelles : stock, caisse, clients, facturation, ateliers.</p>
-          <div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div>
+        <p style="margin-bottom: 0.2rem;">Veuillez transférer le montant total à :</p>
+        <div class="iban-box">
+            <span id="ibanDisplay">DE45 1001 0010 0410 6791 18</span>
+            <button class="copy-btn" id="copyIbanBtn"><i class="fas fa-copy"></i> Copier</button>
         </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Application mobile" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Applications mobiles</h3>
-          <p>Développement d'applications Android et iOS sur mesure adaptées aux usages de votre activité.</p>
-          <div class="tags"><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Mobile</span></div>
+        <div class="bank-details" id="bankDetails">
+            <strong>Bénéficiaire :</strong> Premium Electronique GmbH<br>
+            <strong>BIC :</strong> PBNKDEFF<br>
+            <strong>Référence :</strong> Commande #<span id="orderRef">2026-0816</span>
         </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Assistance informatique" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Assistance informatique</h3>
-          <p>Configuration, diagnostic, optimisation et résolution de problèmes matériels/logiciels.</p>
-          <div class="tags"><span class="tag">Installation</span><span class="tag">Windows</span><span class="tag">Support</span></div>
+        <div class="upload-section">
+            <label for="paymentProof"><i class="fas fa-image"></i> Justificatif / Capture d'écran</label>
+            <div class="helper">Téléchargez une capture d'écran de votre virement.</div>
+            <input type="file" id="paymentProof" accept="image/*">
+            <div class="preview-container" id="previewContainer"></div>
         </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réparation carte mère PC" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Maintenance informatique</h3>
-          <p>Installation de systèmes Windows, activation, résolution de pannes et réparations matérielles.</p>
-          <div class="tags"><span class="tag">Dépannage</span><span class="tag">Matériel</span><span class="tag">Réparation</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réparation de téléphone" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Maintenance téléphonique</h3>
-          <p>Reprogrammation, décodage, changement d'écran, batterie et connecteurs de charge.</p>
-          <div class="tags"><span class="tag">Écran</span><span class="tag">Batterie</span><span class="tag">Déblocage</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Présence Google" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Visibilité locale</h3>
-          <p>Création et optimisation de fiches Google My Business pour améliorer votre présence locale.</p>
-          <div class="tags"><span class="tag">Google My Business</span><span class="tag">SEO</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Intelligence artificielle" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Solutions numériques & IA</h3>
-          <p>Intégration d'outils numériques modernes et d'intelligence artificielle sur mesure.</p>
-          <div class="tags"><span class="tag">IA</span><span class="tag">Automation</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Matériel informatique" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Matériel informatique</h3>
-          <p>Intermédiation et conseils pour obtenir du matériel informatique fiable et de qualité.</p>
-          <div class="tags"><span class="tag">PC Portable</span><span class="tag">Équipement</span></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="solutions">
-  <div class="container">
-    <div class="section-head">
-      <h2>Solutions métiers dédiées</h2>
-      <p>Des logiciels développés sur mesure selon les spécificités de votre activité.</p>
-    </div>
-    <div class="grid solutions">
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Atelier de couture" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Gestion d'atelier de couture</h3>
-          <p>Centralisation des clients, mesures, commandes et suivi de production.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img mtn-bg">
-          <div class="mtn-logo-container">
-            <svg viewBox="0 0 300 120"><ellipse cx="150" cy="60" rx="140" ry="52" fill="#FFCC00" stroke="#000000" stroke-width="6"/><text x="150" y="78" font-family="sans-serif" font-weight="900" font-size="64" fill="#000000" text-anchor="middle" font-style="italic">MTN</text></svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Gestion mobile de monnaie</h3>
-          <p>Registre digital pour dépôts et retraits (MTN MoMo, Moov) évitant les erreurs de caisse.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Encaissement boutique" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Gestion commerciale</h3>
-          <p>Stocks, caisse, clients, facturation et vente réunis dans un seul outil simple.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Maquette web" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Projet web sur mesure</h3>
-          <p>Fonctionnalités avancées, espaces professionnels et réservations selon votre besoin exact.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="apropos">
-  <div class="container">
-    <div class="section-head">
-      <h2>À propos de PHENIX CONNECT</h2>
-      <p>Basée à Parakou au Bénin, notre structure accompagne les professionnels localement et à distance.</p>
-    </div>
-    <div class="grid">
-      <article class="card"><div class="card-body"><h3>Approche adaptée</h3><p>Chaque solution est pensée spécifiquement pour le travail réel du client.</p></div></article>
-      <article class="card"><div class="card-body"><h3>Projets à distance</h3><p>Prestations web et logicielles pour le Bénin, l'Afrique et l'Europe.</p></div></article>
-      <article class="card"><div class="card-body"><h3>Confidentialité</h3><p>Suivi transparent et respect strict de la confidentialité de vos données.</p></div></article>
-    </div>
-  </div>
-</section>
-
-<section id="realisations">
-  <div class="container">
-    <div class="section-head">
-      <h2>Quelques réalisations</h2>
-      <p>Projets récents créés ou en cours de déploiement.</p>
-    </div>
-    <div class="grid projects">
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Travaux de peinture" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>ESTHÉTIQUE PLUS</h3>
-          <p>Site vitrine pour un atelier de rénovation et peinture d'intérieur.</p>
-          <a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Popcorn artisanal" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>C'BON POP</h3>
-          <p>Site vitrine et catalogue interactif avec module de commande WhatsApp.</p>
-          <a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Smartphones modernes" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>PREMIUMFR</h3>
-          <p>Catalogue de présentation d'équipements technologiques et smartphones.</p>
-          <a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réseau numérique" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>PHENIX CONNECT</h3>
-          <p>Plateforme institutionnelle regroupant nos compétences et prestations.</p>
-          <a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="container">
-    <div class="section-head">
-      <h2>Questions fréquentes</h2>
-      <p>Réponses rapides à vos interrogations.</p>
-    </div>
-    
-    <div class="faq-list">
-      <details>
-        <summary>Quels sont vos tarifs ?</summary>
-        <div class="detail-content"><p>Nos tarifs dépendent de la complexité et des fonctionnalités souhaitées. Écrivez-nous sur WhatsApp pour recevoir un devis clair rapidement.</p></div>
-      </details>
-
-      <details>
-        <summary>Travaillez-vous à distance ?</summary>
-        <div class="detail-content"><p>Oui, nous créons des sites et applications à distance pour des clients situés partout au Bénin, en Afrique et en Europe.</p></div>
-      </details>
-
-      <details>
-        <summary>Comment obtenir un devis ?</summary>
-        <div class="detail-content"><p>Remplissez le formulaire en bas de page ou envoyez un message direct sur WhatsApp avec vos besoins.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container contact-grid">
-    <div>
-      <div class="section-head">
-        <h2>Contactez-nous</h2>
-        <p>Présentez votre projet pour obtenir une réponse rapide.</p>
-      </div>
-      <div class="contact-list">
-        <div class="contact-item">
-          <small>WhatsApp / Téléphone</small>
-          <strong><a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a></strong>
-        </div>
-        <div class="contact-item">
-          <small>E-mail</small>
-          <strong><a href="mailto:contact@phenixconnect.online">contact@phenixconnect.online</a></strong>
-        </div>
-        <div class="contact-item">
-          <small>Adresse</small>
-          <strong>Dokparou, Parakou, Bénin</strong>
-          <div class="map-box" id="mapWrapper">
-            <button onclick="loadMap()">Afficher la carte Google Maps</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact-box">
-      <form id="contactForm">
-        <div><label for="nom">Nom</label><input id="nom" name="nom" required></div>
-        <div><label for="prenom">Prénom</label><input id="prenom" name="prenom" required></div>
-        <div><label for="contactValue">E-mail ou téléphone</label><input id="contactValue" name="contact" required></div>
-        <div><label for="besoin">Votre préoccupation</label><textarea id="besoin" name="besoin" required></textarea></div>
-        <label class="consent"><input type="checkbox" id="consent" required> J'accepte que mes informations soient utilisées pour traiter ma demande.</label>
-        <button class="btn btn-primary" type="submit">Envoyer sur WhatsApp</button>
-      </form>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie.</p></div>
-      <div><h3>Navigation</h3><p><a href="#services">Services</a><br><a href="#realisations">Réalisations</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
-      <div>
-        <h3>Contact</h3>
-        <p>
-          <a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a><br>
-          Dokparou, Parakou, Bénin
+        <button class="close-payment-btn" id="finalConfirmBtn">
+            <i class="fas fa-check-circle"></i> Confirmer le paiement & envoyer l'e-mail
+        </button>
+        <p style="font-size:0.7rem; color:var(--muted); margin-top:0.4rem; text-align:center;">
+            Votre client de messagerie s'ouvrira avec tous les détails. Veuillez joindre le justificatif manuellement.
         </p>
-      </div>
     </div>
-    <div class="copyright">© <span id="year"></span> PHENIX CONNECT. Tous droits réservés.</div>
-  </div>
-</footer>
 
-<button id="ai-button" aria-label="Ouvrir Assistant">
-  <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13.5 11.5L12 15L10.5 11.5L7 10L10.5 8.5L12 5L13.5 8.5L17 10L13.5 11.5Z"/></svg>
-</button>
+    <!-- ========== ADMIN LOGIN MODAL ========== -->
+    <div class="overlay" id="adminLoginOverlay"></div>
+    <div class="admin-login-modal" id="adminLoginModal">
+        <button class="close-login" id="closeLoginBtn">&times;</button>
+        <h2><i class="fas fa-lock"></i> Accès administrateur</h2>
+        <label>Nom d'utilisateur</label>
+        <input type="text" id="adminUsername" placeholder="Nom d'utilisateur">
+        <label>Mot de passe</label>
+        <input type="password" id="adminPassword" placeholder="Mot de passe">
+        <div class="login-error" id="loginError">Identifiants incorrects</div>
+        <button class="login-btn" id="loginBtn">Se connecter</button>
+    </div>
 
-<div id="ai-panel">
-  <div class="ai-head">
-    <div><strong>ASSISTANT IA</strong><small>PHENIX CONNECT</small></div>
-    <button class="ai-close" id="aiClose">×</button>
-  </div>
-  <div id="messages">
-    <div class="msg bot">Bonjour ! Comment puis-je vous renseigner sur nos prestations ?</div>
-  </div>
-  <div class="quick">
-    <button data-q="Quels services proposez-vous ?">Services</button>
-    <button data-q="Je veux créer un site web.">Site Web</button>
-    <button data-q="Comment obtenir un devis ?">Devis</button>
-  </div>
-  <div class="ai-input">
-    <input id="aiInput" placeholder="Posez une question..." autocomplete="off">
-    <button id="aiSend">OK</button>
-  </div>
-</div>
+    <!-- ========== ADMIN PANEL ========== -->
+    <div id="adminPanel">
+        <div class="admin-header">
+            <h2><i class="fas fa-user-cog"></i> Administration</h2>
+            <button class="btn-back" id="backToShopBtn"><i class="fas fa-arrow-left"></i> Retour à l'accueil</button>
+        </div>
+        <div class="admin-settings">
+            <h3><i class="fas fa-university"></i> Coordonnées bancaires</h3>
+            <div class="settings-grid">
+                <label>IBAN <input type="text" id="adminIban" value="DE45 1001 0010 0410 6791 18"></label>
+                <label>BIC <input type="text" id="adminBic" value="PBNKDEFF"></label>
+                <label>Bénéficiaire <input type="text" id="adminBeneficiary" value="Premium Electronique GmbH"></label>
+                <label>E-mail de contact <input type="email" id="adminEmail" value="infopreniumelectronique@gmail.com"></label>
+            </div>
 
-<script>
-  // Dynamic Navigation & Date
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
-  menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
-  document.getElementById('year').textContent = new Date().getFullYear();
+            <!-- ===== IDENTIFIANTS ADMIN ===== -->
+            <hr style="margin: 1.5rem 0; border: none; border-top: 2px dashed var(--border);">
+            <h3><i class="fas fa-user-shield"></i> Identifiants administrateur</h3>
+            <div class="settings-grid">
+                <label>Nom d'utilisateur <input type="text" id="adminUsernameSetting" placeholder="Nom d'utilisateur"></label>
+                <label>Mot de passe <input type="text" id="adminPasswordSetting" placeholder="Nouveau mot de passe"></label>
+            </div>
+            <p style="font-size:0.8rem; color:var(--muted); margin-top:0.2rem;">Modifiez ces champs pour changer les identifiants de connexion à l'administration.</p>
 
-  // Lazy load Map iframe only on user action
-  function loadMap() {
-    document.getElementById('mapWrapper').innerHTML = '<iframe src="https://maps.google.com/maps?q=Dokparou%2C%20Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
-  }
+            <button class="save-settings-btn" id="saveSettingsBtn"><i class="fas fa-save"></i> Sauvegarder tous les paramètres</button>
+        </div>
+        <div class="admin-products">
+            <h3><i class="fas fa-boxes"></i> Produits</h3>
+            <div id="adminProductList"></div>
+        </div>
+    </div>
 
-  // Lite AI Assistant
-  const aiButton = document.getElementById('ai-button');
-  const aiPanel = document.getElementById('ai-panel');
-  const aiClose = document.getElementById('aiClose');
-  const messages = document.getElementById('messages');
-  const aiInput = document.getElementById('aiInput');
-  const aiSend = document.getElementById('aiSend');
+    <!-- ========== TOAST ========== -->
+    <div class="toast" id="toast"></div>
 
-  aiButton.onclick = () => { aiPanel.classList.add('open'); aiInput.focus(); };
-  aiClose.onclick = () => aiPanel.classList.remove('open');
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        &copy; 2026 <span>Premium Électronique</span> – Service client dédié France & Belgique.
+    </footer>
 
-  function addMsg(text, who) {
-    const el = document.createElement('div');
-    el.className = 'msg ' + who;
-    el.textContent = text;
-    messages.appendChild(el);
-    messages.scrollTop = messages.scrollHeight;
-  }
+    <!-- Balises JSON-LD Produits générées dynamiquement par JS pour un SEO optimal -->
+    <script id="schema-products" type="application/ld+json"></script>
 
-  function getResponse(q) {
-    const s = q.toLowerCase();
-    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) return "Pour obtenir un devis personnalisé, contactez-nous sur WhatsApp au +229 01 47 60 28 48.";
-    if (s.includes('site') || s.includes('web')) return "Nous créons des sites vitrines, e-commerce et applications web adaptés à votre besoin.";
-    if (s.includes('contact') || s.includes('adresse')) return "Nous sommes situés à Dokparou, Parakou. WhatsApp : +229 01 47 60 28 48.";
-    return "Pour toute demande spécifique ou étude de projet, échangez directement avec nous sur WhatsApp : +229 01 47 60 28 48.";
-  }
+    <script>
+        // ============================================================
+        // PROTECTION & BLOCAGE INSPECTION DU CODE
+        // ============================================================
+        (function() {
+            document.addEventListener('contextmenu', e => e.preventDefault());
 
-  function send() {
-    const val = aiInput.value.trim();
-    if (!val) return;
-    addMsg(val, 'user');
-    aiInput.value = '';
-    setTimeout(() => addMsg(getResponse(val), 'bot'), 200);
-  }
+            document.addEventListener('keydown', e => {
+                if (
+                    e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
+                    (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.key === 'S' || e.key === 's'))
+                ) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
 
-  aiSend.onclick = send;
-  aiInput.onkeydown = e => { if (e.key === 'Enter') send(); };
-  document.querySelectorAll('.quick button').forEach(b => b.onclick = () => { aiInput.value = b.dataset.q; send(); });
+            setInterval(() => {
+                const startTime = performance.now();
+                (function() { return false; })['constructor']('debugger')();
+                if (performance.now() - startTime > 100) {
+                    document.body.innerHTML = 'Accès non autorisé.';
+                }
+            }, 1000);
+        })();
 
-  // WhatsApp Form Submit
-  document.getElementById('contactForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const nom = document.getElementById('nom').value.trim();
-    const prenom = document.getElementById('prenom').value.trim();
-    const contact = document.getElementById('contactValue').value.trim();
-    const besoin = document.getElementById('besoin').value.trim();
-    const msg = `Bonjour PHENIX CONNECT,%0A%0AJe vous contacte via le site :%0ANom : ${encodeURIComponent(nom)} ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
-    window.location.href = `https://wa.me/2290147602848?text=${msg}`;
-  });
-</script>
+        function escapeHTML(str) {
+            if (typeof str !== 'string') return str;
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        // ============================================================
+        // 0. SUPABASE CONFIGURATION
+        // ============================================================
+        const SUPABASE_URL = 'https://gvfwetjrsnjvjpyhipqg.supabase.co';
+        const SUPABASE_ANON_KEY = 'sb_publishable_UYXjzuLxhGn9G3d262NUVw_4NEpiYcY';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        function fetchWithTimeout(promise, ms = 3000) {
+            return new Promise((resolve, reject) => {
+                const timer = setTimeout(() => reject(new Error("Network Timeout")), ms);
+                promise.then(res => { clearTimeout(timer); resolve(res); })
+                       .catch(err => { clearTimeout(timer); reject(err); });
+            });
+        }
+
+        // ============================================================
+        // 1. FALLBACK PRODUCTS
+        // ============================================================
+        const fallbackProducts = [
+            { id: 1, name: "Apple iPhone 17 Pro Max", category: "iphone", price: 1276, image: "AppleiPhone17ProMax.jpg" },
+            { id: 2, name: "Apple iPhone 17e", category: "iphone", price: 700, image: "AppleiPhone17e.jpg" },
+            { id: 3, name: "Apple iPhone 16e", category: "iphone", price: 538, image: "AppleiPhone16e.jpg" },
+            { id: 4, name: "Apple iPhone 17", category: "iphone", price: 849, image: "AppleiPhone17.jpg" },
+            { id: 5, name: "Apple iPhone 17 Plus", category: "iphone", price: 927, image: "AppleiPhone17Plus.jpg" },
+            { id: 6, name: "Apple iPhone SE 4", category: "iphone", price: 500, image: "AppleiPhoneSE4.jpg" },
+            { id: 7, name: "Apple iPhone 16 Pro Max", category: "iphone", price: 890, image: "AppleiPhone16ProMax.jpg" },
+            { id: 8, name: "Apple iPhone 12 Pro Max", category: "iphone", price: 580, image: "AppleiPhone12ProMax.jpg" },
+            { id: 9, name: "Samsung Galaxy S26 Ultra", category: "android", price: 1299, image: "SamsungGalaxyS26Ultra.jpg" },
+            { id: 10, name: "Samsung Galaxy Z Fold8 Ultra", category: "android", price: 2199, image: "SamsungGalaxyZFold8Ultra.jpg" },
+            { id: 11, name: "Samsung Galaxy Z Fold8", category: "android", price: 2000, image: "SamsungGalaxyZFold8.jpg" },
+            { id: 12, name: "Samsung Galaxy Z Flip8", category: "android", price: 1299, image: "SamsungGalaxyZFlip8.jpg" },
+            { id: 13, name: "Samsung Galaxy A57 5G", category: "android", price: 620, image: "SamsungGalaxyA575G.jpg" },
+            { id: 14, name: "Samsung Galaxy A37", category: "android", price: 450, image: "SamsungGalaxyA37.jpg" },
+            { id: 15, name: "Xiaomi 17 Ultra", category: "android", price: 1499, image: "Xiaomi17Ultra.jpg" },
+            { id: 16, name: "Xiaomi 17", category: "android", price: 703, image: "Xiaomi17.jpg" },
+            { id: 17, name: "Xiaomi Poco F9 Pro", category: "android", price: 799, image: "XiaomiPocoF9Pro.jpg" },
+            { id: 18, name: "Xiaomi 15T Pro", category: "android", price: 580, image: "Xiaomi15TPro.jpg" },
+            { id: 19, name: "Xiaomi Redmi Note 11", category: "android", price: 185, image: "XiaomiRedmiNote11.jpg" },
+            { id: 20, name: "Sony Xperia 1 VIII", category: "android", price: 1499, image: "SonyXperia1VIII.jpg" },
+            { id: 21, name: "Sony Xperia 10 VII", category: "android", price: 465, image: "SonyXperia10VII.jpg" },
+            { id: 22, name: "Google Pixel 11 Pro XL", category: "android", price: 1399, image: "GooglePixel11ProXL.jpg" },
+            { id: 23, name: "Google Pixel 11 Pro Fold", category: "android", price: 1999, image: "GooglePixel11ProFold.jpg" },
+            { id: 24, name: "Google Pixel 10 Pro XL", category: "android", price: 869, image: "GooglePixel10ProXL.jpg" },
+            { id: 25, name: "Google Pixel 10a", category: "android", price: 549, image: "GooglePixel10a.jpg" },
+            { id: 26, name: "Google Pixel 9a", category: "android", price: 465, image: "GooglePixel9a.jpg" },
+            { id: 27, name: "Oppo Find X9 Pro", category: "android", price: 1059, image: "OppoFindX9Pro.jpg" },
+            { id: 28, name: "Vivo X300 Pro", category: "android", price: 989, image: "VivoX300Pro.jpg" },
+            { id: 29, name: "Honor Magic 8 Pro", category: "android", price: 819, image: "HonorMagic8Pro.jpg" },
+            { id: 30, name: "Honor Magic V6", category: "android", price: 2229, image: "HonorMagicV6.jpg" },
+            { id: 31, name: "Honor 400 Pro", category: "android", price: 700, image: "Honor400Pro.jpg" },
+            { id: 32, name: "Motorola Razr Fold", category: "android", price: 1999, image: "MotorolaRazrFold.jpg" },
+            { id: 33, name: "Motorola Edge 70 Fusion", category: "android", price: 445, image: "MotorolaEdge70Fusion.jpg" },
+            { id: 34, name: "Nothing Phone (3a) Pro", category: "android", price: 390, image: "NothingPhone(3a)Pro.jpg" },
+            { id: 35, name: "Nubia Air Pro", category: "android", price: 449, image: "NubiaAirPro.jpg" },
+            { id: 36, name: "Apple MacBook Neo", category: "pc", price: 749, image: "AppleMacBookNeo.jpg" },
+            { id: 37, name: "Lenovo IdeaPad Slim 3", category: "pc", price: 1009, image: "LenovoIdeaPadSlim3.jpg" },
+            { id: 38, name: "Acer Swift Air 14", category: "pc", price: 799, image: "AcerSwiftAir14.jpg" },
+            { id: 39, name: "Dell XPS 14", category: "pc", price: 1500, image: "DellXPS14.jpg" },
+            { id: 40, name: "Apple MacBook Pro 14 M5 Pro", category: "pc", price: 2400, image: "AppleMacBookPro14M5Pro.jpg" },
+            { id: 41, name: "Lenovo Yoga Slim 7a", category: "pc", price: 1299, image: "LenovoYogaSlim7a.jpg" },
+            { id: 42, name: "MSI Prestige 16 AI+", category: "pc", price: 1549, image: "MSIPrestige16AI+.jpg" },
+            { id: 43, name: "Schenker XMG Apex 17", category: "pc", price: 1899, image: "SchenkerXMGApex17.jpg" },
+            { id: 44, name: "Chuwi CoreBook Air", category: "pc", price: 549, image: "ChuwiCoreBookAir.jpg" },
+            { id: 45, name: "Acer Nitro 18 AI", category: "pc", price: 1900, image: "AcerNitro18AI.jpg" },
+            { id: 46, name: "Sony Alpha 7V", category: "camera", price: 2800, image: "SonyAlpha7V.jpg" },
+            { id: 47, name: "Canon EOS R6 Mark III", category: "camera", price: 2899, image: "CanonEOSR6MarkIII.jpg" },
+            { id: 48, name: "Nikon Z6 III", category: "camera", price: 2029, image: "NikonZ6III.jpg" },
+            { id: 49, name: "Fujifilm X-T5", category: "camera", price: 1665, image: "FujifilmX-T5.jpg" },
+            { id: 50, name: "Leica Q3", category: "camera", price: 6490, image: "LeicaQ3.jpg" },
+            { id: 51, name: "Panasonic Lumix S5D", category: "camera", price: 799, image: "PanasonicLumixS5D.jpg" },
+            { id: 52, name: "Fujifilm X100VI", category: "camera", price: 1799, image: "FujifilmX100VI.jpg" },
+            { id: 53, name: "Sony Cyber-shot RX100 VII", category: "camera", price: 1227, image: "SonyCyber-shotRX100VII.jpg" }
+        ];
+
+        // ============================================================
+        // 2. GLOBAL VARIABLES
+        // ============================================================
+        let products = [];
+        let cart = JSON.parse(localStorage.getItem('techCart')) || [];
+        let currentCategory = 'all';
+        let settings = {
+            iban: 'DE45 1001 0010 0410 6791 18',
+            bic: 'PBNKDEFF',
+            beneficiary: 'Premium Electronique GmbH',
+            email: 'infopreniumelectronique@gmail.com',
+            adminUsername: 'iphone',
+            adminPassword: 'Coucou12'
+        };
+        let isAdmin = false;
+        let adminClickCount = 0;
+
+        // DOM refs
+        const productsGrid = document.getElementById('productsGrid');
+        const cartCountEl = document.getElementById('cartCount');
+        const cartTotalEl = document.getElementById('cartTotal');
+        const cartItemsEl = document.getElementById('cartItems');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const overlay = document.getElementById('overlay');
+        const paymentOverlay = document.getElementById('paymentOverlay');
+        const paymentModal = document.getElementById('paymentModal');
+        const ibanDisplay = document.getElementById('ibanDisplay');
+        const bankDetails = document.getElementById('bankDetails');
+        const orderRefEl = document.getElementById('orderRef');
+
+        // Admin
+        const adminPanel = document.getElementById('adminPanel');
+        const adminLoginModal = document.getElementById('adminLoginModal');
+        const adminLoginOverlay = document.getElementById('adminLoginOverlay');
+        const adminUsername = document.getElementById('adminUsername');
+        const adminPassword = document.getElementById('adminPassword');
+        const loginError = document.getElementById('loginError');
+        const loginBtn = document.getElementById('loginBtn');
+        const closeLoginBtn = document.getElementById('closeLoginBtn');
+        const backToShopBtn = document.getElementById('backToShopBtn');
+        const adminLogo = document.getElementById('adminLogo');
+
+        // Admin credential fields
+        const adminUsernameSetting = document.getElementById('adminUsernameSetting');
+        const adminPasswordSetting = document.getElementById('adminPasswordSetting');
+
+        // Support button
+        const supportBtn = document.getElementById('supportBtn');
+
+        // ============================================================
+        // 3. IMAGE ERROR HANDLING
+        // ============================================================
+        const EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg'];
+
+        function tryExtensions(img, currentSrc, index) {
+            if (index >= EXTENSIONS.length) {
+                img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f1f5f9' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%2394a3b8' font-family='sans-serif' font-size='14'%3EImage%20manquante%3C/text%3E%3C/svg%3E";
+                return;
+            }
+            const base = currentSrc.replace(/\.[^.]+$/, '');
+            img.src = base + EXTENSIONS[index];
+        }
+
+        function handleImageError(img) {
+            if (img.dataset.trying) return;
+            img.dataset.trying = 'true';
+            const currentSrc = img.src;
+            let currentExtIndex = -1;
+            for (let i = 0; i < EXTENSIONS.length; i++) {
+                if (currentSrc.includes(EXTENSIONS[i])) {
+                    currentExtIndex = i;
+                    break;
+                }
+            }
+            const nextIndex = (currentExtIndex === -1) ? 0 : currentExtIndex + 1;
+            tryExtensions(img, currentSrc, nextIndex);
+        }
+
+        // ============================================================
+        // 4. GENERATE DYNAMIC PRODUCT SCHEMA FOR SEO
+        // ============================================================
+        function updateProductSchema() {
+            const schemaEl = document.getElementById('schema-products');
+            if (!schemaEl) return;
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "itemListElement": products.map((p, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "item": {
+                        "@type": "Product",
+                        "name": p.name,
+                        "image": p.image,
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "EUR",
+                            "price": p.price,
+                            "itemCondition": "https://schema.org/NewCondition",
+                            "availability": "https://schema.org/InStock",
+                            "areaServed": ["FR", "BE"]
+                        }
+                    }
+                }))
+            };
+            schemaEl.textContent = JSON.stringify(schemaData);
+        }
+
+        // ============================================================
+        // 5. SUPABASE LOADERS
+        // ============================================================
+        async function loadProductsFromSupabase() {
+            try {
+                const res = await fetchWithTimeout(supabase.from('products').select('*'), 3000);
+                if (res.error) throw res.error;
+                if (res.data && res.data.length > 0) {
+                    const mapped = res.data.map(item => ({
+                        id: item.id,
+                        name: item.name,
+                        category: item.category,
+                        price: typeof item.price === 'number' ? item.price : parseFloat(item.price) || 0,
+                        image: item.image || 'placeholder.jpg'
+                    }));
+                    localStorage.setItem('cachedProducts', JSON.stringify(mapped));
+                    return mapped;
+                }
+            } catch (err) {
+                console.warn('Réseau lent ou hors-ligne, utilisation du cache produit.');
+                const cached = localStorage.getItem('cachedProducts');
+                if (cached) return JSON.parse(cached);
+            }
+            return null;
+        }
+
+        async function loadSettingsFromSupabase() {
+            try {
+                const res = await fetchWithTimeout(supabase.from('settings').select('*').limit(1), 3000);
+                if (res.error) throw res.error;
+                if (res.data && res.data.length > 0) {
+                    const s = res.data[0];
+                    const loaded = {
+                        iban: s.iban || settings.iban,
+                        bic: s.bic || settings.bic,
+                        beneficiary: s.beneficiary || settings.beneficiary,
+                        email: s.email || settings.email,
+                        adminUsername: s.admin_username || settings.adminUsername,
+                        adminPassword: s.admin_password || settings.adminPassword
+                    };
+                    localStorage.setItem('cachedSettings', JSON.stringify(loaded));
+                    return loaded;
+                }
+            } catch (err) {
+                console.warn('Réseau lent ou hors-ligne, utilisation du cache paramètres.');
+                const cached = localStorage.getItem('cachedSettings');
+                if (cached) return JSON.parse(cached);
+            }
+            return null;
+        }
+
+        // ============================================================
+        // 6. REFRESH FUNCTIONS
+        // ============================================================
+        async function refreshAllData() {
+            const productData = await loadProductsFromSupabase();
+            products = (productData && productData.length > 0) ? productData : [...fallbackProducts];
+            
+            const settingsData = await loadSettingsFromSupabase();
+            if (settingsData) {
+                settings = { ...settings, ...settingsData };
+                updatePaymentModalSettings();
+                updateAdminSettingsFields();
+                updateSupportButton();
+            }
+            renderProducts(currentCategory);
+            renderAdminProductList();
+            updateCart();
+            updateProductSchema();
+        }
+
+        // ============================================================
+        // 7. UI UPDATES
+        // ============================================================
+        function updatePaymentModalSettings() {
+            ibanDisplay.textContent = settings.iban || 'DE45 1001 0010 0410 6791 18';
+            const beneficiary = escapeHTML(settings.beneficiary || 'Premium Electronique GmbH');
+            const bic = escapeHTML(settings.bic || 'PBNKDEFF');
+            bankDetails.innerHTML = `
+                <strong>Bénéficiaire :</strong> ${beneficiary}<br>
+                <strong>BIC :</strong> ${bic}<br>
+                <strong>Référence :</strong> Commande #<span id="orderRef">${getOrderRef()}</span>
+            `;
+        }
+
+        function updateAdminSettingsFields() {
+            document.getElementById('adminIban').value = settings.iban || '';
+            document.getElementById('adminBic').value = settings.bic || '';
+            document.getElementById('adminBeneficiary').value = settings.beneficiary || '';
+            document.getElementById('adminEmail').value = settings.email || '';
+            adminUsernameSetting.value = settings.adminUsername || '';
+            adminPasswordSetting.value = settings.adminPassword || '';
+        }
+
+        function updateSupportButton() {
+            if (supportBtn) {
+                supportBtn.onclick = function() {
+                    const email = settings.email || 'infopreniumelectronique@gmail.com';
+                    window.location.href = `mailto:${email}?subject=Demande%20de%20support%20(FR/BE)`;
+                };
+            }
+        }
+
+        function getOrderRef() {
+            const now = new Date();
+            return now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0');
+        }
+
+        // ============================================================
+        // 8. RENDER PRODUCTS
+        // ============================================================
+        function renderProducts(category = 'all') {
+            const filtered = category === 'all' ? products : products.filter(p => p.category === category);
+            if (filtered.length === 0) {
+                productsGrid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--muted); padding:2rem;">Aucun produit dans cette catégorie.</p>`;
+                return;
+            }
+            const categoryNames = { 'pc': 'PC', 'iphone': 'iPhone', 'android': 'Android', 'camera': 'Appareil photo' };
+            
+            productsGrid.innerHTML = filtered.map(p => `
+                <article class="product-card" data-id="${p.id}">
+                    <div class="product-image">
+                        <img src="${escapeHTML(p.image)}" alt="${escapeHTML(p.name)} - High Tech France & Belgique" loading="lazy" onerror="handleImageError(this)">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">${escapeHTML(p.name)}</h2>
+                        <div class="product-category">${categoryNames[p.category] || escapeHTML(p.category)}</div>
+                        <div class="product-price">${p.price.toFixed(2)} €</div>
+                        <button class="add-to-cart" data-id="${p.id}" aria-label="Ajouter ${escapeHTML(p.name)} au panier">
+                            <i class="fas fa-cart-plus"></i> Ajouter au panier
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.onclick = () => addToCart(parseInt(btn.dataset.id));
+            });
+        }
+
+        // ============================================================
+        // 9. CART MANAGEMENT
+        // ============================================================
+        function saveCart() { localStorage.setItem('techCart', JSON.stringify(cart)); }
+
+        function updateCart() {
+            const totalItems = cart.reduce((sum, i) => sum + i.quantity, 0);
+            cartCountEl.textContent = totalItems;
+            const totalPrice = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
+            cartTotalEl.textContent = totalPrice.toFixed(2) + ' €';
+            
+            if (cart.length === 0) {
+                cartItemsEl.innerHTML = `<li class="empty-cart">Votre panier est vide.</li>`;
+            } else {
+                cartItemsEl.innerHTML = cart.map(item => `
+                    <li class="cart-item" data-id="${item.id}">
+                        <div class="cart-item-info">
+                            <span class="cart-item-name">${escapeHTML(item.name)}</span>
+                            <span class="cart-item-price">${(item.price * item.quantity).toFixed(2)} €</span>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="qty-btn" data-id="${item.id}" data-delta="-1">−</button>
+                            <span>${item.quantity}</span>
+                            <button class="qty-btn" data-id="${item.id}" data-delta="1">+</button>
+                            <button class="remove-btn" data-id="${item.id}"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </li>
+                `).join('');
+
+                document.querySelectorAll('.qty-btn').forEach(btn => {
+                    btn.onclick = () => changeQuantity(parseInt(btn.dataset.id), parseInt(btn.dataset.delta));
+                });
+                document.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.onclick = () => removeFromCart(parseInt(btn.dataset.id));
+                });
+            }
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            const existing = cart.find(item => item.id === productId);
+            if (existing) existing.quantity += 1;
+            else cart.push({ ...product, quantity: 1 });
+            updateCart();
+            saveCart();
+            showToast(`${product.name} a été ajouté !`);
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+            saveCart();
+        }
+
+        function changeQuantity(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (!item) return;
+            const newQty = item.quantity + delta;
+            if (newQty <= 0) removeFromCart(productId);
+            else { 
+                item.quantity = newQty;
+                updateCart();
+                saveCart(); 
+            }
+        }
+
+        // ============================================================
+        // 10. TOAST
+        // ============================================================
+        let toastTimeout;
+        function showToast(msg) {
+            const el = document.getElementById('toast');
+            el.textContent = msg;
+            el.classList.add('show');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => el.classList.remove('show'), 4000);
+        }
+
+        // ============================================================
+        // 11. CART SIDEBAR
+        // ============================================================
+        function openCart() {
+            cartSidebar.classList.add('open');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            cartSidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('cartIcon').addEventListener('click', openCart);
+        document.getElementById('closeCart').addEventListener('click', closeCart);
+        overlay.addEventListener('click', closeCart);
+
+        // ============================================================
+        // 12. PAYMENT
+        // ============================================================
+        function openPaymentModal() {
+            orderRefEl.textContent = getOrderRef();
+            updatePaymentModalSettings();
+            paymentOverlay.classList.add('active');
+            paymentModal.classList.add('open');
+            closeCart();
+            document.getElementById('paymentProof').value = '';
+            document.getElementById('previewContainer').innerHTML = '';
+        }
+
+        function closePaymentModal() {
+            paymentOverlay.classList.remove('active');
+            paymentModal.classList.remove('open');
+        }
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            if (cart.length === 0) { showToast('Votre panier est vide !'); return; }
+            openPaymentModal();
+        });
+        paymentOverlay.addEventListener('click', closePaymentModal);
+
+        document.getElementById('paymentProof').addEventListener('change', function(e) {
+            const file = this.files[0];
+            const container = document.getElementById('previewContainer');
+            if (!file) { container.innerHTML = ''; return; }
+            if (file.size > 2 * 1024 * 1024) {
+                showToast('⚠️ Fichier trop volumineux (max. 2 Mo).');
+                this.value = '';
+                container.innerHTML = '';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+                container.innerHTML = `
+                    <img src="${ev.target.result}" alt="Aperçu">
+                    <span class="file-name">${escapeHTML(file.name)} (${(file.size / 1024).toFixed(0)} Ko)</span>
+                `;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById('finalConfirmBtn').addEventListener('click', function() {
+            const firstname = document.getElementById('deliveryFirstname').value.trim();
+            const lastname = document.getElementById('deliveryLastname').value.trim();
+            const street = document.getElementById('deliveryStreet').value.trim();
+            const zip = document.getElementById('deliveryZip').value.trim();
+            const city = document.getElementById('deliveryCity').value.trim();
+            const country = document.getElementById('deliveryCountry').value.trim();
+            
+            if (!firstname || !lastname || !street || !zip || !city || !country) {
+                showToast('⚠️ Veuillez remplir tous les champs de l\'adresse.');
+                return;
+            }
+            if (cart.length === 0) { showToast('Panier vide.'); closePaymentModal(); return; }
+            
+            const file = document.getElementById('paymentProof').files[0];
+            const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0).toFixed(2);
+            const itemsList = cart.map(i => `${i.name} x ${i.quantity} (${(i.price * i.quantity).toFixed(2)} €)`).join('\n');
+            const orderRef = document.getElementById('orderRef').textContent;
+            const iban = document.getElementById('ibanDisplay').textContent.trim();
+            
+            let body = `Commande #${orderRef}\n\nAdresse de livraison (FR / BE) :\n${firstname} ${lastname}\n${street}\n${zip} ${city}\n${country}\n\nProduits :\n${itemsList}\n\nTotal : ${total} €\n\nIBAN : ${iban}\nBIC : ${settings.bic}\nBénéficiaire : ${settings.beneficiary}\n\n`;
+            if (file) body += `Fichier joint : ${file.name}\n`;
+            body += `Merci de joindre le justificatif.`;
+            
+            const recipient = settings.email || 'infopreniumelectronique@gmail.com';
+            const subject = encodeURIComponent(`Commande #${orderRef} (FR/BE)`);
+            const mailBody = encodeURIComponent(body);
+            window.open(`mailto:${recipient}?subject=${subject}&body=${mailBody}`, '_blank');
+            
+            showToast(`✅ Commande #${orderRef} enregistrée.`);
+            cart = [];
+            updateCart();
+            saveCart();
+            closePaymentModal();
+        });
+
+        document.getElementById('copyIbanBtn').addEventListener('click', async () => {
+            const iban = document.getElementById('ibanDisplay').textContent.trim();
+            try { 
+                await navigator.clipboard.writeText(iban);
+                showToast('✅ IBAN copié !'); 
+            } catch { 
+                const ta = document.createElement('textarea');
+                ta.value = iban;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast('✅ IBAN copié !'); 
+            }
+        });
+
+        // ============================================================
+        // 13. ADMIN LOGIN (7 clics)
+        // ============================================================
+        function openLoginModal() {
+            adminUsername.value = '';
+            adminPassword.value = '';
+            loginError.classList.remove('show');
+            adminLoginModal.classList.add('open');
+            adminLoginOverlay.classList.add('active');
+        }
+
+        function closeLoginModal() {
+            adminLoginModal.classList.remove('open');
+            adminLoginOverlay.classList.remove('active');
+            adminClickCount = 0;
+        }
+
+        adminLogo.addEventListener('click', () => {
+            adminClickCount++;
+            if (adminClickCount >= 7) {
+                openLoginModal();
+                adminClickCount = 0;
+            }
+        });
+
+        adminLoginOverlay.addEventListener('click', closeLoginModal);
+        closeLoginBtn.addEventListener('click', closeLoginModal);
+
+        loginBtn.addEventListener('click', () => {
+            const user = adminUsername.value.trim();
+            const pass = adminPassword.value.trim();
+            if (user === settings.adminUsername && pass === settings.adminPassword) {
+                isAdmin = true;
+                closeLoginModal();
+                showAdminPanel();
+                showToast('✅ Connecté en tant qu\'administrateur.');
+            } else {
+                loginError.classList.add('show');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && adminLoginModal.classList.contains('open')) {
+                loginBtn.click();
+            }
+        });
+
+        // ============================================================
+        // 14. ADMIN PANEL
+        // ============================================================
+        function showAdminPanel() {
+            document.getElementById('heroSection').style.display = 'none';
+            document.getElementById('shopContainer').style.display = 'none';
+            adminPanel.classList.add('active');
+            refreshAllData();
+        }
+
+        function hideAdminPanel() {
+            document.getElementById('heroSection').style.display = 'block';
+            document.getElementById('shopContainer').style.display = 'block';
+            adminPanel.classList.remove('active');
+        }
+
+        backToShopBtn.addEventListener('click', () => {
+            hideAdminPanel();
+            isAdmin = false;
+            refreshAllData();
+        });
+
+        // ============================================================
+        // 15. ADMIN PRODUCT LIST
+        // ============================================================
+        function renderAdminProductList() {
+            const container = document.getElementById('adminProductList');
+            if (!products || products.length === 0) {
+                container.innerHTML = '<p>Aucun produit.</p>';
+                return;
+            }
+            const categoryOptions = ['pc', 'iphone', 'android', 'camera'];
+            container.innerHTML = products.map(p => `
+                <div class="admin-product-item" data-id="${p.id}">
+                    <img src="${escapeHTML(p.image)}" alt="${escapeHTML(p.name)}" class="admin-img-preview" onerror="handleImageError(this)">
+                    <input type="text" class="admin-product-name" value="${escapeHTML(p.name)}" placeholder="Nom">
+                    <select class="admin-product-category">
+                        ${categoryOptions.map(cat => `<option value="${cat}" ${cat===p.category?'selected':''}>${cat}</option>`).join('')}
+                    </select>
+                    <input type="number" class="admin-product-price" value="${p.price}" step="0.01" min="0">
+                    <input type="text" class="admin-product-image" value="${escapeHTML(p.image)}" placeholder="Nom du fichier">
+                    <input type="file" class="admin-product-file" accept="image/*">
+                    <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                        <button class="admin-save-product" data-id="${p.id}"><i class="fas fa-save"></i> Sauvegarder</button>
+                        <button class="admin-remove-product" data-id="${p.id}"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            `).join('');
+
+            container.querySelectorAll('.admin-save-product').forEach(btn => {
+                btn.onclick = async (e) => {
+                    const item = e.currentTarget.closest('.admin-product-item');
+                    const id = parseInt(item.dataset.id);
+                    const name = item.querySelector('.admin-product-name').value.trim();
+                    const category = item.querySelector('.admin-product-category').value;
+                    const price = parseFloat(item.querySelector('.admin-product-price').value);
+                    let image = item.querySelector('.admin-product-image').value.trim();
+                    const fileInput = item.querySelector('.admin-product-file');
+                    const file = fileInput.files[0];
+
+                    if (!name || isNaN(price) || price < 0) {
+                        showToast('⚠️ Vérifiez les champs (nom, prix).');
+                        return;
+                    }
+
+                    if (file) {
+                        const fileExt = file.name.split('.').pop();
+                        const fileName = `${Date.now()}.${fileExt}`;
+                        const { error: uploadError } = await supabase.storage.from('products').upload(fileName, file);
+                        if (uploadError) {
+                            showToast('❌ Erreur upload image : ' + uploadError.message);
+                            return;
+                        }
+                        const { data: urlData } = supabase.storage.from('products').getPublicUrl(fileName);
+                        image = urlData.publicUrl;
+                    }
+
+                    const { error } = await supabase.from('products').update({ name, category, price, image }).eq('id', id);
+
+                    if (error) {
+                        showToast('❌ Erreur mise à jour : ' + error.message);
+                    } else {
+                        showToast(`✅ Produit "${name}" mis à jour.`);
+                        await refreshAllData();
+                    }
+                };
+            });
+
+            container.querySelectorAll('.admin-remove-product').forEach(btn => {
+                btn.onclick = async (e) => {
+                    const id = parseInt(e.currentTarget.dataset.id);
+                    if (!confirm('Supprimer définitivement ce produit ?')) return;
+                    const { error } = await supabase.from('products').delete().eq('id', id);
+                    if (error) {
+                        showToast('❌ Erreur suppression : ' + error.message);
+                    } else {
+                        showToast('🗑️ Produit supprimé.');
+                        await refreshAllData();
+                    }
+                };
+            });
+        }
+
+        // ============================================================
+        // 16. ADMIN SAVE SETTINGS
+        // ============================================================
+        document.getElementById('saveSettingsBtn').addEventListener('click', async () => {
+            const iban = document.getElementById('adminIban').value.trim();
+            const bic = document.getElementById('adminBic').value.trim();
+            const beneficiary = document.getElementById('adminBeneficiary').value.trim();
+            const email = document.getElementById('adminEmail').value.trim();
+            const adminUsernameVal = adminUsernameSetting.value.trim();
+            const adminPasswordVal = adminPasswordSetting.value.trim();
+
+            if (!iban || !bic || !beneficiary || !email || !adminUsernameVal || !adminPasswordVal) {
+                showToast('⚠️ Tous les champs sont requis.');
+                return;
+            }
+
+            const payload = {
+                iban, bic, beneficiary, email,
+                admin_username: adminUsernameVal,
+                admin_password: adminPasswordVal
+            };
+
+            const { error } = await supabase.from('settings').update(payload).eq('id', 1);
+
+            if (error) {
+                if (error.code === 'PGRST116') {
+                    const { error: insertError } = await supabase.from('settings').insert([payload]);
+                    if (insertError) {
+                        showToast('❌ Erreur insertion : ' + insertError.message);
+                        return;
+                    }
+                } else {
+                    showToast('❌ Erreur mise à jour : ' + error.message);
+                    return;
+                }
+            }
+
+            settings.iban = iban;
+            settings.bic = bic;
+            settings.beneficiary = beneficiary;
+            settings.email = email;
+            settings.adminUsername = adminUsernameVal;
+            settings.adminPassword = adminPasswordVal;
+
+            localStorage.setItem('cachedSettings', JSON.stringify(settings));
+            updatePaymentModalSettings();
+            updateSupportButton();
+            showToast('✅ Tous les paramètres ont été sauvegardés.');
+        });
+
+        // ============================================================
+        // 17. CATEGORIES
+        // ============================================================
+        document.querySelectorAll('.categories button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.categories button').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                renderProducts(currentCategory);
+            });
+        });
+
+        // ============================================================
+        // 18. INIT APP
+        // ============================================================
+        async function initApp() {
+            const cachedProd = localStorage.getItem('cachedProducts');
+            if (cachedProd) {
+                products = JSON.parse(cachedProd);
+                renderProducts(currentCategory);
+            }
+
+            const cachedSet = localStorage.getItem('cachedSettings');
+            if (cachedSet) {
+                settings = { ...settings, ...JSON.parse(cachedSet) };
+                updatePaymentModalSettings();
+                updateAdminSettingsFields();
+                updateSupportButton();
+            }
+
+            updateCart();
+            updateProductSchema();
+
+            refreshAllData();
+        }
+
+        initApp();
+    </script>
 </body>
 </html>
