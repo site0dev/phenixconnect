@@ -43,7 +43,7 @@
     section{padding:92px 0}
     .hero{padding:95px 0 80px;background:radial-gradient(circle at 85% 10%,#dff8f4 0,transparent 35%),linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-    .eyebrow{display:inline-flex;padding:7px 11px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.8rem;font-weight:850;margin-bottom:18px}
+    .eyebrow{display:inline-flex;padding:7px 11px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.8rem;font-weight:850;margin-top:18px;margin-bottom:18px}
     h1{font-size:clamp(2.45rem,5vw,4.6rem);line-height:1.02;letter-spacing:-.045em;max-width:760px}
     h1 span{color:var(--primary)}
     .hero p{font-size:1.08rem;color:var(--muted);max-width:680px;margin:24px 0 30px}
@@ -51,38 +51,68 @@
     .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
     .hero-card h3{font-size:1.35rem;margin-bottom:12px}
     .hero-card p{font-size:.95rem;margin:0 0 20px}
+    
     .mini-list{display:grid;gap:12px}
-    .mini-list div{padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfefd;font-weight:700}
+    .mini-list details{border:1px solid var(--line);border-radius:14px;background:#fbfefd;overflow:hidden;transition:.2s}
+    .mini-list details[open]{background:#fff;border-color:var(--accent);box-shadow:0 4px 15px rgba(15,118,110,.08)}
+    .mini-list summary{padding:13px 14px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none}
+    .mini-list summary::-webkit-details-marker{display:none}
+    .mini-list summary::after{content:'+';font-size:1.2rem;color:var(--primary);font-weight:900;transition:transform .2s}
+    .mini-list details[open] summary::after{content:'-'}
+    .mini-list .detail-content{padding:0 14px 14px;font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:6px;padding-top:10px}
+    .mini-list ul{margin-left:18px;margin-top:6px}
+    .mini-list li{margin-bottom:6px}
+
     .section-head{max-width:760px;margin-bottom:40px}
     .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.03em}
     .section-head p{color:var(--muted);margin-top:13px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 25px rgba(20,50,50,.04);transition:.22s}
+    
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 25px rgba(20,50,50,.04);transition:.22s;display:flex;flex-direction:column}
     .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#e8f7f4;color:var(--primary);font-size:1.35rem;margin-bottom:18px}
+    .card-img{width:100%;height:165px;overflow:hidden;position:relative;background:#e2eceb;display:flex;align-items:center;justify-content:center}
+    .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+    .card:hover .card-img img{transform:scale(1.05)}
+    
+    /* Conteneur spécifique pour le logo MTN MoMo */
+    .card-img.mtn-bg{background:#FFCC00}
+    .mtn-logo-container{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:20px}
+    .mtn-logo-container svg{max-width:180px;max-height:100px;width:100%;height:auto}
+
+    .card-body{padding:22px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
     .card h3{font-size:1.12rem;margin-bottom:9px}
     .card p{color:var(--muted);font-size:.94rem}
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
     .tag{font-size:.76rem;padding:5px 8px;border-radius:999px;background:#f0f6f5;color:#496060}
+    
     .band{background:#102a2a;color:#fff}
     .band .section-head p{color:#bdd0ce}
     .band .card{background:#173837;border-color:#2b504e}
     .band .card p{color:#bdd0ce}
     .solutions{grid-template-columns:repeat(2,1fr)}
+    
     .projects{grid-template-columns:repeat(2,1fr)}
-    .project{overflow:hidden;padding:0}
-    .project-top{min-height:155px;padding:25px;background:linear-gradient(135deg,#e7f7f4,#fff)}
+    .project{padding:0}
+    .project .card-img{height:190px}
     .project-body{padding:24px}
     .project-body p{color:var(--muted);font-size:.92rem}
     .project-body a{display:inline-block;margin-top:15px;color:var(--primary);font-weight:800}
+
     .steps{counter-reset:step}
-    .step{position:relative;padding-left:65px}
-    .step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900}
+    .step{position:relative;padding:26px;padding-left:65px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;left:15px;top:22px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900}
+    
     .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}
     .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
     .contact-list{display:grid;gap:14px;margin-top:22px}
     .contact-item{padding:14px;border:1px solid var(--line);border-radius:14px}
     .contact-item small{display:block;color:var(--muted)}
+    .contact-item a{color:var(--primary);font-weight:700}
+    .contact-item a:hover{text-decoration:underline}
+    
+    .map-box{margin-top:10px;border-radius:12px;overflow:hidden;border:1px solid var(--line);height:220px}
+    .map-box iframe{width:100%;height:100%;border:0}
+
     form{display:grid;gap:14px}
     label{font-weight:750;font-size:.9rem}
     input,textarea,select{width:100%;margin-top:6px;padding:13px 14px;border:1px solid #d6e3e1;border-radius:12px;outline:none;background:#fff;color:var(--text)}
@@ -94,7 +124,34 @@
     footer h3{color:#fff;margin-bottom:12px}
     footer a:hover{color:#fff}
     .copyright{border-top:1px solid #24403e;margin-top:30px;padding-top:20px;font-size:.8rem}
-    #ai-button{position:fixed;right:22px;bottom:22px;z-index:100;width:64px;height:64px;border:0;border-radius:50%;background:var(--primary);color:#fff;font-size:1.35rem;box-shadow:0 14px 35px rgba(15,118,110,.3);cursor:pointer}
+    
+    #ai-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:100;
+      width:60px;
+      height:60px;
+      border:0;
+      border-radius:50%;
+      background:linear-gradient(135deg, var(--primary), var(--accent));
+      color:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 30px rgba(15,118,110,.35);
+      cursor:pointer;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    #ai-button:hover{
+      transform:scale(1.06);
+      box-shadow:0 16px 36px rgba(15,118,110,.45);
+    }
+    #ai-button svg{
+      width:28px;
+      height:28px;
+      fill:currentColor;
+    }
+
     #ai-panel{position:fixed;right:22px;bottom:98px;z-index:101;width:min(390px,calc(100% - 28px));height:560px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.18);display:none;overflow:hidden}
     #ai-panel.open{display:flex;flex-direction:column}
     .ai-head{padding:17px 18px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
@@ -117,16 +174,10 @@
     @media(max-width:620px){
       section{padding:68px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
       .hero{padding-top:70px}.actions .btn{width:100%}
-      #ai-button{right:16px;bottom:16px}.ai-panel{right:14px!important;bottom:88px!important}
+      #ai-button{right:16px;bottom:16px}#ai-panel{right:14px!important;bottom:88px!important}
       .footer-grid{grid-template-columns:1fr}
     }
   </style>
-
-  <!--
-    ASSISTANT IA :
-    Cette interface est prête. Pour activer une vraie IA, connectez le formulaire
-    à votre backend/API sécurisé. Ne placez jamais une clé API dans ce fichier public.
-  -->
 </head>
 
 <body>
@@ -150,8 +201,10 @@
 <section class="hero" id="accueil">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">Entreprise béninoise · Solutions numériques & informatiques</span>
       <h1>Des solutions <span>numériques utiles</span>, conçues pour vos projets.</h1>
+      <div>
+        <span class="eyebrow">Entreprise béninoise · Solutions numériques & informatiques</span>
+      </div>
       <p>
         PHENIX CONNECT accompagne entreprises, commerces, organisations, professionnels
         et particuliers dans leurs projets web, applications, informatique et téléphonie,
@@ -162,14 +215,55 @@
         <a class="btn btn-light" href="#services">Découvrir nos services</a>
       </div>
     </div>
+    
     <aside class="hero-card">
       <h3>Un interlocuteur pour vos besoins numériques</h3>
-      <p>De la conception d'une solution à l'assistance et à la maintenance, nous adaptons notre intervention à votre besoin.</p>
+      <p>De la création de vos plateformes à l'entretien de vos équipements, nous vous apportons un accompagnement adapté à vos objectifs :</p>
+      
       <div class="mini-list">
-        <div>Développement web & applications</div>
-        <div>Gestion et solutions métier</div>
-        <div>Assistance & maintenance informatique</div>
-        <div>Maintenance et réparation téléphonique</div>
+        <details>
+          <summary>Développement web & applications</summary>
+          <div class="detail-content">
+            <ul>
+              <li><strong>Sites vitrines & d'entreprise :</strong> Présentation de votre activité et vos coordonnées.</li>
+              <li><strong>Boutiques en ligne :</strong> Catalogue, panier et prise de commandes sur internet.</li>
+              <li><strong>Applications web :</strong> Espaces clients, gestion interne et plateformes sur mesure.</li>
+              <li><strong>Applications mobiles :</strong> Présence directe sur smartphones Android et iOS.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Gestion et solutions métier</summary>
+          <div class="detail-content">
+            <ul>
+              <li><strong>Gestion pour ateliers & artisans :</strong> Fiches clients, mesures et suivi des vêtements/commandes.</li>
+              <li><strong>Gestion commerciale & caisse :</strong> Suivi des stocks, ventes, facturation et reçus.</li>
+              <li><strong>Monnaie électronique :</strong> Registre digital sécurisé des transactions de transfert.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Assistance & maintenance informatique</summary>
+          <div class="detail-content">
+            <ul>
+              <li><strong>Systèmes & Logiciels :</strong> Installation propre de Windows et configurations.</li>
+              <li><strong>Maintenance préventive :</strong> Dépoussiérage, nettoyage physique, virus et lenteurs.</li>
+              <li><strong>Dépannage matériel :</strong> Changement de disque, RAM, écran PC, connecteurs et cartes mères.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Maintenance et réparation téléphonique</summary>
+          <div class="detail-content">
+            <ul>
+              <li><strong>Réparations physiques :</strong> Remplacement d'écran fissuré, batterie, prise de charge.</li>
+              <li><strong>Déblocage & Réseau :</strong> Déblocage de comptes, reprogrammation et décodage réseau.</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </aside>
   </div>
@@ -182,15 +276,113 @@
       <p>Des prestations complémentaires pour accompagner vos besoins numériques, informatiques et techniques.</p>
     </div>
     <div class="grid">
-      <article class="card"><div class="icon">⌘</div><h3>Développement web</h3><p>Création de sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et solutions web sur mesure.</p><div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div></article>
-      <article class="card"><div class="icon">▦</div><h3>Applications de gestion</h3><p>Conception d'outils adaptés aux activités professionnelles : stock, caisse, clients, commandes, employés, facturation, ateliers et gestion commerciale.</p><div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div></article>
-      <article class="card"><div class="icon">◉</div><h3>Applications mobiles</h3><p>Développement d'applications mobiles et de solutions adaptées aux usages de votre activité, avec possibilité de développement sur mesure.</p></article>
-      <article class="card"><div class="icon">⚙</div><h3>Assistance informatique</h3><p>Accompagnement pour l'installation, la configuration, le diagnostic, l'optimisation et la résolution de problèmes matériels et logiciels.</p></article>
-      <article class="card"><div class="icon">▣</div><h3>Maintenance informatique</h3><p>Installation de systèmes d'exploitation, activation de systèmes, résolution de pannes matérielles et logicielles et interventions adaptées à votre équipement.</p></article>
-      <article class="card"><div class="icon">⌁</div><h3>Maintenance téléphonique</h3><p>Reprogrammation, décodage, réparation de connecteurs de charge, remplacement d'écran, batterie et autres interventions selon le besoin.</p></article>
-      <article class="card"><div class="icon">◎</div><h3>Visibilité & présence locale</h3><p>Création et optimisation de présence professionnelle sur Google et accompagnement des besoins liés à la visibilité en ligne.</p></article>
-      <article class="card"><div class="icon">◇</div><h3>Solutions numériques & IA</h3><p>Intégration de fonctionnalités numériques et d'intelligence artificielle adaptées aux projets et aux besoins professionnels.</p></article>
-      <article class="card"><div class="icon">▤</div><h3>Matériel informatique</h3><p>Intermédiation pour procurer à nos collaborateurs du matériel et des équipements de qualité adaptés à leurs besoins.</p></article>
+      <!-- 1. Dev Web -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code source HTML CSS sur un écran de programmation">
+        </div>
+        <div class="card-body">
+          <h3>Développement web</h3>
+          <p>Création de sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et solutions web sur mesure.</p>
+          <div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div>
+        </div>
+      </article>
+
+      <!-- 2. Gestion -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Tableau de bord de gestion et graphiques d'analyse">
+        </div>
+        <div class="card-body">
+          <h3>Applications de gestion</h3>
+          <p>Conception d'outils adaptés aux activités professionnelles : stock, caisse, clients, commandes, employés, facturation, ateliers et gestion commerciale.</p>
+          <div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div>
+        </div>
+      </article>
+
+      <!-- 3. Mobile -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Application mobile sur smartphone dans la main">
+        </div>
+        <div class="card-body">
+          <h3>Applications mobiles</h3>
+          <p>Développement d'applications mobiles et de solutions adaptées aux usages de votre activité, avec possibilité de développement sur mesure.</p>
+          <div class="tags"><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Mobile</span></div>
+        </div>
+      </article>
+
+      <!-- 4. Assistance info -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=600&q=80" alt="Assistance et support informatique sur ordinateur de bureau">
+        </div>
+        <div class="card-body">
+          <h3>Assistance informatique</h3>
+          <p>Accompagnement pour l'installation, la configuration, le diagnostic, l'optimisation et la résolution de problèmes matériels et logiciels.</p>
+          <div class="tags"><span class="tag">Installation</span><span class="tag">Windows</span><span class="tag">Support</span></div>
+        </div>
+      </article>
+
+      <!-- 5. Maintenance info -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80" alt="Réparation de composants électroniques et carte mère PC">
+        </div>
+        <div class="card-body">
+          <h3>Maintenance informatique</h3>
+          <p>Installation de systèmes d'exploitation, activation de systèmes, résolution de pannes matérielles et logicielles et interventions adaptées à votre équipement.</p>
+          <div class="tags"><span class="tag">Dépannage</span><span class="tag">Matériel</span><span class="tag">Réparation</span></div>
+        </div>
+      </article>
+
+      <!-- 6. Téléphonie -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=600&q=80" alt="Démontage et réparation de téléphone portable avec outils">
+        </div>
+        <div class="card-body">
+          <h3>Maintenance téléphonique</h3>
+          <p>Reprogrammation, décodage, réparation de connecteurs de charge, remplacement d'écran, batterie et autres interventions selon le besoin.</p>
+          <div class="tags"><span class="tag">Écran</span><span class="tag">Batterie</span><span class="tag">Déblocage</span></div>
+        </div>
+      </article>
+
+      <!-- 7. Visibilité -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=600&q=80" alt="Recherche web et présence locale sur tablette">
+        </div>
+        <div class="card-body">
+          <h3>Visibilité & présence locale</h3>
+          <p>Création et optimisation de présence professionnelle sur Google et accompagnement des besoins liés à la visibilité en ligne.</p>
+          <div class="tags"><span class="tag">Google My Business</span><span class="tag">SEO</span></div>
+        </div>
+      </article>
+
+      <!-- 8. IA & Numérique -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="Réseaux de neurones et intelligence artificielle">
+        </div>
+        <div class="card-body">
+          <h3>Solutions numériques & IA</h3>
+          <p>Intégration de fonctionnalités numériques et d'intelligence artificielle adaptées aux projets et aux besoins professionnels.</p>
+          <div class="tags"><span class="tag">IA</span><span class="tag">Automation</span></div>
+        </div>
+      </article>
+
+      <!-- 9. Matériel -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80" alt="Ordinateur portable professionnel en vente ou fourniture">
+        </div>
+        <div class="card-body">
+          <h3>Matériel informatique</h3>
+          <p>Intermédiation pour procurer à nos collaborateurs du matériel et des équipements de qualité adaptés à leurs besoins.</p>
+          <div class="tags"><span class="tag">PC Portable</span><span class="tag">Équipement</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -202,10 +394,54 @@
       <p>Nous pouvons développer une solution sur mesure lorsque les outils existants ne correspondent pas suffisamment à votre fonctionnement.</p>
     </div>
     <div class="grid solutions">
-      <article class="card"><h3>Gestionnaire d'atelier de couture</h3><p>Une solution pouvant centraliser les clients, mesures, commandes, production, historique et organisation d'un atelier.</p></article>
-      <article class="card"><h3>Gestion mobile de monnaie</h3><p>Une solution pensée pour suivre les opérations et conserver un historique structuré afin de limiter le risque de perte d'informations lié à un cahier papier.</p></article>
-      <article class="card"><h3>Gestion commerciale</h3><p>Stock, caisse, clients, commandes, employés, facturation et suivi d'activité réunis selon les besoins de votre entreprise.</p></article>
-      <article class="card"><h3>Projet web sur mesure</h3><p>Fonctionnalités spécifiques, e-commerce, réservation, catalogue, espace professionnel ou autre besoin : la solution est définie selon votre projet.</p></article>
+      <!-- Couture -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Mètre ruban, ciseaux et tissu dans un atelier de couture">
+        </div>
+        <div class="card-body">
+          <h3>Gestionnaire d'atelier de couture</h3>
+          <p>Une solution pouvant centraliser les clients, mesures, commandes, production, historique et organisation d'un atelier.</p>
+        </div>
+      </article>
+
+      <!-- Monnaie Mobile Bénin : Logo MTN MoMo en SVG vectoriel pur (S'affiche à 100% sans bug) -->
+      <article class="card">
+        <div class="card-img mtn-bg">
+          <div class="mtn-logo-container">
+            <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="150" cy="60" rx="140" ry="52" fill="#FFCC00" stroke="#000000" stroke-width="6"/>
+              <text x="150" y="78" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="64" fill="#000000" text-anchor="middle" font-style="italic" letter-spacing="-3">MTN</text>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Gestion mobile de monnaie</h3>
+          <p>Une solution pensée pour suivre les opérations de dépôt/retrait (MTN MoMo, Moov Money) et conserver un historique structuré afin d'éviter les erreurs de registre.</p>
+        </div>
+      </article>
+
+      <!-- Commerce -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=600&q=80" alt="Comptoir de vente et encaissement en boutique">
+        </div>
+        <div class="card-body">
+          <h3>Gestion commerciale</h3>
+          <p>Stock, caisse, clients, commandes, employés, facturation et suivi d'activité réunis selon les besoins de votre entreprise.</p>
+        </div>
+      </article>
+
+      <!-- Sur mesure -->
+      <article class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Conception de maquettes de projet web sur mesure">
+        </div>
+        <div class="card-body">
+          <h3>Projet web sur mesure</h3>
+          <p>Fonctionnalités spécifiques, e-commerce, réservation, catalogue, espace professionnel ou autre besoin : la solution est définie selon votre projet.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -217,9 +453,24 @@
       <p>Entreprise béninoise basée à Parakou, nous accompagnons nos clients localement et pouvons travailler à distance pour les projets de développement web et numériques.</p>
     </div>
     <div class="grid">
-      <article class="card"><div class="icon">✓</div><h3>Une approche adaptée</h3><p>Chaque projet est étudié selon les besoins exprimés, les objectifs et le contexte d'utilisation.</p></article>
-      <article class="card"><div class="icon">↗</div><h3>Une capacité à distance</h3><p>Nos prestations numériques peuvent accompagner des clients au Bénin, en Afrique de l'Ouest et dans les pays francophones d'Europe.</p></article>
-      <article class="card"><div class="icon">♡</div><h3>Une relation de confiance</h3><p>Nous privilégions une communication claire, la confidentialité des informations et des solutions utiles au client.</p></article>
+      <article class="card">
+        <div class="card-body">
+          <h3>Une approche adaptée</h3>
+          <p>Chaque projet est étudié selon les besoins exprimés, les objectifs et le contexte d'utilisation.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3>Une capacité à distance</h3>
+          <p>Nos prestations numériques peuvent accompagner des clients au Bénin et en Europe.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3>Une relation de confiance</h3>
+          <p>Nous privilégions une communication claire, la confidentialité des informations et des solutions utiles au client.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -231,10 +482,49 @@
       <p>Une sélection de projets réalisés ou actuellement en développement.</p>
     </div>
     <div class="grid projects">
-      <article class="card project"><div class="project-top"><h3>ESTHÉTIQUE PLUS</h3><p>Site vitrine · Projet en cours</p></div><div class="project-body"><p>Site vitrine destiné à un atelier de peinture.</p><a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
-      <article class="card project"><div class="project-top"><h3>C'BON POP</h3><p>Site vitrine & mini-boutique</p></div><div class="project-body"><p>Présence web, mini-boutique avec panier avancé et accompagnement de la présence Google.</p><a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
-      <article class="card project"><div class="project-top"><h3>PREMIUMFR</h3><p>Catalogue · Projet en cours</p></div><div class="project-body"><p>Catalogue français consacré aux appareils de dernière génération.</p><a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
-      <article class="card project"><div class="project-top"><h3>PHENIX CONNECT</h3><p>Site de présentation</p></div><div class="project-body"><p>Site institutionnel présentant les activités et solutions de PHENIX CONNECT.</p><a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
+      <article class="card project">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Travaux de peinture et finition de mur intérieur">
+        </div>
+        <div class="project-body">
+          <h3>ESTHÉTIQUE PLUS</h3>
+          <p>Site vitrine · Projet en cours. Site destiné à un atelier de peinture et rénovation d'espaces.</p>
+          <a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le projet →</a>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&q=80" alt="Popcorn artisanal et gourmand">
+        </div>
+        <div class="project-body">
+          <h3>C'BON POP</h3>
+          <p>Site vitrine & mini-boutique avec panier avancé et accompagnement de la présence Google.</p>
+          <a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Smartphones modernes haut de gamme">
+        </div>
+        <div class="project-body">
+          <h3>PREMIUMFR</h3>
+          <p>Catalogue · Projet en cours. Catalogue français consacré aux appareils de dernière génération.</p>
+          <a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Réseau numérique et interconnexion">
+        </div>
+        <div class="project-body">
+          <h3>PHENIX CONNECT</h3>
+          <p>Site institutionnel présentant l'ensemble des activités et solutions de PHENIX CONNECT.</p>
+          <a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le projet →</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -261,10 +551,10 @@
       <p>Quelques réponses essentielles avant votre prise de contact.</p>
     </div>
     <div class="grid">
-      <article class="card"><h3>Quels sont vos tarifs ?</h3><p>Les tarifs ne sont pas affichés publiquement. Ils dépendent de la nature, des fonctionnalités et des besoins du projet. Contactez-nous pour obtenir un devis.</p></article>
-      <article class="card"><h3>Travaillez-vous à distance ?</h3><p>Oui. Les projets web et numériques peuvent être réalisés à distance, notamment pour des clients au Bénin, en Afrique de l'Ouest et dans les pays francophones d'Europe.</p></article>
-      <article class="card"><h3>Pouvez-vous créer une solution sur mesure ?</h3><p>Oui. Les projets peuvent être conçus sur mesure lorsque les besoins nécessitent des fonctionnalités spécifiques.</p></article>
-      <article class="card"><h3>Comment obtenir un devis ?</h3><p>Présentez votre besoin via WhatsApp ou le formulaire de contact. Une proposition adaptée pourra ensuite être établie.</p></article>
+      <article class="card"><div class="card-body"><h3>Quels sont vos tarifs ?</h3><p>Les tarifs ne sont pas affichés publiquement. Ils dépendent de la nature, des fonctionnalités et des besoins du projet. Contactez-nous pour obtenir un devis.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Travaillez-vous à distance ?</h3><p>Oui. Les projets web et numériques peuvent être réalisés à distance, notamment pour des clients au Bénin et en Europe.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Pouvez-vous créer une solution sur mesure ?</h3><p>Oui. Les projets peuvent être conçus sur mesure lorsque les besoins nécessitent des fonctionnalités spécifiques.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Comment obtenir un devis ?</h3><p>Présentez votre besoin via WhatsApp ou le formulaire de contact. Une proposition adaptée pourra ensuite être établie.</p></div></article>
     </div>
   </div>
 </section>
@@ -277,9 +567,26 @@
         <p>Décrivez-nous votre besoin. Pour les informations sensibles, les tarifs et la confirmation d'un projet, nous vous orienterons vers WhatsApp.</p>
       </div>
       <div class="contact-list">
-        <div class="contact-item"><small>WhatsApp / Téléphone</small><strong>+229 01 47 60 28 48</strong></div>
-        <div class="contact-item"><small>E-mail</small><strong>contact@phenixconnect.online</strong></div>
-        <div class="contact-item"><small>Adresse</small><strong>Dokparou, Parakou, Bénin</strong></div>
+        <div class="contact-item">
+          <small>WhatsApp / Téléphone</small>
+          <strong><a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a></strong>
+        </div>
+        <div class="contact-item">
+          <small>E-mail</small>
+          <strong><a href="mailto:contact@phenixconnect.online">contact@phenixconnect.online</a></strong>
+        </div>
+        <div class="contact-item">
+          <small>Adresse</small>
+          <strong>Dokparou, Parakou, Bénin</strong>
+          <div class="map-box">
+            <iframe 
+              src="https://maps.google.com/maps?q=Dokparou%2C%20Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              title="Localisation PHENIX CONNECT à Dokparou, Parakou"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
         <div class="contact-item"><small>Horaires</small><strong>Lun–Ven 08h00–19h00 · Sam 10h00–18h00</strong></div>
       </div>
     </div>
@@ -291,7 +598,7 @@
         <div><label for="contactValue">E-mail ou téléphone</label><input id="contactValue" name="contact" required></div>
         <div><label for="besoin">Votre préoccupation</label><textarea id="besoin" name="besoin" required></textarea></div>
         <label class="consent"><input type="checkbox" id="consent" required> Je confirme l'envoi de ma demande et accepte que mes informations soient utilisées pour traiter ma demande conformément à la politique de confidentialité.</label>
-        <button class="btn btn-primary" type="submit">Confirmer ma demande</button>
+        <button class="btn btn-primary" type="submit">Confirmer ma demande (WhatsApp)</button>
         <p class="consent">Les informations sont traitées de manière confidentielle et ne sont pas vendues. Elles sont conservées pendant la durée nécessaire à la relation avec PHENIX CONNECT, sous réserve des obligations légales applicables.</p>
       </form>
     </div>
@@ -304,14 +611,24 @@
     <div class="footer-grid">
       <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie pour vos projets au Bénin et à distance.</p></div>
       <div><h3>Navigation</h3><p><a href="#services">Services</a><br><a href="#realisations">Réalisations</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
-      <div><h3>Contact</h3><p>+229 01 47 60 28 48<br>contact@phenixconnect.online<br>Dokparou, Parakou, Bénin</p></div>
+      <div>
+        <h3>Contact</h3>
+        <p>
+          <a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a><br>
+          <a href="mailto:contact@phenixconnect.online">contact@phenixconnect.online</a><br>
+          Dokparou, Parakou, Bénin
+        </p>
+      </div>
     </div>
     <div class="copyright">© <span id="year"></span> PHENIX CONNECT. Tous droits réservés. · <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a> · <a href="#">Cookies</a></div>
   </div>
 </footer>
 
-<!-- Assistant IA -->
-<button id="ai-button" aria-label="Ouvrir PHENIX CONNECT ASSISTANT">✦</button>
+<button id="ai-button" aria-label="Ouvrir PHENIX CONNECT ASSISTANT">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13.5 11.5L12 15L10.5 11.5L7 10L10.5 8.5L12 5L13.5 8.5L17 10L13.5 11.5Z"/>
+  </svg>
+</button>
 
 <div id="ai-panel" aria-label="PHENIX CONNECT ASSISTANT">
   <div class="ai-head">
@@ -366,7 +683,7 @@
       return "Les tarifs ne sont pas communiqués directement par l'assistant. Pour une proposition adaptée à votre besoin et la confirmation d'un devis, je vous invite à nous contacter sur WhatsApp : +229 01 47 60 28 48.";
     }
     if (s.includes('contact') || s.includes('whatsapp')) {
-      return "Vous pouvez contacter PHENIX CONNECT sur WhatsApp ou par téléphone au +229 01 47 60 28 48, ou par e-mail à contact@phenixconnect.online.";
+      return "Vous pouvez contacter PHENIX CONNECT sur WhatsApp au +229 01 47 60 28 48, ou par e-mail à contact@phenixconnect.online.";
     }
     if (s.includes('site') || s.includes('web')) {
       return "PHENIX CONNECT réalise des sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et des projets web sur mesure. Présentez-moi votre projet et je peux vous orienter.";
@@ -389,11 +706,6 @@
     addMsg(q, 'user');
     aiInput.value = '';
 
-    /*
-      MODE ACTUEL : réponse locale de démonstration.
-      POUR UNE VRAIE IA : envoyez q à votre endpoint sécurisé, par exemple /api/assistant,
-      puis affichez la réponse retournée. La clé API ne doit jamais être placée ici.
-    */
     setTimeout(() => addMsg(localAnswer(q), 'bot'), 350);
   }
 
@@ -408,7 +720,8 @@
     const contact = document.getElementById('contactValue').value.trim();
     const besoin = document.getElementById('besoin').value.trim();
     const message = `Bonjour PHENIX CONNECT,%0A%0AJe souhaite vous contacter pour un projet.%0A%0ANom : ${encodeURIComponent(nom)}%0APrénom : ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
-    window.open(`https://wa.me/2290147602848?text=${message}`, '_blank', 'noopener');
+    
+    window.location.href = `https://wa.me/2290147602848?text=${message}`;
   });
 </script>
 </body>
