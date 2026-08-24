@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PHENIX CONNECT accompagne entreprises, commerces, organisations et professionnels dans leurs projets web, applications, informatique et téléphonie au Bénin, en Afrique, en Europe et à distance.">
+  <meta name="description" content="PHENIX CONNECT accompagne entreprises et professionnels dans leurs projets web, applications et maintenance au Bénin et à distance.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.phenixconnect.online/">
-  <title>PHENIX CONNECT — Solutions numériques, web & informatiques</title>
+  <title>PHENIX CONNECT — Solutions numériques & informatiques</title>
 
   <style>
     :root{
@@ -19,181 +19,137 @@
       --bg:#f7fbfa;
       --card:#ffffff;
       --line:#e2eceb;
-      --shadow:0 18px 50px rgba(15,118,110,.10);
-      --radius:22px;
+      --shadow:0 10px 30px rgba(15,118,110,.08);
+      --radius:16px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.5;content-visibility:auto}
     a{text-decoration:none;color:inherit}
     button,input,textarea,select{font:inherit}
     .container{width:min(1160px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-weight:900;letter-spacing:.08em;font-size:1.08rem}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+    .nav{height:65px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:900;letter-spacing:.05em;font-size:1.05rem}
     .brand span{color:var(--primary)}
-    .navlinks{display:flex;gap:24px;align-items:center}
-    .navlinks a{font-size:.94rem;font-weight:650;color:#385050}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .navlinks a{font-size:.9rem;font-weight:600;color:#385050}
     .navlinks a:hover{color:var(--primary)}
-    .menu{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:12px;border:1px solid transparent;font-weight:800;cursor:pointer;transition:.2s}
-    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 24px rgba(15,118,110,.2)}
-    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+    .menu{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-primary:hover{background:var(--primary-dark)}
     .btn-light{background:#fff;border-color:var(--line);color:var(--text)}
     
-    /* Style spécifique pour le bouton WhatsApp avec icône */
-    .btn-whatsapp{
-      background:#25D366;
-      color:#fff;
-      box-shadow:0 10px 24px rgba(37,211,102,.25);
-    }
-    .btn-whatsapp:hover{
-      background:#1eaa53;
-      color:#fff;
-      transform:translateY(-1px);
-    }
-    .btn-whatsapp svg{
-      width:20px;
-      height:20px;
-      fill:currentColor;
-      flex-shrink:0;
-    }
+    .btn-whatsapp{background:#25D366;color:#fff}
+    .btn-whatsapp:hover{background:#1eaa53;color:#fff}
+    .btn-whatsapp svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
 
-    section{padding:92px 0}
-    .hero{padding:95px 0 80px;background:radial-gradient(circle at 85% 10%,#dff8f4 0,transparent 35%),linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-    .eyebrow{display:inline-flex;padding:7px 11px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.8rem;font-weight:850;margin-top:18px;margin-bottom:18px}
-    h1{font-size:clamp(2.45rem,5vw,4.6rem);line-height:1.02;letter-spacing:-.045em;max-width:760px}
+    section{padding:50px 0}
+    .hero{padding:50px 0 40px;background:linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
+    h1{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.03em}
     h1 span{color:var(--primary)}
-    .hero p{font-size:1.08rem;color:var(--muted);max-width:680px;margin:24px 0 30px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
-    .hero-card h3{font-size:1.35rem;margin-bottom:12px}
-    .hero-card p{font-size:.95rem;margin:0 0 20px}
+    .hero p{font-size:1rem;color:var(--muted);margin:16px 0 22px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+    .hero-card h3{font-size:1.2rem;margin-bottom:10px}
+    .hero-card p{font-size:.9rem;margin-bottom:15px}
     
-    .mini-list, .faq-list{display:grid;gap:12px}
-    .mini-list details, .faq-list details{border:1px solid var(--line);border-radius:14px;background:#fbfefd;overflow:hidden;transition:.2s}
-    .mini-list details[open], .faq-list details[open]{background:#fff;border-color:var(--accent);box-shadow:0 4px 15px rgba(15,118,110,.08)}
-    .mini-list summary, .faq-list summary{padding:16px 18px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none}
+    .mini-list, .faq-list{display:grid;gap:10px}
+    .mini-list details, .faq-list details{border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
+    .mini-list summary, .faq-list summary{padding:12px 15px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
     .mini-list summary::-webkit-details-marker, .faq-list summary::-webkit-details-marker{display:none}
-    .mini-list summary::after, .faq-list summary::after{content:'+';font-size:1.3rem;color:var(--primary);font-weight:900;transition:transform .2s}
+    .mini-list summary::after, .faq-list summary::after{content:'+';font-size:1.1rem;color:var(--primary);font-weight:900}
     .mini-list details[open] summary::after, .faq-list details[open] summary::after{content:'-'}
-    .mini-list .detail-content, .faq-list .detail-content{padding:0 18px 18px;font-size:.94rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:6px;padding-top:12px}
-    .mini-list ul{margin-left:18px;margin-top:6px}
-    .mini-list li{margin-bottom:6px}
+    .mini-list .detail-content, .faq-list .detail-content{padding:0 15px 15px;font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:4px;padding-top:10px}
+    .mini-list ul{margin-left:16px;margin-top:4px}
 
-    .section-head{max-width:760px;margin-bottom:40px}
-    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.03em}
-    .section-head p{color:var(--muted);margin-top:13px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .section-head{max-width:700px;margin-bottom:30px}
+    .section-head h2{font-size:clamp(1.6rem,3.5vw,2.4rem);line-height:1.15}
+    .section-head p{color:var(--muted);margin-top:8px;font-size:.95rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 25px rgba(20,50,50,.04);transition:.22s;display:flex;flex-direction:column}
-    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .card-img{width:100%;height:165px;overflow:hidden;position:relative;background:#e2eceb;display:flex;align-items:center;justify-content:center}
-    .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
-    .card:hover .card-img img{transform:scale(1.05)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .card-img{width:100%;height:150px;background:#e2eceb;display:flex;align-items:center;justify-content:center}
+    .card-img img{width:100%;height:100%;object-fit:cover}
     
     .card-img.mtn-bg{background:#FFCC00}
-    .mtn-logo-container{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:20px}
-    .mtn-logo-container svg{max-width:180px;max-height:100px;width:100%;height:auto}
+    .mtn-logo-container{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:15px}
+    .mtn-logo-container svg{max-width:140px;max-height:80px;width:100%;height:auto}
 
-    .card-body{padding:22px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
-    .card h3{font-size:1.12rem;margin-bottom:9px}
-    .card p{color:var(--muted);font-size:.94rem}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
-    .tag{font-size:.76rem;padding:5px 8px;border-radius:999px;background:#f0f6f5;color:#496060}
+    .card-body{padding:18px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+    .card h3{font-size:1.05rem;margin-bottom:6px}
+    .card p{color:var(--muted);font-size:.9rem}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f0f6f5;color:#496060}
     
     .band{background:#102a2a;color:#fff}
     .band .section-head p{color:#bdd0ce}
     .band .card{background:#173837;border-color:#2b504e}
     .band .card p{color:#bdd0ce}
-    .solutions{grid-template-columns:repeat(2,1fr)}
+    .solutions, .projects{grid-template-columns:repeat(2,1fr)}
     
-    .projects{grid-template-columns:repeat(2,1fr)}
-    .project{padding:0}
-    .project .card-img{height:190px}
-    .project-body{padding:24px}
-    .project-body p{color:var(--muted);font-size:.92rem}
-    .project-body a{display:inline-block;margin-top:15px;color:var(--primary);font-weight:800}
+    .project .card-img{height:160px}
+    .project-body{padding:18px}
+    .project-body p{color:var(--muted);font-size:.9rem}
+    .project-body a{display:inline-block;margin-top:10px;color:var(--primary);font-weight:700;font-size:.9rem}
 
     .steps{counter-reset:step}
-    .step{position:relative;padding:26px;padding-left:65px}
-    .step:before{counter-increment:step;content:counter(step);position:absolute;left:15px;top:22px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900}
+    .step{position:relative;padding:20px;padding-left:55px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;left:15px;top:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:800;font-size:.85rem}
     
-    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}
-    .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
-    .contact-list{display:grid;gap:14px;margin-top:22px}
-    .contact-item{padding:14px;border:1px solid var(--line);border-radius:14px}
-    .contact-item small{display:block;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
+    .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+    .contact-list{display:grid;gap:12px;margin-top:18px}
+    .contact-item{padding:12px;border:1px solid var(--line);border-radius:10px}
+    .contact-item small{display:block;color:var(--muted);font-size:.78rem}
     .contact-item a{color:var(--primary);font-weight:700}
-    .contact-item a:hover{text-decoration:underline}
     
-    .map-box{margin-top:10px;border-radius:12px;overflow:hidden;border:1px solid var(--line);height:220px}
-    .map-box iframe{width:100%;height:100%;border:0}
+    .map-box{margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid var(--line);height:180px;background:#e2eceb;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px}
+    .map-box button{background:var(--primary);color:#fff;border:0;padding:8px 14px;border-radius:8px;font-size:.85rem;cursor:pointer;font-weight:700}
 
-    form{display:grid;gap:14px}
-    label{font-weight:750;font-size:.9rem}
-    input,textarea,select{width:100%;margin-top:6px;padding:13px 14px;border:1px solid #d6e3e1;border-radius:12px;outline:none;background:#fff;color:var(--text)}
-    input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(20,184,166,.10)}
-    textarea{min-height:130px;resize:vertical}
-    .consent{font-size:.8rem;color:var(--muted)}
-    footer{background:#0b2020;color:#b9ccca;padding:48px 0 25px}
-    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
-    footer h3{color:#fff;margin-bottom:12px}
+    form{display:grid;gap:12px}
+    label{font-weight:700;font-size:.85rem}
+    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d6e3e1;border-radius:8px;outline:none;background:#fff;color:var(--text)}
+    textarea{min-height:100px;resize:vertical}
+    .consent{font-size:.75rem;color:var(--muted)}
+    footer{background:#0b2020;color:#b9ccca;padding:35px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px;font-size:.9rem}
+    footer h3{color:#fff;margin-bottom:10px;font-size:1rem}
     footer a:hover{color:#fff}
-    .copyright{border-top:1px solid #24403e;margin-top:30px;padding-top:20px;font-size:.8rem}
+    .copyright{border-top:1px solid #24403e;margin-top:25px;padding-top:15px;font-size:.78rem}
     
     #ai-button{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      z-index:100;
-      width:60px;
-      height:60px;
-      border:0;
-      border-radius:50%;
-      background:linear-gradient(135deg, var(--primary), var(--accent));
-      color:#fff;
-      display:grid;
-      place-items:center;
-      box-shadow:0 12px 30px rgba(15,118,110,.35);
-      cursor:pointer;
-      transition:transform .25s ease, box-shadow .25s ease;
+      position:fixed;right:18px;bottom:18px;z-index:100;width:52px;height:52px;border:0;border-radius:50%;
+      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;
     }
-    #ai-button:hover{
-      transform:scale(1.06);
-      box-shadow:0 16px 36px rgba(15,118,110,.45);
-    }
-    #ai-button svg{
-      width:28px;
-      height:28px;
-      fill:currentColor;
-    }
+    #ai-button svg{width:24px;height:24px;fill:currentColor}
 
-    #ai-panel{position:fixed;right:22px;bottom:98px;z-index:101;width:min(390px,calc(100% - 28px));height:560px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.18);display:none;overflow:hidden}
-    #ai-panel.open{display:flex;flex-direction:column}
-    .ai-head{padding:17px 18px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
-    .ai-head small{display:block;opacity:.85}
-    .ai-close{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
-    #messages{flex:1;overflow:auto;padding:17px;background:#f7fbfa;display:flex;flex-direction:column;gap:10px}
-    .msg{max-width:86%;padding:10px 12px;border-radius:14px;font-size:.88rem;white-space:pre-wrap}
+    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15);display:none;flex-direction:column;overflow:hidden}
+    #ai-panel.open{display:flex}
+    .ai-head{padding:14px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
+    .ai-head small{display:block;opacity:.85;font-size:.75rem}
+    .ai-close{background:none;border:0;color:#fff;font-size:1.2rem;cursor:pointer}
+    #messages{flex:1;overflow:auto;padding:14px;background:#f7fbfa;display:flex;flex-direction:column;gap:8px}
+    .msg{max-width:88%;padding:8px 11px;border-radius:10px;font-size:.85rem;white-space:pre-wrap}
     .bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
     .user{background:var(--primary);color:#fff;align-self:flex-end}
-    .quick{display:flex;gap:7px;flex-wrap:wrap;padding:10px 12px;border-top:1px solid var(--line)}
-    .quick button{border:1px solid #cfe1df;background:#fff;border-radius:999px;padding:7px 9px;font-size:.74rem;cursor:pointer}
-    .ai-input{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
-    .ai-input input{margin:0}
-    .ai-input button{border:0;border-radius:11px;background:var(--primary);color:#fff;padding:0 15px;cursor:pointer}
-    .note{font-size:.75rem;color:var(--muted);padding:0 12px 8px}
-    @media(max-width:900px){
-      .navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+    .quick{display:flex;gap:5px;flex-wrap:wrap;padding:8px 10px;border-top:1px solid var(--line)}
+    .quick button{border:1px solid #cfe1df;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
+    .ai-input{display:flex;gap:6px;padding:8px 10px;border-top:1px solid var(--line)}
+    .ai-input input{margin:0;padding:8px}
+    .ai-input button{border:0;border-radius:8px;background:var(--primary);color:#fff;padding:0 12px;cursor:pointer;font-size:.85rem}
+    .note{font-size:.7rem;color:var(--muted);padding:0 10px 6px}
+
+    @media(max-width:850px){
+      .navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:#fff;padding:15px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
       .navlinks.show{display:flex}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}
     }
-    @media(max-width:620px){
-      section{padding:68px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
-      .hero{padding-top:70px}.actions .btn{width:100%}
-      #ai-button{right:16px;bottom:16px}#ai-panel{right:14px!important;bottom:88px!important}
-      .footer-grid{grid-template-columns:1fr}
+    @media(max-width:580px){
+      section{padding:35px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
+      .actions .btn{width:100%}.footer-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -211,9 +167,7 @@
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-whatsapp" href="https://wa.me/2290147602848" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.191 8.191 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.31.2-.56.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.18-.48-.3z"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.191 8.191 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.31.2-.56.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.18-.48-.3z"/></svg>
         WhatsApp
       </a>
     </nav>
@@ -225,14 +179,8 @@
   <div class="container hero-grid">
     <div>
       <h1>Des solutions <span>numériques utiles</span>, conçues pour vos projets.</h1>
-      <div>
-        <span class="eyebrow">Entreprise béninoise · Solutions numériques & informatiques</span>
-      </div>
-      <p>
-        PHENIX CONNECT accompagne entreprises, commerces, organisations, professionnels
-        et particuliers dans leurs projets web, applications, informatique et téléphonie,
-        au Bénin, en Afrique, en Europe et à distance.
-      </p>
+      <div><span class="eyebrow">Entreprise béninoise · Solutions numériques & informatiques</span></div>
+      <p>PHENIX CONNECT accompagne entreprises, commerces, organisations et particuliers dans leurs projets web, applications, informatique et téléphonie.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#contact">Parler de votre projet</a>
         <a class="btn btn-light" href="#services">Découvrir nos services</a>
@@ -240,18 +188,16 @@
     </div>
     
     <aside class="hero-card">
-      <h3>Un interlocuteur pour vos besoins numériques</h3>
-      <p>De la création de vos plateformes à l'entretien de vos équipements, nous vous apportons un accompagnement adapté à vos objectifs :</p>
-      
+      <h3>Un interlocuteur pour vos besoins</h3>
+      <p>Un accompagnement adapté à vos objectifs :</p>
       <div class="mini-list">
         <details>
           <summary>Développement web & applications</summary>
           <div class="detail-content">
             <ul>
-              <li><strong>Sites vitrines & d'entreprise :</strong> Présentation de votre activité et vos coordonnées.</li>
-              <li><strong>Boutiques en ligne :</strong> Catalogue, panier et prise de commandes sur internet.</li>
-              <li><strong>Applications web :</strong> Espaces clients, gestion interne et plateformes sur mesure.</li>
-              <li><strong>Applications mobiles :</strong> Présence directe sur smartphones Android et iOS.</li>
+              <li><strong>Sites vitrines & d'entreprise :</strong> Présentation claire et professionnelle.</li>
+              <li><strong>Boutiques en ligne :</strong> Catalogue, panier et commandes directes.</li>
+              <li><strong>Applications web & mobiles :</strong> Outils sur mesure sur PC, Android et iOS.</li>
             </ul>
           </div>
         </details>
@@ -260,30 +206,29 @@
           <summary>Gestion et solutions métier</summary>
           <div class="detail-content">
             <ul>
-              <li><strong>Gestion pour ateliers & artisans :</strong> Fiches clients, mesures et suivi des vêtements/commandes.</li>
-              <li><strong>Gestion commerciale & caisse :</strong> Suivi des stocks, ventes, facturation et reçus.</li>
-              <li><strong>Monnaie électronique :</strong> Registre digital sécurisé des transactions de transfert.</li>
+              <li><strong>Ateliers & artisans :</strong> Fiches clients, mesures et suivi des commandes.</li>
+              <li><strong>Gestion commerciale :</strong> Stocks, ventes, facturation et reçus.</li>
+              <li><strong>Monnaie électronique :</strong> Registre digital sécurisé pour dépôts/retraits.</li>
             </ul>
           </div>
         </details>
 
         <details>
-          <summary>Assistance & maintenance informatique</summary>
+          <summary>Assistance & maintenance PC</summary>
           <div class="detail-content">
             <ul>
               <li><strong>Systèmes & Logiciels :</strong> Installation propre de Windows et configurations.</li>
-              <li><strong>Maintenance préventive :</strong> Dépoussiérage, nettoyage physique, virus et lenteurs.</li>
-              <li><strong>Dépannage matériel :</strong> Changement de disque, RAM, écran PC, connecteurs et cartes mères.</li>
+              <li><strong>Dépannage matériel :</strong> Nettoyage, changement de disques, RAM, écran PC.</li>
             </ul>
           </div>
         </details>
 
         <details>
-          <summary>Maintenance et réparation téléphonique</summary>
+          <summary>Maintenance téléphonique</summary>
           <div class="detail-content">
             <ul>
-              <li><strong>Réparations physiques :</strong> Remplacement d'écran fissuré, batterie, prise de charge.</li>
-              <li><strong>Déblocage & Réseau :</strong> Déblocage de comptes, reprogrammation et décodage réseau.</li>
+              <li><strong>Réparations physiques :</strong> Remplacement d'écran, batterie, prise de charge.</li>
+              <li><strong>Déblocage :</strong> Reprogrammation et décodage réseau.</li>
             </ul>
           </div>
         </details>
@@ -296,104 +241,86 @@
   <div class="container">
     <div class="section-head">
       <h2>Nos services</h2>
-      <p>Des prestations complémentaires pour accompagner vos besoins numériques, informatiques et techniques.</p>
+      <p>Des prestations adaptées à vos besoins informatiques et numériques.</p>
     </div>
     <div class="grid">
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code source HTML CSS sur un écran de programmation">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Code source HTML CSS" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Développement web</h3>
-          <p>Création de sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et solutions web sur mesure.</p>
+          <p>Sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios et solutions sur mesure.</p>
           <div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Tableau de bord de gestion et graphiques d'analyse">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Tableau de bord de gestion" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Applications de gestion</h3>
-          <p>Conception d'outils adaptés aux activités professionnelles : stock, caisse, clients, commandes, employés, facturation, ateliers et gestion commerciale.</p>
+          <p>Outils adaptés aux activités professionnelles : stock, caisse, clients, facturation, ateliers.</p>
           <div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Application mobile sur smartphone dans la main">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Application mobile" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Applications mobiles</h3>
-          <p>Développement d'applications mobiles et de solutions adaptées aux usages de votre activité, avec possibilité de développement sur mesure.</p>
+          <p>Développement d'applications Android et iOS sur mesure adaptées aux usages de votre activité.</p>
           <div class="tags"><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Mobile</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=600&q=80" alt="Assistance et support informatique sur ordinateur de bureau">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Assistance informatique" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Assistance informatique</h3>
-          <p>Accompagnement pour l'installation, la configuration, le diagnostic, l'optimisation et la résolution de problèmes matériels et logiciels.</p>
+          <p>Configuration, diagnostic, optimisation et résolution de problèmes matériels/logiciels.</p>
           <div class="tags"><span class="tag">Installation</span><span class="tag">Windows</span><span class="tag">Support</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80" alt="Réparation de composants électroniques et carte mère PC">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réparation carte mère PC" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Maintenance informatique</h3>
-          <p>Installation de systèmes d'exploitation, activation de systèmes, résolution de pannes matérielles et logicielles et interventions adaptées à votre équipement.</p>
+          <p>Installation de systèmes Windows, activation, résolution de pannes et réparations matérielles.</p>
           <div class="tags"><span class="tag">Dépannage</span><span class="tag">Matériel</span><span class="tag">Réparation</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=600&q=80" alt="Démontage et réparation de téléphone portable avec outils">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réparation de téléphone" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Maintenance téléphonique</h3>
-          <p>Reprogrammation, décodage, réparation de connecteurs de charge, remplacement d'écran, batterie et autres interventions selon le besoin.</p>
+          <p>Reprogrammation, décodage, changement d'écran, batterie et connecteurs de charge.</p>
           <div class="tags"><span class="tag">Écran</span><span class="tag">Batterie</span><span class="tag">Déblocage</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=600&q=80" alt="Recherche web et présence locale sur tablette">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Présence Google" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <h3>Visibilité & présence locale</h3>
-          <p>Création et optimisation de présence professionnelle sur Google et accompagnement des besoins liés à la visibilité en ligne.</p>
+          <h3>Visibilité locale</h3>
+          <p>Création et optimisation de fiches Google My Business pour améliorer votre présence locale.</p>
           <div class="tags"><span class="tag">Google My Business</span><span class="tag">SEO</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="Réseaux de neurones et intelligence artificielle">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Intelligence artificielle" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Solutions numériques & IA</h3>
-          <p>Intégration de fonctionnalités numériques et d'intelligence artificielle adaptées aux projets et aux besoins professionnels.</p>
+          <p>Intégration d'outils numériques modernes et d'intelligence artificielle sur mesure.</p>
           <div class="tags"><span class="tag">IA</span><span class="tag">Automation</span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80" alt="Ordinateur portable professionnel en vente ou fourniture">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Matériel informatique" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Matériel informatique</h3>
-          <p>Intermédiation pour procurer à nos collaborateurs du matériel et des équipements de qualité adaptés à leurs besoins.</p>
+          <p>Intermédiation et conseils pour obtenir du matériel informatique fiable et de qualité.</p>
           <div class="tags"><span class="tag">PC Portable</span><span class="tag">Équipement</span></div>
         </div>
       </article>
@@ -404,52 +331,43 @@
 <section class="band" id="solutions">
   <div class="container">
     <div class="section-head">
-      <h2>Des solutions pensées pour votre activité</h2>
-      <p>Nous pouvons développer une solution sur mesure lorsque les outils existants ne correspondent pas suffisamment à votre fonctionnement.</p>
+      <h2>Solutions métiers dédiées</h2>
+      <p>Des logiciels développés sur mesure selon les spécificités de votre activité.</p>
     </div>
     <div class="grid solutions">
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Mètre ruban, ciseaux et tissu dans un atelier de couture">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Atelier de couture" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <h3>Gestionnaire d'atelier de couture</h3>
-          <p>Une solution pouvant centraliser les clients, mesures, commandes, production, historique et organisation d'un atelier.</p>
+          <h3>Gestion d'atelier de couture</h3>
+          <p>Centralisation des clients, mesures, commandes et suivi de production.</p>
         </div>
       </article>
 
       <article class="card">
         <div class="card-img mtn-bg">
           <div class="mtn-logo-container">
-            <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="150" cy="60" rx="140" ry="52" fill="#FFCC00" stroke="#000000" stroke-width="6"/>
-              <text x="150" y="78" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="64" fill="#000000" text-anchor="middle" font-style="italic" letter-spacing="-3">MTN</text>
-            </svg>
+            <svg viewBox="0 0 300 120"><ellipse cx="150" cy="60" rx="140" ry="52" fill="#FFCC00" stroke="#000000" stroke-width="6"/><text x="150" y="78" font-family="sans-serif" font-weight="900" font-size="64" fill="#000000" text-anchor="middle" font-style="italic">MTN</text></svg>
           </div>
         </div>
         <div class="card-body">
           <h3>Gestion mobile de monnaie</h3>
-          <p>Une solution pensée pour suivre les opérations de dépôt/retrait (MTN MoMo, Moov Money) et conserver un historique structuré afin d'éviter les erreurs de registre.</p>
+          <p>Registre digital pour dépôts et retraits (MTN MoMo, Moov) évitant les erreurs de caisse.</p>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=600&q=80" alt="Comptoir de vente et encaissement en boutique">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Encaissement boutique" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Gestion commerciale</h3>
-          <p>Stock, caisse, clients, commandes, employés, facturation et suivi d'activité réunis selon les besoins de votre entreprise.</p>
+          <p>Stocks, caisse, clients, facturation et vente réunis dans un seul outil simple.</p>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Conception de maquettes de projet web sur mesure">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Maquette web" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Projet web sur mesure</h3>
-          <p>Fonctionnalités spécifiques, e-commerce, réservation, catalogue, espace professionnel ou autre besoin : la solution est définie selon votre projet.</p>
+          <p>Fonctionnalités avancées, espaces professionnels et réservations selon votre besoin exact.</p>
         </div>
       </article>
     </div>
@@ -459,28 +377,13 @@
 <section id="apropos">
   <div class="container">
     <div class="section-head">
-      <h2>PHENIX CONNECT, une approche orientée vers vos besoins</h2>
-      <p>Entreprise béninoise basée à Parakou, nous accompagnons nos clients localement et pouvons travailler à distance pour les projets de développement web et numériques.</p>
+      <h2>À propos de PHENIX CONNECT</h2>
+      <p>Basée à Parakou au Bénin, notre structure accompagne les professionnels localement et à distance.</p>
     </div>
     <div class="grid">
-      <article class="card">
-        <div class="card-body">
-          <h3>Une approche adaptée</h3>
-          <p>Chaque projet est étudié selon les besoins exprimés, les objectifs et le contexte d'utilisation.</p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3>Une capacité à distance</h3>
-          <p>Nos prestations numériques peuvent accompagner des clients au Bénin, en Afrique et en Europe.</p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3>Une relation de confiance</h3>
-          <p>Nous privilégions une communication claire, la confidentialité des informations et des solutions utiles au client.</p>
-        </div>
-      </article>
+      <article class="card"><div class="card-body"><h3>Approche adaptée</h3><p>Chaque solution est pensée spécifiquement pour le travail réel du client.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Projets à distance</h3><p>Prestations web et logicielles pour le Bénin, l'Afrique et l'Europe.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Confidentialité</h3><p>Suivi transparent et respect strict de la confidentialité de vos données.</p></div></article>
     </div>
   </div>
 </section>
@@ -489,67 +392,44 @@
   <div class="container">
     <div class="section-head">
       <h2>Quelques réalisations</h2>
-      <p>Une sélection de projets réalisés ou actuellement en développement.</p>
+      <p>Projets récents créés ou en cours de déploiement.</p>
     </div>
     <div class="grid projects">
       <article class="card project">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Travaux de peinture et finition de mur intérieur">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Travaux de peinture" loading="lazy" decoding="async"></div>
         <div class="project-body">
           <h3>ESTHÉTIQUE PLUS</h3>
-          <p>Site vitrine · Projet en cours. Site destiné à un atelier de peinture et rénovation d'espaces.</p>
-          <a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le projet →</a>
+          <p>Site vitrine pour un atelier de rénovation et peinture d'intérieur.</p>
+          <a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le site →</a>
         </div>
       </article>
 
       <article class="card project">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&q=80" alt="Popcorn artisanal et gourmand">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Popcorn artisanal" loading="lazy" decoding="async"></div>
         <div class="project-body">
           <h3>C'BON POP</h3>
-          <p>Site vitrine & mini-boutique avec panier avancé et accompagnement de la présence Google.</p>
-          <a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a>
+          <p>Site vitrine et catalogue interactif avec module de commande WhatsApp.</p>
+          <a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le site →</a>
         </div>
       </article>
 
       <article class="card project">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Smartphones modernes haut de gamme">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Smartphones modernes" loading="lazy" decoding="async"></div>
         <div class="project-body">
           <h3>PREMIUMFR</h3>
-          <p>Catalogue · Projet en cours. Catalogue français consacré aux appareils de dernière génération.</p>
-          <a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a>
+          <p>Catalogue de présentation d'équipements technologiques et smartphones.</p>
+          <a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le site →</a>
         </div>
       </article>
 
       <article class="card project">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Réseau numérique et interconnexion">
-        </div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réseau numérique" loading="lazy" decoding="async"></div>
         <div class="project-body">
           <h3>PHENIX CONNECT</h3>
-          <p>Site institutionnel présentant l'ensemble des activités et solutions de PHENIX CONNECT.</p>
-          <a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le projet →</a>
+          <p>Plateforme institutionnelle regroupant nos compétences et prestations.</p>
+          <a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le site →</a>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <h2>Comment nous pouvons vous accompagner</h2>
-      <p>Une démarche simple pour passer de votre besoin à une solution adaptée.</p>
-    </div>
-    <div class="grid">
-      <article class="card step"><h3>Échange</h3><p>Vous nous présentez votre activité, votre besoin et vos objectifs.</p></article>
-      <article class="card step"><h3>Analyse</h3><p>Nous identifions les fonctionnalités et prestations pertinentes pour votre projet.</p></article>
-      <article class="card step"><h3>Proposition</h3><p>Nous vous orientons vers une solution adaptée et échangeons sur les modalités du projet.</p></article>
-      <article class="card step"><h3>Réalisation</h3><p>Après validation, nous avançons sur la mise en œuvre et l'accompagnement prévu.</p></article>
     </div>
   </div>
 </section>
@@ -558,36 +438,23 @@
   <div class="container">
     <div class="section-head">
       <h2>Questions fréquentes</h2>
-      <p>Quelques réponses essentielles avant votre prise de contact.</p>
+      <p>Réponses rapides à vos interrogations.</p>
     </div>
     
     <div class="faq-list">
       <details>
         <summary>Quels sont vos tarifs ?</summary>
-        <div class="detail-content">
-          <p>Les tarifs ne sont pas affichés publiquement. Ils dépendent de la nature, des fonctionnalités et des besoins spécifiques de votre projet. Contactez-nous pour obtenir un devis personnalisé.</p>
-        </div>
+        <div class="detail-content"><p>Nos tarifs dépendent de la complexité et des fonctionnalités souhaitées. Écrivez-nous sur WhatsApp pour recevoir un devis clair rapidement.</p></div>
       </details>
 
       <details>
         <summary>Travaillez-vous à distance ?</summary>
-        <div class="detail-content">
-          <p>Oui. Les projets web et numériques peuvent être réalisés à distance, notamment pour des clients au Bénin, en Afrique et en Europe.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Pouvez-vous créer une solution sur mesure ?</summary>
-        <div class="detail-content">
-          <p>Oui. Les projets peuvent être conçus entièrement sur mesure lorsque vos besoins nécessitent des fonctionnalités spécifiques ou un fonctionnement particulier.</p>
-        </div>
+        <div class="detail-content"><p>Oui, nous créons des sites et applications à distance pour des clients situés partout au Bénin, en Afrique et en Europe.</p></div>
       </details>
 
       <details>
         <summary>Comment obtenir un devis ?</summary>
-        <div class="detail-content">
-          <p>Présentez votre besoin via WhatsApp ou le formulaire de contact en bas de page. Une proposition adaptée pourra ensuite être établie rapidement.</p>
-        </div>
+        <div class="detail-content"><p>Remplissez le formulaire en bas de page ou envoyez un message direct sur WhatsApp avec vos besoins.</p></div>
       </details>
     </div>
   </div>
@@ -597,8 +464,8 @@
   <div class="container contact-grid">
     <div>
       <div class="section-head">
-        <h2>Parlons de votre projet</h2>
-        <p>Décrivez-nous votre besoin. Pour les informations sensibles, les tarifs et la confirmation d'un projet, nous vous orienterons vers WhatsApp.</p>
+        <h2>Contactez-nous</h2>
+        <p>Présentez votre projet pour obtenir une réponse rapide.</p>
       </div>
       <div class="contact-list">
         <div class="contact-item">
@@ -612,16 +479,10 @@
         <div class="contact-item">
           <small>Adresse</small>
           <strong>Dokparou, Parakou, Bénin</strong>
-          <div class="map-box">
-            <iframe 
-              src="https://maps.google.com/maps?q=Dokparou%2C%20Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-              title="Localisation PHENIX CONNECT à Dokparou, Parakou"
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          <div class="map-box" id="mapWrapper">
+            <button onclick="loadMap()">Afficher la carte Google Maps</button>
           </div>
         </div>
-        <div class="contact-item"><small>Horaires</small><strong>Lun–Ven 08h00–19h00 · Sam 10h00–18h00</strong></div>
       </div>
     </div>
 
@@ -631,9 +492,8 @@
         <div><label for="prenom">Prénom</label><input id="prenom" name="prenom" required></div>
         <div><label for="contactValue">E-mail ou téléphone</label><input id="contactValue" name="contact" required></div>
         <div><label for="besoin">Votre préoccupation</label><textarea id="besoin" name="besoin" required></textarea></div>
-        <label class="consent"><input type="checkbox" id="consent" required> Je confirme l'envoi de ma demande et accepte que mes informations soient utilisées pour traiter ma demande conformément à la politique de confidentialité.</label>
-        <button class="btn btn-primary" type="submit">Confirmer ma demande (WhatsApp)</button>
-        <p class="consent">Les informations sont traitées de manière confidentielle et ne sont pas vendues. Elles sont conservées pendant la durée nécessaire à la relation avec PHENIX CONNECT, sous réserve des obligations légales applicables.</p>
+        <label class="consent"><input type="checkbox" id="consent" required> J'accepte que mes informations soient utilisées pour traiter ma demande.</label>
+        <button class="btn btn-primary" type="submit">Envoyer sur WhatsApp</button>
       </form>
     </div>
   </div>
@@ -643,56 +503,57 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie pour vos projets au Bénin, en Afrique, en Europe et à distance.</p></div>
+      <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie.</p></div>
       <div><h3>Navigation</h3><p><a href="#services">Services</a><br><a href="#realisations">Réalisations</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
       <div>
         <h3>Contact</h3>
         <p>
           <a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a><br>
-          <a href="mailto:contact@phenixconnect.online">contact@phenixconnect.online</a><br>
           Dokparou, Parakou, Bénin
         </p>
       </div>
     </div>
-    <div class="copyright">© <span id="year"></span> PHENIX CONNECT. Tous droits réservés. · <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a> · <a href="#">Cookies</a></div>
+    <div class="copyright">© <span id="year"></span> PHENIX CONNECT. Tous droits réservés.</div>
   </div>
 </footer>
 
-<button id="ai-button" aria-label="Ouvrir PHENIX CONNECT ASSISTANT">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13.5 11.5L12 15L10.5 11.5L7 10L10.5 8.5L12 5L13.5 8.5L17 10L13.5 11.5Z"/>
-  </svg>
+<button id="ai-button" aria-label="Ouvrir Assistant">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13.5 11.5L12 15L10.5 11.5L7 10L10.5 8.5L12 5L13.5 8.5L17 10L13.5 11.5Z"/></svg>
 </button>
 
-<div id="ai-panel" aria-label="PHENIX CONNECT ASSISTANT">
+<div id="ai-panel">
   <div class="ai-head">
-    <div><strong>PHENIX CONNECT ASSISTANT</strong><small>Assistant IA · Je peux vous orienter</small></div>
-    <button class="ai-close" id="aiClose" aria-label="Fermer">×</button>
+    <div><strong>ASSISTANT IA</strong><small>PHENIX CONNECT</small></div>
+    <button class="ai-close" id="aiClose">×</button>
   </div>
   <div id="messages">
-    <div class="msg bot">Bonjour. Je suis l'assistant IA de PHENIX CONNECT. Je peux vous renseigner sur nos services et vous orienter selon votre projet. Comment puis-je vous aider ?</div>
+    <div class="msg bot">Bonjour ! Comment puis-je vous renseigner sur nos prestations ?</div>
   </div>
   <div class="quick">
     <button data-q="Quels services proposez-vous ?">Services</button>
-    <button data-q="Je veux créer un site web.">Créer un site</button>
-    <button data-q="Je veux une application de gestion.">Application</button>
-    <button data-q="Je veux demander un devis.">Devis</button>
-    <button data-q="Comment vous contacter ?">Contact</button>
+    <button data-q="Je veux créer un site web.">Site Web</button>
+    <button data-q="Comment obtenir un devis ?">Devis</button>
   </div>
   <div class="ai-input">
-    <input id="aiInput" placeholder="Écrivez votre question..." autocomplete="off">
-    <button id="aiSend">Envoyer</button>
+    <input id="aiInput" placeholder="Posez une question..." autocomplete="off">
+    <button id="aiSend">OK</button>
   </div>
-  <div class="note">Pour un devis, une information sensible ou une confirmation, je vous oriente vers WhatsApp.</div>
 </div>
 
 <script>
+  // Dynamic Navigation & Date
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.getElementById('navLinks');
   menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Lazy load Map iframe only on user action
+  function loadMap() {
+    document.getElementById('mapWrapper').innerHTML = '<iframe src="https://maps.google.com/maps?q=Dokparou%2C%20Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
+  }
+
+  // Lite AI Assistant
   const aiButton = document.getElementById('ai-button');
   const aiPanel = document.getElementById('ai-panel');
   const aiClose = document.getElementById('aiClose');
@@ -711,51 +572,35 @@
     messages.scrollTop = messages.scrollHeight;
   }
 
-  function localAnswer(q) {
+  function getResponse(q) {
     const s = q.toLowerCase();
-    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) {
-      return "Les tarifs ne sont pas communiqués directement par l'assistant. Pour une proposition adaptée à votre besoin et la confirmation d'un devis, je vous invite à nous contacter sur WhatsApp : +229 01 47 60 28 48.";
-    }
-    if (s.includes('contact') || s.includes('whatsapp')) {
-      return "Vous pouvez contacter PHENIX CONNECT sur WhatsApp au +229 01 47 60 28 48, ou par e-mail à contact@phenixconnect.online.";
-    }
-    if (s.includes('site') || s.includes('web')) {
-      return "PHENIX CONNECT réalise des sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et des projets web sur mesure. Présentez-moi votre projet et je peux vous orienter.";
-    }
-    if (s.includes('application') || s.includes('gestion')) {
-      return "Nous pouvons développer des applications de gestion adaptées à votre activité : stock, caisse, clients, commandes, employés, gestion commerciale, facturation, ateliers et autres besoins sur mesure. Nous pouvons aussi développer des applications mobiles.";
-    }
-    if (s.includes('informatique') || s.includes('ordinateur')) {
-      return "PHENIX CONNECT propose l'assistance et la maintenance informatique : installation de systèmes, activation de systèmes, diagnostic et résolution de problèmes matériels et logiciels, ainsi que d'autres interventions adaptées.";
-    }
-    if (s.includes('téléphone') || s.includes('telephone') || s.includes('écran') || s.includes('batterie')) {
-      return "Nous proposons notamment la reprogrammation, le décodage, la réparation de connecteurs de charge et le remplacement d'écran ou de batterie, selon le besoin.";
-    }
-    return "Je peux vous renseigner sur les services web, applications, informatique, téléphonie et solutions numériques de PHENIX CONNECT. Décrivez-moi votre besoin et je vous orienterai. Pour une information sensible ou un devis, je vous redirigerai vers WhatsApp.";
+    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) return "Pour obtenir un devis personnalisé, contactez-nous sur WhatsApp au +229 01 47 60 28 48.";
+    if (s.includes('site') || s.includes('web')) return "Nous créons des sites vitrines, e-commerce et applications web adaptés à votre besoin.";
+    if (s.includes('contact') || s.includes('adresse')) return "Nous sommes situés à Dokparou, Parakou. WhatsApp : +229 01 47 60 28 48.";
+    return "Pour toute demande spécifique ou étude de projet, échangez directement avec nous sur WhatsApp : +229 01 47 60 28 48.";
   }
 
-  async function sendQuestion(text) {
-    const q = text.trim();
-    if (!q) return;
-    addMsg(q, 'user');
+  function send() {
+    const val = aiInput.value.trim();
+    if (!val) return;
+    addMsg(val, 'user');
     aiInput.value = '';
-
-    setTimeout(() => addMsg(localAnswer(q), 'bot'), 350);
+    setTimeout(() => addMsg(getResponse(val), 'bot'), 200);
   }
 
-  aiSend.onclick = () => sendQuestion(aiInput.value);
-  aiInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendQuestion(aiInput.value); });
-  document.querySelectorAll('.quick button').forEach(btn => btn.onclick = () => sendQuestion(btn.dataset.q));
+  aiSend.onclick = send;
+  aiInput.onkeydown = e => { if (e.key === 'Enter') send(); };
+  document.querySelectorAll('.quick button').forEach(b => b.onclick = () => { aiInput.value = b.dataset.q; send(); });
 
+  // WhatsApp Form Submit
   document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
     const nom = document.getElementById('nom').value.trim();
     const prenom = document.getElementById('prenom').value.trim();
     const contact = document.getElementById('contactValue').value.trim();
     const besoin = document.getElementById('besoin').value.trim();
-    const message = `Bonjour PHENIX CONNECT,%0A%0AJe souhaite vous contacter pour un projet.%0A%0ANom : ${encodeURIComponent(nom)}%0APrénom : ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
-    
-    window.location.href = `https://wa.me/2290147602848?text=${message}`;
+    const msg = `Bonjour PHENIX CONNECT,%0A%0AJe vous contacte via le site :%0ANom : ${encodeURIComponent(nom)} ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
+    window.location.href = `https://wa.me/2290147602848?text=${msg}`;
   });
 </script>
 </body>
