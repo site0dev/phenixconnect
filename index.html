@@ -1,210 +1,415 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PHENIX CONNECT accompagne entreprises, commerces, organisations et professionnels dans leurs projets web, applications, informatique et téléphonie au Bénin et à distance.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://www.phenixconnect.online/">
+  <title>PHENIX CONNECT — Solutions numériques, web & informatiques</title>
 
-<title>Phenix Connect | Création de sites web, applications & solutions IT</title>
-<meta name="description" content="Phenix Connect accompagne entreprises et entrepreneurs au Bénin, en Afrique de l’Ouest, en France, en Belgique et en Europe : création de sites web, applications sur mesure, maintenance informatique et solutions digitales.">
-<meta name="keywords" content="Phenix Connect, agence web Bénin, création site web Bénin, agence web Parakou, développement web Afrique de l’Ouest, application sur mesure Bénin, maintenance informatique Bénin, agence web France, création site internet France, agence web Belgique, développement web Europe, solutions digitales">
-<meta name="author" content="Phenix Connect">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="theme-color" content="#0a0a0f">
+  <style>
+    :root{
+      --primary:#0f766e;
+      --primary-dark:#115e59;
+      --accent:#14b8a6;
+      --text:#102a2a;
+      --muted:#5f7373;
+      --bg:#f7fbfa;
+      --card:#ffffff;
+      --line:#e2eceb;
+      --shadow:0 18px 50px rgba(15,118,110,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:900;letter-spacing:.08em;font-size:1.08rem}
+    .brand span{color:var(--primary)}
+    .navlinks{display:flex;gap:24px;align-items:center}
+    .navlinks a{font-size:.94rem;font-weight:650;color:#385050}
+    .navlinks a:hover{color:var(--primary)}
+    .menu{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:12px;border:1px solid transparent;font-weight:800;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 24px rgba(15,118,110,.2)}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+    .btn-light{background:#fff;border-color:var(--line);color:var(--text)}
+    section{padding:92px 0}
+    .hero{padding:95px 0 80px;background:radial-gradient(circle at 85% 10%,#dff8f4 0,transparent 35%),linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;padding:7px 11px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.8rem;font-weight:850;margin-bottom:18px}
+    h1{font-size:clamp(2.45rem,5vw,4.6rem);line-height:1.02;letter-spacing:-.045em;max-width:760px}
+    h1 span{color:var(--primary)}
+    .hero p{font-size:1.08rem;color:var(--muted);max-width:680px;margin:24px 0 30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+    .hero-card h3{font-size:1.35rem;margin-bottom:12px}
+    .hero-card p{font-size:.95rem;margin:0 0 20px}
+    .mini-list{display:grid;gap:12px}
+    .mini-list div{padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfefd;font-weight:700}
+    .section-head{max-width:760px;margin-bottom:40px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.03em}
+    .section-head p{color:var(--muted);margin-top:13px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 25px rgba(20,50,50,.04);transition:.22s}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#e8f7f4;color:var(--primary);font-size:1.35rem;margin-bottom:18px}
+    .card h3{font-size:1.12rem;margin-bottom:9px}
+    .card p{color:var(--muted);font-size:.94rem}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+    .tag{font-size:.76rem;padding:5px 8px;border-radius:999px;background:#f0f6f5;color:#496060}
+    .band{background:#102a2a;color:#fff}
+    .band .section-head p{color:#bdd0ce}
+    .band .card{background:#173837;border-color:#2b504e}
+    .band .card p{color:#bdd0ce}
+    .solutions{grid-template-columns:repeat(2,1fr)}
+    .projects{grid-template-columns:repeat(2,1fr)}
+    .project{overflow:hidden;padding:0}
+    .project-top{min-height:155px;padding:25px;background:linear-gradient(135deg,#e7f7f4,#fff)}
+    .project-body{padding:24px}
+    .project-body p{color:var(--muted);font-size:.92rem}
+    .project-body a{display:inline-block;margin-top:15px;color:var(--primary);font-weight:800}
+    .steps{counter-reset:step}
+    .step{position:relative;padding-left:65px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}
+    .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+    .contact-list{display:grid;gap:14px;margin-top:22px}
+    .contact-item{padding:14px;border:1px solid var(--line);border-radius:14px}
+    .contact-item small{display:block;color:var(--muted)}
+    form{display:grid;gap:14px}
+    label{font-weight:750;font-size:.9rem}
+    input,textarea,select{width:100%;margin-top:6px;padding:13px 14px;border:1px solid #d6e3e1;border-radius:12px;outline:none;background:#fff;color:var(--text)}
+    input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(20,184,166,.10)}
+    textarea{min-height:130px;resize:vertical}
+    .consent{font-size:.8rem;color:var(--muted)}
+    footer{background:#0b2020;color:#b9ccca;padding:48px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+    footer h3{color:#fff;margin-bottom:12px}
+    footer a:hover{color:#fff}
+    .copyright{border-top:1px solid #24403e;margin-top:30px;padding-top:20px;font-size:.8rem}
+    #ai-button{position:fixed;right:22px;bottom:22px;z-index:100;width:64px;height:64px;border:0;border-radius:50%;background:var(--primary);color:#fff;font-size:1.35rem;box-shadow:0 14px 35px rgba(15,118,110,.3);cursor:pointer}
+    #ai-panel{position:fixed;right:22px;bottom:98px;z-index:101;width:min(390px,calc(100% - 28px));height:560px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.18);display:none;overflow:hidden}
+    #ai-panel.open{display:flex;flex-direction:column}
+    .ai-head{padding:17px 18px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
+    .ai-head small{display:block;opacity:.85}
+    .ai-close{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
+    #messages{flex:1;overflow:auto;padding:17px;background:#f7fbfa;display:flex;flex-direction:column;gap:10px}
+    .msg{max-width:86%;padding:10px 12px;border-radius:14px;font-size:.88rem;white-space:pre-wrap}
+    .bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
+    .user{background:var(--primary);color:#fff;align-self:flex-end}
+    .quick{display:flex;gap:7px;flex-wrap:wrap;padding:10px 12px;border-top:1px solid var(--line)}
+    .quick button{border:1px solid #cfe1df;background:#fff;border-radius:999px;padding:7px 9px;font-size:.74rem;cursor:pointer}
+    .ai-input{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
+    .ai-input input{margin:0}
+    .ai-input button{border:0;border-radius:11px;background:var(--primary);color:#fff;padding:0 15px;cursor:pointer}
+    .note{font-size:.75rem;color:var(--muted);padding:0 12px 8px}
+    @media(max-width:900px){
+      .navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+      .navlinks.show{display:flex}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:620px){
+      section{padding:68px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
+      .hero{padding-top:70px}.actions .btn{width:100%}
+      #ai-button{right:16px;bottom:16px}.ai-panel{right:14px!important;bottom:88px!important}
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
 
-<link rel="canonical" href="https://phenixconnect.online/">
-<link rel="sitemap" type="application/xml" href="https://phenixconnect.online/sitemap.xml">
-
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Phenix Connect">
-<meta property="og:title" content="Phenix Connect | Solutions digitales & IT">
-<meta property="og:description" content="Création de sites web, applications sur mesure, maintenance informatique et solutions digitales pour l’Afrique de l’Ouest et l’Europe.">
-<meta property="og:url" content="https://phenixconnect.online/">
-
-<link rel="alternate" hreflang="fr" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="fr-BJ" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="fr-FR" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="fr-BE" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="fr-CI" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="fr-SN" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="fr-TG" href="https://phenixconnect.online/">
-<link rel="alternate" hreflang="x-default" href="https://phenixconnect.online/">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Phenix Connect",
-  "url":"https://phenixconnect.online/",
-  "email":"contact@phenixconnect.online",
-  "telephone":"+2290147602848",
-  "description":"Création de sites web, applications sur mesure, maintenance informatique et solutions digitales pour l’Afrique de l’Ouest et l’Europe.",
-  "areaServed":[
-    "Benin","Togo","Côte d’Ivoire","Sénégal","Burkina Faso","Niger",
-    "Ghana","Nigeria","France","Belgique","Europe"
-  ],
-  "serviceType":[
-    "Développement Web",
-    "Applications sur mesure",
-    "Maintenance informatique",
-    "Maintenance téléphonique",
-    "Assistance informatique"
-  ]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-:root{
---bg-primary:#0a0a0f;--bg-secondary:#111118;--bg-card:#16161f;--bg-card-hover:#1c1c28;
---text-primary:#f5f5f7;--text-secondary:#a0a0b0;--text-muted:#6b6b7b;
---accent-1:#ff6b35;--accent-2:#ff8c42;--accent-3:#ffb347;
---accent-glow:rgba(255,107,53,.25);--border-subtle:rgba(255,255,255,.06);
---border-hover:rgba(255,107,53,.35);--gradient-fire:linear-gradient(135deg,#ff6b35,#ff8c42 40%,#ffb347);
---radius-sm:8px;--radius-md:14px;--radius-lg:22px;--radius-xl:32px;
---transition:.35s cubic-bezier(.4,0,.2,1);--shadow-card:0 8px 32px rgba(0,0,0,.35);
---shadow-glow:0 0 60px rgba(255,107,53,.15);--font-sans:'Inter',sans-serif;
---font-display:'Playfair Display',Georgia,serif
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font-sans);background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-.bg-aurora,.bg-grid{position:fixed;inset:0;pointer-events:none}
-.bg-aurora{z-index:-2;overflow:hidden}.bg-aurora:before{content:"";position:absolute;inset:-50%;
-background:radial-gradient(ellipse at 20% 50%,rgba(255,107,53,.07),transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(255,140,66,.05),transparent 45%),radial-gradient(ellipse at 50% 80%,rgba(255,179,71,.04),transparent 40%);animation:aurora 20s ease-in-out infinite alternate}
-.bg-grid{z-index:-1;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:60px 60px}
-@keyframes aurora{to{transform:translate(3%,-2%) rotate(-2deg) scale(1.02)}}
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,.75);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-subtle)}
-.navbar.scrolled{background:rgba(10,10,15,.92);box-shadow:0 4px 30px rgba(0,0,0,.4)}
-.nav-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text-primary)}
-.nav-brand-icon{width:42px;height:42px;border-radius:12px;background:var(--gradient-fire);display:flex;align-items:center;justify-content:center;color:#0a0a0f;font-weight:900;box-shadow:0 4px 18px var(--accent-glow)}
-.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;font-weight:700;line-height:1.1}
-.nav-brand-text span{display:block;font-family:var(--font-sans);font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--text-muted)}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.85rem;font-weight:500}
-.nav-links a:hover{color:var(--text-primary)}.nav-cta{background:var(--gradient-fire);color:#0a0a0f!important;padding:.55rem 1.4rem;border-radius:50px;font-weight:700!important}
-.nav-toggle{display:none;background:none;border:0;color:var(--text-primary);font-size:1.5rem}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:8rem 2rem 5rem;text-align:center}
-.hero-content{max-width:900px;margin:auto}.hero-badge{display:inline-flex;gap:.5rem;background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.2);padding:.5rem 1.2rem;border-radius:50px;color:var(--accent-2);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:2rem}
-.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:800;line-height:1.1;margin-bottom:1.5rem}.highlight{background:var(--gradient-fire);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
-.hero-subtitle{font-size:clamp(1rem,2vw,1.2rem);color:var(--text-secondary);max-width:700px;margin:0 auto 2.5rem}.hero-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2.2rem;border-radius:50px;font-size:.9rem;font-weight:600;text-decoration:none;cursor:pointer;border:0}
-.btn-primary{background:var(--gradient-fire);color:#0a0a0f;box-shadow:0 6px 28px var(--accent-glow)}.btn-secondary{background:transparent;color:var(--text-primary);border:1px solid var(--border-subtle)}
-.hero-stats{display:flex;justify-content:center;gap:3.5rem;margin-top:4rem;flex-wrap:wrap}.hero-stat{text-align:center}
-.hero-stat-value{font-size:2.2rem;font-weight:800;font-family:var(--font-display);background:var(--gradient-fire);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hero-stat-label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.1em}
-.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--text-muted)}
-.section{padding:6rem 2rem;position:relative}.section-container{max-width:1200px;margin:auto}.section-header{text-align:center;margin-bottom:4rem}
-.section-tag{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--accent-2);margin-bottom:.8rem}
-.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:800}.section-subtitle{color:var(--text-secondary);max-width:650px;margin:1rem auto 0}
-.services-grid,.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
-.service-card,.why-item{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:2.2rem 1.8rem;transition:.35s}
-.service-card:hover,.why-item:hover{background:var(--bg-card-hover);border-color:var(--border-hover);transform:translateY(-5px);box-shadow:var(--shadow-card)}
-.service-icon{width:56px;height:56px;border-radius:16px;background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.15);display:flex;align-items:center;justify-content:center;color:var(--accent-1);font-size:1.5rem;margin-bottom:1.4rem}
-.service-card h3{font-size:1.15rem;margin-bottom:.7rem}.service-card p,.why-item p{color:var(--text-secondary);font-size:.88rem}
-.about-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}.about-text h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:1.5rem}.about-text p{color:var(--text-secondary);margin-bottom:1.2rem}
-.about-features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.about-feature{display:flex;gap:.7rem;font-size:.85rem}.about-feature i{color:var(--accent-1)}
-.about-visual{display:flex;justify-content:center}.about-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;max-width:360px;box-shadow:var(--shadow-card)}.about-card-icon{font-size:3rem;background:var(--gradient-fire);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.about-card h4{font-family:var(--font-display);font-size:1.4rem}.about-card p{color:var(--text-secondary);font-size:.85rem}
-.contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:3rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);padding:3rem;box-shadow:var(--shadow-card)}
-.contact-info h3{font-family:var(--font-display);font-size:1.8rem;margin-bottom:1rem}.contact-info p{color:var(--text-secondary);font-size:.9rem;margin-bottom:2rem}
-.contact-detail{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;font-size:.88rem}.contact-detail i{width:40px;height:40px;border-radius:12px;background:rgba(255,107,53,.08);display:flex;align-items:center;justify-content:center;color:var(--accent-1);flex-shrink:0}
-.contact-form{display:flex;flex-direction:column;gap:1rem}.contact-form input,.contact-form textarea,.contact-form select{background:var(--bg-secondary);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);padding:.85rem 1.2rem;color:var(--text-primary);font:inherit;outline:none;width:100%}.contact-form textarea{min-height:130px;resize:vertical}
-.form-success{display:none;padding:1rem;border-radius:8px;background:rgba(46,213,115,.1);color:#2ed573}.form-success.show{display:block}
-.footer{background:var(--bg-secondary);border-top:1px solid var(--border-subtle);padding:3rem 2rem 2rem}.footer-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}.footer-brand p{color:var(--text-muted);font-size:.82rem;margin-top:.8rem;max-width:350px}.footer h5{font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.2rem}.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}.footer-links a{color:var(--text-muted);text-decoration:none;font-size:.82rem}.footer-links a:hover{color:var(--accent-2)}.footer-bottom{max-width:1200px;margin:auto;padding-top:1.5rem;border-top:1px solid var(--border-subtle);text-align:center}.footer-bottom p{color:var(--text-muted);font-size:.78rem}
-.whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.65rem;text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.35);z-index:1100}
-.reveal{opacity:0;transform:translateY(30px);transition:.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:768px){
-.nav-links{position:fixed;top:72px;left:0;right:0;flex-direction:column;background:rgba(10,10,15,.97);padding:2rem;gap:1.2rem;transform:translateY(-110%);opacity:0;pointer-events:none}.nav-links.active{transform:translateY(0);opacity:1;pointer-events:auto}.nav-toggle{display:block}.navbar{padding:0 1.2rem}.about-wrapper,.contact-wrapper{grid-template-columns:1fr}.about-features{grid-template-columns:1fr}.section{padding:4rem 1.5rem}.footer-container{grid-template-columns:1fr}.hero-stats{gap:2rem}.hero-stat-value{font-size:1.7rem}.whatsapp-float{right:15px;bottom:15px;width:54px;height:54px}
-}
-</style>
+  <!--
+    ASSISTANT IA :
+    Cette interface est prête. Pour activer une vraie IA, connectez le formulaire
+    à votre backend/API sécurisé. Ne placez jamais une clé API dans ce fichier public.
+  -->
 </head>
+
 <body>
-<div class="bg-aurora"></div><div class="bg-grid"></div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#accueil">PHENIX <span>CONNECT</span></a>
+    <button class="menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+    <nav class="navlinks" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#apropos">À propos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://wa.me/2290147602848" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
 
-<nav class="navbar" id="navbar">
-<a href="#accueil" class="nav-brand" aria-label="Phenix Connect Accueil"><div class="nav-brand-icon"><i class="fa-solid fa-fire"></i></div><div class="nav-brand-text">Phenix Connect<span>Digital Solutions</span></div></a>
-<ul class="nav-links" id="navLinks">
-<li><a href="#accueil">Accueil</a></li><li><a href="#services">Services</a></li><li><a href="#apropos">À propos</a></li><li><a href="#pourquoi">Pourquoi nous</a></li><li><a href="#contact" class="nav-cta">Démarrer un projet</a></li>
-</ul>
-<button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
-</nav>
-
+<main>
 <section class="hero" id="accueil">
-<div class="hero-content">
-<div class="hero-badge"><i class="fa-solid fa-circle"></i> Solutions IT & Digitales sur mesure</div>
-<h1 class="hero-title">Votre vision.<br><span class="highlight">Notre expertise.</span><br>Réalité digitale.</h1>
-<p class="hero-subtitle">Phenix Connect conçoit, développe et maintient vos solutions digitales. Des sites web aux applications métiers, nous donnons vie à vos projets avec excellence et précision, pour les entreprises et entrepreneurs en Afrique de l’Ouest et en Europe.</p>
-<div class="hero-actions"><a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Demander un devis</a><a href="#services" class="btn btn-secondary"><i class="fa-solid fa-arrow-down"></i> Découvrir nos services</a></div>
-<div class="hero-stats">
-<div class="hero-stat"><div class="hero-stat-value">89+</div><div class="hero-stat-label">Projets livrés</div></div>
-<div class="hero-stat"><div class="hero-stat-value">98%</div><div class="hero-stat-label">Clients satisfaits</div></div>
-<div class="hero-stat"><div class="hero-stat-value">6/7</div><div class="hero-stat-label">Support réactif</div></div>
-</div></div>
-<a href="#services" class="scroll-indicator" aria-label="Services"><i class="fa-solid fa-chevron-down"></i></a>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Entreprise béninoise · Solutions numériques & informatiques</span>
+      <h1>Des solutions <span>numériques utiles</span>, conçues pour vos projets.</h1>
+      <p>
+        PHENIX CONNECT accompagne entreprises, commerces, organisations, professionnels
+        et particuliers dans leurs projets web, applications, informatique et téléphonie,
+        au Bénin et à distance.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Parler de votre projet</a>
+        <a class="btn btn-light" href="#services">Découvrir nos services</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h3>Un interlocuteur pour vos besoins numériques</h3>
+      <p>De la conception d'une solution à l'assistance et à la maintenance, nous adaptons notre intervention à votre besoin.</p>
+      <div class="mini-list">
+        <div>Développement web & applications</div>
+        <div>Gestion et solutions métier</div>
+        <div>Assistance & maintenance informatique</div>
+        <div>Maintenance et réparation téléphonique</div>
+      </div>
+    </aside>
+  </div>
 </section>
 
-<section class="section" id="services"><div class="section-container"><div class="section-header reveal"><span class="section-tag">Nos services</span><h2 class="section-title">Une expertise complète</h2><p class="section-subtitle">Cinq pôles de compétences pour couvrir tous vos besoins digitaux et informatiques, de la conception à la maintenance.</p></div>
-<div class="services-grid">
-<div class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-code"></i></div><h3>Développement Web</h3><p>Sites vitrines, e-commerce et plateformes sur mesure, performants, responsives et optimisés SEO.</p></div>
-<div class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div><h3>Applications sur mesure</h3><p>Applications métiers, SaaS et outils internes pour automatiser vos processus et accélérer votre croissance.</p></div>
-<div class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-server"></i></div><h3>Maintenance informatique</h3><p>Surveillance, mises à jour, sauvegardes et sécurisation de votre infrastructure informatique.</p></div>
-<div class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-phone"></i></div><h3>Maintenance téléphonique</h3><p>Installation, configuration et dépannage de systèmes téléphoniques, standards et VoIP.</p></div>
-<div class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-headset"></i></div><h3>Assistance informatique</h3><p>Support technique à distance ou sur site, résolution d’incidents et accompagnement utilisateurs.</p></div>
-</div></div></section>
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Nos services</h2>
+      <p>Des prestations complémentaires pour accompagner vos besoins numériques, informatiques et techniques.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">⌘</div><h3>Développement web</h3><p>Création de sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et solutions web sur mesure.</p><div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div></article>
+      <article class="card"><div class="icon">▦</div><h3>Applications de gestion</h3><p>Conception d'outils adaptés aux activités professionnelles : stock, caisse, clients, commandes, employés, facturation, ateliers et gestion commerciale.</p><div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div></article>
+      <article class="card"><div class="icon">◉</div><h3>Applications mobiles</h3><p>Développement d'applications mobiles et de solutions adaptées aux usages de votre activité, avec possibilité de développement sur mesure.</p></article>
+      <article class="card"><div class="icon">⚙</div><h3>Assistance informatique</h3><p>Accompagnement pour l'installation, la configuration, le diagnostic, l'optimisation et la résolution de problèmes matériels et logiciels.</p></article>
+      <article class="card"><div class="icon">▣</div><h3>Maintenance informatique</h3><p>Installation de systèmes d'exploitation, activation de systèmes, résolution de pannes matérielles et logicielles et interventions adaptées à votre équipement.</p></article>
+      <article class="card"><div class="icon">⌁</div><h3>Maintenance téléphonique</h3><p>Reprogrammation, décodage, réparation de connecteurs de charge, remplacement d'écran, batterie et autres interventions selon le besoin.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>Visibilité & présence locale</h3><p>Création et optimisation de présence professionnelle sur Google et accompagnement des besoins liés à la visibilité en ligne.</p></article>
+      <article class="card"><div class="icon">◇</div><h3>Solutions numériques & IA</h3><p>Intégration de fonctionnalités numériques et d'intelligence artificielle adaptées aux projets et aux besoins professionnels.</p></article>
+      <article class="card"><div class="icon">▤</div><h3>Matériel informatique</h3><p>Intermédiation pour procurer à nos collaborateurs du matériel et des équipements de qualité adaptés à leurs besoins.</p></article>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="apropos" style="background:var(--bg-secondary)"><div class="section-container"><div class="about-wrapper"><div class="about-text reveal"><span class="section-tag">À propos</span><h2>L’excellence digitale, portée par la passion du code</h2><p>Fondée sur une conviction simple — <strong>la technologie doit servir votre vision</strong> — Phenix Connect accompagne les entreprises et les entrepreneurs dans leur transformation digitale.</p><p>Notre équipe allie rigueur technique et créativité pour livrer des projets qui associent performance, design et fiabilité.</p><div class="about-features"><div class="about-feature"><i class="fa-solid fa-check-circle"></i>Équipe expérimentée</div><div class="about-feature"><i class="fa-solid fa-check-circle"></i>Délais respectés</div><div class="about-feature"><i class="fa-solid fa-check-circle"></i>Technologies modernes</div><div class="about-feature"><i class="fa-solid fa-check-circle"></i>Accompagnement post-livraison</div></div></div><div class="about-visual reveal"><div class="about-card"><div class="about-card-icon"><i class="fa-solid fa-fire"></i></div><h4>Phenix Connect</h4><p>Votre partenaire digital pour des solutions modernes, fiables et adaptées à vos objectifs.</p></div></div></div></div></section>
+<section class="band" id="solutions">
+  <div class="container">
+    <div class="section-head">
+      <h2>Des solutions pensées pour votre activité</h2>
+      <p>Nous pouvons développer une solution sur mesure lorsque les outils existants ne correspondent pas suffisamment à votre fonctionnement.</p>
+    </div>
+    <div class="grid solutions">
+      <article class="card"><h3>Gestionnaire d'atelier de couture</h3><p>Une solution pouvant centraliser les clients, mesures, commandes, production, historique et organisation d'un atelier.</p></article>
+      <article class="card"><h3>Gestion mobile de monnaie</h3><p>Une solution pensée pour suivre les opérations et conserver un historique structuré afin de limiter le risque de perte d'informations lié à un cahier papier.</p></article>
+      <article class="card"><h3>Gestion commerciale</h3><p>Stock, caisse, clients, commandes, employés, facturation et suivi d'activité réunis selon les besoins de votre entreprise.</p></article>
+      <article class="card"><h3>Projet web sur mesure</h3><p>Fonctionnalités spécifiques, e-commerce, réservation, catalogue, espace professionnel ou autre besoin : la solution est définie selon votre projet.</p></article>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="pourquoi"><div class="section-container"><div class="section-header reveal"><span class="section-tag">Pourquoi nous choisir</span><h2 class="section-title">Une méthode éprouvée</h2><p class="section-subtitle">Notre approche structurée garantit des résultats concrets, mesurables et durables.</p></div><div class="why-grid">
-<div class="why-item reveal"><div class="why-number">01</div><h4>Écoute & Analyse</h4><p>Nous comprenons vos besoins avant toute ligne de code.</p></div>
-<div class="why-item reveal"><div class="why-number">02</div><h4>Conception & Design</h4><p>Maquettes, prototypes et UX design pour valider chaque étape.</p></div>
-<div class="why-item reveal"><div class="why-number">03</div><h4>Développement Agile</h4><p>Code propre, revues régulières et déploiement continu.</p></div>
-<div class="why-item reveal"><div class="why-number">04</div><h4>Suivi & Support</h4><p>Maintenance proactive et support réactif.</p></div>
-</div></div></section>
+<section id="apropos">
+  <div class="container">
+    <div class="section-head">
+      <h2>PHENIX CONNECT, une approche orientée vers vos besoins</h2>
+      <p>Entreprise béninoise basée à Parakou, nous accompagnons nos clients localement et pouvons travailler à distance pour les projets de développement web et numériques.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">✓</div><h3>Une approche adaptée</h3><p>Chaque projet est étudié selon les besoins exprimés, les objectifs et le contexte d'utilisation.</p></article>
+      <article class="card"><div class="icon">↗</div><h3>Une capacité à distance</h3><p>Nos prestations numériques peuvent accompagner des clients au Bénin, en Afrique de l'Ouest et dans les pays francophones d'Europe.</p></article>
+      <article class="card"><div class="icon">♡</div><h3>Une relation de confiance</h3><p>Nous privilégions une communication claire, la confidentialité des informations et des solutions utiles au client.</p></article>
+    </div>
+  </div>
+</section>
 
-<section class="section" id="contact" style="background:var(--bg-secondary)"><div class="section-container"><div class="section-header reveal"><span class="section-tag">Contact</span><h2 class="section-title">Parlons de votre projet</h2><p class="section-subtitle">Une question, un devis ou un projet à concrétiser ? Contactez-nous.</p></div>
-<div class="contact-wrapper reveal"><div class="contact-info"><h3>Restons connectés</h3><p>Nous vous accompagnons pour vos sites web, applications et besoins informatiques.</p>
-<div class="contact-detail"><i class="fa-solid fa-location-dot"></i><span>Afrique de l’Ouest & Europe — Intervention à distance</span></div>
-<div class="contact-detail"><i class="fa-solid fa-envelope"></i><a href="mailto:contact@phenixconnect.online" style="color:inherit;text-decoration:none">contact@phenixconnect.online</a></div>
-<div class="contact-detail"><i class="fa-solid fa-phone"></i><a href="tel:+2290147602848" style="color:inherit;text-decoration:none">+229 01 47 60 28 48</a></div>
-<div class="contact-detail"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/2290147602848" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">WhatsApp</a></div>
+<section id="realisations">
+  <div class="container">
+    <div class="section-head">
+      <h2>Quelques réalisations</h2>
+      <p>Une sélection de projets réalisés ou actuellement en développement.</p>
+    </div>
+    <div class="grid projects">
+      <article class="card project"><div class="project-top"><h3>ESTHÉTIQUE PLUS</h3><p>Site vitrine · Projet en cours</p></div><div class="project-body"><p>Site vitrine destiné à un atelier de peinture.</p><a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
+      <article class="card project"><div class="project-top"><h3>C'BON POP</h3><p>Site vitrine & mini-boutique</p></div><div class="project-body"><p>Présence web, mini-boutique avec panier avancé et accompagnement de la présence Google.</p><a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
+      <article class="card project"><div class="project-top"><h3>PREMIUMFR</h3><p>Catalogue · Projet en cours</p></div><div class="project-body"><p>Catalogue français consacré aux appareils de dernière génération.</p><a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
+      <article class="card project"><div class="project-top"><h3>PHENIX CONNECT</h3><p>Site de présentation</p></div><div class="project-body"><p>Site institutionnel présentant les activités et solutions de PHENIX CONNECT.</p><a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le projet →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Comment nous pouvons vous accompagner</h2>
+      <p>Une démarche simple pour passer de votre besoin à une solution adaptée.</p>
+    </div>
+    <div class="grid">
+      <article class="card step"><h3>Échange</h3><p>Vous nous présentez votre activité, votre besoin et vos objectifs.</p></article>
+      <article class="card step"><h3>Analyse</h3><p>Nous identifions les fonctionnalités et prestations pertinentes pour votre projet.</p></article>
+      <article class="card step"><h3>Proposition</h3><p>Nous vous orientons vers une solution adaptée et échangeons sur les modalités du projet.</p></article>
+      <article class="card step"><h3>Réalisation</h3><p>Après validation, nous avançons sur la mise en œuvre et l'accompagnement prévu.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Questions fréquentes</h2>
+      <p>Quelques réponses essentielles avant votre prise de contact.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>Quels sont vos tarifs ?</h3><p>Les tarifs ne sont pas affichés publiquement. Ils dépendent de la nature, des fonctionnalités et des besoins du projet. Contactez-nous pour obtenir un devis.</p></article>
+      <article class="card"><h3>Travaillez-vous à distance ?</h3><p>Oui. Les projets web et numériques peuvent être réalisés à distance, notamment pour des clients au Bénin, en Afrique de l'Ouest et dans les pays francophones d'Europe.</p></article>
+      <article class="card"><h3>Pouvez-vous créer une solution sur mesure ?</h3><p>Oui. Les projets peuvent être conçus sur mesure lorsque les besoins nécessitent des fonctionnalités spécifiques.</p></article>
+      <article class="card"><h3>Comment obtenir un devis ?</h3><p>Présentez votre besoin via WhatsApp ou le formulaire de contact. Une proposition adaptée pourra ensuite être établie.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="section-head">
+        <h2>Parlons de votre projet</h2>
+        <p>Décrivez-nous votre besoin. Pour les informations sensibles, les tarifs et la confirmation d'un projet, nous vous orienterons vers WhatsApp.</p>
+      </div>
+      <div class="contact-list">
+        <div class="contact-item"><small>WhatsApp / Téléphone</small><strong>+229 01 47 60 28 48</strong></div>
+        <div class="contact-item"><small>E-mail</small><strong>contact@phenixconnect.online</strong></div>
+        <div class="contact-item"><small>Adresse</small><strong>Dokparou, Parakou, Bénin</strong></div>
+        <div class="contact-item"><small>Horaires</small><strong>Lun–Ven 08h00–19h00 · Sam 10h00–18h00</strong></div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <form id="contactForm">
+        <div><label for="nom">Nom</label><input id="nom" name="nom" required></div>
+        <div><label for="prenom">Prénom</label><input id="prenom" name="prenom" required></div>
+        <div><label for="contactValue">E-mail ou téléphone</label><input id="contactValue" name="contact" required></div>
+        <div><label for="besoin">Votre préoccupation</label><textarea id="besoin" name="besoin" required></textarea></div>
+        <label class="consent"><input type="checkbox" id="consent" required> Je confirme l'envoi de ma demande et accepte que mes informations soient utilisées pour traiter ma demande conformément à la politique de confidentialité.</label>
+        <button class="btn btn-primary" type="submit">Confirmer ma demande</button>
+        <p class="consent">Les informations sont traitées de manière confidentielle et ne sont pas vendues. Elles sont conservées pendant la durée nécessaire à la relation avec PHENIX CONNECT, sous réserve des obligations légales applicables.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie pour vos projets au Bénin et à distance.</p></div>
+      <div><h3>Navigation</h3><p><a href="#services">Services</a><br><a href="#realisations">Réalisations</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
+      <div><h3>Contact</h3><p>+229 01 47 60 28 48<br>contact@phenixconnect.online<br>Dokparou, Parakou, Bénin</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> PHENIX CONNECT. Tous droits réservés. · <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a> · <a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+<!-- Assistant IA -->
+<button id="ai-button" aria-label="Ouvrir PHENIX CONNECT ASSISTANT">✦</button>
+
+<div id="ai-panel" aria-label="PHENIX CONNECT ASSISTANT">
+  <div class="ai-head">
+    <div><strong>PHENIX CONNECT ASSISTANT</strong><small>Assistant IA · Je peux vous orienter</small></div>
+    <button class="ai-close" id="aiClose" aria-label="Fermer">×</button>
+  </div>
+  <div id="messages">
+    <div class="msg bot">Bonjour. Je suis l'assistant IA de PHENIX CONNECT. Je peux vous renseigner sur nos services et vous orienter selon votre projet. Comment puis-je vous aider ?</div>
+  </div>
+  <div class="quick">
+    <button data-q="Quels services proposez-vous ?">Services</button>
+    <button data-q="Je veux créer un site web.">Créer un site</button>
+    <button data-q="Je veux une application de gestion.">Application</button>
+    <button data-q="Je veux demander un devis.">Devis</button>
+    <button data-q="Comment vous contacter ?">Contact</button>
+  </div>
+  <div class="ai-input">
+    <input id="aiInput" placeholder="Écrivez votre question..." autocomplete="off">
+    <button id="aiSend">Envoyer</button>
+  </div>
+  <div class="note">Pour un devis, une information sensible ou une confirmation, je vous oriente vers WhatsApp.</div>
 </div>
-<form class="contact-form" id="contactForm">
-<input type="text" name="name" placeholder="Votre nom complet *" required>
-<input type="email" name="email" placeholder="Votre adresse email *" required>
-<input type="tel" name="phone" placeholder="Votre téléphone (optionnel)">
-<select name="service" required><option value="" disabled selected>Service souhaité *</option><option>Développement Web</option><option>Application sur mesure</option><option>Maintenance informatique</option><option>Maintenance téléphonique</option><option>Assistance informatique</option><option>Autre demande</option></select>
-<textarea name="message" placeholder="Décrivez votre projet en quelques lignes... *" required></textarea>
-<button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Envoyer la demande</button>
-<div class="form-success" id="formSuccess"></div>
-</form></div></div></section>
-
-<footer class="footer"><div class="footer-container">
-<div class="footer-brand"><a href="#accueil" class="nav-brand"><div class="nav-brand-icon"><i class="fa-solid fa-fire"></i></div><div class="nav-brand-text">Phenix Connect<span>Digital Solutions</span></div></a><p>Votre partenaire digital pour la conception, le développement et la maintenance de solutions IT en Afrique de l’Ouest et en Europe.</p></div>
-<div><h5>Navigation</h5><ul class="footer-links"><li><a href="#accueil">Accueil</a></li><li><a href="#services">Services</a></li><li><a href="#apropos">À propos</a></li><li><a href="#pourquoi">Pourquoi nous</a></li><li><a href="#contact">Contact</a></li></ul></div>
-<div><h5>Services</h5><ul class="footer-links"><li><a href="#services">Développement Web</a></li><li><a href="#services">Applications sur mesure</a></li><li><a href="#services">Maintenance informatique</a></li><li><a href="#services">Maintenance téléphonique</a></li><li><a href="#services">Assistance informatique</a></li></ul></div>
-</div><div class="footer-bottom"><p>© 2026 Phenix Connect. Tous droits réservés.</p></div></footer>
-
-<a class="whatsapp-float" href="https://wa.me/2290147602848?text=Bonjour%20Phenix%20Connect%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." target="_blank" rel="noopener noreferrer" aria-label="Contacter Phenix Connect sur WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
-(()=>{"use strict";
-const navbar=document.getElementById("navbar"),toggle=document.getElementById("navToggle"),links=document.getElementById("navLinks");
-window.addEventListener("scroll",()=>navbar.classList.toggle("scrolled",scrollY>50));
-toggle.addEventListener("click",()=>{links.classList.toggle("active");const i=toggle.querySelector("i");i.classList.toggle("fa-bars");i.classList.toggle("fa-xmark")});
-links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("active");const i=toggle.querySelector("i");i.classList.add("fa-bars");i.classList.remove("fa-xmark")}));
-const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.1,rootMargin:"0px 0px -40px 0px"});
-document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
-const form=document.getElementById("contactForm"),success=document.getElementById("formSuccess");
-form.addEventListener("submit",e=>{e.preventDefault();if(!form.checkValidity()){form.reportValidity();return}
-const d=new FormData(form),body=`Nom : ${d.get("name")}\nEmail : ${d.get("email")}\nTéléphone : ${d.get("phone")||"Non renseigné"}\nService : ${d.get("service")}\n\nProjet / message :\n${d.get("message")}`;
-location.href=`mailto:contact@phenixconnect.online?subject=${encodeURIComponent("Demande de contact — "+d.get("service"))}&body=${encodeURIComponent(body)}`;
-success.textContent="Votre messagerie va s’ouvrir pour envoyer votre demande.";success.classList.add("show")});
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const id=a.getAttribute("href");if(id==="#")return;const t=document.querySelector(id);if(t){e.preventDefault();scrollTo({top:t.getBoundingClientRect().top+scrollY-navbar.offsetHeight,behavior:"smooth"})}}));
-})();
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const aiButton = document.getElementById('ai-button');
+  const aiPanel = document.getElementById('ai-panel');
+  const aiClose = document.getElementById('aiClose');
+  const messages = document.getElementById('messages');
+  const aiInput = document.getElementById('aiInput');
+  const aiSend = document.getElementById('aiSend');
+
+  aiButton.onclick = () => { aiPanel.classList.add('open'); aiInput.focus(); };
+  aiClose.onclick = () => aiPanel.classList.remove('open');
+
+  function addMsg(text, who) {
+    const el = document.createElement('div');
+    el.className = 'msg ' + who;
+    el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function localAnswer(q) {
+    const s = q.toLowerCase();
+    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) {
+      return "Les tarifs ne sont pas communiqués directement par l'assistant. Pour une proposition adaptée à votre besoin et la confirmation d'un devis, je vous invite à nous contacter sur WhatsApp : +229 01 47 60 28 48.";
+    }
+    if (s.includes('contact') || s.includes('whatsapp')) {
+      return "Vous pouvez contacter PHENIX CONNECT sur WhatsApp ou par téléphone au +229 01 47 60 28 48, ou par e-mail à contact@phenixconnect.online.";
+    }
+    if (s.includes('site') || s.includes('web')) {
+      return "PHENIX CONNECT réalise des sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios, blogs, réservation et des projets web sur mesure. Présentez-moi votre projet et je peux vous orienter.";
+    }
+    if (s.includes('application') || s.includes('gestion')) {
+      return "Nous pouvons développer des applications de gestion adaptées à votre activité : stock, caisse, clients, commandes, employés, gestion commerciale, facturation, ateliers et autres besoins sur mesure. Nous pouvons aussi développer des applications mobiles.";
+    }
+    if (s.includes('informatique') || s.includes('ordinateur')) {
+      return "PHENIX CONNECT propose l'assistance et la maintenance informatique : installation de systèmes, activation de systèmes, diagnostic et résolution de problèmes matériels et logiciels, ainsi que d'autres interventions adaptées.";
+    }
+    if (s.includes('téléphone') || s.includes('telephone') || s.includes('écran') || s.includes('batterie')) {
+      return "Nous proposons notamment la reprogrammation, le décodage, la réparation de connecteurs de charge et le remplacement d'écran ou de batterie, selon le besoin.";
+    }
+    return "Je peux vous renseigner sur les services web, applications, informatique, téléphonie et solutions numériques de PHENIX CONNECT. Décrivez-moi votre besoin et je vous orienterai. Pour une information sensible ou un devis, je vous redirigerai vers WhatsApp.";
+  }
+
+  async function sendQuestion(text) {
+    const q = text.trim();
+    if (!q) return;
+    addMsg(q, 'user');
+    aiInput.value = '';
+
+    /*
+      MODE ACTUEL : réponse locale de démonstration.
+      POUR UNE VRAIE IA : envoyez q à votre endpoint sécurisé, par exemple /api/assistant,
+      puis affichez la réponse retournée. La clé API ne doit jamais être placée ici.
+    */
+    setTimeout(() => addMsg(localAnswer(q), 'bot'), 350);
+  }
+
+  aiSend.onclick = () => sendQuestion(aiInput.value);
+  aiInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendQuestion(aiInput.value); });
+  document.querySelectorAll('.quick button').forEach(btn => btn.onclick = () => sendQuestion(btn.dataset.q));
+
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const nom = document.getElementById('nom').value.trim();
+    const prenom = document.getElementById('prenom').value.trim();
+    const contact = document.getElementById('contactValue').value.trim();
+    const besoin = document.getElementById('besoin').value.trim();
+    const message = `Bonjour PHENIX CONNECT,%0A%0AJe souhaite vous contacter pour un projet.%0A%0ANom : ${encodeURIComponent(nom)}%0APrénom : ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
+    window.open(`https://wa.me/2290147602848?text=${message}`, '_blank', 'noopener');
+  });
 </script>
 </body>
 </html>
