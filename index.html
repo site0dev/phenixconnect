@@ -151,6 +151,30 @@
       section{padding:35px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
       .actions .btn{width:100%}.footer-grid{grid-template-columns:1fr}
     }
+    /* Études de cas ajoutées à la section Services */
+    .case-studies{margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+    .case-studies-intro{max-width:760px;color:var(--muted);margin:0 auto 28px;text-align:center}
+    .case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .case-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .case-item summary{list-style:none;cursor:pointer;padding:21px 24px;font-weight:800;color:var(--text);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .case-item summary::-webkit-details-marker{display:none}
+    .case-item summary::after{content:'+';font-size:1.25rem;color:var(--primary);transition:transform .2s ease}
+    .case-item[open] summary::after{transform:rotate(45deg)}
+    .case-content{padding:0 24px 24px;border-top:1px solid var(--line)}
+    .case-content p{color:var(--muted);margin-top:15px}
+    .case-content strong{color:var(--text)}
+    .case-content ul{margin:10px 0 0 18px;color:var(--muted)}
+    .case-content li{margin:6px 0}
+    .case-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+    .case-meta .tag{font-size:.75rem}
+    .case-link{display:inline-block;margin-top:18px;color:var(--primary);font-weight:800}
+
+  
+    @media(max-width:580px){
+      .case-list{grid-template-columns:1fr}
+      .case-item summary{padding:18px}
+      .case-content{padding:0 18px 20px}
+    }
   </style>
 </head>
 
@@ -162,7 +186,7 @@
     <nav class="navlinks" id="navLinks">
       <a href="#services">Services</a>
       <a href="#solutions">Solutions</a>
-      <a href="#realisations">Réalisations</a>
+      
       <a href="#apropos">À propos</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
@@ -240,7 +264,7 @@
 <section id="services">
   <div class="container">
     <div class="section-head">
-      <h2>Nos services</h2>
+      <h2>Services et études de cas</h2>
       <p>Des prestations adaptées à vos besoins informatiques et numériques.</p>
     </div>
     <div class="grid">
@@ -325,6 +349,91 @@
         </div>
       </article>
     </div>
+
+    <div class="case-studies">
+      <div class="section-head">
+        <h2>Études de cas</h2>
+        <p class="case-studies-intro">Quelques projets qui illustrent concrètement notre savoir-faire et les solutions développées pour répondre à des besoins précis.</p>
+      </div>
+
+      <div class="case-list">
+        <details class="case-item">
+          <summary>ESTHÉTIQUE PLUS — Site vitrine</summary>
+          <div class="case-content">
+            <p><strong>Contexte :</strong> création d'une présence web pour présenter l'activité et les réalisations de l'atelier.</p>
+            <p><strong>Solution :</strong> un site vitrine structuré autour de la présentation de l'activité, de ses réalisations et de la prise de contact.</p>
+            <p><strong>Éléments réalisés :</strong></p>
+            <ul>
+              <li>Présentation de l'activité</li>
+              <li>Mise en valeur des réalisations</li>
+              <li>Accès direct au contact</li>
+              <li>Informations de localisation</li>
+              <li>Accès téléphonique et WhatsApp</li>
+            </ul>
+            <div class="case-meta"><span class="tag">Site vitrine</span><span class="tag">Galerie</span><span class="tag">Contact</span></div>
+            <a class="case-link" href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </details>
+
+        <details class="case-item">
+          <summary>C'BON POP — Site vitrine & mini-boutique</summary>
+          <div class="case-content">
+            <p><strong>Contexte :</strong> présenter les produits de C'BON POP et proposer un parcours de commande en ligne.</p>
+            <p><strong>Solution :</strong> un site vitrine enrichi d'un catalogue interactif, d'un panier et d'un espace d'administration.</p>
+            <p><strong>Fonctionnalités réalisées :</strong></p>
+            <ul>
+              <li>Catalogue des produits avec informations et visuels</li>
+              <li>Panier et calcul du total</li>
+              <li>Parcours de commande</li>
+              <li>Avis clients et FAQ</li>
+              <li>Informations de livraison</li>
+              <li>Gestion des produits et paramètres</li>
+            </ul>
+            <div class="case-meta"><span class="tag">E-commerce</span><span class="tag">Panier</span><span class="tag">Administration</span></div>
+            <a class="case-link" href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </details>
+
+        <details class="case-item">
+          <summary>PREMIUMFR — Catalogue technologique</summary>
+          <div class="case-content">
+            <p><strong>Contexte :</strong> présenter un catalogue d'appareils technologiques destiné notamment aux marchés français et belge.</p>
+            <p><strong>Solution :</strong> un catalogue structuré avec catégories, panier, livraison et parcours de commande.</p>
+            <p><strong>Fonctionnalités réalisées :</strong></p>
+            <ul>
+              <li>Catalogue de produits</li>
+              <li>Catégories PC, iPhone, Android et appareils photo</li>
+              <li>Panier et calcul du total</li>
+              <li>Formulaire de livraison France / Belgique</li>
+              <li>Paiement par virement avec justificatif</li>
+              <li>Espace d'administration</li>
+            </ul>
+            <div class="case-meta"><span class="tag">Catalogue</span><span class="tag">Panier</span><span class="tag">Commande</span></div>
+            <a class="case-link" href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </details>
+
+        <details class="case-item">
+          <summary>PHENIX CONNECT — Site institutionnel</summary>
+          <div class="case-content">
+            <p><strong>Contexte :</strong> présenter clairement une offre regroupant développement web, applications, assistance, maintenance et solutions numériques.</p>
+            <p><strong>Solution :</strong> un site institutionnel responsive réunissant les services, solutions métiers, réalisations, informations pratiques et moyens de contact.</p>
+            <p><strong>Fonctionnalités intégrées :</strong></p>
+            <ul>
+              <li>Présentation des services et solutions</li>
+              <li>Présentation des réalisations</li>
+              <li>Formulaire de demande</li>
+              <li>Orientation vers WhatsApp pour les devis et demandes sensibles</li>
+              <li>Localisation Google Maps</li>
+              <li>Assistant PHENIX CONNECT</li>
+              <li>Informations de contact et horaires</li>
+            </ul>
+            <div class="case-meta"><span class="tag">Institutionnel</span><span class="tag">Responsive</span><span class="tag">Assistant IA</span></div>
+            <a class="case-link" href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </details>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -388,51 +497,7 @@
   </div>
 </section>
 
-<section id="realisations">
-  <div class="container">
-    <div class="section-head">
-      <h2>Quelques réalisations</h2>
-      <p>Projets récents créés ou en cours de déploiement.</p>
-    </div>
-    <div class="grid projects">
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Travaux de peinture" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>ESTHÉTIQUE PLUS</h3>
-          <p>Site vitrine pour un atelier de rénovation et peinture d'intérieur.</p>
-          <a href="https://esthetiqueplus.netlify.app/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
 
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Popcorn artisanal" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>C'BON POP</h3>
-          <p>Site vitrine et catalogue interactif avec module de commande WhatsApp.</p>
-          <a href="https://c-bonpopcorn.vercel.app/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Smartphones modernes" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>PREMIUMFR</h3>
-          <p>Catalogue de présentation d'équipements technologiques et smartphones.</p>
-          <a href="https://premiumfr.vercel.app/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-
-      <article class="card project">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réseau numérique" loading="lazy" decoding="async"></div>
-        <div class="project-body">
-          <h3>PHENIX CONNECT</h3>
-          <p>Plateforme institutionnelle regroupant nos compétences et prestations.</p>
-          <a href="https://www.phenixconnect.online/" target="_blank" rel="noopener">Voir le site →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
 
 <section id="faq">
   <div class="container">
@@ -504,7 +569,7 @@
   <div class="container">
     <div class="footer-grid">
       <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie.</p></div>
-      <div><h3>Navigation</h3><p><a href="#services">Services</a><br><a href="#realisations">Réalisations</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
+      <div><h3>Navigation</h3><p><a href="#services">Services</a><br><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p></div>
       <div>
         <h3>Contact</h3>
         <p>
