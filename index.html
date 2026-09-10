@@ -12,15 +12,15 @@
 
   <style>
     :root{
-      --primary:#7f1d3d;
-      --primary-dark:#5f1530;
-      --accent:#9f4562;
-      --text:#2b2024;
-      --muted:#6b5b61;
-      --bg:#faf7f8;
+      --primary:#6b1f2a;
+      --primary-dark:#4a1520;
+      --accent:#8a4a55;
+      --text:#2b1b1f;
+      --muted:#8a4a55;
+      --bg:#fcf9fa;
       --card:#ffffff;
-      --line:#eadfe3;
-      --shadow:0 10px 30px rgba(127,29,61,.06);
+      --line:#eadfe2;
+      --shadow:0 10px 30px rgba(107,31,42,.06);
       --radius:16px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -34,7 +34,7 @@
     .brand{font-weight:900;letter-spacing:.05em;font-size:1.05rem}
     .brand span{color:var(--primary)}
     .navlinks{display:flex;gap:18px;align-items:center}
-    .navlinks a{font-size:.9rem;font-weight:600;color:#5f4650}
+    .navlinks a{font-size:.9rem;font-weight:600;color:#62404a}
     .navlinks a:hover{color:var(--primary)}
     .menu{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:700;cursor:pointer}
@@ -49,7 +49,7 @@
     section{padding:50px 0}
     .hero{padding:50px 0 40px;background:linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #dbc6ce;background:#f7f0f3;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
+    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #ddc5ca;background:#f7eef0;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
     h1{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.03em}
     h1 span{color:var(--primary)}
     .hero p{font-size:1rem;color:var(--muted);margin:16px 0 22px}
@@ -84,12 +84,12 @@
     .card h3{font-size:1.05rem;margin-bottom:6px}
     .card p{color:var(--muted);font-size:.9rem}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f7f0f3;color:#64748b}
+    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f7eef0;color:#8a4a55}
     
-    .band{background:#1f2937;color:#fff}
-    .band .section-head p{color:#dbc6ce}
-    .band .card{background:#38242c;border-color:#513640}
-    .band .card p{color:#dbc6ce}
+    .band{background:#2b1b1f;color:#fff}
+    .band .section-head p{color:#ddc5ca}
+    .band .card{background:#351f25;border-color:#5a3039}
+    .band .card p{color:#ddc5ca}
     .solutions, .projects{grid-template-columns:repeat(2,1fr)}
     
     .project .card-img{height:160px}
@@ -113,22 +113,22 @@
 
     form{display:grid;gap:12px}
     label{font-weight:700;font-size:.85rem}
-    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d8cbd0;border-radius:8px;outline:none;background:#fff;color:var(--text)}
+    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d8c5c9;border-radius:8px;outline:none;background:#fff;color:var(--text)}
     textarea{min-height:100px;resize:vertical}
     .consent{font-size:.75rem;color:var(--muted)}
-    footer{background:#24191e;color:#dbc6ce;padding:35px 0 20px}
+    footer{background:#24151a;color:#ddc5ca;padding:35px 0 20px}
     .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px;font-size:.9rem}
     footer h3{color:#fff;margin-bottom:10px;font-size:1rem}
     footer a:hover{color:#fff}
-    .copyright{border-top:1px solid #374151;margin-top:25px;padding-top:15px;font-size:.78rem}
+    .copyright{border-top:1px solid #4f2b34;margin-top:25px;padding-top:15px;font-size:.78rem}
     
     #ai-button{
       position:fixed;right:18px;bottom:18px;z-index:100;width:52px;height:52px;border:0;border-radius:50%;
-      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(127,29,61,.14);cursor:pointer;
+      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(74,21,32,.14);cursor:pointer;
     }
     #ai-button svg{width:24px;height:24px;fill:currentColor}
 
-    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(127,29,61,.10);display:none;flex-direction:column;overflow:hidden}
+    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(74,21,32,.10);display:none;flex-direction:column;overflow:hidden}
     #ai-panel.open{display:flex}
     .ai-head{padding:14px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
     .ai-head small{display:block;opacity:.85;font-size:.75rem}
@@ -138,7 +138,7 @@
     .bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
     .user{background:var(--primary);color:#fff;align-self:flex-end}
     .quick{display:flex;gap:5px;flex-wrap:wrap;padding:8px 10px;border-top:1px solid var(--line)}
-    .quick button{border:1px solid #d8cbd0;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
+    .quick button{border:1px solid #d8c5c9;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
     .ai-input{display:flex;gap:6px;padding:8px 10px;border-top:1px solid var(--line)}
     .ai-input input{margin:0;padding:8px}
     .ai-input button{border:0;border-radius:8px;background:var(--primary);color:#fff;padding:0 12px;cursor:pointer;font-size:.85rem}
@@ -176,46 +176,80 @@
       .case-item summary{padding:18px}
       .case-content{padding:0 18px 20px}
     }
-  
-    /* Contrôles flottants : positionnement responsive */
-    .btn-whatsapp{
-      white-space:nowrap;
-    }
-    #ai-button{
-      right:max(14px, env(safe-area-inset-right));
-      bottom:max(14px, env(safe-area-inset-bottom));
-      width:52px;height:52px;
-    }
-    #ai-panel{
-      right:max(14px, env(safe-area-inset-right));
-      bottom:calc(76px + env(safe-area-inset-bottom));
-    }
-    @media(max-width:580px){
-      .btn-whatsapp{
-        width:100%;
-      }
-      #ai-button{
-        width:48px;height:48px;
-        right:12px;
-        bottom:12px;
-      }
-      #ai-panel{
-        right:12px;
-        bottom:70px;
-        width:calc(100% - 24px);
-        max-width:none;
-        height:min(480px,calc(100vh - 92px));
-      }
-    }
-    @media(min-width:581px){
-      .btn-whatsapp{
-        width:auto;
-      }
-    }
-
   </style>
+
+<style id="responsive-floating-icons">
+  .floating-whatsapp, .whatsapp-float, .whatsapp-button, #whatsapp,
+  .assistant-float, .ai-assistant, #assistant, #aiAssistant, .chatbot-float {
+    max-width: calc(100vw - 24px);
+    box-sizing: border-box;
+  }
+  @media (max-width: 600px) {
+    .floating-whatsapp, .whatsapp-float, .whatsapp-button, #whatsapp {
+      right: 14px !important;
+      bottom: 14px !important;
+      width: 50px !important;
+      height: 50px !important;
+    }
+    .assistant-float, .ai-assistant, #assistant, #aiAssistant, .chatbot-float {
+      right: 14px !important;
+      bottom: 76px !important;
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+  @media (min-width: 601px) {
+    .floating-whatsapp, .whatsapp-float, .whatsapp-button, #whatsapp {
+      right: 20px !important;
+      bottom: 20px !important;
+    }
+    .assistant-float, .ai-assistant, #assistant, #aiAssistant, .chatbot-float {
+      right: 20px !important;
+      bottom: 88px !important;
+    }
+  }
+</style>
+
+
+<style id="sewing-project-style">
+.sewing-project-image{
+  width:100%;
+  min-height:220px;
+  margin:14px 0 18px;
+  border-radius:18px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 10px 30px rgba(74,21,32,.10);
+}
+@media (max-width:600px){
+  .sewing-project-image{min-height:170px;border-radius:14px;margin:10px 0 14px}
+}
+</style>
+
+
+<style id="responsive-photo-grid">
+.photo-grid,.gallery,.projects-grid,.cases-grid,.portfolio-grid,
+.services-grid,.solutions-grid,.cards-grid{
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important;
+}
+.photo-grid img,.gallery img,.projects-grid img,.cases-grid img,.portfolio-grid img,
+.services-grid img,.solutions-grid img,.cards-grid img{
+ width:100%;height:auto;display:block;object-fit:cover;
+}
+@media(max-width:600px){
+ .photo-grid,.gallery,.projects-grid,.cases-grid,.portfolio-grid,
+ .services-grid,.solutions-grid,.cards-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;
+ }
+}
+img{content-visibility:auto}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
+<!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
 <body>
 <header>
   <div class="container nav">
@@ -228,7 +262,7 @@
       <a href="#apropos">À propos</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/2290147602848" target="_blank" rel="noopener">
+      <a class="btn btn-whatsapp" href="https://wa.me/2290153023080" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.191 8.191 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.31.2-.56.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.18-.48-.3z"/></svg>
         WhatsApp
       </a>
@@ -307,7 +341,7 @@
     </div>
     <div class="grid">
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Code source HTML CSS" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Code source HTML CSS" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Développement web</h3>
           <p>Sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios et solutions sur mesure.</p>
@@ -316,7 +350,8 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Tableau de bord de gestion" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Tableau de bord de gestion" loading="lazy" decoding="async"></div>
+<div class="sewing-project-image" style="background-image:url('https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75')" role="img" aria-label="Atelier de couture"></div>
         <div class="card-body">
           <h3>Applications de gestion</h3>
           <p>Outils adaptés aux activités professionnelles : stock, caisse, clients, facturation, ateliers.</p>
@@ -325,7 +360,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Application mobile" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Application mobile" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Applications mobiles</h3>
           <p>Développement d'applications Android et iOS sur mesure adaptées aux usages de votre activité.</p>
@@ -334,7 +369,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Assistance informatique" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Assistance informatique" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Assistance informatique</h3>
           <p>Configuration, diagnostic, optimisation et résolution de problèmes matériels/logiciels.</p>
@@ -343,7 +378,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réparation carte mère PC" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Réparation carte mère PC" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Maintenance informatique</h3>
           <p>Installation de systèmes Windows, activation, résolution de pannes et réparations matérielles.</p>
@@ -352,7 +387,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Réparation de téléphone" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Réparation de téléphone" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Maintenance téléphonique</h3>
           <p>Reprogrammation, décodage, changement d'écran, batterie et connecteurs de charge.</p>
@@ -361,7 +396,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Présence Google" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Présence Google" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Visibilité locale</h3>
           <p>Création et optimisation de fiches Google My Business pour améliorer votre présence locale.</p>
@@ -370,7 +405,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Intelligence artificielle" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Intelligence artificielle" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Solutions numériques & IA</h3>
           <p>Intégration d'outils numériques modernes et d'intelligence artificielle sur mesure.</p>
@@ -379,7 +414,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Matériel informatique" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Matériel informatique" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Matériel informatique</h3>
           <p>Intermédiation et conseils pour obtenir du matériel informatique fiable et de qualité.</p>
@@ -483,7 +518,7 @@
     </div>
     <div class="grid solutions">
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Atelier de couture" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Atelier de couture" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Gestion d'atelier de couture</h3>
           <p>Centralisation des clients, mesures, commandes et suivi de production.</p>
@@ -503,7 +538,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Encaissement boutique" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Encaissement boutique" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Gestion commerciale</h3>
           <p>Stocks, caisse, clients, facturation et vente réunis dans un seul outil simple.</p>
@@ -511,7 +546,7 @@
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Maquette web" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Maquette web" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Projet web sur mesure</h3>
           <p>Fonctionnalités avancées, espaces professionnels et réservations selon votre besoin exact.</p>
@@ -573,7 +608,7 @@
       <div class="contact-list">
         <div class="contact-item">
           <small>WhatsApp / Téléphone</small>
-          <strong><a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a></strong>
+          <strong><a href="https://wa.me/2290153023080" target="_blank" rel="noopener">0153023080</a></strong>
         </div>
         <div class="contact-item">
           <small>E-mail</small>
@@ -611,7 +646,7 @@
       <div>
         <h3>Contact</h3>
         <p>
-          <a href="https://wa.me/2290147602848" target="_blank" rel="noopener">+229 01 47 60 28 48</a><br>
+          <a href="https://wa.me/2290153023080" target="_blank" rel="noopener">0153023080</a><br>
           Dokparou, Parakou, Bénin
         </p>
       </div>
@@ -677,10 +712,10 @@
 
   function getResponse(q) {
     const s = q.toLowerCase();
-    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) return "Pour obtenir un devis personnalisé, contactez-nous sur WhatsApp au +229 01 47 60 28 48.";
+    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) return "Pour obtenir un devis personnalisé, contactez-nous sur WhatsApp au 0153023080.";
     if (s.includes('site') || s.includes('web')) return "Nous créons des sites vitrines, e-commerce et applications web adaptés à votre besoin.";
-    if (s.includes('contact') || s.includes('adresse')) return "Nous sommes situés à Dokparou, Parakou. WhatsApp : +229 01 47 60 28 48.";
-    return "Pour toute demande spécifique ou étude de projet, échangez directement avec nous sur WhatsApp : +229 01 47 60 28 48.";
+    if (s.includes('contact') || s.includes('adresse')) return "Nous sommes situés à Dokparou, Parakou. WhatsApp : 0153023080.";
+    return "Pour toute demande spécifique ou étude de projet, échangez directement avec nous sur WhatsApp : 0153023080.";
   }
 
   function send() {
@@ -703,7 +738,7 @@
     const contact = document.getElementById('contactValue').value.trim();
     const besoin = document.getElementById('besoin').value.trim();
     const msg = `Bonjour PHENIX CONNECT,%0A%0AJe vous contacte via le site :%0ANom : ${encodeURIComponent(nom)} ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
-    window.location.href = `https://wa.me/2290147602848?text=${msg}`;
+    window.location.href = `https://wa.me/2290153023080?text=${msg}`;
   });
 </script>
 </body>
