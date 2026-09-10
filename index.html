@@ -73,7 +73,7 @@
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
-    .card-img{width:100%;height:150px;background:#e2eceb;display:flex;align-items:center;justify-content:center}
+    .card-img{width:100%;height:180px;background:#e2eceb;display:flex;align-items:center;justify-content:center}
     .card-img img{width:100%;height:100%;object-fit:cover}
     
     .card-img.mtn-bg{background:#FFCC00}
@@ -149,7 +149,7 @@
       .navlinks.show{display:flex}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:580px){
-      section{padding:35px 0}.grid,.solutions,.projects{grid-template-columns:1fr}
+      section{padding:35px 0}.grid,.solutions,.projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
       .actions .btn{width:100%}.footer-grid{grid-template-columns:1fr}
     }
     /* Études de cas ajoutées à la section Services */
@@ -242,7 +242,7 @@
   grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;
  }
 }
-img{content-visibility:auto}
+img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -341,7 +341,7 @@ img{content-visibility:auto}
     </div>
     <div class="grid">
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Code source HTML CSS" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Code source HTML CSS" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Développement web</h3>
           <p>Sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios et solutions sur mesure.</p>
@@ -350,8 +350,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Tableau de bord de gestion" loading="lazy" decoding="async"></div>
-<div class="sewing-project-image" style="background-image:url('https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75')" role="img" aria-label="Atelier de couture"></div>
+        <div class="card-img"><img src="Developpementweb.jpg" data-photo="Developpementweb" alt="Tableau de bord de gestion" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Applications de gestion</h3>
           <p>Outils adaptés aux activités professionnelles : stock, caisse, clients, facturation, ateliers.</p>
@@ -360,7 +359,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Application mobile" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="applicationdegestion.jpg" data-photo="applicationdegestion" alt="Application mobile" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Applications mobiles</h3>
           <p>Développement d'applications Android et iOS sur mesure adaptées aux usages de votre activité.</p>
@@ -369,7 +368,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Assistance informatique" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="applicationmobile.jpg" data-photo="applicationmobile" alt="Assistance informatique" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Assistance informatique</h3>
           <p>Configuration, diagnostic, optimisation et résolution de problèmes matériels/logiciels.</p>
@@ -378,7 +377,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Réparation carte mère PC" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="assistanceinformatique.jpg" data-photo="assistanceinformatique" alt="Réparation carte mère PC" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Maintenance informatique</h3>
           <p>Installation de systèmes Windows, activation, résolution de pannes et réparations matérielles.</p>
@@ -387,7 +386,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Réparation de téléphone" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="maintenanceinformatique.jpg" data-photo="maintenanceinformatique" alt="Réparation de téléphone" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Maintenance téléphonique</h3>
           <p>Reprogrammation, décodage, changement d'écran, batterie et connecteurs de charge.</p>
@@ -396,7 +395,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Présence Google" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="maintenancetelephonique.jpg" data-photo="maintenancetelephonique" alt="Présence Google" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Visibilité locale</h3>
           <p>Création et optimisation de fiches Google My Business pour améliorer votre présence locale.</p>
@@ -405,7 +404,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Intelligence artificielle" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="visibilitelocal.jpg" data-photo="visibilitelocal" alt="Intelligence artificielle" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Solutions numériques & IA</h3>
           <p>Intégration d'outils numériques modernes et d'intelligence artificielle sur mesure.</p>
@@ -414,7 +413,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Matériel informatique" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="solutionnumeriqueia.jpg" data-photo="solutionnumeriqueia" alt="Matériel informatique" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Matériel informatique</h3>
           <p>Intermédiation et conseils pour obtenir du matériel informatique fiable et de qualité.</p>
@@ -518,7 +517,7 @@ img{content-visibility:auto}
     </div>
     <div class="grid solutions">
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Atelier de couture" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="materielinformatique.jpg" data-photo="materielinformatique" alt="Atelier de couture" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Gestion d'atelier de couture</h3>
           <p>Centralisation des clients, mesures, commandes et suivi de production.</p>
@@ -538,7 +537,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Encaissement boutique" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Encaissement boutique" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Gestion commerciale</h3>
           <p>Stocks, caisse, clients, facturation et vente réunis dans un seul outil simple.</p>
@@ -546,7 +545,7 @@ img{content-visibility:auto}
       </article>
 
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Maquette web" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603539947678-c9d6c0b6f9f0?auto=format&fit=crop&w=1200&q=75" alt="Maquette web" loading="lazy" decoding="async" fetchpriority="low"></div>
         <div class="card-body">
           <h3>Projet web sur mesure</h3>
           <p>Fonctionnalités avancées, espaces professionnels et réservations selon votre besoin exact.</p>
@@ -677,6 +676,21 @@ img{content-visibility:auto}
     <button id="aiSend">OK</button>
   </div>
 </div>
+
+<script>
+const PHOTO_EXTENSIONS=['jpg','jpeg','png','webp','avif'];
+function resolvePhoto(img){
+  const stem=img.dataset.photo;if(!stem)return;
+  let i=0;
+  const next=()=>{
+    if(i>=PHOTO_EXTENSIONS.length){img.removeAttribute('src');img.classList.add('photo-missing');return;}
+    const src=`${stem}.${PHOTO_EXTENSIONS[i++]}`, probe=new Image();
+    probe.onload=()=>{img.src=src;};
+    probe.onerror=next;probe.src=src;
+  }; next();
+}
+document.querySelectorAll('img[data-photo]').forEach(resolvePhoto);
+</script>
 
 <script>
   // Dynamic Navigation & Date
