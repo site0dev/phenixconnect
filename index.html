@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- PROJET BOUCLÉ : PHENIX CONNECT -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -11,15 +12,15 @@
 
   <style>
     :root{
-      --primary:#0f766e;
-      --primary-dark:#115e59;
-      --accent:#14b8a6;
-      --text:#102a2a;
-      --muted:#5f7373;
-      --bg:#f7fbfa;
+      --primary:#7f1d3d;
+      --primary-dark:#5f1530;
+      --accent:#9f4562;
+      --text:#2b2024;
+      --muted:#6b5b61;
+      --bg:#faf7f8;
       --card:#ffffff;
-      --line:#e2eceb;
-      --shadow:0 10px 30px rgba(15,118,110,.08);
+      --line:#eadfe3;
+      --shadow:0 10px 30px rgba(127,29,61,.06);
       --radius:16px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -33,7 +34,7 @@
     .brand{font-weight:900;letter-spacing:.05em;font-size:1.05rem}
     .brand span{color:var(--primary)}
     .navlinks{display:flex;gap:18px;align-items:center}
-    .navlinks a{font-size:.9rem;font-weight:600;color:#385050}
+    .navlinks a{font-size:.9rem;font-weight:600;color:#5f4650}
     .navlinks a:hover{color:var(--primary)}
     .menu{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:700;cursor:pointer}
@@ -48,7 +49,7 @@
     section{padding:50px 0}
     .hero{padding:50px 0 40px;background:linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #cce9e6;background:#effaf8;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
+    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #dbc6ce;background:#f7f0f3;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
     h1{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.03em}
     h1 span{color:var(--primary)}
     .hero p{font-size:1rem;color:var(--muted);margin:16px 0 22px}
@@ -83,12 +84,12 @@
     .card h3{font-size:1.05rem;margin-bottom:6px}
     .card p{color:var(--muted);font-size:.9rem}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f0f6f5;color:#496060}
+    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f7f0f3;color:#64748b}
     
-    .band{background:#102a2a;color:#fff}
-    .band .section-head p{color:#bdd0ce}
-    .band .card{background:#173837;border-color:#2b504e}
-    .band .card p{color:#bdd0ce}
+    .band{background:#1f2937;color:#fff}
+    .band .section-head p{color:#dbc6ce}
+    .band .card{background:#38242c;border-color:#513640}
+    .band .card p{color:#dbc6ce}
     .solutions, .projects{grid-template-columns:repeat(2,1fr)}
     
     .project .card-img{height:160px}
@@ -112,22 +113,22 @@
 
     form{display:grid;gap:12px}
     label{font-weight:700;font-size:.85rem}
-    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d6e3e1;border-radius:8px;outline:none;background:#fff;color:var(--text)}
+    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d8cbd0;border-radius:8px;outline:none;background:#fff;color:var(--text)}
     textarea{min-height:100px;resize:vertical}
     .consent{font-size:.75rem;color:var(--muted)}
-    footer{background:#0b2020;color:#b9ccca;padding:35px 0 20px}
+    footer{background:#24191e;color:#dbc6ce;padding:35px 0 20px}
     .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px;font-size:.9rem}
     footer h3{color:#fff;margin-bottom:10px;font-size:1rem}
     footer a:hover{color:#fff}
-    .copyright{border-top:1px solid #24403e;margin-top:25px;padding-top:15px;font-size:.78rem}
+    .copyright{border-top:1px solid #374151;margin-top:25px;padding-top:15px;font-size:.78rem}
     
     #ai-button{
       position:fixed;right:18px;bottom:18px;z-index:100;width:52px;height:52px;border:0;border-radius:50%;
-      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;
+      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(127,29,61,.14);cursor:pointer;
     }
     #ai-button svg{width:24px;height:24px;fill:currentColor}
 
-    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15);display:none;flex-direction:column;overflow:hidden}
+    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(127,29,61,.10);display:none;flex-direction:column;overflow:hidden}
     #ai-panel.open{display:flex}
     .ai-head{padding:14px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
     .ai-head small{display:block;opacity:.85;font-size:.75rem}
@@ -137,7 +138,7 @@
     .bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
     .user{background:var(--primary);color:#fff;align-self:flex-end}
     .quick{display:flex;gap:5px;flex-wrap:wrap;padding:8px 10px;border-top:1px solid var(--line)}
-    .quick button{border:1px solid #cfe1df;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
+    .quick button{border:1px solid #d8cbd0;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
     .ai-input{display:flex;gap:6px;padding:8px 10px;border-top:1px solid var(--line)}
     .ai-input input{margin:0;padding:8px}
     .ai-input button{border:0;border-radius:8px;background:var(--primary);color:#fff;padding:0 12px;cursor:pointer;font-size:.85rem}
@@ -175,6 +176,43 @@
       .case-item summary{padding:18px}
       .case-content{padding:0 18px 20px}
     }
+  
+    /* Contrôles flottants : positionnement responsive */
+    .btn-whatsapp{
+      white-space:nowrap;
+    }
+    #ai-button{
+      right:max(14px, env(safe-area-inset-right));
+      bottom:max(14px, env(safe-area-inset-bottom));
+      width:52px;height:52px;
+    }
+    #ai-panel{
+      right:max(14px, env(safe-area-inset-right));
+      bottom:calc(76px + env(safe-area-inset-bottom));
+    }
+    @media(max-width:580px){
+      .btn-whatsapp{
+        width:100%;
+      }
+      #ai-button{
+        width:48px;height:48px;
+        right:12px;
+        bottom:12px;
+      }
+      #ai-panel{
+        right:12px;
+        bottom:70px;
+        width:calc(100% - 24px);
+        max-width:none;
+        height:min(480px,calc(100vh - 92px));
+      }
+    }
+    @media(min-width:581px){
+      .btn-whatsapp{
+        width:auto;
+      }
+    }
+
   </style>
 </head>
 
@@ -445,7 +483,7 @@
     </div>
     <div class="grid solutions">
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Atelier de couture" loading="lazy" decoding="async"></div>
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=60&fm=webp" alt="Atelier de couture" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>Gestion d'atelier de couture</h3>
           <p>Centralisation des clients, mesures, commandes et suivi de production.</p>
