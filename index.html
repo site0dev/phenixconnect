@@ -247,6 +247,54 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style id="assistant-floating-final">
+/* Assistant toujours flottant, indépendant de la section affichée */
+#ai-button{
+  position:fixed !important;
+  right:18px !important;
+  bottom:18px !important;
+  left:auto !important;
+  top:auto !important;
+  z-index:99999 !important;
+  width:58px !important;
+  height:58px !important;
+  margin:0 !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+}
+
+#ai-panel{
+  position:fixed !important;
+  right:18px !important;
+  bottom:88px !important;
+  left:auto !important;
+  top:auto !important;
+  z-index:100000 !important;
+  width:min(360px, calc(100vw - 24px)) !important;
+  max-height:calc(100vh - 105px) !important;
+  margin:0 !important;
+}
+
+@media (max-width:600px){
+  #ai-button{
+    right:14px !important;
+    bottom:14px !important;
+    width:56px !important;
+    height:56px !important;
+  }
+  #ai-panel{
+    right:12px !important;
+    bottom:80px !important;
+    width:calc(100vw - 24px) !important;
+    height:min(480px, calc(100vh - 100px)) !important;
+    max-height:calc(100vh - 100px) !important;
+    border-radius:18px !important;
+  }
+}
+</style>
+
 </head>
 
 <!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
