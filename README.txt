@@ -1,37 +1,22 @@
-BOISÉO — PACK PROPRE POUR boiseo.online
+PHENIX CONNECT — PACK SEO CORRIGÉ
 
-Domaine officiel :
-https://www.boiseo.online/
+Fichiers à mettre à la racine de phenixconnect.online :
+- index.html
+- les 8 pages de services .html
+- robots.txt
+- sitemap.xml
 
-E-mail officiel :
-contact@boiseo.online
+Corrections :
+- Nom commercial conservé : PHENIX CONNECT
+- Téléphone public : 0153023080 (+229 dans les liens/Schema.org)
+- Email public : contact@phenixconnect.online
+- Localisation publique limitée à Parakou, Borgou, Bénin (aucune adresse précise ni nom de dirigeant dans le site)
+- Développement web, sites, applications et logiciels mis au premier plan
+- Maintenance conservée comme service secondaire
+- Données structurées harmonisées sur toutes les pages
 
-CONTENU DU PACK
-- index.html : page principale du site
-- robots.txt : autorise l'exploration du site et déclare le sitemap
-- sitemap.xml : sitemap de la page d'accueil
-- README.txt : instructions
-
-MISE EN LIGNE AVEC VERCEL
-1. Remplacer l'ancien index.html par index.html.
-2. Conserver les photos du site à la racine selon les noms déjà utilisés par le site.
-3. Déployer le projet sur Vercel.
-4. Dans Vercel > Settings > Domains, conserver boiseo.online comme domaine principal validé.
-5. Tester https://www.boiseo.online/
-
-RÉFÉRENCEMENT GOOGLE
-1. Ouvrir Google Search Console.
-2. Utiliser la propriété du domaine/site boiseo.online.
-3. Envoyer :
-   https://www.boiseo.online/sitemap.xml
-4. Utiliser ensuite l'inspection d'URL sur :
-   https://www.boiseo.online/
-5. Demander l'indexation si le bouton est disponible.
-
-IMPORTANT
-- Le domaine officiel utilisé dans le HTML, le canonical, les données structurées, Open Graph et le sitemap est boiseo.online.
-- L'adresse de contact utilisée par le formulaire, l'assistant et le bouton e-mail est contact@boiseo.online.
-- Le site est orienté France uniquement.
-- Les tarifs de base affichés correspondent aux bûches de 33 cm.
-- Pour 50 cm, le site applique le supplément prévu de 20 € par stère.
-- Ne pas supprimer les éventuels enregistrements MX/TXT du domaine si l'e-mail contact@boiseo.online est configuré chez un fournisseur de messagerie.
+Après mise en ligne :
+1. Vérifier https://www.phenixconnect.online/
+2. Vérifier https://www.phenixconnect.online/robots.txt
+3. Vérifier https://www.phenixconnect.online/sitemap.xml
+4. Dans Search Console, conserver le sitemap déjà traité et inspecter les nouvelles pages si nécessaire.

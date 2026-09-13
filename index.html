@@ -1,3156 +1,896 @@
 <!DOCTYPE html>
-<html lang="fr">
 
+<!-- PROJET BOUCLÉ : PHENIX CONNECT -->
+<html lang="fr-BJ">
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>
-Boiséo | Bois de chauffage très sec en France
-</title>
-
-<meta name="description"
-content="Boiséo propose du bois de chauffage très sec composé de chêne, frêne, hêtre et charme. Bûches de 33 cm et 50 cm. Vente de 1 à 60 stères et livraison en France.">
-
-<meta name="keywords"
-content="Boiséo, bois de chauffage, bois chauffage, bois sec, bois de chauffage France, bois de chauffage France, bûches, chêne, frêne, hêtre, charme, stère, livraison bois">
-
-<meta name="robots"
-content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-
-<meta name="author"
-content="Boiséo">
-
-<link rel="sitemap" type="application/xml" href="https://www.boiseo.online/sitemap.xml">
-
-<link rel="canonical"
-href="https://www.boiseo.online/">
-
-<meta property="og:title"
-content="Boiséo - Bois de chauffage très sec">
-
-<meta property="og:description"
-content="Chêne, frêne, hêtre et charme. Bûches de 33 cm et 50 cm. De 1 à 60 stères. Livraison France.">
-
-<meta property="og:type"
-content="website">
-
-<meta property="og:url"
-content="https://www.boiseo.online/">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="PHENIX CONNECT développe des sites web, applications, logiciels de gestion et solutions numériques à Parakou et partout au Bénin, avec des projets à distance en Afrique francophone." name="description"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="PHENIX CONNECT" name="author"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<link href="https://www.phenixconnect.online/" rel="canonical"/>
+<link href="https://www.phenixconnect.online/sitemap.xml" rel="sitemap" type="application/xml"/>
+<title>PHENIX CONNECT | Développement web, applications &amp; solutions numériques au Bénin</title>
+<meta content="website" property="og:type"/>
+<meta content="fr_BJ" property="og:locale"/>
+<meta content="PHENIX CONNECT" property="og:site_name"/>
+<meta content="PHENIX CONNECT | Développement web, applications &amp; solutions numériques au Bénin" property="og:title"/>
+<meta content="Sites web, applications, logiciels de gestion, maintenance informatique et solutions numériques à Parakou, au Bénin et à distance en Afrique francophone." property="og:description"/>
+<meta content="https://www.phenixconnect.online/" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
 <style>
+    :root{
+      --primary:#6b1f2a;
+      --primary-dark:#4a1520;
+      --accent:#8a4a55;
+      --text:#2b1b1f;
+      --muted:#8a4a55;
+      --bg:#fcf9fa;
+      --card:#ffffff;
+      --line:#eadfe2;
+      --shadow:0 10px 30px rgba(107,31,42,.06);
+      --radius:16px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+    .nav{height:65px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:900;letter-spacing:.05em;font-size:1.05rem}
+    .brand span{color:var(--primary)}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .navlinks a{font-size:.9rem;font-weight:600;color:#62404a}
+    .navlinks a:hover{color:var(--primary)}
+    .menu{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-primary:hover{background:var(--primary-dark)}
+    .btn-light{background:#fff;border-color:var(--line);color:var(--text)}
+    
+    .btn-whatsapp{background:#25D366;color:#fff}
+    .btn-whatsapp:hover{background:#1eaa53;color:#fff}
+    .btn-whatsapp svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
 
-/* =====================================================
-   CONFIGURATION GENERALE
-===================================================== */
+    section{padding:50px 0}
+    .hero{padding:50px 0 40px;background:linear-gradient(180deg,#fff 0,#f7fbfa 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+    .eyebrow{display:inline-block;padding:4px 10px;border:1px solid #ddc5ca;background:#f7eef0;border-radius:999px;color:var(--primary);font-size:.78rem;font-weight:700;margin:12px 0}
+    h1{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.03em}
+    h1 span{color:var(--primary)}
+    .hero p{font-size:1rem;color:var(--muted);margin:16px 0 22px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+    .hero-card h3{font-size:1.2rem;margin-bottom:10px}
+    .hero-card p{font-size:.9rem;margin-bottom:15px}
+    
+    .mini-list, .faq-list{display:grid;gap:10px}
+    .mini-list details, .faq-list details{border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
+    .mini-list summary, .faq-list summary{padding:12px 15px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+    .mini-list summary::-webkit-details-marker, .faq-list summary::-webkit-details-marker{display:none}
+    .mini-list summary::after, .faq-list summary::after{content:'+';font-size:1.1rem;color:var(--primary);font-weight:900}
+    .mini-list details[open] summary::after, .faq-list details[open] summary::after{content:'-'}
+    .mini-list .detail-content, .faq-list .detail-content{padding:0 15px 15px;font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:4px;padding-top:10px}
+    .mini-list ul{margin-left:16px;margin-top:4px}
 
-* {
-    margin: 0;
-    padding: 0;
+    .section-head{max-width:700px;margin-bottom:30px}
+    .section-head h2{font-size:clamp(1.6rem,3.5vw,2.4rem);line-height:1.15}
+    .section-head p{color:var(--muted);margin-top:8px;font-size:.95rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .card-img{width:100%;height:180px;background:#e2eceb;display:flex;align-items:center;justify-content:center}
+    .card-img img{width:100%;height:100%;object-fit:cover}
+    
+    .card-img.mtn-bg{background:#FFCC00}
+    .mtn-logo-container{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:15px}
+    .mtn-logo-container svg{max-width:140px;max-height:80px;width:100%;height:auto}
+
+    .card-body{padding:18px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+    .card h3{font-size:1.05rem;margin-bottom:6px}
+    .card p{color:var(--muted);font-size:.9rem}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+    .tag{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#f7eef0;color:#8a4a55}
+    
+    .band{background:#2b1b1f;color:#fff}
+    .band .section-head p{color:#ddc5ca}
+    .band .card{background:#351f25;border-color:#5a3039}
+    .band .card p{color:#ddc5ca}
+    .solutions, .projects{grid-template-columns:repeat(2,1fr)}
+    
+    .project .card-img{height:160px}
+    .project-body{padding:18px}
+    .project-body p{color:var(--muted);font-size:.9rem}
+    .project-body a{display:inline-block;margin-top:10px;color:var(--primary);font-weight:700;font-size:.9rem}
+
+    .steps{counter-reset:step}
+    .step{position:relative;padding:20px;padding-left:55px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;left:15px;top:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:800;font-size:.85rem}
+    
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
+    .contact-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+    .contact-list{display:grid;gap:12px;margin-top:18px}
+    .contact-item{padding:12px;border:1px solid var(--line);border-radius:10px}
+    .contact-item small{display:block;color:var(--muted);font-size:.78rem}
+    .contact-item a{color:var(--primary);font-weight:700}
+    
+    .map-box{margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid var(--line);height:180px;background:#e2eceb;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px}
+    .map-box button{background:var(--primary);color:#fff;border:0;padding:8px 14px;border-radius:8px;font-size:.85rem;cursor:pointer;font-weight:700}
+
+    form{display:grid;gap:12px}
+    label{font-weight:700;font-size:.85rem}
+    input,textarea,select{width:100%;margin-top:4px;padding:10px;border:1px solid #d8c5c9;border-radius:8px;outline:none;background:#fff;color:var(--text)}
+    textarea{min-height:100px;resize:vertical}
+    .consent{font-size:.75rem;color:var(--muted)}
+    footer{background:#24151a;color:#ddc5ca;padding:35px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px;font-size:.9rem}
+    footer h3{color:#fff;margin-bottom:10px;font-size:1rem}
+    footer a:hover{color:#fff}
+    .copyright{border-top:1px solid #4f2b34;margin-top:25px;padding-top:15px;font-size:.78rem}
+    
+    #ai-button{
+      position:fixed;right:18px;bottom:18px;z-index:100;width:52px;height:52px;border:0;border-radius:50%;
+      background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(74,21,32,.14);cursor:pointer;
+    }
+    #ai-button svg{width:24px;height:24px;fill:currentColor}
+
+    #ai-panel{position:fixed;right:18px;bottom:80px;z-index:101;width:min(360px,calc(100% - 24px));height:480px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 15px 40px rgba(74,21,32,.10);display:none;flex-direction:column;overflow:hidden}
+    #ai-panel.open{display:flex}
+    .ai-head{padding:14px;background:var(--primary);color:#fff;display:flex;justify-content:space-between;align-items:center}
+    .ai-head small{display:block;opacity:.85;font-size:.75rem}
+    .ai-close{background:none;border:0;color:#fff;font-size:1.2rem;cursor:pointer}
+    #messages{flex:1;overflow:auto;padding:14px;background:#f7fbfa;display:flex;flex-direction:column;gap:8px}
+    .msg{max-width:88%;padding:8px 11px;border-radius:10px;font-size:.85rem;white-space:pre-wrap}
+    .bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
+    .user{background:var(--primary);color:#fff;align-self:flex-end}
+    .quick{display:flex;gap:5px;flex-wrap:wrap;padding:8px 10px;border-top:1px solid var(--line)}
+    .quick button{border:1px solid #d8c5c9;background:#fff;border-radius:999px;padding:5px 8px;font-size:.7rem;cursor:pointer}
+    .ai-input{display:flex;gap:6px;padding:8px 10px;border-top:1px solid var(--line)}
+    .ai-input input{margin:0;padding:8px}
+    .ai-input button{border:0;border-radius:8px;background:var(--primary);color:#fff;padding:0 12px;cursor:pointer;font-size:.85rem}
+    .note{font-size:.7rem;color:var(--muted);padding:0 10px 6px}
+
+    @media(max-width:850px){
+      .navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:#fff;padding:15px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+      .navlinks.show{display:flex}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:580px){
+      section{padding:35px 0}.grid,.solutions,.projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .actions .btn{width:100%}.footer-grid{grid-template-columns:1fr}
+    }
+    /* Études de cas ajoutées à la section Services */
+    .case-studies{margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+    .case-studies-intro{max-width:760px;color:var(--muted);margin:0 auto 28px;text-align:center}
+    .case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .case-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .case-item summary{list-style:none;cursor:pointer;padding:21px 24px;font-weight:800;color:var(--text);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .case-item summary::-webkit-details-marker{display:none}
+    .case-item summary::after{content:'+';font-size:1.25rem;color:var(--primary);transition:transform .2s ease}
+    .case-item[open] summary::after{transform:rotate(45deg)}
+    .case-content{padding:0 24px 24px;border-top:1px solid var(--line)}
+    .case-content p{color:var(--muted);margin-top:15px}
+    .case-content strong{color:var(--text)}
+    .case-content ul{margin:10px 0 0 18px;color:var(--muted)}
+    .case-content li{margin:6px 0}
+    .case-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+    .case-meta .tag{font-size:.75rem}
+    .case-link{display:inline-block;margin-top:18px;color:var(--primary);font-weight:800}
+
+  
+    @media(max-width:580px){
+      .case-list{grid-template-columns:1fr}
+      .case-item summary{padding:18px}
+      .case-content{padding:0 18px 20px}
+    }
+  </style>
+<style id="responsive-floating-icons">
+  .floating-whatsapp, .whatsapp-float, .whatsapp-button, #whatsapp,
+  .assistant-float, .ai-assistant, #assistant, #aiAssistant, .chatbot-float {
+    max-width: calc(100vw - 24px);
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #1d2c24;
-    background: #faf9f5;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(250,249,245,0.97);
-
-    border-bottom:
-    1px solid #ded9ce;
-
-    backdrop-filter: blur(10px);
-}
-
-.header-container {
-    width: 90%;
-    max-width: 1250px;
-
-    margin: auto;
-
-    min-height: 75px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 32px;
-    font-weight: 900;
-
-    color: #173b2a;
-
-    letter-spacing: -1px;
-}
-
-.logo span {
-    color: #b56d2d;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-nav a {
-    font-size: 15px;
-    font-weight: bold;
-
-    color: #25342c;
-
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #a76329;
-}
-
-.nav-button {
-    background: #173b2a;
-    color: white;
-
-    padding: 11px 20px;
-
-    border-radius: 30px;
-}
-
-.nav-button:hover {
-    color: white;
-    background: #28583f;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-
-    min-height: 700px;
-
-    display: flex;
-    align-items: center;
-
-    background:
-
-    radial-gradient(
-        circle at 85% 20%,
-        #ead7b9 0,
-        transparent 28%
-    ),
-
-    linear-gradient(
-        135deg,
-        #f4efe4,
-        #fffdf8
-    );
-}
-
-.hero-grid {
-
-    width: 90%;
-    max-width: 1250px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-    1.3fr
-    0.7fr;
-
-    gap: 70px;
-
-    align-items: center;
-
-    padding: 90px 0;
-}
-
-.small-title {
-
-    color: #a9662c;
-
-    font-size: 14px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 15px;
-}
-
-.hero h1 {
-
-    color: #173b2a;
-
-    font-size:
-    clamp(48px, 7vw, 85px);
-
-    line-height: 0.98;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 25px;
-}
-
-.hero-description {
-
-    font-size: 20px;
-
-    color: #5d6962;
-
-    max-width: 700px;
-}
-
-.hero-buttons {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-
-    margin-top: 32px;
-}
-
-.button {
-
-    display: inline-block;
-
-    padding: 15px 25px;
-
-    border-radius: 12px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
-    cursor: pointer;
-}
-
-.button-primary {
-
-    background: #173b2a;
-
-    color: white;
-}
-
-.button-primary:hover {
-
-    background: #28583f;
-
-    transform: translateY(-2px);
-}
-
-.button-secondary {
-
-    background: white;
-
-    border:
-    1px solid #d2cbbf;
-}
-
-.button-secondary:hover {
-
-    border-color: #a9662c;
-
-    color: #a9662c;
-}
-
-.hero-features {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 25px;
-}
-
-.feature {
-
-    background: white;
-
-    border:
-    1px solid #e2ddd3;
-
-    padding: 8px 13px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   HERO CARD
-===================================================== */
-
-.hero-card {
-
-    background: #173b2a;
-
-    color: white;
-
-    border-radius: 28px;
-
-    padding: 42px;
-
-    box-shadow:
-    0 25px 60px
-    rgba(0,0,0,0.15);
-}
-
-.fire {
-
-    font-size: 60px;
-
-    margin-bottom: 15px;
-}
-
-.hero-card h2 {
-
-    font-size: 32px;
-
-    line-height: 1.15;
-
-    margin-bottom: 15px;
-}
-
-.hero-card p {
-
-    color: #dce6df;
-
-    font-size: 16px;
-}
-
-.hero-card a {
-
-    display: inline-block;
-
-    margin-top: 20px;
-
-    color: #f2c98e;
-
-    font-weight: bold;
-}
-
-
-/* =====================================================
-   CHIFFRES
-===================================================== */
-
-.stats {
-
-    background: white;
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(4, 1fr);
-
-    border-bottom:
-    1px solid #e3ded3;
-}
-
-.stat {
-
-    text-align: center;
-
-    padding: 30px 15px;
-
-    border-right:
-    1px solid #e3ded3;
-}
-
-.stat:last-child {
-    border-right: none;
-}
-
-.stat strong {
-
-    display: block;
-
-    font-size: 26px;
-
-    color: #173b2a;
-}
-
-.stat span {
-
-    color: #69746e;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   SECTIONS
-===================================================== */
-
-section {
-    padding: 100px 0;
-}
-
-.section-title {
-
-    max-width: 780px;
-
-    margin-bottom: 45px;
-}
-
-.section-title small {
-
-    color: #a9662c;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-}
-
-.section-title h2 {
-
-    color: #173b2a;
-
-    font-size:
-    clamp(35px, 5vw, 55px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    margin:
-    10px 0 20px;
-}
-
-.section-title p {
-
-    color: #657169;
-
-    font-size: 17px;
-}
-
-
-/* =====================================================
-   PRESENTATION
-===================================================== */
-
-.presentation {
-
-    background: #fffdf8;
-}
-
-.presentation-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.presentation-text h3 {
-
-    color: #173b2a;
-
-    font-size: 28px;
-
-    margin-bottom: 15px;
-}
-
-.presentation-text p {
-
-    color: #59665e;
-
-    margin-bottom: 18px;
-}
-
-.check-list {
-
-    list-style: none;
-
-    margin-top: 20px;
-}
-
-.check-list li {
-
-    margin: 12px 0;
-
-    font-weight: bold;
-}
-
-.check-list li::before {
-
-    content: "✓";
-
-    color: #a9662c;
-
-    font-weight: bold;
-
-    margin-right: 10px;
-}
-
-.wood-visual {
-
-    min-height: 430px;
-
-    border-radius: 30px;
-
-    background:
-
-    linear-gradient(
-        rgba(23,59,42,.15),
-        rgba(23,59,42,.65)
-    ),
-
-    linear-gradient(
-        135deg,
-        #9b6335,
-        #5d351e
-    );
-
-    display: flex;
-
-    align-items: flex-end;
-
-    padding: 35px;
-
-    color: white;
-
-    box-shadow:
-    0 25px 50px
-    rgba(0,0,0,.15);
-}
-
-.wood-visual h3 {
-
-    font-size: 35px;
-
-    line-height: 1.1;
-}
-
-
-/* =====================================================
-   ESSENCES
-===================================================== */
-
-.essences {
-
-    background: #f5f1e8;
-}
-
-.essence-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.essence {
-
-    background: white;
-
-    padding: 30px;
-
-    border:
-    1px solid #e2ddd3;
-
-    border-radius: 20px;
-
-    transition: .3s;
-}
-
-.essence:hover {
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-    0 15px 35px
-    rgba(0,0,0,.08);
-}
-
-.essence-icon {
-
-    font-size: 45px;
-}
-
-.essence h3 {
-
-    color: #173b2a;
-
-    font-size: 23px;
-
-    margin:
-    15px 0 8px;
-}
-
-.essence p {
-
-    color: #647068;
-}
-
-
-/* =====================================================
-   UTILITE DU BOIS
-===================================================== */
-
-.utilities {
-
-    background: white;
-}
-
-.utility-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
-    gap: 20px;
-}
-
-.utility {
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    background: #f6f3ec;
-
-    border:
-    1px solid #e5dfd4;
-}
-
-.utility-icon {
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-.utility h3 {
-
-    color: #173b2a;
-
-    margin-bottom: 10px;
-
-    font-size: 22px;
-}
-
-.utility p {
-
-    color: #606c65;
-}
-
-
-/* =====================================================
-   TARIFS
-===================================================== */
-
-.pricing {
-
-    background: #eee8dc;
-}
-
-.price-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(3, 1fr);
-
-    gap: 16px;
-}
-
-.price {
-
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    border:
-    1px solid #ddd7cb;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    position: relative;
-}
-
-.price-name {
-
-    font-size: 17px;
-
-    font-weight: bold;
-
-    color: #39463e;
-}
-
-.price-value {
-
-    font-size: 27px;
-
-    font-weight: 900;
-
-    color: #173b2a;
-}
-
-.price.popular {
-
-    border:
-    2px solid #b56d2d;
-}
-
-.popular {
-
-    position: absolute;
-
-    top: -12px;
-
-    right: 15px;
-
-    background: #b56d2d;
-
-    color: white;
-
-    padding: 4px 10px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: bold;
-}
-
-.price-note {
-
-    margin-top: 25px;
-
-    color: #69736d;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   COMMANDE
-===================================================== */
-
-.order {
-
-    background: #173b2a;
-
-    color: white;
-}
-
-.order .section-title h2 {
-
-    color: white;
-}
-
-.order .section-title p {
-
-    color: #dce6df;
-}
-
-.order-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.order-step {
-
-    border-top:
-    3px solid #c17a38;
-
-    padding: 25px 10px;
-}
-
-.order-number {
-
-    color: #f0c68e;
-
-    font-weight: bold;
-}
-
-.order-step h3 {
-
-    font-size: 23px;
-
-    margin:
-    10px 0;
-}
-
-.order-step p {
-
-    color: #d3dfd8;
-}
-
-
-/* =====================================================
-   LIVRAISON
-===================================================== */
-
-.delivery {
-
-    background: #fffdf8;
-}
-
-.delivery-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    1fr .8fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.delivery h2 {
-
-    color: #173b2a;
-
-    font-size: 50px;
-
-    line-height: 1.05;
-
-    margin:
-    10px 0 20px;
-}
-
-.delivery p {
-
-    color: #5f6b64;
-}
-
-.delivery ul {
-
-    list-style: none;
-
-    margin-top: 25px;
-}
-
-.delivery li {
-
-    margin: 12px 0;
-
-    font-weight: bold;
-}
-
-.delivery li::before {
-
-    content: "🚚";
-
-    margin-right: 10px;
-}
-
-.delivery-card {
-
-    background: #173b2a;
-
-    color: white;
-
-    border-radius: 25px;
-
-    padding: 50px 30px;
-
-    text-align: center;
-}
-
-.delivery-truck {
-
-    font-size: 70px;
-}
-
-.delivery-card h3 {
-
-    font-size: 28px;
-
-    margin:
-    15px 0;
-}
-
-.delivery-card p {
-
-    color: #dbe5df;
-}
-
-
-/* =====================================================
-   FAQ
-===================================================== */
-
-.faq {
-
-    background: #f5f2eb;
-}
-
-.faq-item {
-
-    background: white;
-
-    border:
-    1px solid #e0dbd1;
-
-    border-radius: 14px;
-
-    margin-bottom: 12px;
-
-    padding: 20px;
-}
-
-.faq-item summary {
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-    color: #173b2a;
-}
-
-.faq-item p {
-
-    color: #626e67;
-
-    margin-top: 15px;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact {
-
-    background: #eee8dc;
-}
-
-.contact-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    .8fr 1.2fr;
-
-    gap: 70px;
-
-    align-items: start;
-}
-
-.contact h2 {
-
-    color: #173b2a;
-
-    font-size: 50px;
-
-    line-height: 1.05;
-
-    margin:
-    10px 0 20px;
-}
-
-.contact-description {
-
-    color: #5f6a63;
-
-    font-size: 17px;
-}
-
-.contact-info {
-
-    margin-top: 30px;
-}
-
-.contact-info p {
-
-    margin: 15px 0;
-
-    font-weight: bold;
-}
-
-form {
-
-    background: white;
-
-    padding: 32px;
-
-    border-radius: 22px;
-
-    box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.08);
-}
-
-label {
-
-    display: block;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    margin-bottom: 15px;
-}
-
-input,
-select,
-textarea {
-
-    width: 100%;
-
-    padding: 13px;
-
-    margin-top: 7px;
-
-    border:
-    1px solid #d5cfc4;
-
-    border-radius: 10px;
-
-    font-family: inherit;
-
-    font-size: 15px;
-}
-
-textarea {
-
-    resize: vertical;
-}
-
-.form-row {
-
-    display: grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap: 15px;
-}
-
-form button {
-
-    width: 100%;
-
-    border: none;
-
-    font-size: 16px;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-
-    background: #102b1e;
-
-    color: #dbe5df;
-
-    padding: 60px 0;
-}
-
-.footer-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    1.5fr 1fr 1fr;
-
-    gap: 40px;
-}
-
-.footer-logo {
-
-    font-size: 32px;
-
-    font-weight: 900;
-
-    color: white;
-}
-
-.footer-logo span {
-
-    color: #f0c68e;
-}
-
-footer h3 {
-
-    color: white;
-
-    margin-bottom: 15px;
-}
-
-footer a {
-
-    display: block;
-
-    color: #b9c9c0;
-
-    margin: 7px 0;
-}
-
-footer a:hover {
-
-    color: #f0c68e;
-}
-
-.copyright {
-
-    border-top:
-    1px solid #315141;
-
-    margin-top: 45px;
-
-    padding-top: 20px;
-
-    color: #93a59b;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   RESPONSIVE TABLETTE
-===================================================== */
-
-@media(max-width: 900px) {
-
-    nav {
-        display: none;
-    }
-
-    .hero-grid {
-
-        grid-template-columns: 1fr;
-
-        padding: 70px 0;
-    }
-
-    .stats {
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .stat {
-
-        border-right: none;
-
-        border-bottom:
-        1px solid #e3ded3;
-    }
-
-    .presentation-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .essence-grid {
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .utility-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .price-grid {
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .order-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .delivery-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .contact-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .footer-grid {
-
-        grid-template-columns:
-        1fr 1fr;
-    }
-}
-
-
-/* =====================================================
-   RESPONSIVE MOBILE
-===================================================== */
-
-@media(max-width:550px) {
-
-    .container {
-
-        width: 88%;
-    }
-
-    section {
-
-        padding: 70px 0;
-    }
-
-    .hero h1 {
-
-        font-size: 50px;
-
-        letter-spacing: -2px;
-    }
-
-    .hero-description {
-
-        font-size: 18px;
-    }
-
-    .hero-card {
-
-        padding: 30px;
-    }
-
-    .stats {
-
-        grid-template-columns:
-        1fr 1fr;
-    }
-
-    .stat strong {
-
-        font-size: 21px;
-    }
-
-    .essence-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .price-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .form-row {
-
-        grid-template-columns:
-        1fr;
-    }
-
-    .contact h2,
-    .delivery h2 {
-
-        font-size: 40px;
-    }
-
-    .footer-grid {
-
-        grid-template-columns:
-        1fr;
-    }
-}
-
-
-/* ===== Boiséo — finition professionnelle v2 ===== */
-:root{
-  --green:#173b2a;
-  --green-2:#28583f;
-  --brown:#a9662c;
-  --cream:#f7f3eb;
-  --ink:#1d2c24;
-  --muted:#66736b;
-  --line:#e3ddd2;
-  --white:#fff;
-  --shadow:0 18px 50px rgba(22,39,30,.10);
-}
-body{background:#fbfaf7;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-section{position:relative}
-.button{border-radius:14px;box-shadow:0 8px 20px rgba(23,59,42,.08)}
-.button-primary{background:var(--green)}
-.button-primary:hover{background:var(--green-2)}
-.hero{overflow:hidden}
-.hero-card{box-shadow:0 28px 70px rgba(23,59,42,.20)}
-.section-title h2{font-weight:850}
-.essence,.price,.utility,.faq-item,form{box-shadow:0 8px 28px rgba(22,39,30,.045)}
-.essence{height:100%;border-color:var(--line)}
-.price{min-height:78px}
-.price-grid{align-items:stretch}
-.contact-info a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
-
-/* Command form */
-.order-form-section{background:linear-gradient(180deg,#173b2a 0%,#102b1e 100%);color:#fff}
-.order-form-wrap{display:grid;grid-template-columns:.78fr 1.22fr;gap:42px;align-items:start}
-.order-form-intro{padding-top:12px}
-.order-form-intro h2{font-size:clamp(38px,5vw,62px);line-height:1.02;margin:10px 0 18px;color:#fff}
-.order-form-intro p{color:#d9e4dd;font-size:17px}
-.order-form-points{list-style:none;margin:28px 0 0;padding:0}
-.order-form-points li{margin:13px 0;color:#eef5f0;font-weight:650}
-.order-form-points li::before{content:"✓";color:#f0c68e;font-weight:900;margin-right:10px}
-.order-form-card{background:#fff;border-radius:26px;padding:30px;box-shadow:0 25px 70px rgba(0,0,0,.20);color:var(--ink)}
-.order-form-card h3{font-size:25px;color:var(--green);margin-bottom:5px}
-.order-form-card .form-intro{color:var(--muted);margin-bottom:22px}
-.order-form-card label{margin-bottom:14px}
-.order-form-card input,.order-form-card select,.order-form-card textarea{
-  background:#fcfbf8;border:1px solid #d8d2c8;border-radius:12px;padding:14px 13px;
-  outline:none;transition:border-color .2s,box-shadow .2s
-}
-.order-form-card input:focus,.order-form-card select:focus,.order-form-card textarea:focus{
-  border-color:#7d9b89;box-shadow:0 0 0 4px rgba(40,88,63,.10)
-}
-.order-summary{display:grid;grid-template-columns:1fr auto;gap:10px;margin:4px 0 18px;padding:16px 17px;border-radius:14px;background:#f1eee7;border:1px solid #e0d9cd}
-.order-summary strong{color:var(--green)}
-.order-total{font-size:21px;font-weight:900;color:var(--brown)}
-.order-form-card button{margin-top:5px}
-.form-note{font-size:12px;color:#748078;margin-top:10px;text-align:center}
-
-/* Dynamic gallery */
-.gallery-section{background:#fffdf8}
-.gallery-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}
-.gallery-head p{max-width:650px;color:var(--muted)}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.gallery-item{position:relative;overflow:hidden;border-radius:18px;background:#eee9df;aspect-ratio:4/3;border:1px solid var(--line);cursor:zoom-in}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
-.gallery-item:hover img{transform:scale(1.045)}
-.gallery-item figcaption{display:none}
-
-/* Zoom photo */
-.photo-lightbox{position:fixed;inset:0;z-index:99999;background:rgba(8,14,11,.92);display:none;align-items:center;justify-content:center;padding:30px}
-.photo-lightbox.open{display:flex}
-.photo-lightbox img{max-width:min(94vw,1200px);max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 25px 80px rgba(0,0,0,.45)}
-.photo-lightbox-close{position:absolute;top:16px;right:18px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#173b2a;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(0,0,0,.25)}
-.photo-lightbox-close:hover{transform:scale(1.05)}
-
-.gallery-empty{padding:34px;border:1px dashed #cfc7ba;border-radius:18px;text-align:center;color:var(--muted);background:#f8f5ee}
-.gallery-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px}
-.gallery-controls button{border:1px solid #d7d0c5;background:#fff;padding:10px 15px;border-radius:10px;font-weight:750;cursor:pointer}
-.gallery-controls button:disabled{opacity:.4;cursor:not-allowed}
-.gallery-page{font-size:13px;color:var(--muted);min-width:100px;text-align:center}
-
-/* Better mobile navigation */
-.mobile-menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 11px;font-size:20px;cursor:pointer}
-@media(max-width:1100px){
-  .utility-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-@media(max-width:900px){
-  .essence-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-  .mobile-menu-toggle{display:block}
-  header nav{display:none;position:absolute;left:5%;right:5%;top:72px;background:#fff;padding:15px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:4px}
-  header nav.open{display:flex}
-  header nav a{padding:12px 13px;border-radius:10px}
-  header nav a:hover{background:#f4f1ea}
-  .order-form-wrap{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:550px){
-  .essence-grid,.utility-grid{grid-template-columns:1fr;}
-  .gallery-head{display:block}
-  .gallery-grid{grid-template-columns:1fr}
-  .order-form-card{padding:20px}
-  .order-summary{grid-template-columns:1fr}
-}
-
-
-/* Prix en panneau dépliant */
-.price-disclosure{margin-top:26px;border:1px solid #d9d2c7;border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 12px 35px rgba(30,45,35,.07)}
-.price-disclosure>summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:850;color:var(--green);display:flex;align-items:center;justify-content:space-between;gap:15px}
-.price-disclosure>summary::-webkit-details-marker{display:none}
-.price-disclosure>summary::after{content:'+';font-size:26px;line-height:1;transition:transform .2s ease}
-.price-disclosure[open]>summary::after{transform:rotate(45deg)}
-.price-disclosure .price-panel{padding:0 22px 22px;border-top:1px solid #eee8de}
-.price-disclosure .price-grid{margin-top:18px}
-.price-disclosure .price-note{margin-bottom:0}
-.order-price-disclosure{margin:4px 0 16px;border:1px solid #ded8ce;border-radius:14px;background:#f8f5ee;overflow:hidden}
-.order-price-disclosure summary{cursor:pointer;padding:13px 15px;font-weight:800;color:var(--green);list-style:none}
-.order-price-disclosure summary::-webkit-details-marker{display:none}
-.order-price-content{padding:0 15px 15px;color:var(--muted)}
-.order-price-content strong{color:var(--brown);font-size:20px}
-.gallery-item img{display:block;width:100%;height:100%;object-fit:cover}
-.gallery-item{min-height:180px}
-.gallery-item.is-loading{display:flex;align-items:center;justify-content:center;color:#827a70;font-size:13px}
-
-
-/* ===== Grilles 4 éléments : 2 colonnes x 2 lignes sur tous les écrans ===== */
-.essence-grid,
-.utility-grid,
-.gallery-grid,
-.stats {
-  display:grid !important;
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  gap:20px;
-}
-
-/* Sur petits écrans, on conserve volontairement le format 2 x 2 */
-@media(max-width:550px){
-  .essence-grid,
-  .utility-grid,
-  .gallery-grid,
-  .stats {
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    gap:12px;
   }
-  .essence, .utility { padding:18px; }
-  .essence h3, .utility h3 { font-size:18px; }
-  .essence p, .utility p { font-size:13px; line-height:1.5; }
-  .essence-icon, .utility-icon { font-size:30px; }
-}
-
-/* ===== Assistant + contact flottants Boiséo ===== */
-.boiseo-floating-actions{
-  position:fixed;
-  right:22px;
-  bottom:135px;
-  z-index:10000;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-  pointer-events:none;
-  filter:drop-shadow(0 4px 10px rgba(20,35,27,.10));
-}
-.boiseo-floating-action{
-  pointer-events:auto;
-  width:58px;
-  height:58px;
-  padding:0;
-  border-radius:50%;
-  border:2px solid rgba(255,255,255,.92);
-  box-shadow:0 10px 28px rgba(20,35,27,.28),0 2px 8px rgba(20,35,27,.16);
-  display:grid;
-  place-items:center;
-  text-decoration:none !important;
-  color:#fff !important;
-  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
-  position:relative;
-}
-.boiseo-floating-action:hover{
-  transform:translateY(-2px) scale(1.06);
-  box-shadow:0 14px 34px rgba(20,35,27,.34),0 3px 10px rgba(20,35,27,.16);
-  filter:brightness(1.06);
-}
-.boiseo-floating-action:focus-visible{
-  outline:3px solid rgba(255,255,255,.95);
-  outline-offset:3px;
-}
-.boiseo-floating-action__icon{
+  @media (max-width: 600px) {
+    .floating-whatsapp, .whatsapp-float, .whatsapp-button, #whatsapp {
+      right: 14px !important;
+      bottom: 14px !important;
+      width: 50px !important;
+      height: 50px !important;
+    }
+    .assistant-float, .ai-assistant, #assistant, #aiAssistant, .chatbot-float {
+      right: 14px !important;
+      bottom: 76px !important;
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+  @media (min-width: 601px) {
+    .floating-whatsapp, .whatsapp-float, .whatsapp-button, #whatsapp {
+      right: 20px !important;
+      bottom: 20px !important;
+    }
+    .assistant-float, .ai-assistant, #assistant, #aiAssistant, .chatbot-float {
+      right: 20px !important;
+      bottom: 88px !important;
+    }
+  }
+</style>
+<style id="sewing-project-style">
+.sewing-project-image{
   width:100%;
-  height:100%;
-  display:grid;
-  place-items:center;
-  font-size:27px;
-  line-height:1;
-  text-shadow:0 2px 5px rgba(0,0,0,.2);
+  min-height:220px;
+  margin:14px 0 18px;
+  border-radius:18px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 10px 30px rgba(74,21,32,.10);
 }
-.boiseo-floating-action--assistant{
-  background:linear-gradient(145deg,#123b29,#2f8a5b);
-  box-shadow:0 12px 30px rgba(28,92,58,.34),0 2px 8px rgba(20,35,27,.18);
-}
-.boiseo-floating-action--mail{
-  background:linear-gradient(145deg,#76501f,#c88a43);
-}
-.boiseo-floating-action--assistant .boiseo-floating-action__icon{
-  font-size:30px;
-}
-.boiseo-floating-action--assistant::after{
-  content:"";
-  position:absolute;
-  inset:4px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.24);
-  pointer-events:none;
-}
-.boiseo-floating-action--assistant .boiseo-floating-action__icon svg{
-  width:34px;height:34px;display:block;
-  filter:drop-shadow(0 2px 3px rgba(0,0,0,.18));
-}
-.boiseo-floating-action--mail .boiseo-floating-action__icon svg{
-  width:28px;height:28px;display:block;
-}
-
-/* Fenêtre de l'assistant : au-dessus des deux boutons */
-.boiseo-assistant-panel{
-  position:fixed;
-  right:22px;
-  bottom:209px;
-  width:min(360px,calc(100vw - 30px));
-  max-height:min(560px,calc(100vh - 120px));
-  z-index:9999;
-  background:rgba(255,255,255,.98);
-  border:1px solid rgba(28,67,46,.14);
-  border-radius:20px;
-  box-shadow:0 20px 55px rgba(15,35,24,.24);
-  overflow:hidden;
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(12px) scale(.97);
-  transform-origin:bottom right;
-  transition:opacity .2s ease,transform .2s ease,visibility .2s ease;
-  pointer-events:none;
-}
-.boiseo-assistant-panel.open{
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0) scale(1);
-  pointer-events:auto;
-}
-.boiseo-assistant-head{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:14px 16px;
-  background:linear-gradient(135deg,#173b2a,#2d6a47);
-  color:#fff;
-}
-.boiseo-assistant-avatar{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:rgba(255,255,255,.16);
-  border:1px solid rgba(255,255,255,.3);
-  font-size:22px;
-}
-.boiseo-assistant-head strong{display:block;font-size:15px}
-.boiseo-assistant-head small{opacity:.85;font-size:11px}
-.boiseo-assistant-close{
-  margin-left:auto;
-  width:30px;height:30px;border:0;border-radius:50%;
-  background:rgba(255,255,255,.13);color:#fff;cursor:pointer;font-size:20px;
-}
-.boiseo-assistant-body{padding:14px;overflow:auto;max-height:330px}
-.boiseo-assistant-message{
-  background:#f1f6f2;border-radius:14px;padding:11px 12px;font-size:13px;line-height:1.5;color:#24342b;margin-bottom:10px;
-}
-.boiseo-assistant-quick{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
-.boiseo-assistant-quick button{
-  border:1px solid #dce7df;background:#fff;border-radius:10px;padding:9px 7px;font-size:11px;color:#214b34;cursor:pointer;font-weight:700;
-}
-.boiseo-assistant-quick button:hover{background:#f4f8f5}
-.boiseo-assistant-form{display:flex;gap:7px;padding:10px;border-top:1px solid #edf0ee;background:#fff}
-.boiseo-assistant-form input{flex:1;min-width:0;border:1px solid #d7dfda;border-radius:12px;padding:11px 12px;font-size:13px;outline:none}
-.boiseo-assistant-form input:focus{border-color:#4a8663;box-shadow:0 0 0 3px rgba(74,134,99,.1)}
-.boiseo-assistant-form button{width:42px;border:0;border-radius:12px;background:#234e36;color:#fff;font-size:18px;cursor:pointer}
-@media(max-width:550px){
-  .boiseo-floating-actions{right:12px;bottom:118px;gap:7px}
-  .boiseo-floating-action{width:52px;height:52px}
-  .boiseo-floating-action__icon{font-size:24px}
-  .boiseo-floating-action--assistant .boiseo-floating-action__icon{font-size:27px}
-  .boiseo-assistant-panel{right:12px;bottom:179px;width:calc(100vw - 24px);max-height:calc(100vh - 100px)}
+@media (max-width:600px){
+  .sewing-project-image{min-height:170px;border-radius:14px;margin:10px 0 14px}
 }
 </style>
+<style id="responsive-photo-grid">
+.photo-grid,.gallery,.projects-grid,.cases-grid,.portfolio-grid,
+.services-grid,.solutions-grid,.cards-grid{
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important;
+}
+.photo-grid img,.gallery img,.projects-grid img,.cases-grid img,.portfolio-grid img,
+.services-grid img,.solutions-grid img,.cards-grid img{
+ width:100%;height:auto;display:block;object-fit:cover;
+}
+@media(max-width:600px){
+ .photo-grid,.gallery,.projects-grid,.cases-grid,.portfolio-grid,
+ .services-grid,.solutions-grid,.cards-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;
+ }
+}
+img{content-visibility:auto;contain-intrinsic-size:180px 180px}
+</style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<style id="assistant-floating-final">
+/* ASSISTANT PHENIX CONNECT — FLOTTANT EN PERMANENCE */
+#ai-button{
+  position:fixed !important;
+  inset:auto 18px 18px auto !important;
+  z-index:2147483646 !important;
+  width:60px !important;
+  height:60px !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:grid !important;
+  place-items:center !important;
+  border:0 !important;
+  border-radius:50% !important;
+  background:var(--primary) !important;
+  color:#fff !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.22) !important;
+  cursor:pointer !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:none !important;
+}
 
-</head>
+#ai-button svg{
+  width:27px !important;
+  height:27px !important;
+  display:block !important;
+}
 
+#ai-panel{
+  position:fixed !important;
+  inset:auto 18px 90px auto !important;
+  z-index:2147483647 !important;
+  width:min(360px,calc(100vw - 24px)) !important;
+  height:480px !important;
+  max-height:calc(100vh - 105px) !important;
+  margin:0 !important;
+  border:1px solid var(--line) !important;
+  border-radius:16px !important;
+  box-shadow:0 15px 40px rgba(0,0,0,.20) !important;
+  overflow:hidden !important;
+}
 
+#ai-panel.open{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+@media(max-width:600px){
+  #ai-button{
+    right:14px !important;
+    bottom:14px !important;
+    width:56px !important;
+    height:56px !important;
+  }
+
+  #ai-panel{
+    right:12px !important;
+    bottom:80px !important;
+    width:calc(100vw - 24px) !important;
+    height:min(480px,calc(100vh - 100px)) !important;
+    max-height:calc(100vh - 100px) !important;
+    border-radius:18px !important;
+  }
+}
+</style>
+<meta content="création site web Bénin, agence web Parakou, développement web Bénin, application mobile Bénin, logiciel de gestion Bénin, maintenance informatique Parakou, SEO local Bénin, solutions numériques Afrique" name="keywords"/><meta content="PHENIX CONNECT | Solutions web et informatiques au Bénin" name="twitter:title"/><meta content="Création de sites web, applications, logiciels de gestion, maintenance informatique et solutions numériques au Bénin et en Afrique francophone." name="twitter:description"/><meta content="https://www.phenixconnect.online/developpementweb.jpg" property="og:image"/><meta content="https://www.phenixconnect.online/developpementweb.jpg" name="twitter:image"/><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.phenixconnect.online/#business",
+      "name": "PHENIX CONNECT",
+      "url": "https://www.phenixconnect.online/",
+      "telephone": "+2290153023080",
+      "email": "contact@phenixconnect.online",
+      "description": "Développement web, création de sites, applications web et mobiles, logiciels de gestion et solutions numériques au Bénin.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Parakou",
+        "addressRegion": "Borgou",
+        "addressCountry": "BJ"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parakou"
+        },
+        {
+          "@type": "Country",
+          "name": "Bénin"
+        },
+        {
+          "@type": "Continent",
+          "name": "Afrique"
+        }
+      ],
+      "sameAs": [
+        "https://wa.me/2290153023080"
+      ],
+      "knowsAbout": [
+        "Développement web",
+        "Création de sites web",
+        "Applications web",
+        "Applications mobiles",
+        "Logiciels de gestion",
+        "Solutions numériques",
+        "Intelligence artificielle",
+        "SEO local"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.phenixconnect.online/#website",
+      "url": "https://www.phenixconnect.online/",
+      "name": "PHENIX CONNECT",
+      "publisher": {
+        "@id": "https://www.phenixconnect.online/#business"
+      },
+      "inLanguage": "fr-BJ"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.phenixconnect.online/#webpage",
+      "url": "https://www.phenixconnect.online/",
+      "name": "PHENIX CONNECT | Développement web, applications & solutions numériques au Bénin",
+      "isPartOf": {
+        "@id": "https://www.phenixconnect.online/#website"
+      },
+      "about": {
+        "@id": "https://www.phenixconnect.online/#business"
+      },
+      "inLanguage": "fr-BJ"
+    }
+  ]
+}
+</script><style>
+.seo-intro{font-size:1rem;color:var(--muted);max-width:900px}
+.service-link{display:inline-block;margin-top:14px;color:var(--primary);font-weight:800;font-size:.88rem}
+.service-link:hover{text-decoration:underline}
+.local-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.local-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.local-card h3{font-size:1.05rem;margin-bottom:7px}
+.local-card p{color:var(--muted);font-size:.9rem}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.process-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.process-card strong{display:block;color:var(--primary);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+@media(max-width:850px){.local-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.local-grid,.process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+</style></head>
+<!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
 <body>
-
-
-<!-- =====================================================
-     MENU
-===================================================== -->
-
 <header>
-
-<div class="header-container">
-
-<a href="#accueil" class="logo">
-Boisé<span>o</span>
-</a>
-
-<button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-
-<nav>
-
-<a href="#presentation">
-Présentation
-</a>
-
-<a href="#bois">
-Nos bois
-</a>
-
-<a href="#utilite">
-Utilité
-</a>
-
-<a href="#tarifs">Tarifs</a>
-<a href="#galerie">Galerie</a>
-
-<a href="#livraison">
-Livraison
-</a>
-
-<a href="#faq">
-FAQ
-</a>
-
-<a href="#contact"
-   class="nav-button">
-Commander
-</a>
-
+<div class="container nav">
+<a class="brand" href="#accueil">PHENIX <span>CONNECT</span></a>
+<button aria-label="Ouvrir le menu" class="menu" id="menuBtn">☰</button>
+<nav class="navlinks" id="navLinks">
+<a href="creation-site-web-benin.html">Services détaillés</a><a href="#services">Services</a>
+<a href="#solutions">Solutions</a>
+<a href="#apropos">À propos</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290153023080" rel="noopener" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.191 8.191 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.12-.56.12-.17.25-.66.8-.81.97-.15.17-.31.2-.56.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.18-.48-.3z"></path></svg>
+        WhatsApp
+      </a>
 </nav>
-
 </div>
-
 </header>
-
-
-<!-- =====================================================
-     ACCUEIL
-===================================================== -->
-
-<section class="hero"
-         id="accueil">
-
-<div class="hero-grid">
-
-
+<main>
+<section class="hero" id="accueil">
+<div class="container hero-grid">
 <div>
-
-<div class="small-title">
-
-🔥 BOIS DE CHAUFFAGE
-•
-FRANCE
-
+<h1>Développement web, applications et solutions numériques au Bénin.</h1>
+<div><span class="eyebrow">Entreprise béninoise · Solutions numériques &amp; informatiques</span></div>
+<p>PHENIX CONNECT, basé à Parakou, conçoit des sites web, applications, logiciels de gestion et solutions numériques pour les entreprises, commerces, organisations et professionnels au Bénin, avec un accompagnement à distance en Afrique francophone.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#contact">Parler de votre projet</a>
+<a class="btn btn-light" href="#services">Découvrir nos services</a>
 </div>
-
-
-<h1>
-
-Le bois qui chauffe vraiment.
-
-</h1>
-
-
-<p class="hero-description">
-
-Bienvenue chez <strong>Boiséo</strong>,
-votre spécialiste du bois de chauffage
-très sec.
-
-Nous proposons un mélange de
-<strong>chêne, frêne, hêtre et charme</strong>,
-coupé en longueurs de
-<strong>33 cm et 50 cm</strong>.
-
-</p>
-
-
-<div class="hero-buttons">
-
-<a href="#tarifs"
-   class="button button-primary">
-
-Voir nos tarifs
-
-</a>
-
-
-<a href="#contact"
-   class="button button-secondary">
-
-Demander un devis
-
-</a>
-
 </div>
-
-
-<div class="hero-features">
-
-<div class="feature">
-🔥 Bois très sec
-</div>
-
-<div class="feature">
-🌳 4 essences
-</div>
-
-<div class="feature">
-📏 33 cm / 50 cm
-</div>
-
-<div class="feature">
-🚚 Livraison
-</div>
-
-</div>
-
-</div>
-
-
-<div class="hero-card">
-
-<div class="fire">
-🔥
-</div>
-
-<h2>
-
-Votre chauffage,
-notre priorité.
-
-</h2>
-
-<p>
-
-Boiséo vous accompagne dans
-l'approvisionnement en bois de
-chauffage pour votre maison,
-votre cheminée, votre poêle
-ou votre chaudière à bois.
-
-</p>
-
-<a href="#contact">
-
-Obtenir un devis →
-
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     STATISTIQUES
-===================================================== -->
-
-<div class="stats">
-
-
-<div class="stat">
-
-<strong>
-33 / 50 cm
-</strong>
-
-<span>
-Longueurs disponibles
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-1 à 60
-</strong>
-
-<span>
-Stères disponibles
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-4 essences
-</strong>
-
-<span>
-Chêne, frêne, hêtre, charme
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-France
-</strong>
-
-<span>
-Livraison selon destination
-</span>
-
-</div>
-
-
-</div>
-
-
-<!-- =====================================================
-     PRESENTATION
-===================================================== -->
-
-<section class="presentation"
-         id="presentation">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<small>
-QUI SOMMES-NOUS ?
-</small>
-
-<h2>
-Boiséo, votre bois de chauffage.
-</h2>
-
-<p>
-
-Une solution simple pour vous
-approvisionner en bois de chauffage
-sec et adapté à vos besoins.
-
-</p>
-
-</div>
-
-
-<div class="presentation-grid">
-
-
-<div class="presentation-text">
-
-<h3>
-Un bois sélectionné pour votre confort
-</h3>
-
-<p>
-
-Boiséo propose un mélange de
-<strong>chêne, frêne, hêtre et charme</strong>.
-Ces essences sont particulièrement
-appréciées pour leur utilisation
-comme bois de chauffage.
-
-</p>
-
-<p>
-
-Notre bois est présenté dans
-les longueurs de <strong>33 cm</strong>
-et <strong>50 cm</strong>, afin de
-s'adapter à différents types
-d'appareils de chauffage.
-
-</p>
-
-<p>
-
-Que vous soyez particulier,
-professionnel, propriétaire d'un
-gîte ou utilisateur d'un système
-de chauffage au bois, Boiséo
-vous permet de commander le
-volume correspondant à votre besoin.
-
-</p>
-
-
-<ul class="check-list">
-
-<li>
-Bois de chauffage très sec
-</li>
-
-<li>
-Mélange chêne, frêne, hêtre et charme
-</li>
-
-<li>
-Longueurs 33 cm et 50 cm
-</li>
-
-<li>
-Volumes de 1 à 60 stères
-</li>
-
-<li>
-Livraison selon destination
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="wood-visual">
-
-<div>
-
-<h3>
-La chaleur naturelle
-du bois.
-</h3>
-
-<p>
-Une énergie traditionnelle
-pour accompagner vos hivers.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     NOS ESSENCES
-===================================================== -->
-
-<section class="essences"
-         id="bois">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<small>
-NOS ESSENCES
-</small>
-
-<h2>
-Chêne, frêne, hêtre et charme.
-</h2>
-
-<p>
-
-Boiséo propose un mélange de
-quatre essences de bois feuillus,
-destiné au chauffage.
-
-</p>
-
-</div>
-
-
-<div class="essence-grid">
-
-
-<div class="essence">
-
-<div class="essence-image" data-essence="chene" role="button" tabindex="0" aria-label="Agrandir la photo du chêne">
-<img data-essence-image="chene" alt="Bois de chêne Boiséo" loading="lazy">
-</div>
-
-<h3>
-Chêne
-</h3>
-
-<p>
-
-Le chêne est un bois dense,
-largement utilisé pour le
-chauffage au bois.
-
-Il est apprécié pour sa
-combustion durable.
-
-</p>
-
-</div>
-
-
-<div class="essence">
-
-<div class="essence-image" data-essence="frene" role="button" tabindex="0" aria-label="Agrandir la photo du frêne">
-<img data-essence-image="frene" alt="Bois de frêne Boiséo" loading="lazy">
-</div>
-
-<h3>
-Frêne
-</h3>
-
-<p>
-
-Le frêne est une essence
-couramment recherchée pour
-son utilisation comme bois
-de chauffage.
-
-</p>
-
-</div>
-
-
-<div class="essence">
-
-<div class="essence-image" data-essence="hetre" role="button" tabindex="0" aria-label="Agrandir la photo du hêtre">
-<img data-essence-image="hetre" alt="Bois de hêtre Boiséo" loading="lazy">
-</div>
-
-<h3>
-Hêtre
-</h3>
-
-<p>
-
-Le hêtre est un bois dense
-qui convient parfaitement
-à différents usages de
-chauffage domestique.
-
-</p>
-
-</div>
-
-
-<div class="essence">
-
-<div class="essence-image" data-essence="charme" role="button" tabindex="0" aria-label="Agrandir la photo du charme">
-<img data-essence-image="charme" alt="Bois de charme Boiséo" loading="lazy">
-</div>
-
-<h3>
-Charme
-</h3>
-
-<p>
-
-Le charme est une essence
-dense particulièrement
-appréciée comme bois
-de chauffage.
-
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="info"
-style="
-margin-top:30px;
-padding:20px;
-background:#fff;
-border-radius:15px;
-border:1px solid #e0d9cd;
-color:#626d65;
-">
-
-<strong>
-ℹ️ Information :
-</strong>
-
-Les caractéristiques exactes du bois,
-son taux d'humidité, son cubage,
-son conditionnement et les modalités
-de livraison sont à confirmer lors
-de la commande ou sur le devis.
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     UTILITE
-===================================================== -->
-
-<section class="utilities"
-         id="utilite">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<small>
-UTILITÉ DE NOS BOIS
-</small>
-
-<h2>
-Pour quels usages utiliser
-le bois Boiséo ?
-</h2>
-
-<p>
-
-Notre bois de chauffage peut être
-utilisé dans différents équipements
-prévus pour le chauffage au bois.
-
-</p>
-
-</div>
-
-
-<div class="utility-grid">
-
-
-<div class="utility">
-
-<div class="utility-icon">
-🔥
-</div>
-
-<h3>
-Cheminée
-</h3>
-
-<p>
-
-Profitez de la chaleur et de
-l'ambiance d'un feu de bois
-dans une cheminée adaptée.
-
-</p>
-
-</div>
-
-
-<div class="utility">
-
-<div class="utility-icon">
-🏠
-</div>
-
-<h3>
-Poêle à bois
-</h3>
-
-<p>
-
-Les bûches de 33 cm ou 50 cm
-peuvent convenir aux appareils
-dont le foyer accepte ces
-dimensions.
-
-</p>
-
-</div>
-
-
-<div class="utility">
-
-<div class="utility-icon">
-♨️
-</div>
-
-<h3>
-Chauffage domestique
-</h3>
-
-<p>
-
-Le bois peut contribuer au
-chauffage de votre habitation
-lorsqu'il est utilisé dans un
-appareil approprié.
-
-</p>
-
-</div>
-
-
-<div class="utility">
-
-<div class="utility-icon">
-🏡
-</div>
-
-<h3>
-Maison secondaire
-</h3>
-
-<p>
-
-Constituez votre stock de bois
-avant la saison froide pour
-votre résidence principale
-ou secondaire.
-
-</p>
-
-</div>
-
-
-<div class="utility">
-
-<div class="utility-icon">
-🏨
-</div>
-
-<h3>
-Professionnels
-</h3>
-
-<p>
-
-Nous pouvons également répondre
-aux demandes de volumes importants
-pour les professionnels, selon
-les conditions de vente.
-
-</p>
-
-</div>
-
-
-<div class="utility">
-
-<div class="utility-icon">
-🌲
-</div>
-
-<h3>
-Stock pour l'hiver
-</h3>
-
-<p>
-
-Anticipez la saison de chauffage
-en commandant le volume de bois
-correspondant à vos besoins.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     TARIFS
-===================================================== -->
-
-<section class="pricing" id="tarifs">
-<div class="container">
-  <div class="section-title">
-    <small>NOS TARIFS</small>
-    <h2>Les prix Boiséo</h2>
-    <p>Ouvrez le panneau ci-dessous pour consulter les tarifs par volume.</p>
-  </div>
-
-  <details class="price-disclosure">
-    <summary>Afficher les tarifs</summary>
-    <div class="price-panel">
-      <div class="price-grid">
-        <div class="price"><span class="price-name">1 stère</span><span class="price-value">40 €</span></div>
-        <div class="price"><span class="price-name">2 stères</span><span class="price-value">70 €</span></div>
-        <div class="price popular"><span class="popular">POPULAIRE</span><span class="price-name">3 stères</span><span class="price-value">120 €</span></div>
-        <div class="price"><span class="price-name">5 stères</span><span class="price-value">200 €</span></div>
-        <div class="price"><span class="price-name">10 stères</span><span class="price-value">360 €</span></div>
-        <div class="price"><span class="price-name">20 stères</span><span class="price-value">700 €</span></div>
-        <div class="price"><span class="price-name">30 stères</span><span class="price-value">1 000 €</span></div>
-        <div class="price"><span class="price-name">40 stères</span><span class="price-value">1 250 €</span></div>
-        <div class="price"><span class="price-name">60 stères</span><span class="price-value">1 600 €</span></div>
-      </div>
-      <div class="price-note"><strong>Longueur 50 cm :</strong> supplément de 20 € par stère. Les montants affichés correspondent à la longueur de 33 cm.</div>
-    </div>
-  </details>
-</div>
-</section>
-
-
-<!-- =====================================================
-     COMMANDER
-===================================================== -->
-
-<section class="order">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<small>
-COMMENT COMMANDER ?
-</small>
-
-<h2>
-Votre commande en 3 étapes.
-</h2>
-
-<p>
-
-Boiséo vous accompagne de la
-demande de devis jusqu'à
-la livraison.
-
-</p>
-
-</div>
-
-
-<div class="order-grid">
-
-
-<div class="order-step">
-
-<div class="order-number">
-01
-</div>
-
-<h3>
-Choisissez votre volume
-</h3>
-
-<p>
-
-Sélectionnez le nombre de stères
-dont vous avez besoin :
-1, 2, 3, 5, 10, 20, 30,
-40 ou 60 stères.
-
-</p>
-
-</div>
-
-
-<div class="order-step">
-
-<div class="order-number">
-02
-</div>
-
-<h3>
-Indiquez votre adresse
-</h3>
-
-<p>
-
-Communiquez votre pays,
-votre code postal et les
-informations nécessaires
-pour la livraison.
-
-</p>
-
-</div>
-
-
-<div class="order-step">
-
-<div class="order-number">
-03
-</div>
-
-<h3>
-Recevez votre confirmation
-</h3>
-
-<p>
-
-Nous vous confirmons les
-conditions de livraison et
-le montant final avant
-la commande.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     LIVRAISON
-===================================================== -->
-
-<section class="delivery"
-         id="livraison">
-
-<div class="container">
-
-
-<div class="delivery-grid">
-
-
-<div>
-
-<div class="small-title">
-LIVRAISON
-</div>
-
-<h2>
-France.
-</h2>
-
-<p>
-
-Vous souhaitez recevoir votre
-bois de chauffage directement
-chez vous ?
-
-Contactez Boiséo avec votre
-adresse et le volume souhaité.
-
-</p>
-
-
+<aside class="hero-card">
+<h3>Un interlocuteur pour vos besoins</h3>
+<p>Un accompagnement adapté à vos objectifs :</p>
+<div class="mini-list">
+<details>
+<summary>Développement web &amp; applications</summary>
+<div class="detail-content">
 <ul>
-<li>Livraison partout en France</li>
-<li>Adresse de livraison renseignée dans le formulaire</li>
-<li>Tarif calculé selon le volume et la longueur des bûches</li>
+<li><strong>Sites vitrines &amp; d'entreprise :</strong> Présentation claire et professionnelle.</li>
+<li><strong>Boutiques en ligne :</strong> Catalogue, panier et commandes directes.</li>
+<li><strong>Applications web &amp; mobiles :</strong> Outils sur mesure sur PC, Android et iOS.</li>
 </ul>
-
 </div>
-
-
-<div class="delivery-card">
-
-<div class="delivery-truck">
-🚚
+</details>
+<details>
+<summary>Gestion et solutions métier</summary>
+<div class="detail-content">
+<ul>
+<li><strong>Ateliers &amp; artisans :</strong> Fiches clients, mesures et suivi des commandes.</li>
+<li><strong>Gestion commerciale :</strong> Stocks, ventes, facturation et reçus.</li>
+<li><strong>Monnaie électronique :</strong> Registre digital sécurisé pour dépôts/retraits.</li>
+</ul>
 </div>
-
-<h3>
-Livraison de votre bois
-</h3>
-
-<p>
-
-Indiquez votre adresse,
-votre code postal et votre
-quantité de stères.
-
-</p>
-
-<a href="#contact"
-   class="button button-primary"
-   style="margin-top:20px;">
-
-Demander un devis
-
-</a>
-
+</details>
+<details>
+<summary>Assistance &amp; maintenance PC</summary>
+<div class="detail-content">
+<ul>
+<li><strong>Systèmes &amp; Logiciels :</strong> Installation propre de Windows et configurations.</li>
+<li><strong>Dépannage matériel :</strong> Nettoyage, changement de disques, RAM, écran PC.</li>
+</ul>
 </div>
-
-
+</details>
+<details>
+<summary>Maintenance téléphonique</summary>
+<div class="detail-content">
+<ul>
+<li><strong>Réparations physiques :</strong> Remplacement d'écran, batterie, prise de charge.</li>
+<li><strong>Déblocage :</strong> Reprogrammation et décodage réseau.</li>
+</ul>
 </div>
-
+</details>
 </div>
-
+</aside>
+</div>
 </section>
-
-
-<!-- =====================================================
-     GALERIE DYNAMIQUE
-===================================================== -->
-<section class="gallery-section" id="galerie">
+<section id="services">
 <div class="container">
-<div class="gallery-head">
-<div class="section-title" style="margin-bottom:0">
-<h2>Nos bois</h2>
+<div class="section-head">
+<h2>Développement web, applications et solutions numériques</h2>
+<p>Des prestations adaptées aux besoins des entreprises, commerces, organisations et professionnels au Bénin et à distance.</p>
 </div>
+<div class="grid">
+<article class="card">
+<div class="card-img"><img alt="Code source HTML CSS" decoding="async" fetchpriority="low" loading="lazy" src="developpementweb.jpg"/></div>
+<div class="card-body">
+<h3>Développement web</h3>
+<p>Sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios et solutions sur mesure.</p>
+<div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div>
+<a aria-label="En savoir plus sur Développement web au Bénin" class="service-link" href="creation-site-web-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Tableau de bord de gestion" decoding="async" fetchpriority="low" loading="lazy" src="applicationdegestion.jpeg"/></div>
+<div class="card-body">
+<h3>Applications de gestion</h3>
+<p>Outils adaptés aux activités professionnelles : stock, caisse, clients, facturation, ateliers.</p>
+<div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div>
+<a aria-label="En savoir plus sur Applications de gestion au Bénin" class="service-link" href="logiciels-gestion-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Application mobile" decoding="async" fetchpriority="low" loading="lazy" src="applicationmobile.jpeg"/></div>
+<div class="card-body">
+<h3>Applications mobiles</h3>
+<p>Développement d'applications Android et iOS sur mesure adaptées aux usages de votre activité.</p>
+<div class="tags"><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Mobile</span></div>
+<a aria-label="En savoir plus sur Applications mobiles au Bénin" class="service-link" href="applications-web-mobiles-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Assistance informatique" decoding="async" fetchpriority="low" loading="lazy" src="assistanceinformatique.jpeg"/></div>
+<div class="card-body">
+<h3>Assistance informatique</h3>
+<p>Configuration, diagnostic, optimisation et résolution de problèmes matériels/logiciels.</p>
+<div class="tags"><span class="tag">Installation</span><span class="tag">Windows</span><span class="tag">Support</span></div>
+<a aria-label="En savoir plus sur Assistance informatique au Bénin" class="service-link" href="maintenance-informatique-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Réparation carte mère PC" decoding="async" fetchpriority="low" loading="lazy" src="maintenanceinformatique.jpeg"/></div>
+<div class="card-body">
+<h3>Maintenance informatique</h3>
+<p>Installation de systèmes Windows, activation, résolution de pannes et réparations matérielles.</p>
+<div class="tags"><span class="tag">Dépannage</span><span class="tag">Matériel</span><span class="tag">Réparation</span></div>
+<a aria-label="En savoir plus sur Maintenance informatique au Bénin" class="service-link" href="maintenance-informatique-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Réparation de téléphone" decoding="async" fetchpriority="low" loading="lazy" src="maintenancetelephonique.jpeg"/></div>
+<div class="card-body">
+<h3>Maintenance téléphonique</h3>
+<p>Reprogrammation, décodage, changement d'écran, batterie et connecteurs de charge.</p>
+<div class="tags"><span class="tag">Écran</span><span class="tag">Batterie</span><span class="tag">Déblocage</span></div>
+<a aria-label="En savoir plus sur Maintenance téléphonique au Bénin" class="service-link" href="maintenance-telephone-parakou.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Présence Google" decoding="async" fetchpriority="low" loading="lazy" src="visibilitelocal.jpeg"/></div>
+<div class="card-body">
+<h3>Visibilité locale</h3>
+<p>Création et optimisation de fiches Google My Business pour améliorer votre présence locale.</p>
+<div class="tags"><span class="tag">Google My Business</span><span class="tag">SEO</span></div>
+<a aria-label="En savoir plus sur Visibilité locale au Bénin" class="service-link" href="seo-visibilite-locale-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Intelligence artificielle" decoding="async" fetchpriority="low" loading="lazy" src="solutionnumeriqueia.jpeg"/></div>
+<div class="card-body">
+<h3>Solutions numériques &amp; IA</h3>
+<p>Intégration d'outils numériques modernes et d'intelligence artificielle sur mesure.</p>
+<div class="tags"><span class="tag">IA</span><span class="tag">Automation</span></div>
+<a aria-label="En savoir plus sur Solutions numériques &amp; IA au Bénin" class="service-link" href="solutions-numeriques-ia-benin.html">En savoir plus →</a></div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Matériel informatique" decoding="async" fetchpriority="low" loading="lazy" src="materielinformatique.jpeg"/></div>
+<div class="card-body">
+<h3>Matériel informatique</h3>
+<p>Intermédiation et conseils pour obtenir du matériel informatique fiable et de qualité.</p>
+<div class="tags"><span class="tag">PC Portable</span><span class="tag">Équipement</span></div>
+<a aria-label="En savoir plus sur Matériel informatique au Bénin" class="service-link" href="materiel-informatique-benin.html">En savoir plus →</a></div>
+</article>
 </div>
-<div id="woodGallery" class="gallery-grid"></div>
-<div class="gallery-controls">
-<button type="button" id="galleryPrev">← Précédent</button>
-<span class="gallery-page" id="galleryPage">Page 1</span>
-<button type="button" id="galleryNext">Suivant →</button>
-</div>
-</div>
-</section>
-
-<!-- =====================================================
-     VISIONNEUSE PHOTO
-===================================================== -->
-<div class="photo-lightbox" id="photoLightbox" aria-hidden="true">
-  <button class="photo-lightbox-close" id="photoLightboxClose" type="button" aria-label="Fermer l'image agrandie">×</button>
-  <img id="photoLightboxImage" alt="Photo agrandie">
-</div>
-
-<!-- =====================================================
-     BOUTONS FLOTTANTS BOISÉO
-===================================================== -->
-<!-- Assistant flottant Boiséo -->
-<div class="boiseo-assistant-panel" id="boiseoAssistantPanel" aria-hidden="true">
-  <div class="boiseo-assistant-head">
-    <div class="boiseo-assistant-avatar" aria-hidden="true">🌲</div>
-    <div><strong>Assistant Boiséo</strong><small>Informations sur les bois, tarifs et livraison</small></div>
-    <button class="boiseo-assistant-close" id="boiseoAssistantClose" type="button" aria-label="Fermer l'assistant">×</button>
-  </div>
-  <div class="boiseo-assistant-body" id="boiseoAssistantBody">
-    <div class="boiseo-assistant-message">Bonjour 👋 Je peux vous renseigner sur Boiséo : essences, longueurs, volumes, tarifs, livraison en France et commande.</div>
-    <div class="boiseo-assistant-quick">
-      <button type="button" data-assistant-q="Quels bois propose Boiséo ?">Essences</button>
-      <button type="button" data-assistant-q="Quels sont les tarifs ?">Tarifs</button>
-      <button type="button" data-assistant-q="Comment se passe la livraison ?">Livraison</button>
-      <button type="button" data-assistant-q="Comment commander ?">Commander</button>
-    </div>
-  </div>
-  <form class="boiseo-assistant-form" id="boiseoAssistantForm">
-    <input id="boiseoAssistantInput" type="text" autocomplete="off" placeholder="Posez votre question…" aria-label="Question à l'assistant Boiséo">
-    <button type="submit" aria-label="Envoyer la question">➤</button>
-  </form>
-</div>
-
-<div class="boiseo-floating-actions" aria-label="Actions flottantes Boiséo">
-  <button class="boiseo-floating-action boiseo-floating-action--assistant" id="boiseoAssistantToggle" type="button" aria-label="Ouvrir l'assistant Boiséo" aria-expanded="false">
-    <span class="boiseo-floating-action__icon" aria-hidden="true">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 5v5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="24" cy="4" r="2" fill="currentColor"/>
-        <rect x="8" y="11" width="32" height="27" rx="10" fill="white" fill-opacity=".18" stroke="white" stroke-width="2"/>
-        <circle cx="18" cy="24" r="3" fill="white"/>
-        <circle cx="30" cy="24" r="3" fill="white"/>
-        <path d="M17 31c4 3 10 3 14 0" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M8 22H5M43 22h-3" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".8"/>
-      </svg>
-    </span>
-  </button>
-  <a class="boiseo-floating-action boiseo-floating-action--mail"
-     href="mailto:contact@boiseo.online?subject=Demande%20de%20livraison%20Bois%C3%A9o&body=Bonjour%20Bois%C3%A9o%2C%0A%0AJe%20souhaite%20faire%20une%20demande%20de%20livraison.%0A%0ANom%20et%20pr%C3%A9nom%20%3A%0AVille%20%3A%0ACode%20postal%20%3A%0AAdresse%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0AMail%20%3A%0A%0AMerci."
-     aria-label="Écrire à Boiséo par email">
-    <span class="boiseo-floating-action__icon" aria-hidden="true">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="6" y="10" width="36" height="28" rx="7" fill="white" fill-opacity=".16" stroke="white" stroke-width="2.4"/>
-        <path d="m9 14 15 12 15-12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="m9 34 11-10M39 34 28 24" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".85"/>
-      </svg>
-    </span>
-  </a>
-</div>
-
-<!-- =====================================================
-     FAQ
-===================================================== -->
-
-<section class="faq"
-         id="faq">
-
+<section class="local-seo-section" id="zones">
 <div class="container">
-
-
-<div class="section-title">
-
-<small>
-QUESTIONS FRÉQUENTES
-</small>
-
-<h2>
-Tout savoir avant de commander.
-</h2>
-
+<div class="section-head">
+<h2>Solutions numériques au Bénin et en Afrique francophone</h2>
+<p class="seo-intro">Depuis Parakou, PHENIX CONNECT accompagne les professionnels qui souhaitent créer, moderniser ou maintenir leurs outils numériques. Les projets web et logiciels peuvent être réalisés à distance au Bénin et dans d’autres pays d’Afrique francophone.</p>
 </div>
-
-
-<details class="faq-item">
-
-<summary>
-Quelles essences de bois propose Boiséo ?
-</summary>
-
-<p>
-
-Boiséo propose un mélange de
-chêne, frêne, hêtre et charme.
-
-</p>
-
-</details>
-
-
-<details class="faq-item">
-
-<summary>
-Quelles longueurs de bûches sont disponibles ?
-</summary>
-
-<p>
-
-Les longueurs présentées dans
-la vidéo sont de 33 cm et 50 cm.
-
-</p>
-
-</details>
-
-
-<details class="faq-item">
-
-<summary>
-Quels volumes puis-je commander ?
-</summary>
-
-<p>
-
-Les volumes affichés sont :
-1, 2, 3, 5, 10, 20, 30,
-40 et 60 stères.
-
-</p>
-
-</details>
-
-
-<details class="faq-item">
-
-<summary>
-Quel est le prix d'un stère ?
-</summary>
-
-<p>
-
-Le tarif dépend du volume commandé.
-Par exemple, 1 stère est affiché
-à 40 €, tandis que 60 stères
-sont affichés à 1 600 €.
-
-Consultez la grille complète
-des tarifs ci-dessus.
-
-</p>
-
-</details>
-
-
-
-
-
-<details class="faq-item">
-
-<summary>
-Le prix comprend-il la livraison ?
-</summary>
-
-<p>
-
-Le coût de transport doit être
-confirmé selon la destination,
-le volume et les conditions
-logistiques.
-
-</p>
-
-</details>
-
-
-<details class="faq-item">
-
-<summary>
-Comment demander un devis ?
-</summary>
-
-<p>
-
-Remplissez le formulaire
-de contact et indiquez votre
-nom et prénom, votre ville, votre code
-postal, votre adresse, votre téléphone,
-votre mail et les détails de votre commande.
-
-</p>
-
-</details>
-
-
+<div class="local-grid">
+<article class="local-card"><h3>Parakou</h3><p>Création de sites, applications, assistance informatique et solutions de gestion pour les entreprises et commerces de Parakou.</p></article>
+<article class="local-card"><h3>Bénin</h3><p>Accompagnement à distance pour les professionnels et organisations situés dans différentes villes du Bénin.</p></article>
+<article class="local-card"><h3>Afrique francophone</h3><p>Conception de sites et solutions logicielles à distance pour des projets numériques adaptés aux besoins des professionnels africains.</p></article>
 </div>
-
+</div></section><div class="case-studies">
+<div class="section-head">
+<h2>Études de cas</h2>
+<p class="case-studies-intro">Quelques projets qui illustrent concrètement notre savoir-faire et les solutions développées pour répondre à des besoins précis.</p>
+</div>
+<div class="case-list">
+<details class="case-item">
+<summary>ESTHÉTIQUE PLUS — Site vitrine</summary>
+<div class="case-content">
+<p><strong>Contexte :</strong> création d'une présence web pour présenter l'activité et les réalisations de l'atelier.</p>
+<p><strong>Solution :</strong> un site vitrine structuré autour de la présentation de l'activité, de ses réalisations et de la prise de contact.</p>
+<p><strong>Éléments réalisés :</strong></p>
+<ul>
+<li>Présentation de l'activité</li>
+<li>Mise en valeur des réalisations</li>
+<li>Accès direct au contact</li>
+<li>Informations de localisation</li>
+<li>Accès téléphonique et WhatsApp</li>
+</ul>
+<div class="case-meta"><span class="tag">Site vitrine</span><span class="tag">Galerie</span><span class="tag">Contact</span></div>
+<a class="case-link" href="https://esthetiqueplus.netlify.app/" rel="noopener" target="_blank">Voir le projet →</a>
+</div>
+</details>
+<details class="case-item">
+<summary>C'BON POP — Site vitrine &amp; mini-boutique</summary>
+<div class="case-content">
+<p><strong>Contexte :</strong> présenter les produits de C'BON POP et proposer un parcours de commande en ligne.</p>
+<p><strong>Solution :</strong> un site vitrine enrichi d'un catalogue interactif, d'un panier et d'un espace d'administration.</p>
+<p><strong>Fonctionnalités réalisées :</strong></p>
+<ul>
+<li>Catalogue des produits avec informations et visuels</li>
+<li>Panier et calcul du total</li>
+<li>Parcours de commande</li>
+<li>Avis clients et FAQ</li>
+<li>Informations de livraison</li>
+<li>Gestion des produits et paramètres</li>
+</ul>
+<div class="case-meta"><span class="tag">E-commerce</span><span class="tag">Panier</span><span class="tag">Administration</span></div>
+<a class="case-link" href="https://c-bonpopcorn.vercel.app/" rel="noopener" target="_blank">Voir le projet →</a>
+</div>
+</details>
+<details class="case-item">
+<summary>PREMIUMFR — Catalogue technologique</summary>
+<div class="case-content">
+<p><strong>Contexte :</strong> présenter un catalogue d'appareils technologiques destiné notamment aux marchés français et belge.</p>
+<p><strong>Solution :</strong> un catalogue structuré avec catégories, panier, livraison et parcours de commande.</p>
+<p><strong>Fonctionnalités réalisées :</strong></p>
+<ul>
+<li>Catalogue de produits</li>
+<li>Catégories PC, iPhone, Android et appareils photo</li>
+<li>Panier et calcul du total</li>
+<li>Formulaire de livraison France / Belgique</li>
+<li>Paiement par virement avec justificatif</li>
+<li>Espace d'administration</li>
+</ul>
+<div class="case-meta"><span class="tag">Catalogue</span><span class="tag">Panier</span><span class="tag">Commande</span></div>
+<a class="case-link" href="https://premiumfr.vercel.app/" rel="noopener" target="_blank">Voir le projet →</a>
+</div>
+</details>
+<details class="case-item">
+<summary>PHENIX CONNECT — Site institutionnel</summary>
+<div class="case-content">
+<p><strong>Contexte :</strong> présenter clairement une offre regroupant développement web, applications, assistance, maintenance et solutions numériques.</p>
+<p><strong>Solution :</strong> un site institutionnel responsive réunissant les services, solutions métiers, réalisations, informations pratiques et moyens de contact.</p>
+<p><strong>Fonctionnalités intégrées :</strong></p>
+<ul>
+<li>Présentation des services et solutions</li>
+<li>Présentation des réalisations</li>
+<li>Formulaire de demande</li>
+<li>Orientation vers WhatsApp pour les devis et demandes sensibles</li>
+<li>Localisation Google Maps</li>
+<li>Assistant PHENIX CONNECT</li>
+<li>Informations de contact et horaires</li>
+</ul>
+<div class="case-meta"><span class="tag">Institutionnel</span><span class="tag">Responsive</span><span class="tag">Assistant IA</span></div>
+<a class="case-link" href="https://www.phenixconnect.online/" rel="noopener" target="_blank">Voir le projet →</a>
+</div>
+</details>
+<details class="case-item">
+<summary>FINVERO CAPITAL — Simulation &amp; octroi de crédit</summary>
+<div class="case-content">
+<p><strong>Statut :</strong> Projet bouclé.</p>
+<p><strong>Présentation :</strong> site de simulation et d’octroi de crédit destiné aux marchés allemand et européen.</p>
+<p><strong>Solution :</strong> une plateforme web permettant de présenter les offres de financement et d'accompagner l'utilisateur dans son parcours de simulation et de demande de crédit.</p>
+<div class="case-meta">
+<span class="tag">Finance</span>
+<span class="tag">Simulation</span>
+<span class="tag">Crédit</span>
+<span class="tag">Europe</span>
+</div>
+<a class="case-link" href="https://www.finverocapital.de/" rel="noopener" target="_blank">Voir le projet →</a>
+</div>
+</details>
+</div>
+</div>
+</div>
 </section>
-
-
-<!-- =====================================================
-     CONTACT / COMMANDE
-===================================================== -->
-
-<section class="contact order-form-section" id="contact">
+<section class="band" id="solutions">
 <div class="container">
-  <div class="order-form-wrap">
-    <div class="order-form-intro">
-      <div class="small-title">COMMANDE & LIVRAISON</div>
-      <h2>Préparez votre demande de livraison.</h2>
-      <ul class="order-form-points">
-        <li>Livraison en France uniquement</li>
-        <li>Chêne, frêne, hêtre ou charme</li>
-        <li>33 cm ou 50 cm</li>
-        <li>Tarif calculé selon le volume choisi</li>
-      </ul>
-    </div>
-
-    <div class="order-form-card">
-      <h3>Votre demande de livraison</h3>
-      <p class="form-intro">Tous les champs de livraison importants sont regroupés ici.</p>
-      <form id="boiseoOrderForm" novalidate>
-        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
-
-        <div class="form-row">
-          <label>Nom et prénom<input type="text" name="Nom et prénom" placeholder="Votre nom et prénom" minlength="2" maxlength="80" autocomplete="name" required></label>
-          <label>Ville<input type="text" name="Ville" placeholder="Votre ville" minlength="2" maxlength="80" autocomplete="address-level2" required></label>
-        </div>
-
-        <div class="form-row">
-          <label>Code postal<input type="text" name="Code postal" placeholder="Ex. 75000" inputmode="numeric" pattern="[0-9]{5}" minlength="5" maxlength="5" autocomplete="postal-code" required></label>
-          <label>Téléphone<input type="tel" name="Numéro de téléphone" placeholder="Votre numéro" inputmode="tel" minlength="10" maxlength="20" autocomplete="tel" required></label>
-        </div>
-
-        <label>Adresse de livraison<textarea name="Adresse" rows="3" minlength="5" maxlength="250" autocomplete="street-address" placeholder="Numéro, rue, complément d'adresse" required></textarea></label>
-        <label>Mail<input type="email" name="Mail" placeholder="vous@exemple.fr" maxlength="160" autocomplete="email" required></label>
-
-        <div class="form-row">
-          <label>Essence
-            <select name="Essence" id="essence" required>
-              <option value="Mélange — chêne, frêne, hêtre, charme">Mélange — chêne, frêne, hêtre, charme</option>
-              <option>Chêne</option><option>Frêne</option><option>Hêtre</option><option>Charme</option>
-            </select>
-          </label>
-          <label>Volume
-            <select name="Volume" id="volume" required>
-              <option data-price="40">1 stère</option><option data-price="70">2 stères</option><option data-price="120">3 stères</option><option data-price="200">5 stères</option><option data-price="360">10 stères</option><option data-price="700">20 stères</option><option data-price="1000">30 stères</option><option data-price="1250">40 stères</option><option data-price="1600">60 stères</option>
-            </select>
-          </label>
-        </div>
-
-        <label>Longueur des bûches
-          <select name="Longueur" id="length" required><option>33 cm</option><option>50 cm</option></select>
-        </label>
-        <input type="hidden" name="Montant estimatif" id="orderPriceHidden" value="40 €">
-
-        <details class="order-price-disclosure">
-          <summary>Voir le montant estimatif</summary>
-          <div class="order-price-content">
-            <div id="orderSummary">Mélange — chêne, frêne, hêtre, charme • 1 stère • 33 cm</div>
-            <strong id="orderPrice">40 €</strong>
-          </div>
-        </details>
-
-        <label>Précisions complémentaires<textarea name="Précisions" rows="4" maxlength="1000" placeholder="Accès, indications utiles pour la livraison, besoin particulier…"></textarea></label>
-
-        <button type="submit" class="button button-primary">🔥 Envoyer ma demande par email</button>
-      </form>
-    </div>
-  </div>
+<div class="section-head">
+<h2>Solutions métiers dédiées</h2>
+<p>Des logiciels développés sur mesure selon les spécificités de votre activité.</p>
+</div>
+<div class="grid solutions">
+<article class="card">
+<div class="card-img"><img alt="Atelier de couture" decoding="async" fetchpriority="low" loading="lazy" src="gestioncouture.jpeg"/></div>
+<div class="card-body">
+<h3>Gestion d'atelier de couture</h3>
+<p>Centralisation des clients, mesures, commandes et suivi de production.</p>
+</div>
+</article>
+<article class="card">
+<div class="card-img mtn-bg">
+<div class="mtn-logo-container">
+<svg viewbox="0 0 300 120"><ellipse cx="150" cy="60" fill="#FFCC00" rx="140" ry="52" stroke="#000000" stroke-width="6"></ellipse><text fill="#000000" font-family="sans-serif" font-size="64" font-style="italic" font-weight="900" text-anchor="middle" x="150" y="78">MTN</text></svg>
+</div>
+</div>
+<div class="card-body">
+<h3>Gestion mobile de monnaie</h3>
+<p>Registre digital pour dépôts et retraits (MTN MoMo, Moov) évitant les erreurs de caisse.</p>
+</div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Encaissement boutique" decoding="async" fetchpriority="low" loading="lazy" src="applicationdegestion.jpeg"/></div>
+<div class="card-body">
+<h3>Gestion commerciale</h3>
+<p>Stocks, caisse, clients, facturation et vente réunis dans un seul outil simple.</p>
+</div>
+</article>
+<article class="card">
+<div class="card-img"><img alt="Maquette web" decoding="async" fetchpriority="low" loading="lazy" src="applicationwebsurmesure.jpeg"/></div>
+<div class="card-body">
+<h3>Projet web sur mesure</h3>
+<p>Fonctionnalités avancées, espaces professionnels et réservations selon votre besoin exact.</p>
+</div>
+</article>
+</div>
 </div>
 </section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+<section id="processus">
+<div class="container">
+<div class="section-head"><h2>Comment se déroule un projet avec PHENIX CONNECT ?</h2><p>Un parcours simple pour cadrer le besoin, développer la solution et assurer son suivi.</p></div>
+<div class="process-grid">
+<article class="process-card"><strong>Étape 1</strong><h3>Échange</h3><p>Présentation du besoin, de l’activité et des objectifs du projet.</p></article>
+<article class="process-card"><strong>Étape 2</strong><h3>Conception</h3><p>Définition des fonctionnalités, de la structure et du parcours utilisateur.</p></article>
+<article class="process-card"><strong>Étape 3</strong><h3>Réalisation</h3><p>Développement, intégration, tests et ajustements selon le projet.</p></article>
+<article class="process-card"><strong>Étape 4</strong><h3>Suivi</h3><p>Mise en ligne, assistance et évolutions lorsque le projet le nécessite.</p></article>
+</div>
+</div></section><section id="apropos">
+<div class="container">
+<div class="section-head">
+<h2>À propos de PHENIX CONNECT à Parakou</h2>
+<p>Basée à Parakou au Bénin, PHENIX CONNECT accompagne les professionnels localement et à distance avec des solutions web, informatiques et numériques adaptées à leurs activités.</p>
+</div>
+<div class="grid">
+<article class="card"><div class="card-body"><h3>Approche adaptée</h3><p>Chaque solution est pensée spécifiquement pour le travail réel du client.</p></div></article>
+<article class="card"><div class="card-body"><h3>Projets à distance</h3><p>Prestations web et logicielles pour le Bénin, l'Afrique et l'Europe.</p></div></article>
+<article class="card"><div class="card-body"><h3>Confidentialité</h3><p>Suivi transparent et respect strict de la confidentialité de vos données.</p></div></article>
+</div>
+</div>
+</section>
+<section id="faq">
+<div class="container">
+<div class="section-head">
+<h2>Questions fréquentes</h2>
+<p>Réponses rapides à vos interrogations.</p>
+</div>
+<div class="faq-list">
+<details>
+<summary>Quels sont vos tarifs ?</summary>
+<div class="detail-content"><p>Nos tarifs dépendent de la complexité et des fonctionnalités souhaitées. Écrivez-nous sur WhatsApp pour recevoir un devis clair rapidement.</p></div>
+</details>
+<details>
+<summary>Travaillez-vous à distance ?</summary>
+<div class="detail-content"><p>Oui, nous créons des sites et applications à distance pour des clients situés partout au Bénin, en Afrique et en Europe.</p></div>
+</details>
+<details>
+<summary>Comment obtenir un devis ?</summary>
+<div class="detail-content"><p>Remplissez le formulaire en bas de page ou envoyez un message direct sur WhatsApp avec vos besoins.</p></div>
+</details>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="container contact-grid">
+<div>
+<div class="section-head">
+<h2>Contact PHENIX CONNECT à Parakou</h2>
+<p>Présentez votre projet web, informatique ou numérique pour obtenir une réponse rapide.</p>
+</div>
+<div class="contact-list">
+<div class="contact-item">
+<small>WhatsApp / Téléphone</small>
+<strong><a href="https://wa.me/2290153023080" rel="noopener" target="_blank">0153023080</a></strong>
+</div>
+<div class="contact-item">
+<small>E-mail</small>
+<strong><a href="mailto:contact@phenixconnect.online">contact@phenixconnect.online</a></strong>
+</div>
+<div class="contact-item">
+<small>Adresse</small>
+<strong>Parakou, Bénin</strong>
+<div class="map-box" id="mapWrapper">
+<button onclick="loadMap()">Afficher la carte Google Maps</button>
+</div>
+</div>
+</div>
+</div>
+<div class="contact-box">
+<form id="contactForm">
+<div><label for="nom">Nom</label><input id="nom" name="nom" required=""/></div>
+<div><label for="prenom">Prénom</label><input id="prenom" name="prenom" required=""/></div>
+<div><label for="contactValue">E-mail ou téléphone</label><input id="contactValue" name="contact" required=""/></div>
+<div><label for="besoin">Votre préoccupation</label><textarea id="besoin" name="besoin" required=""></textarea></div>
+<label class="consent"><input id="consent" required="" type="checkbox"/> J'accepte que mes informations soient utilisées pour traiter ma demande.</label>
+<button class="btn btn-primary" type="submit">Envoyer sur WhatsApp</button>
+</form>
+</div>
+</div>
+</section>
+</main>
 <footer>
-
 <div class="container">
-
-
 <div class="footer-grid">
-
-
+<div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie.</p></div>
+<div><h3>Navigation</h3><p><a href="creation-site-web-benin.html">Création de sites web</a><br/><br/><a href="applications-web-mobiles-benin.html">Applications web et mobiles</a><br/><br/><a href="logiciels-gestion-benin.html">Logiciels de gestion</a><br/><br/><a href="maintenance-informatique-benin.html">Maintenance informatique</a><br/><br/><a href="seo-visibilite-locale-benin.html">SEO local au Bénin</a><br/><br/><a href="#faq">FAQ</a><br/><br/><a href="#contact">Contact</a></p></div>
 <div>
-
-<div class="footer-logo">
-
-Boisé<span>o</span>
-
+<h3>Contact</h3>
+<p>
+<a href="https://wa.me/2290153023080" rel="noopener" target="_blank">0153023080</a><br/>
+          Parakou, Bénin
+        </p>
 </div>
-
-<p style="margin-top:15px;">
-
-Bois de chauffage très sec.
-
-<br>
-
-Chêne • Frêne • Hêtre • Charme
-
-<br>
-
-33 cm • 50 cm
-
-<br>
-
-France
-
-</p>
-
 </div>
-
-
-<div>
-
-<h3>
-Boiséo
-</h3>
-
-<a href="#presentation">
-Présentation
-</a>
-
-<a href="#bois">
-Nos bois
-</a>
-
-<a href="#utilite">
-Utilité
-</a>
-
-<a href="#tarifs">
-Tarifs
-</a>
-
+<div class="copyright">© <span id="year"></span> PHENIX CONNECT. Tous droits réservés.</div>
 </div>
-
-
-<div>
-
-<h3>
-Service
-</h3>
-
-<a href="#livraison">
-Livraison
-</a>
-
-<a href="#faq">
-FAQ
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-<a href="#contact">
-Commander
-</a>
-
-</div>
-
-
-</div>
-
-
-<div class="copyright">
-
-© 2026 Boiséo —
-Tous droits réservés.
-
-<br><br>
-
-Boiséo - Vente de bois de chauffage
-en France.
-
-</div>
-
-
-</div>
-
 </footer>
-
-
-
+<button aria-label="Ouvrir Assistant" id="ai-button">
+<svg viewbox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13.5 11.5L12 15L10.5 11.5L7 10L10.5 8.5L12 5L13.5 8.5L17 10L13.5 11.5Z"></path></svg>
+</button>
+<div id="ai-panel">
+<div class="ai-head">
+<div><strong>ASSISTANT IA</strong><small>PHENIX CONNECT</small></div>
+<button class="ai-close" id="aiClose">×</button>
+</div>
+<div id="messages">
+<div class="msg bot">Bonjour ! Comment puis-je vous renseigner sur nos prestations ?</div>
+</div>
+<div class="quick">
+<button data-q="Quels services proposez-vous ?">Services</button>
+<button data-q="Je veux créer un site web.">Site Web</button>
+<button data-q="Comment obtenir un devis ?">Devis</button>
+</div>
+<div class="ai-input">
+<input autocomplete="off" id="aiInput" placeholder="Posez une question..."/>
+<button id="aiSend">OK</button>
+</div>
+</div>
 <script>
-(function(){
-  const email = "contact@boiseo.online";
+  // Dynamic Navigation & Date
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Menu mobile
-  const toggle = document.querySelector(".mobile-menu-toggle");
-  const nav = document.querySelector("header nav");
-  if(toggle && nav){
-    toggle.addEventListener("click", function(){
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-    nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-      nav.classList.remove("open");
-      toggle.setAttribute("aria-expanded","false");
-    }));
+  // Lazy load Map iframe only on user action
+  function loadMap() {
+    document.getElementById('mapWrapper').innerHTML = '<iframe src="https://maps.google.com/maps?q=Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
   }
 
-  // Validation et envoi sécurisé côté navigateur : aucune donnée n'est injectée directement dans l'URL.
-  const orderForm = document.getElementById("boiseoOrderForm");
-  if(orderForm){
-    orderForm.addEventListener("submit", function(e){
-      e.preventDefault();
-      const honeypot = orderForm.elements.website;
-      if(honeypot && honeypot.value.trim()) return;
-      if(!orderForm.checkValidity()){
-        orderForm.reportValidity();
-        return;
-      }
-      const data = new FormData(orderForm);
-      const lines = [];
-      for(const [key,value] of data.entries()){
-        if(key !== "website") lines.push(key + " : " + String(value).trim());
-      }
-      const subject = "Demande de livraison Boiséo";
-      const mailto = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
-      window.location.href = mailto;
-    });
+  // Lite AI Assistant
+  const aiButton = document.getElementById('ai-button');
+  const aiPanel = document.getElementById('ai-panel');
+  const aiClose = document.getElementById('aiClose');
+  const messages = document.getElementById('messages');
+  const aiInput = document.getElementById('aiInput');
+  const aiSend = document.getElementById('aiSend');
+
+  aiButton.onclick = () => { aiPanel.classList.add('open'); aiInput.focus(); };
+  aiClose.onclick = () => aiPanel.classList.remove('open');
+
+  function addMsg(text, who) {
+    const el = document.createElement('div');
+    el.className = 'msg ' + who;
+    el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
   }
 
-  // Résumé de commande
-  const essence = document.getElementById("essence");
-  const volume = document.getElementById("volume");
-  const length = document.getElementById("length");
-  const summary = document.getElementById("orderSummary");
-  const price = document.getElementById("orderPrice");
-  function updateSummary(){
-    if(!essence || !volume || !length || !summary || !price) return;
-    const opt = volume.options[volume.selectedIndex];
-    const base = Number(opt.dataset.price || 0);
-    const quantity = Number((volume.value.match(/[0-9]+/) || [0])[0]);
-    const surcharge = length.value === "50 cm" ? quantity * 20 : 0;
-    const total = base + surcharge;
-    summary.textContent = essence.value + " • " + volume.value + " • " + length.value;
-    price.textContent = total.toLocaleString("fr-FR") + " €";
-    const hidden = document.getElementById("orderPriceHidden");
-    if(hidden) hidden.value = total.toLocaleString("fr-FR") + " €";
-  }
-  [essence,volume,length].forEach(el => el && el.addEventListener("change", updateSummary));
-  updateSummary();
-
-  // Photos des essences : fichiers placés à la racine du site.
-  // Plusieurs variantes de nom sont acceptées pour éviter les problèmes d'accents.
-  const essenceFiles = {
-    chene: ["chene.jpg","chêne.jpg","chene.jpeg","chêne.jpeg","chene.png","chêne.png","chene.webp","chêne.webp"],
-    frene: ["frene.jpg","frêne.jpg","frene.jpeg","frêne.jpeg","frene.png","frêne.png","frene.webp","frêne.webp"],
-    hetre: ["hetre.jpg","hêtre.jpg","hetre.jpeg","hêtre.jpeg","hetre.png","hêtre.png","hetre.webp","hêtre.webp"],
-    charme: ["charme.jpg","charme.jpeg","charme.png","charme.webp"]
-  };
-
-  function loadNamedImage(img, names, index=0){
-    if(!img || index >= names.length) return;
-    const name = names[index];
-    const test = new Image();
-    test.onload = () => { img.src = "./" + name; };
-    test.onerror = () => loadNamedImage(img, names, index + 1);
-    test.src = "./" + name;
-  }
-  document.querySelectorAll("[data-essence-image]").forEach(img => {
-    const key = img.dataset.essenceImage;
-    loadNamedImage(img, essenceFiles[key] || []);
-  });
-
-  // Galerie : bois1.jpg à bois20.jpg, sans numéro visible à l'écran.
-  const gallery = document.getElementById("woodGallery");
-  const prev = document.getElementById("galleryPrev");
-  const next = document.getElementById("galleryNext");
-  const pageLabel = document.getElementById("galleryPage");
-  if(gallery && prev && next){
-    const found = Array.from({length:20}, (_,index) => ({
-      name: `bois${index+1}.jpg`,
-      url: `./bois${index+1}.jpg`
-    }));
-    let page = 0;
-    const perPage = 4;
-
-    function render(){
-      const totalPages = Math.ceil(found.length / perPage);
-      gallery.innerHTML = "";
-      found.slice(page*perPage, page*perPage+perPage).forEach(item => {
-        const fig = document.createElement("figure");
-        fig.className = "gallery-item";
-        const img = document.createElement("img");
-        img.src = item.url;
-        img.alt = "Bois de chauffage Boiséo";
-        img.loading = "lazy";
-        img.onerror = () => fig.remove();
-        fig.appendChild(img);
-        gallery.appendChild(fig);
-      });
-      pageLabel.textContent = `Page ${page+1} / ${totalPages}`;
-      prev.disabled = page === 0;
-      next.disabled = page === totalPages-1;
-    }
-    prev.addEventListener("click",()=>{ if(page>0){page--;render();} });
-    next.addEventListener("click",()=>{ if(page<Math.ceil(found.length/perPage)-1){page++;render();} });
-    render();
+  function getResponse(q) {
+    const s = q.toLowerCase();
+    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) return "Pour obtenir un devis personnalisé, contactez-nous sur WhatsApp au <a href="https://wa.me/2290153023080" target="_blank" rel="noopener noreferrer">0153023080</a>.";
+    if (s.includes('site') || s.includes('web')) return "Nous créons des sites vitrines, e-commerce et applications web adaptés à votre besoin.";
+    if (s.includes('contact') || s.includes('adresse')) return "Nous intervenons depuis Parakou, au Bénin, et pouvons accompagner des projets à distance. WhatsApp : <a href="https://wa.me/2290153023080" target="_blank" rel="noopener noreferrer">0153023080</a>.";
+    return "Pour un projet de site web, application ou solution numérique, échangez directement avec nous sur WhatsApp : <a href="https://wa.me/2290153023080" target="_blank" rel="noopener noreferrer">0153023080</a>.";
   }
 
-  // Lightbox commun : clic sur une photo = zoom, croix en haut à droite = fermeture.
-  const lightbox = document.getElementById("photoLightbox");
-  const lightboxImage = document.getElementById("photoLightboxImage");
-  const closeBtn = document.getElementById("photoLightboxClose");
-  function openLightbox(src, alt){
-    if(!lightbox || !lightboxImage) return;
-    lightboxImage.src = src;
-    lightboxImage.alt = alt || "Photo agrandie";
-    lightbox.classList.add("open");
-    lightbox.setAttribute("aria-hidden","false");
-    document.body.style.overflow = "hidden";
+  function send() {
+    const val = aiInput.value.trim();
+    if (!val) return;
+    addMsg(val, 'user');
+    aiInput.value = '';
+    setTimeout(() => addMsg(getResponse(val), 'bot'), 200);
   }
-  function closeLightbox(){
-    if(!lightbox) return;
-    lightbox.classList.remove("open");
-    lightbox.setAttribute("aria-hidden","true");
-    document.body.style.overflow = "";
-  }
-  document.addEventListener("click", e => {
-    const item = e.target.closest(".gallery-item, .essence-image");
-    if(item){
-      const img = item.querySelector("img");
-      if(img && img.src && !img.src.endsWith("/")) openLightbox(img.src, img.alt);
-    }
-  });
-  document.addEventListener("keydown", e => {
-    const item = e.target.closest?.(".gallery-item, .essence-image");
-    if(item && (e.key === "Enter" || e.key === " ")){
-      e.preventDefault();
-      const img = item.querySelector("img");
-      if(img && img.src) openLightbox(img.src, img.alt);
-    }
-    if(e.key === "Escape") closeLightbox();
-  });
-  if(closeBtn) closeBtn.addEventListener("click", closeLightbox);
-  if(lightbox) lightbox.addEventListener("click", e => { if(e.target === lightbox) closeLightbox(); });
 
-  // Assistant Boiséo : informations intégrées au site.
-  const assistantToggle = document.getElementById("boiseoAssistantToggle");
-  const assistantPanel = document.getElementById("boiseoAssistantPanel");
-  const assistantClose = document.getElementById("boiseoAssistantClose");
-  const assistantBody = document.getElementById("boiseoAssistantBody");
-  const assistantForm = document.getElementById("boiseoAssistantForm");
-  const assistantInput = document.getElementById("boiseoAssistantInput");
+  aiSend.onclick = send;
+  aiInput.onkeydown = e => { if (e.key === 'Enter') send(); };
+  document.querySelectorAll('.quick button').forEach(b => b.onclick = () => { aiInput.value = b.dataset.q; send(); });
 
-  function toggleAssistant(force){
-    if(!assistantPanel || !assistantToggle) return;
-    const open = typeof force === "boolean" ? force : !assistantPanel.classList.contains("open");
-    assistantPanel.classList.toggle("open", open);
-    assistantPanel.setAttribute("aria-hidden", String(!open));
-    assistantToggle.setAttribute("aria-expanded", String(open));
-    if(open && assistantInput) setTimeout(()=>assistantInput.focus(),100);
-  }
-  assistantToggle && assistantToggle.addEventListener("click",()=>toggleAssistant());
-  assistantClose && assistantClose.addEventListener("click",()=>toggleAssistant(false));
-
-  function assistantAnswer(q){
-    const text = (q || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-    if(/essence|chene|frene|hetre|charme|bois propose/.test(text))
-      return "Boiséo propose du chêne, du frêne, du hêtre et du charme. Vous pouvez sélectionner l’essence souhaitée directement dans le formulaire de commande.";
-    if(/tarif|prix|cout|40|70|120|200|360|700|1000|1250|1600/.test(text))
-      return "Les tarifs affichés vont de 40 € pour 1 stère à 1 600 € pour 60 stères en 33 cm. En 50 cm, ajoutez 20 € par stère. Ouvrez la rubrique « Tarifs » et sélectionnez votre volume et votre longueur dans le formulaire pour obtenir le montant correspondant.";
-    if(/livraison|livrer|transport|adresse|ville|postal/.test(text))
-      return "Boiséo est présenté pour des livraisons en France. Pour une demande, renseignez nom et prénom, ville, code postal, adresse, téléphone et mail dans le formulaire de commande.";
-    if(/longueur|33|50|buche/.test(text))
-      return "Les longueurs disponibles indiquées sur le site sont 33 cm et 50 cm.";
-    if(/volume|stere|quantite/.test(text))
-      return "Les volumes proposés sont 1, 2, 3, 5, 10, 20, 30, 40 et 60 stères.";
-    if(/commander|commande|acheter|demande/.test(text))
-      return "Pour commander, utilisez le formulaire du site ou le bouton ✉ flottant. La demande est préparée pour être envoyée à contact@boiseo.online.";
-    if(/contact|email|mail|outlook/.test(text))
-      return "L’adresse de contact de Boiséo est contact@boiseo.online.";
-    return "Je peux vous renseigner sur les essences, les longueurs, les volumes, les tarifs, la livraison en France et la commande. Essayez par exemple : « Quels sont les tarifs ? »";
-  }
-  function addAssistantMessage(text, user=false){
-    if(!assistantBody) return;
-    const div=document.createElement("div");
-    div.className="boiseo-assistant-message";
-    if(user){ div.style.background="#e8f0ea"; div.style.marginLeft="22px"; }
-    div.textContent=text;
-    assistantBody.appendChild(div);
-    assistantBody.scrollTop=assistantBody.scrollHeight;
-  }
-  function askAssistant(q){
-    if(!q || !q.trim()) return;
-    addAssistantMessage(q.trim(),true);
-    setTimeout(()=>addAssistantMessage(assistantAnswer(q)),120);
-  }
-  document.querySelectorAll("[data-assistant-q]").forEach(btn=>btn.addEventListener("click",()=>askAssistant(btn.dataset.assistantQ)));
-  assistantForm && assistantForm.addEventListener("submit",e=>{
+  // WhatsApp Form Submit
+  document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
-    const q=assistantInput ? assistantInput.value : "";
-    askAssistant(q);
-    if(assistantInput) assistantInput.value="";
+    const nom = document.getElementById('nom').value.trim();
+    const prenom = document.getElementById('prenom').value.trim();
+    const contact = document.getElementById('contactValue').value.trim();
+    const besoin = document.getElementById('besoin').value.trim();
+    const msg = `Bonjour PHENIX CONNECT,%0A%0AJe vous contacte via le site :%0ANom : ${encodeURIComponent(nom)} ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
+    window.location.href = `https://wa.me/2290153023080?text=${msg}`;
   });
-  document.addEventListener("keydown",e=>{ if(e.key==="Escape") toggleAssistant(false); });
-
-})();
 </script>
-
 </body>
-
 </html>
