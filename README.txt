@@ -1,4 +1,4 @@
-PHENIX CONNECT — PACK SEO
+PHENIX CONNECT — PACK SEO CORRIGÉ
 
 Fichiers à mettre à la racine de phenixconnect.online :
 - index.html
@@ -6,11 +6,17 @@ Fichiers à mettre à la racine de phenixconnect.online :
 - robots.txt
 - sitemap.xml
 
-Après mise en ligne :
-1. Ouvrir Google Search Console.
-2. Inspecter https://www.phenixconnect.online/
-3. Demander l'indexation de la page d'accueil.
-4. Envoyer https://www.phenixconnect.online/sitemap.xml
-5. Inspecter ensuite les 8 pages de services et demander leur indexation si nécessaire.
+Corrections :
+- Nom commercial conservé : PHENIX CONNECT
+- Téléphone public : 0153023080 (+229 dans les liens/Schema.org)
+- Email public : contact@phenixconnect.online
+- Localisation publique limitée à Parakou, Borgou, Bénin (aucune adresse précise ni nom de dirigeant dans le site)
+- Développement web, sites, applications et logiciels mis au premier plan
+- Maintenance conservée comme service secondaire
+- Données structurées harmonisées sur toutes les pages
 
-Ne pas supprimer les images existantes du site : les pages utilisent notamment developpementweb.jpg pour les métadonnées sociales.
+Après mise en ligne :
+1. Vérifier https://www.phenixconnect.online/
+2. Vérifier https://www.phenixconnect.online/robots.txt
+3. Vérifier https://www.phenixconnect.online/sitemap.xml
+4. Dans Search Console, conserver le sitemap déjà traité et inspecter les nouvelles pages si nécessaire.
