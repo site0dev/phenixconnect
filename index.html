@@ -68,12 +68,49 @@
     .hero-card h3{font-size:1.2rem;margin-bottom:10px}
     .hero-card p{font-size:.9rem;margin-bottom:15px}
     
-    .mini-list, .faq-list{display:grid;gap:10px}
+    .pricing-dropdown{display:block;padding:0;background:var(--card);overflow:hidden;}
+.pricing-dropdown summary{list-style:none;}
+.pricing-dropdown summary::-webkit-details-marker{display:none;}
+.pricing-toggle{min-height:72px;padding:18px 20px;font-weight:800;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px;}
+.pricing-toggle > span:first-child{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+
+.pricing-arrow{
+  width:8px;height:8px;
+  border-right:2px solid var(--primary);
+  border-bottom:2px solid var(--primary);
+  transform:rotate(45deg);
+  transition:transform .2s ease;
+  display:inline-block;
+  flex:0 0 auto;
+  margin-top:-4px;
+}
+.pricing-dropdown[open] .pricing-arrow{
+  transform:rotate(225deg);
+  margin-top:4px;
+}
+.pricing-content{padding:0 20px 22px;border-top:1px solid var(--line);}
+.pricing-content .pricing-price{margin-top:18px;}
+.pricing-badge-inline{font-size:.72rem;background:var(--primary);color:#fff;border-radius:999px;padding:5px 9px;white-space:nowrap;}
+
+.mini-list, .faq-list{display:grid;gap:10px}
     .mini-list details, .faq-list details{border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
     .mini-list summary, .faq-list summary{padding:12px 15px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
     .mini-list summary::-webkit-details-marker, .faq-list summary::-webkit-details-marker{display:none}
-    .mini-list summary::after, .faq-list summary::after{content:'+';font-size:1.1rem;color:var(--primary);font-weight:900}
-    .mini-list details[open] summary::after, .faq-list details[open] summary::after{content:'-'}
+    .mini-list summary::after, .faq-list summary::after{
+      content:'';
+      width:8px;height:8px;
+      border-right:2px solid var(--primary);
+      border-bottom:2px solid var(--primary);
+      transform:rotate(45deg);
+      transition:transform .2s ease;
+      flex:0 0 auto;
+      margin-left:12px;
+      margin-top:-4px;
+    }
+    .mini-list details[open] summary::after, .faq-list details[open] summary::after{
+      transform:rotate(225deg);
+      margin-top:4px;
+    }
     .mini-list .detail-content, .faq-list .detail-content{padding:0 15px 15px;font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:4px;padding-top:10px}
     .mini-list ul{margin-left:16px;margin-top:4px}
 
@@ -169,8 +206,21 @@
     .case-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
     .case-item summary{list-style:none;cursor:pointer;padding:21px 24px;font-weight:800;color:var(--text);display:flex;align-items:center;justify-content:space-between;gap:16px}
     .case-item summary::-webkit-details-marker{display:none}
-    .case-item summary::after{content:'+';font-size:1.25rem;color:var(--primary);transition:transform .2s ease}
-    .case-item[open] summary::after{transform:rotate(45deg)}
+    .case-item summary::after{
+      content:'';
+      width:8px;height:8px;
+      border-right:2px solid var(--primary);
+      border-bottom:2px solid var(--primary);
+      transform:rotate(45deg);
+      transition:transform .2s ease;
+      flex:0 0 auto;
+      margin-left:12px;
+      margin-top:-4px;
+    }
+    .case-item[open] summary::after{
+      transform:rotate(225deg);
+      margin-top:4px;
+    }
     .case-content{padding:0 24px 24px;border-top:1px solid var(--line)}
     .case-content p{color:var(--muted);margin-top:15px}
     .case-content strong{color:var(--text)}
@@ -318,6 +368,44 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
   }
 }
 </style>
+<style id="packs-tarifs-styles">
+.pricing-section{background:var(--soft,#f7f8f5)}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:stretch}
+.pricing-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.pricing-card.featured{border:2px solid var(--primary);transform:translateY(-6px)}
+.pricing-badge{position:absolute;top:16px;right:16px;background:var(--primary);color:#fff;padding:7px 11px;border-radius:999px;font-size:.72rem;font-weight:900;text-transform:uppercase}
+.pricing-card h3{font-size:1.35rem;margin:0 0 8px;color:var(--primary)}
+.pricing-price{font-size:1.55rem;font-weight:900;margin:0 0 5px}
+.pricing-payment{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.pricing-ideal{font-size:.92rem;margin-bottom:18px;color:var(--text)}
+.pricing-card ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:10px}
+.pricing-card li{position:relative;padding-left:25px;color:var(--muted);font-size:.92rem;line-height:1.4}
+.pricing-card li::before{content:'✓';position:absolute;left:0;color:var(--primary);font-weight:900}
+.pricing-objective{margin-top:auto;padding:15px;border-radius:12px;background:var(--soft,#f7f8f5);font-size:.9rem;line-height:1.45;margin-bottom:18px}
+.pricing-objective strong{color:var(--primary)}
+.pricing-note{text-align:center;max-width:900px;margin:28px auto 0;color:var(--muted);font-size:.95rem}
+@media(max-width:1100px){.pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .pricing-card{border-radius:16px;padding:0}
+  .pricing-card.featured{transform:none}
+  .pricing-toggle{min-height:72px;padding:16px 14px;font-size:.9rem;gap:10px}
+  .pricing-content{padding:0 14px 18px}
+  .pricing-content .pricing-price{font-size:1.25rem;margin-top:15px}
+  .pricing-payment,.pricing-ideal,.pricing-card li,.pricing-objective{font-size:.82rem}
+  .pricing-card ul{gap:8px;margin-bottom:18px}
+  .pricing-card li{padding-left:20px}
+  .pricing-objective{padding:12px;margin-bottom:15px}
+  .pricing-content .btn{width:100%;text-align:center}
+  .pricing-badge-inline{font-size:.62rem;padding:4px 7px}
+}
+@media(max-width:380px){
+  .pricing-grid{gap:9px}
+  .pricing-toggle{min-height:66px;padding:14px 11px;font-size:.82rem}
+  .pricing-content{padding:0 11px 15px}
+}
+</style>
+
 <meta content="création site web Bénin, agence web Parakou, développement web Bénin, application mobile Bénin, logiciel de gestion Bénin, maintenance informatique Parakou, SEO local Bénin, solutions numériques Afrique" name="keywords"/><meta content="PHENIX CONNECT | Solutions web et informatiques au Bénin" name="twitter:title"/><meta content="Création de sites web, applications, logiciels de gestion, maintenance informatique et solutions numériques au Bénin et en Afrique francophone." name="twitter:description"/><meta content="https://www.phenixconnect.online/developpementweb.jpg" property="og:image"/><meta content="https://www.phenixconnect.online/developpementweb.jpg" name="twitter:image"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -402,7 +490,73 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 .process-card strong{display:block;color:var(--primary);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
 @media(max-width:850px){.local-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:580px){.local-grid,.process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
-</style></head>
+</style>
+<style id="all-details-chevron">
+details > summary{list-style:none;cursor:pointer;}
+details > summary::-webkit-details-marker{display:none;}
+details > summary::marker{display:none;}
+</style>
+
+
+<style id="unified-responsive-grids-and-active-actions">
+/* Toutes les listes/cartes du site utilisent la même grille : 4 colonnes desktop, 2 colonnes mobile. */
+.grid,
+.local-grid,
+.case-list,
+.process-grid,
+.solutions,
+.projects,
+.photo-grid,
+.gallery,
+.projects-grid,
+.cases-grid,
+.portfolio-grid,
+.services-grid,
+.solutions-grid,
+.cards-grid {
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:16px !important;
+  align-items:stretch;
+}
+.grid > *, .local-grid > *, .case-list > *, .process-grid > *,
+.solutions > *, .projects > *, .photo-grid > *, .gallery > *,
+.projects-grid > *, .cases-grid > *, .portfolio-grid > *,
+.services-grid > *, .solutions-grid > *, .cards-grid > * {
+  min-width:0;
+}
+
+@media (max-width:900px){
+  .grid, .local-grid, .case-list, .process-grid, .solutions, .projects,
+  .photo-grid, .gallery, .projects-grid, .cases-grid, .portfolio-grid,
+  .services-grid, .solutions-grid, .cards-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:12px !important;
+  }
+}
+
+@media (max-width:480px){
+  .grid, .local-grid, .case-list, .process-grid, .solutions, .projects,
+  .photo-grid, .gallery, .projects-grid, .cases-grid, .portfolio-grid,
+  .services-grid, .solutions-grid, .cards-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:9px !important;
+  }
+  .card-body, .project-body { padding:13px; }
+  .card h3, .local-card h3, .process-card h3 { font-size:.95rem; }
+  .card p, .local-card p, .process-card p, .project-body p { font-size:.82rem; }
+  .tags { gap:4px; }
+  .tag { font-size:.65rem; padding:3px 5px; }
+  .service-link, .case-link { font-size:.78rem; }
+}
+
+/* Tous les contrôles interactifs gardent un vrai retour visuel et un pointeur. */
+button, .btn, .service-link, .case-link, .navlinks a { cursor:pointer; }
+button:disabled, .btn:disabled { opacity:.55; cursor:not-allowed; }
+.service-link, .case-link { display:inline-block; margin-top:10px; font-weight:700; color:var(--primary); }
+</style>
+
+</head>
 <!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
 <body>
 <header>
@@ -410,8 +564,8 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <a class="brand" href="#accueil">PHENIX <span>CONNECT</span></a>
 <button aria-label="Ouvrir le menu" class="menu" id="menuBtn">☰</button>
 <nav class="navlinks" id="navLinks">
-<a href="creation-site-web-benin.html">Services détaillés</a><a href="#services">Services</a>
-<a href="#solutions">Solutions</a>
+<a href="#contact">Services détaillés</a><a href="#services">Services</a>
+<a href="#tarifs">Nos offres</a><a href="#solutions">Solutions</a>
 <a href="#apropos">À propos</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
@@ -493,7 +647,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Développement web</h3>
 <p>Sites vitrines, e-commerce, sites d'entreprise, ONG, portfolios et solutions sur mesure.</p>
 <div class="tags"><span class="tag">Vitrine</span><span class="tag">E-commerce</span><span class="tag">Sur mesure</span></div>
-<a aria-label="En savoir plus sur Développement web au Bénin" class="service-link" href="creation-site-web-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Développement web au Bénin" class="service-link" href="#contact" data-service="Développement web">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Tableau de bord de gestion" decoding="async" fetchpriority="low" loading="lazy" src="applicationdegestion.jpeg"/></div>
@@ -501,7 +655,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Applications de gestion</h3>
 <p>Outils adaptés aux activités professionnelles : stock, caisse, clients, facturation, ateliers.</p>
 <div class="tags"><span class="tag">Gestion</span><span class="tag">Commerce</span><span class="tag">Atelier</span></div>
-<a aria-label="En savoir plus sur Applications de gestion au Bénin" class="service-link" href="logiciels-gestion-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Applications de gestion au Bénin" class="service-link" href="#contact" data-service="Applications de gestion">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Application mobile" decoding="async" fetchpriority="low" loading="lazy" src="applicationmobile.jpeg"/></div>
@@ -509,7 +663,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Applications mobiles</h3>
 <p>Développement d'applications Android et iOS sur mesure adaptées aux usages de votre activité.</p>
 <div class="tags"><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Mobile</span></div>
-<a aria-label="En savoir plus sur Applications mobiles au Bénin" class="service-link" href="applications-web-mobiles-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Applications mobiles au Bénin" class="service-link" href="#contact" data-service="Applications mobiles">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Assistance informatique" decoding="async" fetchpriority="low" loading="lazy" src="assistanceinformatique.jpeg"/></div>
@@ -517,7 +671,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Assistance informatique</h3>
 <p>Configuration, diagnostic, optimisation et résolution de problèmes matériels/logiciels.</p>
 <div class="tags"><span class="tag">Installation</span><span class="tag">Windows</span><span class="tag">Support</span></div>
-<a aria-label="En savoir plus sur Assistance informatique au Bénin" class="service-link" href="maintenance-informatique-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Assistance informatique au Bénin" class="service-link" href="#contact" data-service="Assistance informatique">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Réparation carte mère PC" decoding="async" fetchpriority="low" loading="lazy" src="maintenanceinformatique.jpeg"/></div>
@@ -525,7 +679,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Maintenance informatique</h3>
 <p>Installation de systèmes Windows, activation, résolution de pannes et réparations matérielles.</p>
 <div class="tags"><span class="tag">Dépannage</span><span class="tag">Matériel</span><span class="tag">Réparation</span></div>
-<a aria-label="En savoir plus sur Maintenance informatique au Bénin" class="service-link" href="maintenance-informatique-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Maintenance informatique au Bénin" class="service-link" href="#contact" data-service="Maintenance informatique">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Réparation de téléphone" decoding="async" fetchpriority="low" loading="lazy" src="maintenancetelephonique.jpeg"/></div>
@@ -533,7 +687,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Maintenance téléphonique</h3>
 <p>Reprogrammation, décodage, changement d'écran, batterie et connecteurs de charge.</p>
 <div class="tags"><span class="tag">Écran</span><span class="tag">Batterie</span><span class="tag">Déblocage</span></div>
-<a aria-label="En savoir plus sur Maintenance téléphonique au Bénin" class="service-link" href="maintenance-telephone-parakou.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Maintenance téléphonique au Bénin" class="service-link" href="#contact" data-service="Maintenance téléphonique">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Présence Google" decoding="async" fetchpriority="low" loading="lazy" src="visibilitelocal.jpeg"/></div>
@@ -541,7 +695,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Visibilité locale</h3>
 <p>Création et optimisation de fiches Google My Business pour améliorer votre présence locale.</p>
 <div class="tags"><span class="tag">Google My Business</span><span class="tag">SEO</span></div>
-<a aria-label="En savoir plus sur Visibilité locale au Bénin" class="service-link" href="seo-visibilite-locale-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Visibilité locale au Bénin" class="service-link" href="#contact" data-service="Visibilité locale">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Intelligence artificielle" decoding="async" fetchpriority="low" loading="lazy" src="solutionnumeriqueia.jpeg"/></div>
@@ -549,7 +703,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Solutions numériques &amp; IA</h3>
 <p>Intégration d'outils numériques modernes et d'intelligence artificielle sur mesure.</p>
 <div class="tags"><span class="tag">IA</span><span class="tag">Automation</span></div>
-<a aria-label="En savoir plus sur Solutions numériques &amp; IA au Bénin" class="service-link" href="solutions-numeriques-ia-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Solutions numériques &amp; IA au Bénin" class="service-link" href="#contact" data-service="service PHENIX CONNECT">En savoir plus →</a></div>
 </article>
 <article class="card">
 <div class="card-img"><img alt="Matériel informatique" decoding="async" fetchpriority="low" loading="lazy" src="materielinformatique.jpeg"/></div>
@@ -557,7 +711,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <h3>Matériel informatique</h3>
 <p>Intermédiation et conseils pour obtenir du matériel informatique fiable et de qualité.</p>
 <div class="tags"><span class="tag">PC Portable</span><span class="tag">Équipement</span></div>
-<a aria-label="En savoir plus sur Matériel informatique au Bénin" class="service-link" href="materiel-informatique-benin.html">En savoir plus →</a></div>
+<a aria-label="En savoir plus sur Matériel informatique au Bénin" class="service-link" href="#contact" data-service="Matériel informatique">En savoir plus →</a></div>
 </article>
 </div>
 <section class="local-seo-section" id="zones">
@@ -728,6 +882,96 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 </div>
 </div>
 </section>
+
+<section id="tarifs" class="pricing-section">
+<div class="container">
+<div class="section-head">
+<h2>Nos Offres</h2>
+<p>Des formules claires pour lancer votre présence en ligne, développer votre activité ou vendre directement sur internet.</p>
+</div>
+<div class="pricing-grid">
+<details class="pricing-card pricing-dropdown">
+<summary class="pricing-toggle"><span>PACK ECO</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<div class="pricing-content">
+<p class="pricing-price">70.000 FCFA</p>
+<p class="pricing-payment">Une solution essentielle, professionnelle et accessible</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> Commerçants, indépendants, artisans et petites activités qui veulent présenter leur entreprise en ligne et permettre aux clients de les contacter facilement.</p>
+<ul>
+<li>Site web professionnel et responsive</li>
+<li>Bouton WhatsApp directement accessible</li>
+<li>Référencement Google de base pour faciliter la visibilité en ligne</li>
+<li>Présentation claire de votre activité, services et coordonnées</li>
+<li>Design propre et adapté à votre activité</li>
+</ul>
+<div class="pricing-objective"><strong>Objectif :</strong> Donner à votre activité une présence professionnelle sur Google et transformer les visiteurs en contacts WhatsApp grâce à un site simple, clair et efficace.</div>
+<a class="btn btn-primary" href="#contact">Choisir le Pack Eco</a>
+</div>
+</details>
+
+<details class="pricing-card pricing-dropdown">
+<summary class="pricing-toggle"><span>PACK 1 : PHENIX START</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<div class="pricing-content">
+<p class="pricing-price">150.000 FCFA</p>
+<p class="pricing-payment">Paiement en 2 fois possible</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> Boutiques, salons, restos, petits business qui veulent être sur Google et recevoir des clients sur WhatsApp.</p>
+<ul>
+<li>Site vitrine 1 page ultra pro et rapide sur mobile</li>
+<li>Bouton WhatsApp et Appel direct qui flotte</li>
+<li>Formulaire de contact + Google Maps</li>
+<li>Design moderne à tes couleurs</li>
+<li>Nom de domaine + Hébergement offerts 1 an</li>
+<li>Formation vidéo pour modifier toi-même</li>
+<li>Livraison en 7 jours</li>
+</ul>
+<div class="pricing-objective"><strong>Objectif :</strong> Tu donnes à ton activité une présence professionnelle en ligne et tu facilites le contact avec tes premiers clients.</div>
+<a class="btn btn-primary" href="#contact">Commander le Pack Start</a>
+</div>
+</details>
+
+<details class="pricing-card featured pricing-dropdown">
+<summary class="pricing-toggle"><span>PACK 2 : PHENIX BUSINESS <small class="pricing-badge-inline">Le plus demandé</small></span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<div class="pricing-content">
+<p class="pricing-price">350.000 FCFA</p>
+<p class="pricing-payment">Paiement en 3 fois possible</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> Cabinets, cliniques, écoles, ONG, agences qui veulent inspirer confiance et être trouvés.</p>
+<ul>
+<li>Tout le Pack Start +</li>
+<li>Site complet 5 pages : Accueil, À propos, Services, Réalisations, Contact</li>
+<li>Blog / Actualités pour le SEO</li>
+<li>Optimisation Google : visibilité à Parakou / Cotonou</li>
+<li>Emails pro : contact@tonentreprise.com</li>
+<li>5 visuels pour Facebook / LinkedIn offerts</li>
+<li>Livraison en 14 jours</li>
+</ul>
+<div class="pricing-objective"><strong>Objectif :</strong> Tu renforces ta crédibilité en ligne, tu améliores ta visibilité sur Google et tu facilites l’arrivée de nouveaux prospects.</div>
+<a class="btn btn-primary" href="#contact">Choisir le Pack Business</a>
+</div>
+</details>
+
+<details class="pricing-card pricing-dropdown">
+<summary class="pricing-toggle"><span>PACK 3 : PHENIX E-COM</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<div class="pricing-content">
+<p class="pricing-price">À partir de 600.000 FCFA</p>
+<p class="pricing-payment">Selon les fonctionnalités et besoins</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> Vendeurs qui veulent encaisser en ligne sans stress.</p>
+<ul>
+<li>Tout le Pack Business +</li>
+<li>Boutique complète : produits illimités, panier, stock</li>
+<li>Paiement Mobile Money / Carte / Paiement à la livraison</li>
+<li>Connexion automatique à WhatsApp pour chaque commande</li>
+<li>Suivi des commandes et factures auto</li>
+<li>Formation complète pour gérer ta boutique</li>
+<li>Livraison en 21 jours</li>
+</ul>
+<div class="pricing-objective"><strong>Objectif :</strong> Tu transformes ton site en véritable canal de vente, disponible 24h/24 pour présenter tes produits, prendre des commandes et faciliter les paiements.</div>
+<a class="btn btn-primary" href="#contact">Lancer ma boutique</a>
+</div>
+</details>
+</div>
+<p class="pricing-note">Tous nos sites sont rapides, sécurisés et 100% gérés sur mobile. Pas de frais cachés. Support WhatsApp 7j/7. <strong>3 places disponibles ce mois-ci.</strong></p>
+</div>
+</section>
+
 <section id="processus">
 <div class="container">
 <div class="section-head"><h2>Comment se déroule un projet avec PHENIX CONNECT ?</h2><p>Un parcours simple pour cadrer le besoin, développer la solution et assurer son suivi.</p></div>
@@ -814,7 +1058,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
 <div class="container">
 <div class="footer-grid">
 <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie.</p></div>
-<div><h3>Navigation</h3><p><a href="creation-site-web-benin.html">Création de sites web</a><br/><br/><a href="applications-web-mobiles-benin.html">Applications web et mobiles</a><br/><br/><a href="logiciels-gestion-benin.html">Logiciels de gestion</a><br/><br/><a href="maintenance-informatique-benin.html">Maintenance informatique</a><br/><br/><a href="seo-visibilite-locale-benin.html">SEO local au Bénin</a><br/><br/><a href="#faq">FAQ</a><br/><br/><a href="#contact">Contact</a></p></div>
+<div><h3>Navigation</h3><p><a href="#contact">Création de sites web</a><br/><br/><a href="#contact">Applications web et mobiles</a><br/><br/><a href="#contact">Logiciels de gestion</a><br/><br/><a href="#contact">Maintenance informatique</a><br/><br/><a href="#contact">SEO local au Bénin</a><br/><br/><a href="#faq">FAQ</a><br/><br/><a href="#contact">Contact</a></p></div>
 <div>
 <h3>Contact</h3>
 <p>
@@ -860,7 +1104,7 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
     document.getElementById('mapWrapper').innerHTML = '<iframe src="https://maps.google.com/maps?q=Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
   }
 
-  // Lite AI Assistant
+  // PHENIX CONNECT — Assistant cadré + filtrage des demandes
   const aiButton = document.getElementById('ai-button');
   const aiPanel = document.getElementById('ai-panel');
   const aiClose = document.getElementById('aiClose');
@@ -879,12 +1123,69 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
     messages.scrollTop = messages.scrollHeight;
   }
 
+  const siteTopics = [
+    'site', 'web', 'internet', 'vitrine', 'e-commerce', 'ecommerce', 'boutique en ligne',
+    'application', 'logiciel', 'gestion', 'stock', 'vente', 'facturation', 'mobile',
+    'informatique', 'ordinateur', 'pc', 'maintenance', 'réparation', 'téléphone', 'smartphone',
+    'seo', 'référencement', 'google', 'visibilité', 'ia', 'intelligence artificielle', 'automation',
+    'numérique', 'digital', 'matériel', 'devis', 'prix', 'tarif', 'pack', 'start', 'business', 'e-com',
+    'contact', 'whatsapp', 'parakou', 'bénin', 'formation', 'hébergement', 'domaine', 'email pro',
+    'adresse', 'service', 'prestation', 'projet', 'commande'
+  ];
+
+  function normalizeText(value) {
+    return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function isAllowedTopic(text) {
+    const s = normalizeText(text);
+    return siteTopics.some(topic => s.includes(normalizeText(topic)));
+  }
+
   function getResponse(q) {
-    const s = q.toLowerCase();
-    if (s.includes('prix') || s.includes('tarif') || s.includes('devis')) return "Pour obtenir un devis personnalisé, contactez-nous sur WhatsApp au <a href="https://wa.me/2290153023080" target="_blank" rel="noopener noreferrer">0153023080</a>.";
-    if (s.includes('site') || s.includes('web')) return "Nous créons des sites vitrines, e-commerce et applications web adaptés à votre besoin.";
-    if (s.includes('contact') || s.includes('adresse')) return "Nous intervenons depuis Parakou, au Bénin, et pouvons accompagner des projets à distance. WhatsApp : <a href="https://wa.me/2290153023080" target="_blank" rel="noopener noreferrer">0153023080</a>.";
-    return "Pour un projet de site web, application ou solution numérique, échangez directement avec nous sur WhatsApp : <a href="https://wa.me/2290153023080" target="_blank" rel="noopener noreferrer">0153023080</a>.";
+    const s = normalizeText(q);
+
+    if (!isAllowedTopic(q)) {
+      return "Je peux uniquement répondre aux questions liées aux services de PHENIX CONNECT : sites web, applications, logiciels de gestion, informatique, maintenance, téléphonie, SEO/visibilité, solutions numériques & IA, matériel informatique, offres et demandes de devis. Pour une autre question, je ne peux pas vous aider ici.";
+    }
+
+    if (s.includes('pack') || s.includes('prix') || s.includes('tarif') || s.includes('devis')) {
+      return "Nos offres actuelles sont : PACK ECO à 70.000 FCFA (site professionnel + bouton WhatsApp + référencement Google), PHENIX START à 150.000 FCFA (paiement en 2 fois possible, livraison 7 jours), PHENIX BUSINESS à 350.000 FCFA (paiement en 3 fois possible, livraison 14 jours) et PHENIX E-COM à partir de 600.000 FCFA (selon les fonctionnalités, livraison 21 jours). Vous pouvez demander un devis via le formulaire ou WhatsApp au 0153023080.";
+    }
+    if (s.includes('eco') || s.includes('70.000') || s.includes('70000')) {
+      return "PACK ECO : 70.000 FCFA. Il comprend un site web professionnel et responsive, un bouton WhatsApp directement accessible et un référencement Google de base pour faciliter la visibilité en ligne, avec une présentation claire de votre activité et de vos coordonnées. Objectif : donner à votre activité une présence professionnelle sur Google et faciliter la conversion des visiteurs en contacts WhatsApp.";
+    }
+    if (s.includes('start')) {
+      return "PHENIX START : 150.000 FCFA, paiement en 2 fois possible. Il comprend un site vitrine 1 page, WhatsApp et appel direct, formulaire + Google Maps, design à vos couleurs, domaine + hébergement offerts 1 an et une formation vidéo. Livraison en 7 jours.";
+    }
+    if (s.includes('business')) {
+      return "PHENIX BUSINESS : 350.000 FCFA, paiement en 3 fois possible. Il comprend tout le Pack Start, un site complet 5 pages, blog/actualités, optimisation Google, e-mail professionnel et 5 visuels Facebook/LinkedIn offerts. Livraison en 14 jours.";
+    }
+    if (s.includes('e-com') || s.includes('ecommerce') || s.includes('boutique')) {
+      return "PHENIX E-COM : à partir de 600.000 FCFA selon les fonctionnalités. Il comprend tout le Pack Business, une boutique avec produits illimités, panier, stock, paiements Mobile Money/carte/paiement à la livraison, connexion WhatsApp, suivi des commandes et factures automatiques, ainsi qu'une formation complète. Livraison en 21 jours.";
+    }
+    if (s.includes('contact') || s.includes('adresse') || s.includes('whatsapp')) {
+      return "PHENIX CONNECT est basé à Parakou, au Bénin, et accompagne aussi des projets à distance. WhatsApp / téléphone : 0153023080. E-mail : contact@phenixconnect.online.";
+    }
+    if (s.includes('site') || s.includes('web')) {
+      return "PHENIX CONNECT crée des sites vitrines, des boutiques e-commerce et des solutions web adaptées aux besoins des professionnels.";
+    }
+    if (s.includes('application')) {
+      return "Nous proposons la création d'applications web et mobiles adaptées aux besoins des entreprises et organisations.";
+    }
+    if (s.includes('logiciel') || s.includes('gestion')) {
+      return "Nous développons des solutions de gestion, notamment pour les stocks, ventes, facturation et reçus.";
+    }
+    if (s.includes('maintenance') || s.includes('informatique') || s.includes('reparation')) {
+      return "Nous proposons de l'assistance et de la maintenance informatique : configuration, diagnostic, optimisation et résolution de problèmes matériels ou logiciels.";
+    }
+    if (s.includes('seo') || s.includes('referencement') || s.includes('google') || s.includes('visibilite')) {
+      return "Nous proposons des prestations de SEO et de visibilité locale pour aider les entreprises à mieux être trouvées en ligne.";
+    }
+    if (s.includes('ia') || s.includes('intelligence artificielle') || s.includes('automation')) {
+      return "PHENIX CONNECT propose des solutions numériques et d'IA, notamment pour l'automatisation et l'optimisation de certaines tâches.";
+    }
+    return "Votre demande concerne PHENIX CONNECT. Pour vous orienter précisément, indiquez si votre besoin concerne un site web, une application, un logiciel de gestion, l'informatique/maintenance, le SEO, une solution numérique/IA, du matériel ou l'une de nos offres.";
   }
 
   function send() {
@@ -899,13 +1200,43 @@ img{content-visibility:auto;contain-intrinsic-size:180px 180px}
   aiInput.onkeydown = e => { if (e.key === 'Enter') send(); };
   document.querySelectorAll('.quick button').forEach(b => b.onclick = () => { aiInput.value = b.dataset.q; send(); });
 
-  // WhatsApp Form Submit
+
+  // Liens de services : aucune destination locale manquante. Ils ouvrent directement le contact avec le besoin prérempli.
+  document.querySelectorAll('a.service-link[href="#contact"]').forEach(link => {
+    link.addEventListener('click', () => {
+      const besoin = document.getElementById('besoin');
+      const service = link.dataset.service || 'un service PHENIX CONNECT';
+      if (besoin) besoin.value = `Je souhaite des informations sur : ${service}.`;
+    });
+  });
+
+  // Les liens de navigation vers d'anciennes pages détaillées restent fonctionnels dans cette version autonome.
+  const servicePageLabels = {
+    'creation-site-web-benin.html':'Création de sites web',
+    'applications-web-mobiles-benin.html':'Applications web et mobiles',
+    'logiciels-gestion-benin.html':'Logiciels de gestion',
+    'maintenance-informatique-benin.html':'Maintenance informatique',
+    'maintenance-telephone-parakou.html':'Maintenance téléphonique',
+    'seo-visibilite-locale-benin.html':'SEO local',
+    'solutions-numeriques-ia-benin.html':'Solutions numériques & IA',
+    'materiel-informatique-benin.html':'Matériel informatique'
+  };
+
+  // Formulaire : contrôle thématique avant transmission à WhatsApp
   document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
     const nom = document.getElementById('nom').value.trim();
     const prenom = document.getElementById('prenom').value.trim();
     const contact = document.getElementById('contactValue').value.trim();
     const besoin = document.getElementById('besoin').value.trim();
+
+    if (!isAllowedTopic(besoin)) {
+      alert("Votre demande ne semble pas concerner les services de PHENIX CONNECT. Le formulaire accepte uniquement les demandes liées à nos services web, applications, logiciels, informatique, maintenance, téléphonie, SEO, solutions numériques/IA, matériel, offres et devis.");
+      return;
+    }
+
+    const btn = e.submitter || document.querySelector('#contactForm button[type=submit]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Ouverture de WhatsApp…'; }
     const msg = `Bonjour PHENIX CONNECT,%0A%0AJe vous contacte via le site :%0ANom : ${encodeURIComponent(nom)} ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
     window.location.href = `https://wa.me/2290153023080?text=${msg}`;
   });
