@@ -1051,7 +1051,7 @@ input,textarea,select{border-radius:10px}
 <small>Adresse</small>
 <strong>Parakou, Bénin</strong>
 <div class="map-box" id="mapWrapper">
-<button onclick="loadMap()">Afficher la carte Google Maps</button>
+<button id="loadMapBtn" type="button">Afficher la carte Google Maps</button>
 </div>
 </div>
 </div>
@@ -1116,8 +1116,9 @@ input,textarea,select{border-radius:10px}
 
   // Lazy load Map iframe only on user action
   function loadMap() {
-    document.getElementById('mapWrapper').innerHTML = '<iframe src="https://maps.google.com/maps?q=Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
+    document.getElementById('mapWrapper').innerHTML = '<iframe title="Carte Google Maps de Parakou" src="https://maps.google.com/maps?q=Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
   }
+  document.getElementById('loadMapBtn').addEventListener('click', loadMap);
 
   // PHENIX CONNECT — Assistant cadré + filtrage des demandes
   const aiButton = document.getElementById('ai-button');
