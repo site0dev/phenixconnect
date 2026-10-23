@@ -556,6 +556,51 @@ button:disabled, .btn:disabled { opacity:.55; cursor:not-allowed; }
 .service-link, .case-link { display:inline-block; margin-top:10px; font-weight:700; color:var(--primary); }
 </style>
 
+
+<style id="final-polish-light-footer">
+/* Harmonisation visuelle finale : fond clair, rythme cohérent et composants plus soignés. */
+:root{--bg:#fffdfd;--card:#ffffff;--line:#eee2e5;--shadow:0 12px 32px rgba(74,21,32,.07);--radius:18px}
+body{background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+section{padding:clamp(42px,6vw,76px) 0;scroll-margin-top:78px}
+.container{width:min(1160px,92%)}
+.section-head{max-width:780px;margin:0 auto 28px;text-align:center}
+.section-head h2{line-height:1.15;letter-spacing:-.025em;text-wrap:balance}
+.section-head p{margin-top:12px;color:#765f65}
+.card,.local-card,.process-card,.pricing-card,.hero-card,.case-item,.solution-card{border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.card,.local-card,.process-card,.pricing-card,.hero-card{background:#fff}
+.card,.local-card,.process-card{transition:transform .2s ease,box-shadow .2s ease}
+.card:hover,.local-card:hover,.process-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(74,21,32,.10)}
+.hero{padding:clamp(38px,6vw,70px) 0 48px;background:linear-gradient(180deg,#fff 0%,#fcf7f8 100%)}
+.hero p{color:#705b61}
+.btn{min-height:44px;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
+.btn-primary{box-shadow:0 6px 16px rgba(107,31,42,.14)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(107,31,42,.2)}
+/* Le pied de page passe au même thème clair que le reste du site. */
+footer{background:#fff;color:var(--text);padding:42px 0 20px;border-top:1px solid var(--line)}
+.footer-grid{grid-template-columns:1.2fr 1fr .8fr;gap:clamp(20px,4vw,48px);font-size:.95rem;align-items:start}
+footer h3{color:var(--primary);font-size:1.05rem;margin-bottom:14px}
+footer p{color:#725d63;line-height:1.8}
+footer a{transition:color .2s ease}
+footer a:hover{color:var(--primary);text-decoration:underline;text-underline-offset:3px}
+.copyright{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);color:#806d72;font-size:.88rem}
+#ai-button{box-shadow:0 8px 24px rgba(107,31,42,.22);border:2px solid rgba(255,255,255,.85)}
+input,textarea,select{border-radius:10px}
+:focus-visible{outline:3px solid rgba(138,74,85,.45);outline-offset:3px}
+@media(max-width:850px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:580px){
+ section{padding:42px 0}
+ .section-head{text-align:left;margin-bottom:22px}
+ .hero{padding-top:38px}
+ .hero-grid{gap:22px}
+ .footer-grid{grid-template-columns:1fr;gap:22px}
+ .footer-grid>div:first-child{grid-column:auto}
+ .copyright{font-size:.8rem;line-height:1.6}
+ .nav{gap:10px}
+ .brand{font-size:clamp(.9rem,4vw,1.05rem)}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+
 </head>
 <!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
 <body>
