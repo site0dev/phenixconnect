@@ -601,6 +601,41 @@ input,textarea,select{border-radius:10px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
 
+
+<style id="catalogue-styles">
+.catalogue-section{background:linear-gradient(180deg,#fff 0%,#fcf7f8 100%)}
+.catalogue-tools{max-width:850px;margin:0 auto 24px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.catalogue-search-label{display:block;font-weight:800;margin-bottom:5px}
+.catalogue-tools input{margin:0}
+.catalogue-tools-bottom{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.catalogue-tools-bottom label{font-size:.85rem}
+.catalogue-tools-bottom select{width:auto;min-width:220px;margin:0}
+#catalogueResults{margin-left:auto;color:var(--muted);font-size:.85rem;font-weight:700}
+.catalogue-list{display:grid;gap:12px}
+.catalogue-category{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.catalogue-category>summary{padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:850;color:var(--text);cursor:pointer}
+.catalogue-category>summary:after{content:"";width:8px;height:8px;border-right:2px solid var(--primary);border-bottom:2px solid var(--primary);transform:rotate(45deg);transition:transform .2s;flex:0 0 auto}
+.catalogue-category[open]>summary:after{transform:rotate(225deg)}
+.catalogue-count{margin-left:auto;color:var(--muted);font-size:.75rem;font-weight:700;white-space:nowrap}
+.catalogue-items{border-top:1px solid var(--line);padding:10px 16px 14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.catalogue-item{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;border:1px solid #f0e5e8;border-radius:12px;background:#fff}
+.catalogue-item-info{min-width:0}
+.catalogue-item h4{font-size:.91rem;line-height:1.35;margin-bottom:5px}
+.catalogue-price{display:inline-block;color:var(--primary);font-weight:900;font-size:.9rem}
+.catalogue-order{padding:8px 11px;min-height:36px;font-size:.78rem;white-space:nowrap;flex:0 0 auto}
+.catalogue-footnote{max-width:850px;margin:18px auto 0;color:var(--muted);font-size:.82rem;text-align:center}
+.catalogue-item[hidden],.catalogue-category[hidden]{display:none!important}
+@media(max-width:650px){
+ .catalogue-tools{padding:14px}
+ .catalogue-items{grid-template-columns:1fr;padding:9px}
+ .catalogue-item{padding:11px}
+ .catalogue-tools-bottom{align-items:stretch}
+ .catalogue-tools-bottom select{flex:1;min-width:0}
+ #catalogueResults{width:100%;margin:0}
+}
+@media(max-width:380px){.catalogue-item{align-items:flex-start;flex-direction:column}.catalogue-order{width:100%}}
+</style>
+
 </head>
 <!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
 <body>
@@ -610,7 +645,7 @@ input,textarea,select{border-radius:10px}
 <button aria-label="Ouvrir le menu" class="menu" id="menuBtn">☰</button>
 <nav class="navlinks" id="navLinks">
 <a href="#contact">Services détaillés</a><a href="#services">Services</a>
-<a href="#tarifs">Nos offres</a><a href="#solutions">Solutions</a>
+<a href="#catalogue">Catalogue</a><a href="#tarifs">Nos offres</a><a href="#solutions">Solutions</a>
 <a href="#apropos">À propos</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
@@ -898,6 +933,261 @@ input,textarea,select{border-radius:10px}
 </div>
 </section>
 
+
+<section id="catalogue" class="catalogue-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Catalogue PHENIX CONNECT</span>
+      <h2>Catalogue des logiciels, services et formations</h2>
+      <p>Retrouvez nos solutions classées par domaine. Recherchez un article, consultez son prix et contactez-nous pour passer commande ou obtenir des précisions.</p>
+    </div>
+    <div class="catalogue-tools">
+      <label class="catalogue-search-label" for="catalogueSearch">Rechercher dans le catalogue</label>
+      <input id="catalogueSearch" type="search" placeholder="Ex. : Windows, AutoCAD, site vitrine…" autocomplete="off">
+      <div class="catalogue-tools-bottom">
+        <label for="catalogueCategory">Catégorie</label>
+        <select id="catalogueCategory">
+          <option value="">Toutes les catégories</option>
+          <option value="logiciels de gestion et métiers">Logiciels de gestion et métiers</option><option value="développement web et e-commerce">Développement Web et E-commerce</option><option value="systèmes d&#x27;exploitation et maintenance">Systèmes d&#x27;exploitation et Maintenance</option><option value="suites bureautiques et utilitaires">Suites Bureautiques et Utilitaires</option><option value="design et multimédia (adobe)">Design et Multimédia (Adobe)</option><option value="architecture et ingénierie (autodesk et autres)">Architecture et Ingénierie (Autodesk et autres)</option><option value="sécurité et antivirus">Sécurité et Antivirus</option><option value="services techniques et récupération">Services Techniques et Récupération</option><option value="formations">Formations</option>
+        </select>
+        <span id="catalogueResults" aria-live="polite">67 articles</span>
+      </div>
+    </div>
+    <div class="catalogue-list" id="catalogueList">
+      <details class="catalogue-category" open data-category="logiciels de gestion et métiers">
+  <summary><span>Logiciels de gestion et métiers</span><span class="catalogue-count">7 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="application &amp; logiciel de gestion &amp; métier logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>Application &amp; logiciel de gestion &amp; métier</h4><span class="catalogue-price">200 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Application &amp; logiciel de gestion &amp; métier" data-price="200 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="odoo logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>Odoo</h4><span class="catalogue-price">10 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Odoo" data-price="10 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="quickbooks logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>QuickBooks</h4><span class="catalogue-price">10 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="QuickBooks" data-price="10 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="sage 100 (avec activateur) logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>Sage 100 (avec activateur)</h4><span class="catalogue-price">10 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Sage 100 (avec activateur)" data-price="10 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="sage 100c gestion commerciale v8.00 logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>Sage 100C Gestion Commerciale v8.00</h4><span class="catalogue-price">10 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Sage 100C Gestion Commerciale v8.00" data-price="10 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="odoo vs quick books logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>Odoo vs Quick books</h4><span class="catalogue-price">10 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Odoo vs Quick books" data-price="10 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="sdl trados studio professional 2026 logiciels de gestion et métiers">
+  <div class="catalogue-item-info"><h4>SDL Trados Studio Professional 2026</h4><span class="catalogue-price">15 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="SDL Trados Studio Professional 2026" data-price="15 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="développement web et e-commerce">
+  <summary><span>Développement Web et E-commerce</span><span class="catalogue-count">6 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="boutique e-commerce développement web et e-commerce">
+  <div class="catalogue-item-info"><h4>Boutique E-commerce</h4><span class="catalogue-price">150 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Boutique E-commerce" data-price="150 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="création de sites web e-commerce développement web et e-commerce">
+  <div class="catalogue-item-info"><h4>Création de sites Web e-commerce</h4><span class="catalogue-price">100 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Création de sites Web e-commerce" data-price="100 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="site vitrine développement web et e-commerce">
+  <div class="catalogue-item-info"><h4>Site vitrine</h4><span class="catalogue-price">70 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Site vitrine" data-price="70 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="création de sites web vitrines développement web et e-commerce">
+  <div class="catalogue-item-info"><h4>Création de sites Web vitrines</h4><span class="catalogue-price">50 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Création de sites Web vitrines" data-price="50 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="website configuration (domaine/mail) développement web et e-commerce">
+  <div class="catalogue-item-info"><h4>Website configuration (domaine/mail)</h4><span class="catalogue-price">150 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Website configuration (domaine/mail)" data-price="150 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="nom de domaine développement web et e-commerce">
+  <div class="catalogue-item-info"><h4>Nom de domaine</h4><span class="catalogue-price">30 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Nom de domaine" data-price="30 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="systèmes d&#x27;exploitation et maintenance">
+  <summary><span>Systèmes d&#x27;exploitation et Maintenance</span><span class="catalogue-count">13 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="installation complète de tout type d&#x27;os systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Installation complète de tout type d&#x27;OS</h4><span class="catalogue-price">10 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Installation complète de tout type d&#x27;OS" data-price="10 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="installation de windows 7, 8, 10 et 11 systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Installation de Windows 7, 8, 10 et 11</h4><span class="catalogue-price">10 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Installation de Windows 7, 8, 10 et 11" data-price="10 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="windows 11 professionnel systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 11 Professionnel</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 11 Professionnel" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="windows 11 (32 &amp; 64 bits avec activateur) systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 11 (32 &amp; 64 bits avec activateur)</h4><span class="catalogue-price">5 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 11 (32 &amp; 64 bits avec activateur)" data-price="5 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="windows 10 (32 &amp; 64 bits avec activateur) systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 10 (32 &amp; 64 bits avec activateur)</h4><span class="catalogue-price">4 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 10 (32 &amp; 64 bits avec activateur)" data-price="4 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="windows 10 32 et 64 bits systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 10 32 et 64 bits</h4><span class="catalogue-price">4 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 10 32 et 64 bits" data-price="4 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="windows 8.1 (32 &amp; 64 bits avec activateur) systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 8.1 (32 &amp; 64 bits avec activateur)</h4><span class="catalogue-price">3 500 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 8.1 (32 &amp; 64 bits avec activateur)" data-price="3 500 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="windows 8 32 et 64 bits systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 8 32 et 64 bits</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 8 32 et 64 bits" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="windows 7 (32 &amp; 64 bits) systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 7 (32 &amp; 64 bits)</h4><span class="catalogue-price">2 500 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 7 (32 &amp; 64 bits)" data-price="2 500 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="windows 7 32/64 bits systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Windows 7 32/64 bits</h4><span class="catalogue-price">2 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Windows 7 32/64 bits" data-price="2 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="linux mint systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Linux mint</h4><span class="catalogue-price">3 500 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Linux mint" data-price="3 500 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="debian &amp; ubuntu systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Debian &amp; Ubuntu</h4><span class="catalogue-price">3 500 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Debian &amp; Ubuntu" data-price="3 500 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="linux xfce systèmes d&#x27;exploitation et maintenance">
+  <div class="catalogue-item-info"><h4>Linux Xfce</h4><span class="catalogue-price">2 500 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Linux Xfce" data-price="2 500 XOF">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="suites bureautiques et utilitaires">
+  <summary><span>Suites Bureautiques et Utilitaires</span><span class="catalogue-count">8 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="ms office 2025 suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>MS Office 2025</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="MS Office 2025" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="ms office 2019 suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>MS Office 2019</h4><span class="catalogue-price">4 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="MS Office 2019" data-price="4 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="ms office 2016 suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>MS Office 2016</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="MS Office 2016" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="ms office 2013 suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>MS Office 2013</h4><span class="catalogue-price">2 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="MS Office 2013" data-price="2 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="ms office 2010 suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>MS Office 2010</h4><span class="catalogue-price">1 500 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="MS Office 2010" data-price="1 500 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="internet download manager suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>Internet Download Manager</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Internet Download Manager" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="nitro pro suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>Nitro Pro</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Nitro Pro" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="deepl pro premium suites bureautiques et utilitaires">
+  <div class="catalogue-item-info"><h4>DeepL Pro Premium</h4><span class="catalogue-price">15 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="DeepL Pro Premium" data-price="15 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="design et multimédia (adobe)">
+  <summary><span>Design et Multimédia (Adobe)</span><span class="catalogue-count">10 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="pack adobe complet design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Pack Adobe Complet</h4><span class="catalogue-price">12 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Pack Adobe Complet" data-price="12 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe photoshop design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Photoshop</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Photoshop" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe premiere pro design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Premiere Pro</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Premiere Pro" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe illustrator design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Illustrator</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Illustrator" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe indesign design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe InDesign</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe InDesign" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe animate design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Animate</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Animate" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe dreamweaver design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Dreamweaver</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Dreamweaver" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe media encoder design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Media Encoder</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Media Encoder" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="adobe muse design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Adobe Muse</h4><span class="catalogue-price">4 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Adobe Muse" data-price="4 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="lumion pro design et multimédia (adobe)">
+  <div class="catalogue-item-info"><h4>Lumion Pro</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Lumion Pro" data-price="5 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="architecture et ingénierie (autodesk et autres)">
+  <summary><span>Architecture et Ingénierie (Autodesk et autres)</span><span class="catalogue-count">10 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="autodesk autocad architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Autodesk AutoCAD</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Autodesk AutoCAD" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="autocad vs archicad architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Autocad vs Archicad</h4><span class="catalogue-price">10 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Autocad vs Archicad" data-price="10 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="graphisoft archicad architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Graphisoft Archicad</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Graphisoft Archicad" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="autodesk revit architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Autodesk Revit</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Autodesk Revit" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="autodesk civil 3d architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Autodesk Civil 3D</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Autodesk Civil 3D" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="autodesk robot structural analysis architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Autodesk Robot Structural Analysis</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Autodesk Robot Structural Analysis" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="autodesk maya architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Autodesk Maya</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Autodesk Maya" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="csi etabs architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>CSI ETABS</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="CSI ETABS" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="csi sap2000 architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>CSI SAP2000</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="CSI SAP2000" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="trimble tekla structures architecture et ingénierie (autodesk et autres)">
+  <div class="catalogue-item-info"><h4>Trimble Tekla Structures</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Trimble Tekla Structures" data-price="5 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="sécurité et antivirus">
+  <summary><span>Sécurité et Antivirus</span><span class="catalogue-count">6 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="avast premium sécurité et antivirus">
+  <div class="catalogue-item-info"><h4>Avast premium</h4><span class="catalogue-price">4 500 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Avast premium" data-price="4 500 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="avast internet security sécurité et antivirus">
+  <div class="catalogue-item-info"><h4>Avast Internet Security</h4><span class="catalogue-price">3 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Avast Internet Security" data-price="3 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="bitdefender sécurité et antivirus">
+  <div class="catalogue-item-info"><h4>Bitdefender</h4><span class="catalogue-price">2 500 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Bitdefender" data-price="2 500 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="eset antivirus sécurité et antivirus">
+  <div class="catalogue-item-info"><h4>ESET Antivirus</h4><span class="catalogue-price">3 500 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="ESET Antivirus" data-price="3 500 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="avg sécurité et antivirus">
+  <div class="catalogue-item-info"><h4>AVG</h4><span class="catalogue-price">10 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="AVG" data-price="10 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="smadav 2026 sécurité et antivirus">
+  <div class="catalogue-item-info"><h4>Smadav 2026</h4><span class="catalogue-price">1 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Smadav 2026" data-price="1 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="services techniques et récupération">
+  <summary><span>Services Techniques et Récupération</span><span class="catalogue-count">5 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="récupération de données (prix promo) services techniques et récupération">
+  <div class="catalogue-item-info"><h4>Récupération de données (Prix promo)</h4><span class="catalogue-price">5 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Récupération de données (Prix promo)" data-price="5 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="récupération de données sur disque dur services techniques et récupération">
+  <div class="catalogue-item-info"><h4>Récupération de données sur disque dur</h4><span class="catalogue-price">10 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Récupération de données sur disque dur" data-price="10 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="récupération de données sur clé usb services techniques et récupération">
+  <div class="catalogue-item-info"><h4>Récupération de données sur clé USB</h4><span class="catalogue-price">5 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Récupération de données sur clé USB" data-price="5 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="imobie (récupération, déverrouillage, réparation système) services techniques et récupération">
+  <div class="catalogue-item-info"><h4>Imobie (Récupération, déverrouillage, réparation système)</h4><span class="catalogue-price">15 000 XOF</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Imobie (Récupération, déverrouillage, réparation système)" data-price="15 000 XOF">Commander</a>
+</article><article class="catalogue-item" data-search="imobie droidkit services techniques et récupération">
+  <div class="catalogue-item-info"><h4>iMobie DroidKit</h4><span class="catalogue-price">15 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="iMobie DroidKit" data-price="15 000 FCFA">Commander</a>
+</article></div>
+</details><details class="catalogue-category"  data-category="formations">
+  <summary><span>Formations</span><span class="catalogue-count">2 articles</span></summary>
+  <div class="catalogue-items"><article class="catalogue-item" data-search="formation en maintenance informatique (3 mois) formations">
+  <div class="catalogue-item-info"><h4>Formation en maintenance informatique (3 mois)</h4><span class="catalogue-price">100 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Formation en maintenance informatique (3 mois)" data-price="100 000 FCFA">Commander</a>
+</article><article class="catalogue-item" data-search="formation en création de sites web formations">
+  <div class="catalogue-item-info"><h4>Formation en création de sites Web</h4><span class="catalogue-price">90 000 FCFA</span></div>
+  <a class="btn btn-primary catalogue-order" href="#contact" data-catalog="Formation en création de sites Web" data-price="90 000 FCFA">Commander</a>
+</article></div>
+</details>
+    </div>
+    <p class="catalogue-footnote">Les tarifs sont affichés tels que communiqués. Les disponibilités, conditions d'utilisation et modalités de livraison sont à confirmer auprès de PHENIX CONNECT.</p>
+  </div>
+</section>
+
 <section id="tarifs" class="pricing-section">
 <div class="container">
 <div class="section-head">
@@ -1073,7 +1363,7 @@ input,textarea,select{border-radius:10px}
 <div class="container">
 <div class="footer-grid">
 <div><h3>PHENIX CONNECT</h3><p>Solutions web, applications, informatique et téléphonie.</p></div>
-<div><h3>Navigation</h3><p><a href="#contact">Création de sites web</a><br/><br/><a href="#contact">Applications web et mobiles</a><br/><br/><a href="#contact">Logiciels de gestion</a><br/><br/><a href="#contact">Maintenance informatique</a><br/><br/><a href="#contact">SEO local au Bénin</a><br/><br/><a href="#faq">FAQ</a><br/><br/><a href="#contact">Contact</a></p></div>
+<div><h3>Navigation</h3><p><a href="#contact">Création de sites web</a><br/><br/><a href="#contact">Applications web et mobiles</a><br/><br/><a href="#catalogue">Catalogue des logiciels et services</a><br/><br/><a href="#contact">Logiciels de gestion</a><br/><br/><a href="#contact">Maintenance informatique</a><br/><br/><a href="#contact">SEO local au Bénin</a><br/><br/><a href="#faq">FAQ</a><br/><br/><a href="#contact">Contact</a></p></div>
 <div>
 <h3>Contact</h3>
 <p>
@@ -1145,7 +1435,7 @@ input,textarea,select{border-radius:10px}
     'informatique', 'ordinateur', 'pc', 'maintenance', 'réparation', 'téléphone', 'smartphone',
     'seo', 'référencement', 'google', 'visibilité', 'ia', 'intelligence artificielle', 'automation',
     'numérique', 'digital', 'matériel', 'devis', 'prix', 'tarif', 'pack', 'start', 'business', 'e-com',
-    'contact', 'whatsapp', 'parakou', 'bénin', 'formation', 'hébergement', 'domaine', 'email pro',
+    'catalogue', 'contact', 'whatsapp', 'parakou', 'bénin', 'formation', 'hébergement', 'domaine', 'email pro',
     'adresse', 'service', 'prestation', 'projet', 'commande'
   ];
 
@@ -1165,6 +1455,7 @@ input,textarea,select{border-radius:10px}
       return "Je peux uniquement répondre aux questions liées aux services de PHENIX CONNECT : sites web, applications, logiciels de gestion, informatique, maintenance, téléphonie, SEO/visibilité, solutions numériques & IA, matériel informatique, offres et demandes de devis. Pour une autre question, je ne peux pas vous aider ici.";
     }
 
+    if (s.includes('catalogue')) { return "Le catalogue PHENIX CONNECT présente les logiciels, services web, systèmes d'exploitation, outils bureautiques, solutions de design, logiciels d'architecture, antivirus, services techniques et formations. Consultez la section Catalogue du site pour rechercher un article et voir son tarif."; }
     if (s.includes('pack') || s.includes('prix') || s.includes('tarif') || s.includes('devis')) {
       return "Nos offres actuelles sont : PACK ECO à 70.000 FCFA (site professionnel + bouton WhatsApp + référencement Google), PHENIX START à 150.000 FCFA (paiement en 2 fois possible, livraison 7 jours), PHENIX BUSINESS à 350.000 FCFA (paiement en 3 fois possible, livraison 14 jours) et PHENIX E-COM à partir de 600.000 FCFA (selon les fonctionnalités, livraison 21 jours). Vous pouvez demander un devis via le formulaire ou WhatsApp au 0153023080.";
     }
@@ -1256,6 +1547,43 @@ input,textarea,select{border-radius:10px}
     const msg = `Bonjour PHENIX CONNECT,%0A%0AJe vous contacte via le site :%0ANom : ${encodeURIComponent(nom)} ${encodeURIComponent(prenom)}%0AContact : ${encodeURIComponent(contact)}%0ABesoin : ${encodeURIComponent(besoin)}`;
     window.location.href = `https://wa.me/2290153023080?text=${msg}`;
   });
+
+  // Catalogue : recherche, filtre par catégorie et demande de commande préremplie.
+  const catalogueSearch = document.getElementById('catalogueSearch');
+  const catalogueCategory = document.getElementById('catalogueCategory');
+  const catalogueResults = document.getElementById('catalogueResults');
+  const catalogueCategories = [...document.querySelectorAll('.catalogue-category')];
+
+  function filterCatalogue() {
+    const query = normalizeText(catalogueSearch.value.trim());
+    const selected = catalogueCategory.value;
+    let total = 0;
+    catalogueCategories.forEach(category => {
+      const categoryMatch = !selected || category.dataset.category === selected;
+      let visibleInCategory = 0;
+      category.querySelectorAll('.catalogue-item').forEach(item => {
+        const matches = categoryMatch && (!query || normalizeText(item.dataset.search).includes(query));
+        item.hidden = !matches;
+        if (matches) visibleInCategory++;
+      });
+      category.hidden = visibleInCategory === 0;
+      if (query && visibleInCategory) category.open = true;
+      total += visibleInCategory;
+    });
+    catalogueResults.textContent = `${total} article${total > 1 ? 's' : ''}`;
+  }
+  catalogueSearch.addEventListener('input', filterCatalogue);
+  catalogueCategory.addEventListener('change', filterCatalogue);
+
+  document.querySelectorAll('.catalogue-order').forEach(link => {
+    link.addEventListener('click', () => {
+      const besoin = document.getElementById('besoin');
+      const item = link.dataset.catalog;
+      const price = link.dataset.price;
+      if (besoin) besoin.value = `Je souhaite commander ou obtenir des informations sur : ${item} — ${price}. Merci de me préciser les modalités.`;
+    });
+  });
+
 </script>
 </body>
 </html>
