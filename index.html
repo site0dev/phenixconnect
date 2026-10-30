@@ -638,6 +638,17 @@ input,textarea,select{border-radius:10px}
 @media(max-width:380px){.catalogue-items{grid-template-columns:1fr}.catalogue-item{min-height:0}}
 </style>
 
+
+<style id="catalogue-grid-v2-fix">
+/* PHENIX CONNECT — grille catalogue V2 renforcée */
+#catalogue #catalogueList{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important;align-items:start!important}
+#catalogue #catalogueList>.catalogue-category{display:block!important;min-width:0!important;width:100%!important}
+#catalogue #catalogueList .catalogue-items{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;padding:12px!important}
+#catalogue #catalogueList .catalogue-item{display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;max-width:none!important;grid-column:auto!important;box-sizing:border-box!important}
+@media(max-width:900px){#catalogue #catalogueList{grid-template-columns:1fr!important;gap:14px!important}}
+@media(max-width:650px){#catalogue #catalogueList .catalogue-items{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;padding:10px!important}#catalogue #catalogueList .catalogue-item{padding:11px!important;min-height:118px!important}}
+@media(max-width:340px){#catalogue #catalogueList .catalogue-items{grid-template-columns:1fr!important}}
+</style>
 </head>
 <!-- PROJET : GESTION D'ATELIER DE COUTURE AFRICAINE — IMAGE DÉDIÉE UNIQUEMENT -->
 <body>
