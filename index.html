@@ -611,29 +611,31 @@ input,textarea,select{border-radius:10px}
 .catalogue-tools-bottom label{font-size:.85rem}
 .catalogue-tools-bottom select{width:auto;min-width:220px;margin:0}
 #catalogueResults{margin-left:auto;color:var(--muted);font-size:.85rem;font-weight:700}
-.catalogue-list{display:grid;gap:12px}
-.catalogue-category{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-.catalogue-category>summary{padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:850;color:var(--text);cursor:pointer}
+.catalogue-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.catalogue-category{min-width:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.catalogue-category>summary{min-height:66px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:850;color:var(--text);cursor:pointer;background:linear-gradient(135deg,#fff,#fcf7f8)}
 .catalogue-category>summary:after{content:"";width:8px;height:8px;border-right:2px solid var(--primary);border-bottom:2px solid var(--primary);transform:rotate(45deg);transition:transform .2s;flex:0 0 auto}
 .catalogue-category[open]>summary:after{transform:rotate(225deg)}
 .catalogue-count{margin-left:auto;color:var(--muted);font-size:.75rem;font-weight:700;white-space:nowrap}
-.catalogue-items{border-top:1px solid var(--line);padding:10px 16px 14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.catalogue-item{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;border:1px solid #f0e5e8;border-radius:12px;background:#fff}
+.catalogue-items{border-top:1px solid var(--line);padding:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.catalogue-item{min-width:0;min-height:112px;display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:10px;padding:12px;border:1px solid #f0e5e8;border-radius:12px;background:#fff;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.catalogue-item:hover{transform:translateY(-2px);border-color:#d9bfc5;box-shadow:0 8px 18px rgba(74,21,32,.07)}
 .catalogue-item-info{min-width:0}
-.catalogue-item h4{font-size:.91rem;line-height:1.35;margin-bottom:5px}
+.catalogue-item h4{font-size:.88rem;line-height:1.35;margin-bottom:7px;overflow-wrap:anywhere}
 .catalogue-price{display:inline-block;color:var(--primary);font-weight:900;font-size:.9rem}
-.catalogue-order{padding:8px 11px;min-height:36px;font-size:.78rem;white-space:nowrap;flex:0 0 auto}
+.catalogue-order{width:100%;padding:8px 10px;min-height:36px;font-size:.78rem;white-space:nowrap}
 .catalogue-footnote{max-width:850px;margin:18px auto 0;color:var(--muted);font-size:.82rem;text-align:center}
 .catalogue-item[hidden],.catalogue-category[hidden]{display:none!important}
+@media(max-width:900px){.catalogue-list{grid-template-columns:1fr}.catalogue-items{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){
  .catalogue-tools{padding:14px}
- .catalogue-items{grid-template-columns:1fr;padding:9px}
- .catalogue-item{padding:11px}
+ .catalogue-items{grid-template-columns:repeat(2,minmax(0,1fr));padding:9px}
+ .catalogue-item{padding:11px;min-height:118px}
  .catalogue-tools-bottom{align-items:stretch}
  .catalogue-tools-bottom select{flex:1;min-width:0}
  #catalogueResults{width:100%;margin:0}
 }
-@media(max-width:380px){.catalogue-item{align-items:flex-start;flex-direction:column}.catalogue-order{width:100%}}
+@media(max-width:380px){.catalogue-items{grid-template-columns:1fr}.catalogue-item{min-height:0}}
 </style>
 
 </head>
@@ -642,7 +644,7 @@ input,textarea,select{border-radius:10px}
 <header>
 <div class="container nav">
 <a class="brand" href="#accueil">PHENIX <span>CONNECT</span></a>
-<button aria-label="Ouvrir le menu" class="menu" id="menuBtn">☰</button>
+<button aria-label="Ouvrir le menu" aria-controls="navLinks" aria-expanded="false" class="menu" id="menuBtn" type="button">☰</button>
 <nav class="navlinks" id="navLinks">
 <a href="#contact">Services détaillés</a><a href="#services">Services</a>
 <a href="#catalogue">Catalogue</a><a href="#tarifs">Nos offres</a><a href="#solutions">Solutions</a>
@@ -1191,89 +1193,91 @@ input,textarea,select{border-radius:10px}
 <section id="tarifs" class="pricing-section">
 <div class="container">
 <div class="section-head">
-<h2>Nos Offres</h2>
-<p>Des formules claires pour lancer votre présence en ligne, développer votre activité ou vendre directement sur internet.</p>
+<h2>Nos packs &amp; prestations</h2>
+<p>Des formules construites à partir des tarifs du catalogue PHENIX CONNECT. Choisissez le niveau de service adapté à votre projet.</p>
 </div>
 <div class="pricing-grid">
-<details class="pricing-card pricing-dropdown">
-<summary class="pricing-toggle"><span>PACK ECO</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<details class="pricing-card pricing-dropdown" open>
+<summary class="pricing-toggle"><span>PACK VITRINE ESSENTIEL</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
 <div class="pricing-content">
-<p class="pricing-price">70.000 FCFA</p>
-<p class="pricing-payment">Une solution essentielle, professionnelle et accessible</p>
-<p class="pricing-ideal"><strong>Idéal pour :</strong> Commerçants, indépendants, artisans et petites activités qui veulent présenter leur entreprise en ligne et permettre aux clients de les contacter facilement.</p>
+<p class="pricing-price">50 000 FCFA</p>
+<p class="pricing-payment">Création de site Web vitrine — tarif catalogue</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> indépendants, artisans et petites entreprises qui souhaitent présenter leur activité en ligne.</p>
 <ul>
-<li>Site web professionnel et responsive</li>
-<li>Bouton WhatsApp directement accessible</li>
-<li>Référencement Google de base pour faciliter la visibilité en ligne</li>
-<li>Présentation claire de votre activité, services et coordonnées</li>
-<li>Design propre et adapté à votre activité</li>
+<li>Prestation de création de site Web vitrine</li>
+<li>Présentation de l'activité, des services et des coordonnées</li>
+<li>Structure adaptée aux besoins communiqués au démarrage</li>
 </ul>
-<div class="pricing-objective"><strong>Objectif :</strong> Donner à votre activité une présence professionnelle sur Google et transformer les visiteurs en contacts WhatsApp grâce à un site simple, clair et efficace.</div>
-<a class="btn btn-primary" href="#contact">Choisir le Pack Eco</a>
+<div class="pricing-objective"><strong>Référence catalogue :</strong> Création de sites Web vitrines — 50 000 FCFA.</div>
+<a class="btn btn-primary" href="#contact" data-pack="Pack Vitrine Essentiel — 50 000 FCFA">Choisir ce pack</a>
 </div>
 </details>
 
 <details class="pricing-card pricing-dropdown">
-<summary class="pricing-toggle"><span>PACK 1 : PHENIX START</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<summary class="pricing-toggle"><span>PACK SITE VITRINE</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
 <div class="pricing-content">
-<p class="pricing-price">150.000 FCFA</p>
-<p class="pricing-payment">Paiement en 2 fois possible</p>
-<p class="pricing-ideal"><strong>Idéal pour :</strong> Boutiques, salons, restos, petits business qui veulent être sur Google et recevoir des clients sur WhatsApp.</p>
+<p class="pricing-price">70 000 XOF</p>
+<p class="pricing-payment">Site vitrine — tarif catalogue</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> professionnels et commerces qui veulent disposer d'un site vitrine pour présenter leurs offres et faciliter les prises de contact.</p>
 <ul>
-<li>Site vitrine 1 page ultra pro et rapide sur mobile</li>
-<li>Bouton WhatsApp et Appel direct qui flotte</li>
-<li>Formulaire de contact + Google Maps</li>
-<li>Design moderne à tes couleurs</li>
-<li>Nom de domaine + Hébergement offerts 1 an</li>
-<li>Formation vidéo pour modifier toi-même</li>
-<li>Livraison en 7 jours</li>
+<li>Prestation Site vitrine</li>
+<li>Présentation professionnelle de l'activité</li>
+<li>Orientation des visiteurs vers vos moyens de contact</li>
 </ul>
-<div class="pricing-objective"><strong>Objectif :</strong> Tu donnes à ton activité une présence professionnelle en ligne et tu facilites le contact avec tes premiers clients.</div>
-<a class="btn btn-primary" href="#contact">Commander le Pack Start</a>
+<div class="pricing-objective"><strong>Référence catalogue :</strong> Site vitrine — 70 000 XOF.</div>
+<a class="btn btn-primary" href="#contact" data-pack="Pack Site Vitrine — 70 000 XOF">Choisir ce pack</a>
 </div>
 </details>
 
 <details class="pricing-card featured pricing-dropdown">
-<summary class="pricing-toggle"><span>PACK 2 : PHENIX BUSINESS <small class="pricing-badge-inline">Le plus demandé</small></span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<summary class="pricing-toggle"><span>PACK E-COMMERCE <small class="pricing-badge-inline">Offre web</small></span><span class="pricing-arrow" aria-hidden="true"></span></summary>
 <div class="pricing-content">
-<p class="pricing-price">350.000 FCFA</p>
-<p class="pricing-payment">Paiement en 3 fois possible</p>
-<p class="pricing-ideal"><strong>Idéal pour :</strong> Cabinets, cliniques, écoles, ONG, agences qui veulent inspirer confiance et être trouvés.</p>
+<p class="pricing-price">100 000 FCFA</p>
+<p class="pricing-payment">Création de site Web e-commerce — tarif catalogue</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> commerçants qui souhaitent présenter leurs produits sur un site e-commerce.</p>
 <ul>
-<li>Tout le Pack Start +</li>
-<li>Site complet 5 pages : Accueil, À propos, Services, Réalisations, Contact</li>
-<li>Blog / Actualités pour le SEO</li>
-<li>Optimisation Google : visibilité à Parakou / Cotonou</li>
-<li>Emails pro : contact@tonentreprise.com</li>
-<li>5 visuels pour Facebook / LinkedIn offerts</li>
-<li>Livraison en 14 jours</li>
+<li>Prestation de création de site Web e-commerce</li>
+<li>Présentation des produits et de l'offre commerciale</li>
+<li>Parcours et fonctionnalités à définir selon le projet</li>
 </ul>
-<div class="pricing-objective"><strong>Objectif :</strong> Tu renforces ta crédibilité en ligne, tu améliores ta visibilité sur Google et tu facilites l’arrivée de nouveaux prospects.</div>
-<a class="btn btn-primary" href="#contact">Choisir le Pack Business</a>
+<div class="pricing-objective"><strong>Référence catalogue :</strong> Création de sites Web e-commerce — 100 000 FCFA. Les fonctionnalités avancées font l'objet d'un cadrage préalable.</div>
+<a class="btn btn-primary" href="#contact" data-pack="Pack E-commerce — 100 000 FCFA">Choisir ce pack</a>
 </div>
 </details>
 
 <details class="pricing-card pricing-dropdown">
-<summary class="pricing-toggle"><span>PACK 3 : PHENIX E-COM</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<summary class="pricing-toggle"><span>PACK BOUTIQUE EN LIGNE</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
 <div class="pricing-content">
-<p class="pricing-price">À partir de 600.000 FCFA</p>
-<p class="pricing-payment">Selon les fonctionnalités et besoins</p>
-<p class="pricing-ideal"><strong>Idéal pour :</strong> Vendeurs qui veulent encaisser en ligne sans stress.</p>
+<p class="pricing-price">150 000 XOF</p>
+<p class="pricing-payment">Boutique E-commerce — tarif catalogue</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> vendeurs qui souhaitent disposer d'une boutique en ligne dédiée à leurs produits.</p>
 <ul>
-<li>Tout le Pack Business +</li>
-<li>Boutique complète : produits illimités, panier, stock</li>
-<li>Paiement Mobile Money / Carte / Paiement à la livraison</li>
-<li>Connexion automatique à WhatsApp pour chaque commande</li>
-<li>Suivi des commandes et factures auto</li>
-<li>Formation complète pour gérer ta boutique</li>
-<li>Livraison en 21 jours</li>
+<li>Prestation Boutique E-commerce</li>
+<li>Organisation du catalogue de produits</li>
+<li>Fonctionnalités de vente définies selon les besoins</li>
 </ul>
-<div class="pricing-objective"><strong>Objectif :</strong> Tu transformes ton site en véritable canal de vente, disponible 24h/24 pour présenter tes produits, prendre des commandes et faciliter les paiements.</div>
-<a class="btn btn-primary" href="#contact">Lancer ma boutique</a>
+<div class="pricing-objective"><strong>Référence catalogue :</strong> Boutique E-commerce — 150 000 XOF. Les moyens de paiement, la gestion des stocks et les automatisations sont à confirmer dans le devis.</div>
+<a class="btn btn-primary" href="#contact" data-pack="Pack Boutique E-commerce — 150 000 XOF">Lancer ma boutique</a>
+</div>
+</details>
+
+<details class="pricing-card pricing-dropdown">
+<summary class="pricing-toggle"><span>PACK GESTION MÉTIER</span><span class="pricing-arrow" aria-hidden="true"></span></summary>
+<div class="pricing-content">
+<p class="pricing-price">200 000 XOF</p>
+<p class="pricing-payment">Application &amp; logiciel de gestion &amp; métier — tarif catalogue</p>
+<p class="pricing-ideal"><strong>Idéal pour :</strong> entreprises, commerces et professionnels qui souhaitent un outil adapté à leur activité.</p>
+<ul>
+<li>Prestation Application &amp; logiciel de gestion &amp; métier</li>
+<li>Cadrage des besoins de gestion avant réalisation</li>
+<li>Fonctionnalités métier définies avec le client</li>
+</ul>
+<div class="pricing-objective"><strong>Référence catalogue :</strong> Application &amp; logiciel de gestion &amp; métier — 200 000 XOF.</div>
+<a class="btn btn-primary" href="#contact" data-pack="Pack Gestion Métier — 200 000 XOF">Demander ce pack</a>
 </div>
 </details>
 </div>
-<p class="pricing-note">Tous nos sites sont rapides, sécurisés et 100% gérés sur mobile. Pas de frais cachés. Support WhatsApp 7j/7. <strong>3 places disponibles ce mois-ci.</strong></p>
+<p class="pricing-note">Les tarifs affichés reprennent les prix du catalogue. Le nom de domaine (30 000 FCFA) et la configuration domaine/e-mail (150 000 FCFA) sont des prestations distinctes. Le périmètre exact, les délais, l'hébergement et les options sont confirmés dans le devis avant commande.</p>
 </div>
 </section>
 
@@ -1387,9 +1391,9 @@ input,textarea,select{border-radius:10px}
 <div class="msg bot">Bonjour ! Comment puis-je vous renseigner sur nos prestations ?</div>
 </div>
 <div class="quick">
-<button data-q="Quels services proposez-vous ?">Services</button>
-<button data-q="Je veux créer un site web.">Site Web</button>
-<button data-q="Comment obtenir un devis ?">Devis</button>
+<button data-q="Présente-moi les packs disponibles">Nos packs</button>
+<button data-q="Quels logiciels propose le catalogue ?">Catalogue</button>
+<button data-q="Comment commander un article ?">Commander</button>
 </div>
 <div class="ai-input">
 <input autocomplete="off" id="aiInput" placeholder="Posez une question..."/>
@@ -1397,18 +1401,37 @@ input,textarea,select{border-radius:10px}
 </div>
 </div>
 <script>
-  // Dynamic Navigation & Date
+  // Navigation mobile : ouverture/fermeture fiable du menu déroulant.
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.getElementById('navLinks');
-  menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
-  document.getElementById('year').textContent = new Date().getFullYear();
+  if (menuBtn && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove('show');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Ouvrir le menu');
+    };
+    menuBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      const isOpen = navLinks.classList.toggle('show');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      menuBtn.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    document.addEventListener('click', (event) => {
+      if (navLinks.classList.contains('show') && !navLinks.contains(event.target) && !menuBtn.contains(event.target)) closeMenu();
+    });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+  }
+  const yearElement = document.getElementById('year');
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
 
   // Lazy load Map iframe only on user action
   function loadMap() {
     document.getElementById('mapWrapper').innerHTML = '<iframe title="Carte Google Maps de Parakou" src="https://maps.google.com/maps?q=Parakou%2C%20B%C3%A9nin&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>';
   }
-  document.getElementById('loadMapBtn').addEventListener('click', loadMap);
+  const loadMapBtn = document.getElementById('loadMapBtn');
+  if (loadMapBtn) loadMapBtn.addEventListener('click', loadMap);
 
   // PHENIX CONNECT — Assistant cadré + filtrage des demandes
   const aiButton = document.getElementById('ai-button');
@@ -1434,65 +1457,143 @@ input,textarea,select{border-radius:10px}
     'application', 'logiciel', 'gestion', 'stock', 'vente', 'facturation', 'mobile',
     'informatique', 'ordinateur', 'pc', 'maintenance', 'réparation', 'téléphone', 'smartphone',
     'seo', 'référencement', 'google', 'visibilité', 'ia', 'intelligence artificielle', 'automation',
-    'numérique', 'digital', 'matériel', 'devis', 'prix', 'tarif', 'pack', 'start', 'business', 'e-com',
-    'catalogue', 'contact', 'whatsapp', 'parakou', 'bénin', 'formation', 'hébergement', 'domaine', 'email pro',
-    'adresse', 'service', 'prestation', 'projet', 'commande'
+    'numérique', 'digital', 'matériel', 'devis', 'prix', 'tarif', 'pack', 'catalogue',
+    'contact', 'whatsapp', 'parakou', 'bénin', 'formation', 'hébergement', 'domaine',
+    'email', 'adresse', 'service', 'prestation', 'projet', 'commande', 'windows', 'linux',
+    'office', 'adobe', 'autodesk', 'antivirus', 'récupération', 'données', 'odoo',
+    'quickbooks', 'sage', 'trados', 'photoshop', 'autocad', 'revit'
   ];
 
   function normalizeText(value) {
-    return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return String(value || '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[’']/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
   }
+
+  // L'assistant lit directement les fiches affichées dans le catalogue :
+  // les noms, catégories et tarifs restent ainsi synchronisés avec la page.
+  function readCatalogue() {
+    return Array.from(document.querySelectorAll('.catalogue-category')).flatMap(category => {
+      const categoryName = category.querySelector('summary')?.innerText
+        .replace(/\d+\s+articles?/i, '').trim() || 'Catalogue';
+      return Array.from(category.querySelectorAll('.catalogue-item')).map(item => ({
+        name: item.querySelector('h4')?.innerText.trim() || '',
+        price: item.querySelector('.catalogue-price')?.innerText.trim() || '',
+        category: categoryName
+      })).filter(item => item.name);
+    });
+  }
+
+  function readPacks() {
+    return Array.from(document.querySelectorAll('.pricing-card')).map(card => ({
+      name: card.querySelector('.pricing-toggle')?.innerText.trim() || '',
+      price: card.querySelector('.pricing-price')?.innerText.trim() || '',
+      content: card.querySelector('.pricing-content')?.innerText.trim() || ''
+    }));
+  }
+
+  const catalogueData = readCatalogue();
+  const packData = readPacks();
 
   function isAllowedTopic(text) {
     const s = normalizeText(text);
-    return siteTopics.some(topic => s.includes(normalizeText(topic)));
+    return siteTopics.some(topic => s.includes(normalizeText(topic))) ||
+      catalogueData.some(item => s.includes(normalizeText(item.name)));
   }
 
   function getResponse(q) {
     const s = normalizeText(q);
+    const wantsPrice = /(prix|tarif|combien|cout|coute|fcfa|xof)/.test(s);
+    const wantsList = /(liste|quels|quelles|catalogue|disponible|proposez|propose)/.test(s);
 
     if (!isAllowedTopic(q)) {
-      return "Je peux uniquement répondre aux questions liées aux services de PHENIX CONNECT : sites web, applications, logiciels de gestion, informatique, maintenance, téléphonie, SEO/visibilité, solutions numériques & IA, matériel informatique, offres et demandes de devis. Pour une autre question, je ne peux pas vous aider ici.";
+      return "Je suis l'assistant PHENIX CONNECT. Je peux vous renseigner sur notre catalogue de logiciels et services, nos packs web, le développement de sites et d'applications, la gestion métier, l'installation de systèmes, la maintenance, les formations et les demandes de devis. Quel est votre besoin ?";
     }
 
-    if (s.includes('catalogue')) { return "Le catalogue PHENIX CONNECT présente les logiciels, services web, systèmes d'exploitation, outils bureautiques, solutions de design, logiciels d'architecture, antivirus, services techniques et formations. Consultez la section Catalogue du site pour rechercher un article et voir son tarif."; }
-    if (s.includes('pack') || s.includes('prix') || s.includes('tarif') || s.includes('devis')) {
-      return "Nos offres actuelles sont : PACK ECO à 70.000 FCFA (site professionnel + bouton WhatsApp + référencement Google), PHENIX START à 150.000 FCFA (paiement en 2 fois possible, livraison 7 jours), PHENIX BUSINESS à 350.000 FCFA (paiement en 3 fois possible, livraison 14 jours) et PHENIX E-COM à partir de 600.000 FCFA (selon les fonctionnalités, livraison 21 jours). Vous pouvez demander un devis via le formulaire ou WhatsApp au 0153023080.";
+    // Recherche d'un article précis dans le catalogue.
+    const exactItem = catalogueData.find(item => {
+      const name = normalizeText(item.name);
+      return name.length > 2 && (s.includes(name) || name.includes(s));
+    });
+    const tokenMatches = catalogueData.map(item => {
+      const tokens = normalizeText(item.name).split(' ').filter(t => t.length > 2);
+      const hits = tokens.filter(token => s.includes(token)).length;
+      return { item, hits, total: tokens.length };
+    }).filter(x => x.hits >= Math.min(2, x.total))
+      .sort((a, b) => (b.hits / b.total) - (a.hits / a.total) || b.hits - a.hits);
+    const product = exactItem || (tokenMatches[0] && tokenMatches[0].hits >= 1 ? tokenMatches[0].item : null);
+
+    if (product) {
+      return `${product.name} est proposé dans la catégorie « ${product.category} » au tarif affiché de ${product.price}. Pour commander ou vérifier les modalités, utilisez le bouton « Commander » de l'article dans le catalogue ou contactez-nous sur WhatsApp au 0153023080.`;
     }
-    if (s.includes('eco') || s.includes('70.000') || s.includes('70000')) {
-      return "PACK ECO : 70.000 FCFA. Il comprend un site web professionnel et responsive, un bouton WhatsApp directement accessible et un référencement Google de base pour faciliter la visibilité en ligne, avec une présentation claire de votre activité et de vos coordonnées. Objectif : donner à votre activité une présence professionnelle sur Google et faciliter la conversion des visiteurs en contacts WhatsApp.";
+
+    // Présentation détaillée d'un pack, en reprenant son contenu réellement affiché.
+    const pack = packData.find(p => {
+      const name = normalizeText(p.name);
+      return name && (s.includes(name) || name.split(' ').some(word => word.length > 3 && s.includes(word)));
+    });
+    if (pack) {
+      return `${pack.name} — ${pack.price}.\n${pack.content}\nPour choisir ce pack, utilisez son bouton dans la section « Nos offres » ou demandez un devis au 0153023080.`;
     }
-    if (s.includes('start')) {
-      return "PHENIX START : 150.000 FCFA, paiement en 2 fois possible. Il comprend un site vitrine 1 page, WhatsApp et appel direct, formulaire + Google Maps, design à vos couleurs, domaine + hébergement offerts 1 an et une formation vidéo. Livraison en 7 jours.";
+
+    if (/(pack|offre|formule)/.test(s) || (wantsPrice && /(site|vitrine|boutique|e commerce|gestion metier)/.test(s))) {
+      const summary = packData.map(p => `${p.name} : ${p.price}`).join('\n');
+      return `Voici nos packs PHENIX CONNECT :\n${summary}\nChaque pack correspond à une prestation de référence du catalogue. Les fonctionnalités et options non précisées sont définies avec vous dans le devis.`;
     }
-    if (s.includes('business')) {
-      return "PHENIX BUSINESS : 350.000 FCFA, paiement en 3 fois possible. Il comprend tout le Pack Start, un site complet 5 pages, blog/actualités, optimisation Google, e-mail professionnel et 5 visuels Facebook/LinkedIn offerts. Livraison en 14 jours.";
+
+    if (/(catalogue|tous les logiciels|liste des logiciels|articles disponibles)/.test(s)) {
+      const groups = {};
+      catalogueData.forEach(item => (groups[item.category] ||= []).push(`${item.name} : ${item.price}`));
+      return 'Le catalogue comprend les catégories suivantes :\n' +
+        Object.entries(groups).map(([category, items]) =>
+          `${category}\n${items.join('\n')}`).join('\n\n') +
+        '\nVous pouvez rechercher un article dans la section « Catalogue » du site.';
     }
-    if (s.includes('e-com') || s.includes('ecommerce') || s.includes('boutique')) {
-      return "PHENIX E-COM : à partir de 600.000 FCFA selon les fonctionnalités. Il comprend tout le Pack Business, une boutique avec produits illimités, panier, stock, paiements Mobile Money/carte/paiement à la livraison, connexion WhatsApp, suivi des commandes et factures automatiques, ainsi qu'une formation complète. Livraison en 21 jours.";
+
+    const category = catalogueData.find(item => {
+      const c = normalizeText(item.category);
+      return c && s.includes(c);
+    });
+    if (category) {
+      const items = catalogueData.filter(item => item.category === category.category);
+      return `${category.category} :\n${items.map(item => `${item.name} — ${item.price}`).join('\n')}`;
     }
-    if (s.includes('contact') || s.includes('adresse') || s.includes('whatsapp')) {
+
+    if (/(contact|adresse|whatsapp|telephone|joindre)/.test(s)) {
       return "PHENIX CONNECT est basé à Parakou, au Bénin, et accompagne aussi des projets à distance. WhatsApp / téléphone : 0153023080. E-mail : contact@phenixconnect.online.";
     }
-    if (s.includes('site') || s.includes('web')) {
-      return "PHENIX CONNECT crée des sites vitrines, des boutiques e-commerce et des solutions web adaptées aux besoins des professionnels.";
+    if (/(site|web|vitrine)/.test(s)) {
+      return "PHENIX CONNECT réalise des sites vitrines et des sites e-commerce. Au catalogue : Création de sites Web vitrines à 50 000 FCFA, Site vitrine à 70 000 XOF, Création de sites Web e-commerce à 100 000 FCFA et Boutique E-commerce à 150 000 XOF. Les détails du projet sont confirmés dans le devis.";
     }
-    if (s.includes('application')) {
-      return "Nous proposons la création d'applications web et mobiles adaptées aux besoins des entreprises et organisations.";
+    if (/(application|logiciel|gestion|metier|stock|facturation)/.test(s)) {
+      return "Nous proposons une Application & logiciel de gestion & métier à 200 000 XOF au catalogue. Les fonctions (clients, stocks, ventes, caisse, facturation ou suivi métier) sont définies selon votre activité et précisées avant réalisation.";
     }
-    if (s.includes('logiciel') || s.includes('gestion')) {
-      return "Nous développons des solutions de gestion, notamment pour les stocks, ventes, facturation et reçus.";
+    if (/(windows|linux|systeme|os|installation|maintenance|ordinateur|informatique)/.test(s)) {
+      return "Le catalogue comprend l'installation de systèmes d'exploitation, Windows 7 à 11, Linux Mint, Debian, Ubuntu et Linux Xfce, ainsi que des prestations de maintenance. Les tarifs varient selon l'article : consultez la catégorie « Systèmes d'exploitation et Maintenance ».";
     }
-    if (s.includes('maintenance') || s.includes('informatique') || s.includes('reparation')) {
-      return "Nous proposons de l'assistance et de la maintenance informatique : configuration, diagnostic, optimisation et résolution de problèmes matériels ou logiciels.";
+    if (/(office|bureautique|utilitaire|deepl|nitro|download manager)/.test(s)) {
+      return "La catégorie « Suites Bureautiques et Utilitaires » propose MS Office 2010 à 2025, Internet Download Manager, Nitro Pro et DeepL Pro Premium. Les tarifs sont consultables dans le catalogue.";
     }
-    if (s.includes('seo') || s.includes('referencement') || s.includes('google') || s.includes('visibilite')) {
-      return "Nous proposons des prestations de SEO et de visibilité locale pour aider les entreprises à mieux être trouvées en ligne.";
+    if (/(adobe|design|multimedia|photoshop|premiere|illustrator)/.test(s)) {
+      return "La catégorie « Design et Multimédia » comprend le Pack Adobe Complet, Photoshop, Premiere Pro, Illustrator, InDesign, Animate, Dreamweaver, Media Encoder, Muse et Lumion Pro. Consultez le catalogue pour les tarifs de chaque article.";
     }
-    if (s.includes('ia') || s.includes('intelligence artificielle') || s.includes('automation')) {
-      return "PHENIX CONNECT propose des solutions numériques et d'IA, notamment pour l'automatisation et l'optimisation de certaines tâches.";
+    if (/(autodesk|architecture|ingenierie|autocad|archicad|revit|civil 3d|etabs|sap2000|tekla)/.test(s)) {
+      return "La catégorie « Architecture et Ingénierie » comprend AutoCAD, Archicad, Revit, Civil 3D, Robot Structural Analysis, Maya, ETABS, SAP2000 et Tekla Structures. Chaque tarif est indiqué dans le catalogue.";
     }
-    return "Votre demande concerne PHENIX CONNECT. Pour vous orienter précisément, indiquez si votre besoin concerne un site web, une application, un logiciel de gestion, l'informatique/maintenance, le SEO, une solution numérique/IA, du matériel ou l'une de nos offres.";
+    if (/(antivirus|securite|avast|bitdefender|eset|smadav|avg)/.test(s)) {
+      return "La catégorie « Sécurité et Antivirus » comprend Avast, Bitdefender, ESET, AVG et Smadav. Consultez les fiches du catalogue pour les prix affichés.";
+    }
+    if (/(recuperation|donnees|droidkit|imobie|deverrouillage)/.test(s)) {
+      return "Nous proposons la récupération de données sur disque dur ou clé USB, ainsi que des prestations iMobie/DroidKit. Les tarifs et le type d'intervention sont indiqués dans la catégorie « Services Techniques et Récupération ».";
+    }
+    if (/(formation|apprendre|cours)/.test(s)) {
+      return "Deux formations figurent au catalogue : Formation en maintenance informatique (3 mois) à 100 000 FCFA et Formation en création de sites Web à 90 000 FCFA. Contactez-nous pour connaître le programme et les modalités.";
+    }
+    if (/(devis|commander|commande|acheter)/.test(s)) {
+      return "Pour commander, ouvrez la section « Catalogue », recherchez l'article et cliquez sur « Commander ». Pour un projet personnalisé ou un pack, utilisez le formulaire de contact ou WhatsApp au 0153023080.";
+    }
+
+    return "Je peux vous aider à choisir un logiciel du catalogue, comparer les tarifs, présenter les packs web ou préparer une demande de devis. Indiquez le nom du logiciel, le type de site ou le service qui vous intéresse.";
   }
 
   function send() {
@@ -1581,6 +1682,13 @@ input,textarea,select{border-radius:10px}
       const item = link.dataset.catalog;
       const price = link.dataset.price;
       if (besoin) besoin.value = `Je souhaite commander ou obtenir des informations sur : ${item} — ${price}. Merci de me préciser les modalités.`;
+    });
+  });
+
+  document.querySelectorAll('[data-pack]').forEach(link => {
+    link.addEventListener('click', () => {
+      const besoin = document.getElementById('besoin');
+      if (besoin) besoin.value = `Je souhaite obtenir un devis pour : ${link.dataset.pack}. Merci de me préciser le périmètre, les options et les délais.`;
     });
   });
 
